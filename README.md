@@ -28,7 +28,7 @@ The **Layout workshop** can copy, edit and playtest every sample. It retains cha
 
 ## Source and building
 
-The private repository is **2319bli/Yearbound**. Earlier foundations remain tagged as `v0.11.0` and `v0.12.0`. Git includes editable source, artwork and music; app builds, caches, workshop drafts and player saves are excluded.
+The public repository is [2319bli/yearbound](https://github.com/2319bli/yearbound). Earlier foundations remain tagged as `v0.11.0` and `v0.12.0`. Git includes editable source, artwork and music; app builds, caches, workshop drafts and player saves are excluded.
 
 Import `project.godot` in **Godot 4.6.2** and press F5. On Apple silicon macOS, run `python3 tools/build_macos.py` to build the standalone app beside the project. It defaults to `/Applications/Godot.app`; set `GODOT_BIN` for another engine executable. Editing the source does not update an already-built app until rebuilt.
 
