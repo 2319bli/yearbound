@@ -234,7 +234,9 @@ func draw_background(n: Node2D) -> void:
 	# The distant landscape shifts gently during a climb; screen-space UI stays put.
 	var vertical=world.camera_y if show_world else 0.0
 	n.draw_set_transform(Vector2(0,clampf(-vertical*.04,0,48)))
-	if show_world and world.spec.has("journey_regions"):
+	if show_world and world.spec.has("scenery"):
+		YBMapScenery.background(n,world.spec,world.player.position.x,cam,clampf(world.june_boss.aftermath/2,0,1) if world.june_boss else 0)
+	elif show_world and world.spec.has("journey_regions"):
 		YBJourneyScenery.background(n,world.spec.journey_regions,world.player.position.x,cam,0 if store.data.settings.reduced_motion else time,clampf(world.june_boss.aftermath/2,0,1) if world.june_boss else 0)
 	else:
 		YBLandscape.background(n,season,cam,time,store.data.settings.reduced_motion,str(world.spec.get("background","")) if show_world else "",ambience)
@@ -290,7 +292,7 @@ func draw_title(n: Node2D) -> void:
 	label(n,"The first sunlit path",Vector2(931,132),17,INK)
 	button(n,"lab","Charge dash lab   →",Rect2(831,175,356,48),true)
 	label(n,"Experiment · tune · repeat",Vector2(849,248),14,CREAM)
-	label(n,"FOUNDATION EDITION  ·  0.13.0",Vector2(995,684),11,Color("e6eac7"),true)
+	label(n,"FOUNDATION EDITION  ·  0.14.0",Vector2(995,684),11,Color("e6eac7"),true)
 
 func draw_calendar(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color(0.07,0.18,0.20,0.94))
@@ -327,7 +329,7 @@ func draw_calendar(n: Node2D) -> void:
 		wrapped(n,s.description,Vector2(796,267),390,18,INK)
 		label(n,"A PLAYABLE CHAPTER",Vector2(796,387),11,Color("638070"))
 		var result=store.data.results.get(selected,{})
-		label(n,("Best: "+clock_text(result.best_time)+"  ·  "+str(int(result.motes))+" sunmotes") if not result.is_empty() else ("Survival boss · three phases" if s.has("boss") else "Explore · collect · reach the garden gate"),Vector2(796,415),15,INK)
+		label(n,("Best: "+clock_text(result.best_time)+"  ·  "+str(int(result.motes))+" sunmotes") if not result.is_empty() else ("Survival boss · five arenas" if s.has("boss") else "Explore · collect · reach the garden gate"),Vector2(796,415),15,INK)
 		button(n,"play","Enter this day   →",Rect2(796,472,400,54),true)
 	else:
 		label(n,"A day yet to be written",Vector2(796,225),28,INK,false,true)
@@ -356,6 +358,7 @@ func draw_hud(n: Node2D) -> void:
 		panel(n,Rect2(439,61,402*maxf(0,1-world.boss_time/float(world.spec.boss.duration)),10),GOLD,5)
 		label(n,("The sky is clear · reach the gate" if world.june_boss.defeated else ("Follow the open gate to the next arena" if world.june_boss.cleared else str(world.june_boss.data().name))) if world.june_boss else "SURVIVE THE STORM  ·  Each phase is a checkpoint",Vector2(640,696),13,CREAM,true)
 	else:
+		if world.spec.has("journey_regions"): panel(n,Rect2(417,22,446,71),Color(.09,.22,.25,.9),11)
 		panel(n,Rect2(445,33,390,7),Color(0.12,0.27,0.27,0.25),4)
 		panel(n,Rect2(445,33,390*clampf(world.player.position.x/float(world.spec.length),0,1),7),CREAM,4)
 	if world.spec.has("journey_regions") and not world.spec.has("boss"):
@@ -425,7 +428,7 @@ func draw_settings(n: Node2D) -> void:
 
 func draw_about(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color(0.07,0.18,0.2,0.96))
-	label(n,"FIELD NOTES  /  FOUNDATION 0.13.0",Vector2(90,81),12,GOLD)
+	label(n,"FIELD NOTES  /  FOUNDATION 0.14.0",Vector2(90,81),12,GOLD)
 	label(n,"A whole year starts here.",Vector2(87,148),46,CREAM,false,true)
 	wrapped(n,"Yearbound is a platforming journey from 1 June to 31 May. Each date will become its own place: its own atmosphere, music and reason to take one more leap.",Vector2(90,213),750,23,CREAM)
 	wrapped(n,"This foundation contains "+str(stages.size())+" playable days, including the full June chapter and a sample in every other month. Follow the sunmotes, light the checkpoint lanterns and find each day's door. On 30 June, read the amber warnings and travel through five storm arenas to calm the Squallkeeper. There is no attack button.",Vector2(90,344),750,18,MUTED)

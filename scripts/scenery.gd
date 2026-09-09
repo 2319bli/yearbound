@@ -148,6 +148,9 @@ static func front_details(n: Node2D, p: Dictionary, stage: Dictionary, time: flo
 static func stage_layer(n: Node2D, stage: Dictionary, platforms: Array[Dictionary], time: float, cam: float, layer: String) -> void:
 	for authored in stage.get("decorations",[]):
 		if authored.get("layer","back")!=layer: continue
+		# The new art depicts these buildings in their actual places. Keep local
+		# plants, spray, lanterns and wind; avoid flat duplicate buildings over it.
+		if stage.has("scenery") and layer=="back" and str(authored.type) in YBMapScenery.PAINTED_LANDMARKS and not authored.get("draw_over_atlas",false): continue
 		var d: Dictionary=authored.duplicate()
 		if d.has("platform"):
 			var p=platforms[int(d.platform)]

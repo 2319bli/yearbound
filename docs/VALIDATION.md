@@ -2,6 +2,18 @@
 
 Environment: Apple M4 / macOS, Godot 4.6.2, native OpenGL compatibility renderer. Delivered app is Apple silicon ARM64, includes its own runtime, and uses an ad-hoc development signature. The original Documents/Yearbound music folder was read and copied from, never edited.
 
+## Custom map backgrounds · 0.14.0
+
+All 41 playable dates own original pixel-art atlases, with individual views for all 219 named places and a separate June boss aftermath. No finished map references another map's atlas. Exact prompts, dimensions, grids and SHA-256 hashes are recorded in `art/maps/PROVENANCE.json`. All 41 atlases were visually reviewed for their named scenery, regular grid, coherent style and interior/seasonal transitions. Source PNGs are copied intact from built-in image generation; no image-generation CLI/API fallback or third-party download was used.
+
+- Five packaged assertion suites pass: map scenery, native map rendering, workshop/editor, gameplay smoke and native ground/layers. Atlas loading, distinct image content, valid cell boundaries, all 41 workshop round trips, malformed art rejection and the two-atlas retention limit are checked.
+- Native coloured-cell probes verify every cell in both grid formats, all four viewport corners, forward transitions, backtracking, the clearing-sky aftermath and raised-camera coverage. The ground/layer suite verifies scenery, terrain, player, hazards, foreground and UI order in the actual framebuffer.
+- The packaged capture pass produces 111 screenshots: every map opening, all places in thirteen representative maps, title and boss aftermath. Daytime, mill/glasshouse interiors, night, underwater and boss views were inspected for matching scenery and clear terrain. The location label has an opaque backing for readability over varied art. Captures are in `Previews/Custom-maps` beside the project.
+- A comparison with `v0.13.0` confirms all 41 maps retain their exact platforms, hazards, zones, collectibles, checkpoints, signs, decoration data, bounds, spawn/goal, layout revision, music, boss settings and abilities. The world simulation, controller, movement/dash/swimming resources and scripts, and 17-station Dash Lab are byte-identical. Existing runs need no layout migration for this artwork update.
+- The content validator and blueprint `--check` pass. Broad legacy building drawings are suppressed over the new painted landmarks, while local plants, lanterns, spray and wind remain. Older workshop exports without an atlas retain their previous rendering path.
+
+The native Apple silicon app is version 0.14.0 and has a verified ad-hoc development signature. Updated source/app archives pass integrity checks. Normal saves were isolated from all verification. Known restricted-headless certificate and shutdown cleanup notices remain separate from the passing assertions; no final script, parser, assertion or native rendering failures remained. This is a visual update, not a new difficulty or physical controller certification pass.
+
 ## Full June chapter and authored journeys · 0.13.0
 
 All 30 June dates are playable, alongside eleven other-month samples: 41 stages and 219 explicit gameplay sections. Each ordinary June day connects five places; 30 June connects five boss arenas. The 365-day calendar retains 324 unfinished dates. All stages have at least 50 independent spike placements. The blueprint audit finds no identical complete-room geometry or duplicate contact hazards; this structural check does not replace human assessment of variety.

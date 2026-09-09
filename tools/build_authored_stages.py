@@ -49,6 +49,8 @@ def compile_day(layout, current):
     if layout.get("journey"):
         stage["journey_regions"] = [{"name": room["name"], "x":room["origin"][0], "y":room["origin"][1], "w":room["width"], **room["visual"]} for room in layout["sections"]]
         stage["secret_areas"] = layout.get("secret_areas", [])
+    if "scenery" in layout:
+        stage["scenery"] = copy.deepcopy(layout["scenery"])
     stage["editor_version"] = 2
     stage["layout_revision"] = layout.get("revision", 13)
     stage["description"] = layout["intent"]

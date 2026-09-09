@@ -77,7 +77,7 @@ Do not reorder collectible/checkpoint arrays in an already-shipped stage without
 
 ## Pixel-art assets
 
-A stage may set `"background": "res://art/my_day.png"` to use its own landscape. If omitted, `landscape.gd` chooses the seasonal reference. Use 16:9 pixel-art landscapes with atmospheric distance, a quiet lower third and no painted collision platforms. The renderer pans the plate subtly; collision and foreground objects remain independent. The current landscape plates pan as complete images rather than independent painted depth layers.
+For multi-place maps, use the `scenery` and `visual.art_cell` format in `MAP_SCENERY.md`. All 41 campaign maps use dedicated artwork sets. For a simple legacy stage without named journey places, a stage may set `"background": "res://art/my_day.png"` to use its own landscape. If omitted, `landscape.gd` chooses the seasonal reference. Use 16:9 pixel-art landscapes with atmospheric distance, a quiet lower third and no painted collision platforms. The renderer pans the plate subtly; collision and foreground objects remain independent. The current landscape plates pan as complete images rather than independent painted depth layers.
 
 The five 64×64 maps in `art/materials/` preserve the earlier texture experiments and can be regenerated with `tools/bake_materials.gd`. The current terrain renderer uses palette-driven shapes instead of these maps, keeping faces quieter and top edges consistent. `art/trees.png` contains June, October and January trees; source rectangles are defined in `landscape.gd`. `art/squallkeeper.png` is the transparent boss sprite. Art provenance and generation prompts are in `art/README.md`.
 

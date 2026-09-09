@@ -1,4 +1,4 @@
-# Layout workshop · 0.13.0
+# Layout workshop · 0.14.0
 
 Open **Yearbound.app → Layout workshop** on the title screen. The editor is built into the desktop game; you do not need Godot or any coding tools. Its first launch opens a small editable block garden. **New** gives you an empty day with a flat block floor. **Copy a sample day…** opens an editable copy of any of the 41 playable stages.
 
@@ -43,7 +43,7 @@ Grass, stone, timber, hay, logs, ice, springs and crumbling blocks all use the s
 
 Trees and flowers are background decoration. The canvas shows simple placement symbols for these props; playtesting renders the full seasonal art. Wind pushes right, updrafts lift upward, and currents carry the player downstream. Paint these zones in the air above the terrain; rectangle mode creates larger regions. The grid is an editing guide, not an overlay during play.
 
-Copies of sample stages preserve their existing moving hazards, signs, boss patterns, music and decorations. The first editor does not expose custom boss-pattern scripting, a sign-text inspector, arbitrary force or lift tuning, custom image/audio imports, or moving-hazard creation. Those remain available through the JSON/source pipeline. All 41 installed music tracks and six seasonal palettes can be selected in the UI. Day-specific background, atmosphere and specialized props survive copying, editing and export; view the finished scenery in Playtest. New blank days choose the next unfinished date, currently 1 July. See JUNE_02_08.md and JUNE_09_17.md for the June designs.
+Copies of sample stages preserve their existing moving hazards, signs, boss patterns, music and decorations. The first editor does not expose custom boss-pattern scripting, a sign-text inspector, arbitrary force or lift tuning, custom image/audio imports, or moving-hazard creation. Those remain available through the JSON/source pipeline. All 41 installed music tracks and six seasonal palettes can be selected in the UI. Map-specific atlas references, individual room cells, atmosphere and specialized props survive copying, editing and export; view the finished scenery in Playtest. New blank days choose the next unfinished date, currently 1 July. See JUNE_02_08.md and JUNE_09_17.md for the June designs.
 
 Layouts span 27–2048 columns and 15–79 rows. Extra height grows upward from the existing floor (negative world Y), and the game camera follows climbs and descents. Shrinking height refuses to discard content. The overview shows the full route and current viewport in both dimensions. Extending a day continues a grass floor when there is one at its end. Shortening trims that floor and moves the exit, but refuses to discard other out-of-bounds content; erase or relocate those objects first. The editor checks marker support and collisions before playtesting. It does not prove every jump is reachable or balance a stage automatically.
 

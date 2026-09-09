@@ -1,6 +1,6 @@
-# Authored campaign layouts · 0.13.0
+# Authored campaign layouts · 0.14.0
 
-There are 41 playable dates. All 30 June journeys follow the five-place chapter described in [JUNE_CHAPTER.md](JUNE_CHAPTER.md). The other months retain their rebuilt routes and original seasonal identities.
+There are 41 playable dates. All 30 June journeys follow the five-place chapter described in [JUNE_CHAPTER.md](JUNE_CHAPTER.md). The other months retain their rebuilt routes and now also have their own artwork for every named section.
 
 ## Other months
 
@@ -38,7 +38,7 @@ Workshop exports remain normal stage JSON. If a compiled day is edited directly 
 - Local falling ice: `local: true` anchors an icicle to its authored `y`, with `warning_seconds`, `floor_y` and optional `fall_acceleration`.
 - Ice surfaces: `surface: "ice"` makes another platform kind slippery. February combines it with independent crumble tiles; July uses polished wooden runs.
 - Updrafts: `visual: "wind"` renders rising air; the default displays waterfall spray. November remains physically underwater, with swim-safe checkpoints and currents.
-- June: `visual` environment/light fields compile into spatially blended `journey_regions`. `secret_areas` describe optional vine covers and side chambers. The boss has five explicit arena definitions.
+- All campaign maps: `scenery` selects a dedicated atlas and each section’s `visual.art_cell` selects its own view. Environment/light fields compile into spatially blended `journey_regions`. `secret_areas` describe optional vine covers and side chambers. The boss has five explicit arena definitions.
 
 These parameters survive workshop save/open and playtest. Detailed inspectors remain future work; edit timing and region fields in JSON.
 

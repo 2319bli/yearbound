@@ -1,8 +1,12 @@
 class_name YBJourneyScenery
 extends RefCounted
-## A journey changes place and light while keeping collision surfaces crisp.
+## Local rear decoration, plus compatibility rendering for older workshop exports.
+## Finished campaign maps use YBMapScenery and their own dedicated atlases.
 const PLATES={"field":"06-10","river":"06-11","marsh":"06-02","orchard":"06-12","forest":"06-14","hedge":"06-10","sunflowers":"06-07","station":"06-05","mill":"06-06","machinery":"06-06","windmill":"06-15","barn":"06-16","garden":"06-13","glasshouse":"06-09","tunnel":"06-14","ridge":"06-03","village":"06-08","flowers":"06-13","bridge":"06-11","fountain":"06-17","grass":"06-10"}
 const LIGHT={"morning":"f2f1d5","day":"ffffff","midsummer":"fff6c5","afternoon":"f3cb9f","sunset":"d99084","shade":"9cbea9","interior":"91a899","dusk":"7588ac","night":"384f80","twilight":"617290"}
+const MAP_PLACES = ["barley", "lake", "snow", "ice", "thaw", "waterfall", "underwater", "ruins"]
+static func known_place(place: String) -> bool:
+	return PLATES.has(place) or place in MAP_PLACES
 static func index_at(regions: Array, x: float) -> int:
 	for i in range(regions.size()-1,-1,-1):
 		if x>=float(regions[i].x):return i

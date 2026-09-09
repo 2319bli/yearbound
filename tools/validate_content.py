@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Validate the catalog before opening Godot. No external dependencies."""
-import json, pathlib, re
+import json, pathlib, re, struct, hashlib
 root=pathlib.Path(__file__).resolve().parents[1]
 load=lambda p:json.loads((root/p).read_text())
 catalog=load('content/catalog.json'); calendar=load('content/calendar.json')
@@ -20,11 +20,27 @@ assert len({d['id'] for d in calendar['days']})==365
 assert sum(d['boss'] for d in calendar['days'])==12
 assert set(catalog['featured']) <= set(catalog['stages'])
 assert len(catalog['stages'])==len(set(catalog['stages']))
+atlas_paths=set(); atlas_hashes=set()
 for id in catalog['stages']:
  s=load(f'content/stages/{id}.json'); assert s['id']==id and s['schema_version']==1
  assert id in {d['id'] for d in calendar['days']}
  assert (root/s['music'].removeprefix('res://')).is_file()
  if s.get('background'): assert (root/s['background'].removeprefix('res://')).is_file()
+ if 'scenery' in s:
+  art=s['scenery'];path=root/art['atlas'].removeprefix('res://')
+  assert art['atlas'].startswith('res://art/') and '..' not in art['atlas'] and path.is_file(), (id,'missing atlas')
+  assert type(art['columns']) is int and type(art['rows']) is int and 1<=art['columns']<=8 and 1<=art['rows']<=8, (id,'invalid atlas grid')
+  assert 0<=art.get('inset',2)<=16, (id,'invalid atlas inset')
+  data=path.read_bytes();assert data[:8]==b'\x89PNG\r\n\x1a\n', (id,'atlas is not a PNG')
+  w,h=struct.unpack('>II',data[16:24]);assert w/art['columns']>=450 and h/art['rows']>=250, (id,'atlas cells too small')
+  assert abs((w/art['columns'])/(h/art['rows'])-16/9)<.02, (id,'atlas cells must be widescreen')
+  assert art['atlas'] not in atlas_paths, (id,'map borrows another map atlas')
+  digest=hashlib.sha256(data).hexdigest();assert digest not in atlas_hashes, (id,'map duplicates another map image')
+  atlas_paths.add(art['atlas']);atlas_hashes.add(digest)
+  cells=[r['art_cell'] for r in s['journey_regions']]
+  assert len(cells)==len(s['challenge']['rooms']) and len(set(cells))==len(cells), (id,'places need individual artwork')
+  if 'aftermath_cell' in art:cells.append(art['aftermath_cell'])
+  assert all(type(c) is int and 0<=c<art['columns']*art['rows'] for c in cells), (id,'atlas cell outside grid')
  assert s['season'] in load('content/themes.json')
  assert s.get('terrain_style',s['season']) in styles, (id,'unknown terrain style')
  assert s.get('decoration_profile','') in ['', 'early_summer'], (id,'unknown decoration profile')

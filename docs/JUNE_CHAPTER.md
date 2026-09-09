@@ -1,4 +1,4 @@
-# June chapter · 0.13.0
+# June chapter · 0.14.0
 
 June is now a complete 30-date chapter: 29 exploration journeys and one five-arena monthly boss. Ordinary dates have five substantial sections, each named as a physical place. The room blueprints specify their own layouts and transitions. Camera and checkpoints work at the new elevations; optional routes can return into earlier space.
 
@@ -63,7 +63,7 @@ The configured survival durations are 24, 28, 32 and 36 seconds. The chase contr
 
 The supplied 1–22 June tracks are retained. `JUNE_MUSIC_18_22.json` records the five newly incorporated files and hashes. Dates 23–29 currently use distinct synthesized sketch compositions. Their score source is in `tools/synthesize_june_scores.py`; it does not overwrite supplied music. The existing Squallkeeper score remains.
 
-Each place selects a background environment and light state. Existing original June landscape plates and prop vocabulary are recomposed into the routes; new interiors, night skies, tall grass and lantern passes add motion and depth. Platform caps, player and hazards remain sharp above the scenery. Lights change spatially as the player travels, rather than on a real-time deadline. The final boss aftermath fades back into warm light.
+Each June date owns a custom artwork atlas with a separate composition for all five places. The mill and glasshouse interiors, canopy heights, hedge corridors, river cliffs and night gardens are painted as those actual locations. The former shared place-to-picture lookup is retained only for older workshop exports. See `MAP_SCENERY.md`. Platform caps, player and hazards remain sharp above the scenery. Lights change spatially as the player travels, rather than on a real-time deadline. The final boss aftermath fades back into warm light.
 
 ## Editing
 

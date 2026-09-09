@@ -1,4 +1,4 @@
-# Yearbound · Foundation 0.13.0
+# Yearbound · Foundation 0.14.0
 
 A native desktop platformer about travelling from 1 June to 31 May. **All 30 June dates are playable**, alongside eleven other-month samples. June now follows a chapter-wide design: five substantial connected places per day, with changing scenery, light, elevation and gameplay. The other 324 calendar dates remain unbuilt.
 
@@ -12,11 +12,13 @@ Move with **A/D**, arrows, or **J/L**. **Space/Z** jumps; hold for height. Hold 
 
 ## This chapter
 
-Each ordinary June stage contains five large places, not five single-screen challenges. Routes include open fields, interiors, low passages, climbs that carry their altitude forward, long descents, moving cargo, waterwheel circuits, windmill hoists, rivers, spring chains and backtracking. Room names in the HUD identify the current place. Backgrounds blend between environments; 8 and 29 June visibly progress into night. The Garden Maze includes returning corridors and optional side chambers beneath fading ivy.
+Each ordinary June stage contains five large places, not five single-screen challenges. Routes include open fields, interiors, low passages, climbs that carry their altitude forward, long descents, moving cargo, waterwheel circuits, windmill hoists, rivers, spring chains and backtracking. Room names in the HUD identify the current place. Every map now owns a custom pixel-art set, with individual views for all 219 named locations. Backgrounds blend between those actual places; 8 and 29 June visibly progress into night. The Garden Maze includes returning corridors and optional side chambers beneath fading ivy.
 
 30 June is a five-arena survival boss: an introductory dodge pattern, higher terraces, an advancing-storm chase, crossing attacks and a final squall followed by a clearing sky. Its health decreases through successful survival or chase progress. Completed phases remain completed after retries; cleared gates connect the arenas physically. There is no melee combat.
 
 The supplied 1–22 June music is included. Dates 23–29 use distinct temporary synthesized scores pending supplied compositions. The existing boss and other-month music remain. See [JUNE_CHAPTER.md](docs/JUNE_CHAPTER.md) for every day’s route and [AUTHORED_DAYS.md](docs/AUTHORED_DAYS.md) for the other months and content pipeline.
+
+See [MAP_SCENERY.md](docs/MAP_SCENERY.md) for the custom artwork, room selection and authoring format.
 
 ## Movement, lab and workshop
 

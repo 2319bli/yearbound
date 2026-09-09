@@ -1,3 +1,7 @@
+# Current campaign artwork · 0.14.0
+
+All 41 campaign maps now use dedicated generated pixel-art atlases in `maps/`, with unique views for 219 named places and the June boss aftermath. Exact prompts and SHA-256 hashes are in `maps/PROVENANCE.json`; see `../docs/MAP_SCENERY.md` for integration. Original PNGs are copied intact and sampled at runtime. Older art below remains for menus, legacy workshop exports and source history.
+
 # Yearbound pixel-art direction · 0.3
 
 Created for this project on 8 September 2026 using the built-in `image_gen.imagegen` tool. The final art uses detailed 16-bit-inspired pixel shapes, seasonal palettes and crisp silhouettes. These are generated game assets, not photographs of identified real places or assets from a third-party pack.

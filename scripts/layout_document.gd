@@ -24,7 +24,7 @@ static func blank() -> Dictionary:
 	base.title="A day of your own";base.description="A layout made in the Yearbound workshop."
 	base.length=4608;base.spawn=[120,624];base.goal=[4488,624]
 	base.platforms=[];base.motes=[];base.checkpoints=[];base.hazards=[];base.zones=[];base.signs=[];base.decorations=[]
-	base.erase("decoration_profile");base.erase("challenge");base.erase("design");base.erase("journey_regions");base.erase("secret_areas");base["world_top"]=0;base["abilities"]=["charge_dash"];base["editor_version"]=2
+	base.erase("decoration_profile");base.erase("challenge");base.erase("design");base.erase("journey_regions");base.erase("secret_areas");base.erase("scenery");base["world_top"]=0;base["abilities"]=["charge_dash"];base["editor_version"]=2
 	return base
 func load_stage(value: Dictionary) -> void:
 	stage=value.duplicate(true);cells.clear();history.clear();future.clear();pending.clear()
@@ -258,8 +258,23 @@ static func errors(s: Variant, check_playable: bool=false) -> PackedStringArray:
 				if not region is Dictionary or not number(region.get("x")) or not number(region.get("y")) or not number(region.get("w")):
 					out.append("A journey place needs numeric bounds.");continue
 				if region.x!=boundary or region.w<=0 or region.x+region.w>s.length:out.append("Journey places must connect inside the stage bounds.")
-				if not YBJourneyScenery.PLATES.has(region.get("place","")) or not YBJourneyScenery.LIGHT.has(region.get("light","day")):out.append("A journey place uses an unknown environment or light setting.")
+				if not YBJourneyScenery.known_place(str(region.get("place",""))) or not YBJourneyScenery.LIGHT.has(region.get("light","day")):out.append("A journey place uses an unknown environment or light setting.")
 				boundary=region.x+region.w
+	if s.has("scenery"):
+		var art = s.scenery
+		if not art is Dictionary or not art.get("atlas") is String or not art.atlas.begins_with("res://art/") or ".." in art.atlas or art.atlas.get_extension().to_lower() not in ["png", "webp", "jpg", "jpeg"] or not ResourceLoader.exists(art.atlas):
+			out.append("Map scenery needs an installed artwork atlas.")
+		elif not number(art.get("columns")) or not number(art.get("rows")) or art.columns < 1 or art.rows < 1 or art.columns > 8 or art.rows > 8 or art.columns != floorf(art.columns) or art.rows != floorf(art.rows):
+			out.append("Map scenery needs a whole-number atlas grid from 1 to 8.")
+		elif not s.get("journey_regions") is Array or s.journey_regions.is_empty():
+			out.append("Map scenery needs named places.")
+		else:
+			if not number(art.get("inset", 2)) or art.get("inset", 2) < 0 or art.get("inset", 2) > 16: out.append("Atlas inset must be between 0 and 16 pixels.")
+			var entries = s.journey_regions.duplicate()
+			if art.has("aftermath_cell"): entries.append({"art_cell":art.aftermath_cell})
+			for region in entries:
+				if not region is Dictionary or not number(region.get("art_cell")) or region.art_cell != floorf(region.art_cell) or region.art_cell < 0 or region.art_cell >= art.columns * art.rows:
+					out.append("A place selects a cell outside its map's atlas.")
 	if s.has("secret_areas"):
 		if not s.secret_areas is Array:out.append("Secret areas must be a list.")
 		else:
