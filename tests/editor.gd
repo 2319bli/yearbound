@@ -1,0 +1,70 @@
+extends SceneTree
+var failures=0
+func _initialize() -> void: call_deferred("run")
+func frames(n: int) -> void:
+	for i in n: await physics_frame
+func check(ok: bool, message: String) -> void:
+	if ok: print("PASS: ",message)
+	else: failures+=1;push_error(message)
+func equal_json(a: Variant,b: Variant) -> bool:
+	return YBLayoutDocument.same(a,b)
+func run() -> void:
+	var app=load("res://main.tscn").instantiate();root.add_child(app);await frames(3)
+	for id in app.stage_order:
+		var problems=YBLayoutDocument.errors(app.stages[id],true)
+		check(problems.is_empty(),id+" is valid on the square grid: "+str(problems))
+	var original=app.store.data.duplicate(true)
+	app.open_editor();await frames(3)
+	var editor=app.editor;var doc=editor.document
+	check(app.screen=="editor" and editor.visible,"workshop opens from the main app")
+	doc.load_stage(YBLayoutDocument.blank());editor.sync_fields()
+	check(doc.cells.size()==192,"blank layout has a two-row block floor across 96 columns")
+	check(YBLayoutDocument.errors(doc.compile(),true).is_empty(),"new day is immediately playable")
+	check(doc.resize_columns(48).is_empty() and doc.columns()==48 and doc.cells.size()==96,"shortening a blank day trims its floor and relocates the exit")
+	check(doc.resize_columns(96).is_empty() and doc.cells.size()==192,"extending a day continues its block floor")
+	check(YBLayoutDocument.errors(doc.compile(),true).is_empty(),"resized start and exit remain playable")
+	var before=doc.compile()
+	doc.begin_edit();doc.paint_line(Vector2i(10,12),Vector2i(13,12),"stone");doc.end_edit()
+	check(doc.cells.has("10:12") and doc.cells.has("13:12"),"drag brush fills every intervening grid cell")
+	doc.undo();check(doc.compile()==before,"undo restores the entire paint stroke")
+	doc.redo();check(doc.cells.has("13:12"),"redo restores the complete stroke")
+	doc.begin_edit();doc.paint_rectangle(Vector2i(10,12),Vector2i(13,12),"erase");doc.end_edit()
+	check(not doc.cells.has("10:12") and not doc.cells.has("13:12"),"rectangle eraser removes an exact grid selection")
+	doc.begin_edit();doc.paint(Vector2i(12,12),"checkpoint");doc.paint(Vector2i(18,12),"spikes");doc.paint(Vector2i(20,10),"mote");doc.paint_rectangle(Vector2i(24,7),Vector2i(25,12),"updraft");doc.end_edit()
+	var data=doc.compile()
+	check(data.checkpoints.size()==1 and data.hazards.size()==1 and data.zones.size()==12,"markers, hazards and environment cells compile into playable stage data")
+	check(YBLayoutDocument.errors(data,true).is_empty(),"authored layout passes playtest validation")
+	var path=OS.get_environment("YEARBOUND_SAVE_DIR").path_join("roundtrip.yearbound.json")
+	check(editor.save_to(path),"layout export succeeds")
+	var loaded=YBLayoutDocument.read_layout(path)
+	check(loaded.has("stage") and equal_json(loaded.stage,data),"JSON round trip preserves the complete stage")
+	doc.begin_edit();doc.paint(Vector2i(2,12),"stone");doc.end_edit()
+	check(not YBLayoutDocument.errors(doc.compile(),true).is_empty(),"playtest catches a start marker embedded in terrain")
+	doc.undo()
+	check(editor.open_path(path),"editor reopens exported layouts")
+	check(equal_json(doc.compile(),data),"reopening retains tile mechanics, markers and zones")
+	var broken=data.duplicate(true);broken.platforms[0].w="wide"
+	check(not YBLayoutDocument.errors(broken).is_empty(),"malformed terrain is rejected before instantiation")
+	broken=data.duplicate(true);broken.music="../../unexpected"
+	check(not YBLayoutDocument.errors(broken).is_empty(),"unknown music references are rejected")
+	broken=data.duplicate(true);broken.id="02-29"
+	check(not YBLayoutDocument.errors(broken).is_empty(),"calendar validation rejects 29 February")
+	check(editor.playtest(),"playtest launches with the authored layout")
+	await frames(5)
+	check(app.editor_test and equal_json(app.world.spec,data) and app.world.player.is_on_floor(),"playtest uses real game collision and the authored spawn")
+	app.save_run();app.world.player.position=Vector2(data.goal[0],data.goal[1]);await frames(4)
+	check(app.screen=="editor_complete","the authored exit completes the test")
+	check(app.store.data==original,"playtesting and completing a layout never change campaign progress")
+	app.return_to_editor();await frames(2)
+	check(editor.visible and equal_json(doc.compile(),data) and app.world==null,"returning from playtest preserves the editable layout")
+	check(editor.flush_draft(),"draft autosave succeeds")
+	var draft=YBLayoutDocument.read_layout(editor.folder.path_join("workshop-draft.json"))
+	check(draft.has("stage") and equal_json(draft.stage,data),"autosaved draft can be recovered on the next launch")
+	for id in app.stage_order:
+		doc.load_stage(app.stages[id]);var compiled=doc.compile()
+		var issues=YBLayoutDocument.errors(compiled,true)
+		check(issues.is_empty(),id+" sample can be edited and recompiled: "+str(issues))
+		check(compiled.motes==app.stages[id].motes,"copy preserves sample collectibles")
+	doc.load_stage(YBLayoutDocument.blank());editor.sync_fields()
+	root.remove_child(app);app.queue_free();await frames(3)
+	print("EDITOR TEST COMPLETE: ",failures," failures");call_deferred("quit",1 if failures else 0)
