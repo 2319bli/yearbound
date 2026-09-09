@@ -339,6 +339,7 @@ func draw_canvas(n: Node2D) -> void:
 		n.draw_string(host.font,rect.position+Vector2(10,28),"↑" if zone.type=="updraft" else "→",HORIZONTAL_ALIGNMENT_LEFT,-1,20,Color("b3e9e9"))
 	for h in document.stage.hazards:
 		if h.type=="bramble": YBTerrainArt.bramble(n,Rect2(h.x,h.y,h.w,h.h),document.stage.season,h.get("direction","up"))
+		elif h.type=="storm": n.draw_rect(Rect2(h.x,h.y,h.w,h.h),Color(1,.75,.4,.24));n.draw_rect(Rect2(h.x,h.y,h.w,h.h),Color("edc180"),false,2)
 		else: n.draw_circle(Vector2(h.x,h.y),float(h.r),Color("d08b77"));n.draw_string(host.font,Vector2(h.x-6,h.y+5),"!",HORIZONTAL_ALIGNMENT_LEFT,-1,18,Color("fff2cc"))
 	for d in document.stage.decorations:
 		var at=Vector2(d.x,d.y)

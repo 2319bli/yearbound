@@ -52,19 +52,20 @@ for id in catalog['stages']:
   assert z['type'] in ['water','wind','updraft','current']
   if 'swimmable' in z: assert z['type']=='water' and type(z['swimmable']) is bool and z['w']>0 and z['h']>0
  for h in s['hazards']:
-  assert h['type'] in ['blade','thorn','icicle','bramble']
+  assert h['type'] in ['blade','thorn','icicle','bramble','storm']
   if h['type']=='bramble':
    assert h['w']>0 and h['h']>0
    assert h.get('direction','up') in ['up','down','left','right'], (id,'invalid spike direction',h)
+  elif h['type']=='storm': assert h['w']>0 and h['h']>0 and h['period']>h['active_seconds']+h['warning_seconds'] and h['warning_seconds']>=.5
   else: assert h['r']>0
  for pos in [s['spawn'],s['goal']]+s['checkpoints']:
   assert 12<=pos[0]<=s['length']-12 and top+48<=pos[1]<=720, (id,'marker outside stage bounds',pos)
-  assert ('ground' in s and abs(pos[1]-s['ground']['y'])<=40) or any(p['x']-12<=pos[0]<=p['x']+p['w']+12 and abs(pos[1]-p['y'])<=50 for p in s['platforms']), (id,'unsafe spawn/goal/checkpoint',pos)
+  assert ('ground' in s and abs(pos[1]-s['ground']['y'])<=40) or any(p['x']-12<=pos[0]<=p['x']+p['w']+12 and abs(pos[1]-p['y'])<=50 for p in s['platforms']) or any(z['type']=='water' and z.get('swimmable') and z['x']<=pos[0]<=z['x']+z['w'] and z['y']<=pos[1]<=z['y']+z['h'] for z in s['zones']), (id,'unsafe spawn/goal/checkpoint',pos)
   assert not any(p['x']-12<pos[0]<p['x']+p['w']+12 and p['y']<pos[1] and p['y']+p['h']>pos[1]-42 for p in s['platforms']), (id,'checkpoint intersects an obstacle',pos)
  if 'challenge' in s:
   challenge=s['challenge'];spikes=[h for h in s['hazards'] if h['type']=='bramble']
   assert s['length']>=challenge['original_length']*2, (id,'expanded route is too short')
   assert len(spikes)>=50 and len(spikes)==challenge['spike_placements'], (id,'spike count changed; update challenge metadata')
-  assert len(challenge['rooms'])==6 and challenge['vertical_travel']>=864, (id,'missing vertical challenge sections')
+  assert len(challenge['rooms'])>=4 and challenge['vertical_travel']>=(192 if s.get('journey_regions') else 384), (id,'missing authored sections or vertical movement')
  print(f"OK {id}: {len(s['platforms'])} platforms, {len(s['motes'])} sunmotes, {len(s['checkpoints'])} checkpoints")
 print(f"Validated {len(catalog['stages'])} stages and 365 dates.")

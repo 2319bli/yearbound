@@ -50,9 +50,10 @@ func run() -> void:
 	check(loaded.data.has("run") and loaded.data.run.collected.has(2.0),"checkpoint and collectibles survive save reload")
 	app.start_stage("06-30");await frames(20)
 	app.world.player.reset_at(Vector2(app.world.spec.boss.get("arena_x",0)+96,624));await frames(5)
-	app.world.boss_time=35.1;app.world.die();await frames(40)
-	check(app.world.boss_time>=35 and app.world.boss_time<36,"boss death preserves completed phase")
-	app.world.boss_time=104.99;app.world.projectiles.clear();await frames(3)
+	app.world.june_boss.enter(1);app.world.june_boss.phase_time=2;app.world.die();await frames(40)
+	check(app.world.june_boss.phase==1 and app.world.boss_time>=24 and app.world.boss_time<25,"boss death preserves completed phase")
+	app.world.june_boss.enter(4);app.world.june_boss.phase_time=35.99;app.world.projectiles.clear();await frames(3)
+	app.world.player.reset_at(Vector2(app.world.spec.goal[0],app.world.spec.goal[1]));await frames(3)
 	check(app.screen=="complete","boss survival triggers completion screen")
 	check(app.store.data.results.has("06-30"),"completion records a date result")
 	for id in ["06-01","06-15","10-12","01-18","03-09"]:

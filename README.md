@@ -1,140 +1,81 @@
-# Yearbound · Foundation 0.12.0
+# Yearbound · Foundation 0.13.0
 
-A native Godot platformer about travelling from 1 June to 31 May. Twenty-nine playable days now include extended vertical challenge routes, each at least twice its previous length and with 116–164 separate spike placements. The first seventeen June days each have their own setting; the supplied 1–17 June tracks are included. Every month now has a playable sample. The other 336 dates are deliberately unfinished.
+A native desktop platformer about travelling from 1 June to 31 May. **All 30 June dates are playable**, alongside eleven other-month samples. June now follows a chapter-wide design: five substantial connected places per day, with changing scenery, light, elevation and gameplay. The other 324 calendar dates remain unbuilt.
 
-## GitHub and building
+## Run the game
 
-The private repository is `2319bli/Yearbound`. Tag `v0.11.0` preserves the tested foundation before the workshop and campaign expansion. The repository includes the editable source, art and music; generated app packages, caches and player saves are excluded.
+Open the accompanying **Yearbound.app** on an Apple silicon Mac. The app includes its runtime and works offline. It is an ad-hoc signed development build, not a notarized public release.
 
-Clone the repository and import `project.godot` in Godot 4.6.2. On an Apple silicon Mac with Godot installed at `/Applications/Godot.app`, run `python3 tools/build_macos.py` to create `Yearbound.app` beside the project. Set `GODOT_BIN` for a different Godot executable. The downloadable app supplied alongside this project is already built.
+Move with **A/D**, arrows, or **J/L**. **Space/Z** jumps; hold for height. Hold **Shift/C**, aim with WASD/arrows/IJKL, then release for a charge dash. **Esc/P** pauses, **R** restarts at the checkpoint, and **F11** toggles fullscreen. Standard controllers use stick/D-pad, bottom face button to jump, X/West or right shoulder to charge, Start to pause and top face button to restart. Controls are rebindable in Settings. Physical controller hardware has not been tested.
 
-## Play
+**Explore the calendar** gives immediate access to all 41 samples. June runs from the welcoming village gate through early-summer countryside, midsummer brightness and longer evenings to the Squallkeeper. The monthly shortcuts along the bottom lead to the other seasonal samples.
 
-Open the accompanying **Yearbound.app** on an Apple silicon Mac. The app contains its own Godot runtime and works offline. No installation, account, browser, or development tools are required. This is a locally ad-hoc signed development build, not a notarized distribution release.
+## This chapter
 
-Move with **A/D**, **←/→**, or **J/L**. Jump with **Space** or **Z**; hold for height. **Esc/P** pauses, **R** returns to the checkpoint, and **F11** toggles fullscreen. Standard gamepads use left stick/D-pad, bottom face button to jump, Start to pause, and top face button to restart. Menus support mouse, ↑/↓, Tab, Enter, Escape, and standard gamepad confirm/back. Physical controller hardware was not available for testing.
+Each ordinary June stage contains five large places, not five single-screen challenges. Routes include open fields, interiors, low passages, climbs that carry their altitude forward, long descents, moving cargo, waterwheel circuits, windmill hoists, rivers, spring chains and backtracking. Room names in the HUD identify the current place. Backgrounds blend between environments; 8 and 29 June visibly progress into night. The Garden Maze includes returning corridors and optional side chambers beneath fading ivy.
 
-Walk past lanterns to save a checkpoint. Sunmotes are optional. Pass through the timber gate to finish a normal stage. The June boss ends after 105 seconds of successful survival; deaths restart the current 35-second phase. Amber lines telegraph attacks. No melee action is assigned. Charge dash is enabled throughout the playable campaign using the original settings with only the horizontal multiplier changed to 1.5. The Dash Lab remains available for tuning.
+30 June is a five-arena survival boss: an introductory dodge pattern, higher terraces, an advancing-storm chase, crossing attacks and a final squall followed by a clearing sky. Its health decreases through successful survival or chase progress. Completed phases remain completed after retries; cleared gates connect the arenas physically. There is no melee combat.
 
-The calendar lets you enter all twenty-nine playable days immediately. Use the twelve monthly shortcuts along the bottom or browse the months. Unbuilt dates say “A day yet to be written.”
+The supplied 1–22 June music is included. Dates 23–29 use distinct temporary synthesized scores pending supplied compositions. The existing boss and other-month music remain. See [JUNE_CHAPTER.md](docs/JUNE_CHAPTER.md) for every day’s route and [AUTHORED_DAYS.md](docs/AUTHORED_DAYS.md) for the other months and content pipeline.
 
-## Underwater November
+## Movement, lab and workshop
 
-Choose **19 November** in the calendar. Swim with **WASD / arrows / IJKL**, or the controller stick/D-pad. **Jump** also swims upward; **Down** dives. Let go to drift gently towards the surface. Dash keeps the original profile with horizontal 1.5, with water drag during the burst and a short recharge while swimming. Lanterns save underwater checkpoints. There is no breath timer. See `docs/UNDERWATER.md`.
+The base player controller, original charge-dash profile with **horizontal multiplier 1.5**, and underwater profile are unchanged. The **Charge dash lab** remains 44,160 pixels long with 17 stations. Pause there to select a station, adjust live tuning or export a profile. Saved tuning applies to campaign stages when entered. Lab attempts stay separate from campaign progress. See [CHARGE_DASH.md](docs/CHARGE_DASH.md).
 
-## Charge dash lab
+**19 November** is physically underwater. WASD/arrows/IJKL or the stick swims; Jump rises and Down dives. Water adds buoyancy, drag and dash recovery. There is no breath timer. See [UNDERWATER.md](docs/UNDERWATER.md).
 
-Choose **Charge dash lab** on the title screen. Hold **Shift / C** (controller **X / West / RB**), aim with WASD/arrows/IJKL or the left stick, then release. Short, medium and long holds blend smoothly, with different steering and momentum tradeoffs. **Esc / Start** opens seventeen stations and the complete live tuning panel; export a tuning JSON file to share your preferred feel. Controls can be rebound in Settings or from the lab panel. See `docs/CHARGE_DASH.md`.
+The **Layout workshop** can copy, edit and playtest every sample. It retains charge dash, selectable height, four spike directions, undo/redo, fills, pan/zoom and draft recovery. Authored platform tracks, timed hazards, journey environments and secret metadata survive save/open and playtest. Detailed environment, track and boss settings remain JSON fields. New blank days choose the next unfinished date, 1 July. See [WORKSHOP.md](docs/WORKSHOP.md).
 
-Lab attempts are isolated from campaign progress. Its tuning profile is shared with campaign play. The campaign keeps its established openings and adds longer vertical challenges; all playable days opt into charge dash. The lab is 44,160 logical pixels long, up from 21,120, with six extended courses.
+## Source and building
 
-## Layout workshop
+The private repository is **2319bli/Yearbound**. Earlier foundations remain tagged as `v0.11.0` and `v0.12.0`. Git includes editable source, artwork and music; app builds, caches, workshop drafts and player saves are excluded.
 
-Choose **Layout workshop** on the title screen to paint square blocks, place markers, set the date/theme/music and playtest your layouts. Save a shareable `.yearbound.json` file for incorporation as a day. The editor includes a visible charge-dash toggle, a height selector, four spike directions, undo/redo, rectangle fills, pan/zoom, sample copying and draft recovery. New layouts enable dash. Playtest uses the current Dash Lab profile and normal rebound controls. Campaign progress stays separate. See `docs/WORKSHOP.md` for the complete guide.
+Import `project.godot` in **Godot 4.6.2** and press F5. On Apple silicon macOS, run `python3 tools/build_macos.py` to build the standalone app beside the project. It defaults to `/Applications/Godot.app`; set `GODOT_BIN` for another engine executable. Editing the source does not update an already-built app until rebuilt.
 
-## The playable days
+- `content/calendar.json`: the 365-day journey and twelve boss slots.
+- `content/catalog.json`: available dates and featured monthly shortcuts.
+- `content/layouts/MM-DD.json`: explicit per-day room blueprints, environments, optional areas and QA routes.
+- `tools/build_authored_stages.py`: compiles blueprints into ordinary stage JSON; no seeded geometry or historical Git tag is required.
+- `content/stages/`: the data consumed by the game and workshop, including music and art references.
+- `scripts/player.gd`, `movement_tuning.gd`, `charge_dash.gd`, `charge_dash_tuning.gd`: shared movement and modular charge ability.
+- `scripts/swim_motion.gd`, `swim_tuning.gd`: physical water and tuning.
+- `scripts/platform_motion.gd`, `stage_hazards.gd`: platform paths and shared rendering/contact timing.
+- `scripts/june_boss.gd`: five-arena boss progression, attacks, chase and phase checkpoints.
+- `scripts/journey_scenery.gd`: per-place scenery, lighting transitions, interiors and optional-area covers.
+- `scripts/world.gd`, `world_layer.gd`, `terrain_art.gd`: collision, camera and ordered drawing passes.
+- `scripts/layout_editor.gd`, `layout_document.gd`: workshop, validation and compilation.
+- `scripts/main.gd`, `audio.gd`, `save.gd`, `controls.gd`: application menus, sound, versioned saves and bindings.
 
-| Date | Stage | Defining play |
-|---|---|---|
-| 1 June | The first sunlit path | A continuous meadow path, low countryside obstacles and optional timber routes beneath a wide summer sky. |
-| 2 June | Skipstones and Dragonfly Wings | A bright streamside path of pale stepping blocks, willow curtains and darting dragonflies. |
-| 3 June | Kites Above the Clover | An open clover common, long kite strings and little gusts above a low skyline. |
-| 4 June | Sunpatches on the Orchard Wall | Honey-coloured orchard walls, green fruit and patches of sun beneath a leafy canopy. |
-| 5 June | The Meadow Express | A tiny flower railway, timber cargo blocks and a little lakeside station in the tall grass. |
-| 6 June | Sunlight on the Waterwheel | Turning paddles, stone sluices and animated spray along an aquamarine millrace. |
-| 7 June | The Sunflower Shortcut | Tall golden sunflower lanes open into cool hazel shade, then turn back towards the sun. |
-| 8 June | Apricot Lanterns in the Breeze | A warm evening village green, swaying paper lanterns and gentle terraces beside a pavilion. |
-| 9 June | The Glasshouse Run | High glass panes, fern beds and palm galleries. Short ceramic steps lead through reflected early-summer light. |
-| 10 June | Cloverfield Crossing | Intersecting paths, little bridges and clover hedges open onto a broad common. |
-| 11 June | Riverside Rush | A wide silver river, rushing rapids and a quiet mooring. Long timber runs alternate with pale bank-side stones. |
-| 12 June | The Orchard Climb | Terraced apple trees, picking ladders and high boughs. Small staircases rise towards a view beyond the orchard. |
-| 13 June | Wildflower Way | Bluebells, pink flower drifts and pollinators fill a wide meadow with colour. Quiet gaps frame the low hopping route. |
-| 14 June | The Woodland Detour | Tall birches, foxgloves and fallen wood lead from cool leaf shade into a clearing full of light. |
-| 15 June | Windmill Heights | Tall windmill sails and lifting ribbons overlook a broad early-summer horizon. Ride the existing mill lifts and bellflower springs. |
-| 16 June | The Hayfield Hop | Round hay rolls, freshly cut rows and a weathered barn catch warm afternoon light. Square hay steps carry the hopping path. |
-| 17 June | Brookside Bounce | Little cascades, water-worn arches and lily pools. Pebble steps and optional bellflowers follow the brook into willow shade. |
-| 30 June | The keeper of the squall | Read the sky. Outlast three changing storm patterns to quiet the keeper. |
-| 16 July | The Long Light of Barley Common | Tailwinds over the cut fields. Chain low jumps and short dashes between the hay stacks. |
-| 23 August | The Lake Before the Storm | Golden light gives way to a storm. Cross lake jetties and use the ferry between gusts. |
-| 14 September | Copper Leaves, Quiet Footsteps | Copper woodland terraces. Keep moving across fragile leaf blocks, then brake for narrow perches. |
-| 12 October | A rustle before thunder | Leaf bridges give way beneath your feet. Find shelter between the gusts. |
-| 19 November | Lanterns Beneath the Flood | Full underwater swimming: buoyancy, diving through sunken beams, water resistance and opposing sluice currents. |
-| 8 December | The First White Mile | Follow the snowline through fir woods. Leave sheltered ledges between falling ice warnings. |
-| 18 January | The hush beneath the ice | Carry your momentum over frozen pools. Watch the glint of falling ice. |
-| 17 February | Where the Ice Lets Go | Thaw pools interrupt the old ice road. Carry speed over slick blocks and brake on exposed stone. |
-| 9 March | Where the river takes flight | Leap into waterfall updrafts. Let the rising spray lift you into spring. |
-| 11 April | A Rainbow Between Showers | Climb rain-washed garden terraces. Ride the rising spray and dash diagonally beneath the rainbow. |
-| 24 May | The Garden at the Edge of May | A long, lush garden path. Link flower springs, elevated walks and controlled diagonal landings. |
+See [AUTHORING.md](docs/AUTHORING.md) for the stage contract and [FOUNDATION.md](docs/FOUNDATION.md) for the architectural intent.
 
-The expanded stages span 13,152–23,808 logical pixels, with six named vertical challenge sections and 864–1,488 pixels of elevation change. All 29 have more than 50 independent spike placements (116–164, containing 756–1,162 visible tips). Existing openings act as a warmup; the longer courses combine sharp landing edges, underside/wall spikes, climbs, descents and checkpoint rest decks. The June boss follows a substantial approach and retains its 105-second survival fight. These are harder reference journeys, not a claim of final five-minute pacing or human difficulty balancing. See `docs/EXPANDED_CAMPAIGN.md` for the per-day measurements. The supplied 1–17 June soundtracks are included; the later sample tracks are original synthesized sketch scores intended for later musical development.
+## Saves
 
-See `docs/JUNE_09_17.md` for the latest nine June scenes, `docs/MONTHLY_SAMPLES.md` for the eight new monthly routes and `docs/JUNE_02_08.md` for the June decoration references.
+On macOS the save is `~/Library/Application Support/Godot/app_userdata/Yearbound/yearbound_v1.json`, with a `.bak` recovery copy. Settings, bindings, completed-day records and saved lab tuning are retained. An unfinished run from an older layout revision resumes at its new entrance because checkpoint and collectible positions have changed. June boss phases save independently. Optional sunmotes use the existing collectible save system.
 
-## Open the source
+## Verification
 
-Import `project.godot` into Godot 4.6.2 or a compatible Godot 4 version and press F6/F5 as appropriate (F5 runs the game). The app package is separate from the source. Editing JSON changes the source build; rebuild the package to update the app.
+Compile/check content with:
 
-- `scripts/layout_editor.gd`: built-in visual workshop and native file dialogs.
-- `scripts/layout_document.gd`: grid model, undo/redo, validation, JSON compilation and safe file writes.
-- `scripts/player.gd`: responsive CharacterBody2D movement, jump forgiveness and modular ability hooks.
-- `scripts/charge_dash.gd` / `charge_dash_tuning.gd`: the charge ability and its central tuning profile.
-- `scripts/swim_motion.gd` / `swim_tuning.gd` / `content/swimming.tres`: physical water volumes, buoyancy, drag, surface transitions and central swim tuning.
-- `scripts/water_art.gd`: layered water surface, depth, light, plants and bubbles.
-- `scripts/controls.gd`: persisted, validated keyboard/mouse/controller bindings.
-- `scripts/movement_tuning.gd` / `content/movement.tres`: shared, typed movement tuning resource.
-- `scripts/world.gd`: collision, mechanics, checkpoints, boss state and stage drawing methods.
-- `scripts/world_layer.gd`: explicit camera-bound drawing passes for scenery, environment, terrain, markers, hazards, particles, foreground and hints.
-- `scripts/terrain_art.gd`: consistent collision-aligned terrain silhouettes and material details.
-- `scripts/june_scenery.gd` / `content/june_scenes.json`: original June 9–17 scene compositions and animated landmarks.
-- `scripts/day_decor.gd`: per-day animated landmarks and seasonal scenic vocabulary.
-- `scripts/scenery.gd`: layered, non-colliding countryside props and environmental animation.
-- `content/terrain_styles.json`: shared terrain palette roles, selected or overridden per stage.
-- `scripts/landscape.gd`: detailed pixel-art seasonal backgrounds, sprites and environmental animation.
-- `scripts/main.gd`: application state and menus; UI/background use separate canvas layers.
-- `scripts/audio.gd`: music playback, level control and generated sound effects.
-- `scripts/save.gd`: versioned save, atomic replacement and backup recovery.
-- `content/catalog.json`: available stages and featured calendar shortcuts.
-- `content/calendar.json`: the full 365-day journey and twelve boss slots.
-- `content/themes.json`: editable seasonal colors.
-- `art/`: generated landscape and sprite assets, material textures, and the prompt/provenance record. Each stage can override its seasonal background using a `background` resource path.
-- `content/stages/`: level geometry, music references and mechanics.
-
-See `docs/AUTHORING.md` for the stage contract, `docs/ART_DIRECTION.md` for the countryside composition rules, and `docs/FOUNDATION.md` for architectural intent.
-
-## Saves and settings
-
-On macOS the normal save is `~/Library/Application Support/Godot/app_userdata/Yearbound/yearbound_v1.json`, with a `.bak` recovery copy. Progress includes the last day, latest checkpoint, collected motes, time/deaths, and completed-day records. Leaving a stage resumes at its most recent lantern, not the precise exit position. Restarting a day deliberately begins a new run. Settings save automatically. Gentle journey increases jump height and relaxes leaf/boss timing; it is optional.
-
-Tests can set `YEARBOUND_SAVE_DIR` to an existing scratch folder, so verification never modifies normal player progress.
-
-## Validation
-
-Run `python3 tools/validate_content.py`. Run the following from the project directory, using your Godot executable:
-
+```sh
+python3 tools/build_authored_stages.py --check
+python3 tools/validate_content.py
 ```
+
+For engine checks, set `YEARBOUND_SAVE_DIR` to a scratch directory, then run, for example:
+
+```sh
+godot --headless --path . --script tests/authored_routes.gd --fixed-fps 60
+godot --headless --path . --script tests/june_chapter.gd --fixed-fps 60
+godot --headless --path . --script tests/june_boss_routes.gd --fixed-fps 60
+godot --headless --path . --script tests/authored_campaign.gd --fixed-fps 60
+godot --headless --path . --script tests/authored_mechanics.gd --fixed-fps 60
+godot --headless --path . --script tests/editor.gd --fixed-fps 60
 godot --headless --path . --script tests/smoke.gd --fixed-fps 60
-godot --headless --path . --script tests/mechanics.gd --fixed-fps 60
 godot --headless --path . --script tests/controller.gd --fixed-fps 60
 godot --headless --path . --script tests/charge_dash.gd --fixed-fps 60
-godot --headless --path . --script tests/year_round.gd --fixed-fps 60
-godot --headless --path . --script tests/dash_interaction.gd --fixed-fps 60
-godot --headless --path . --script tests/lab_extended_routes.gd --fixed-fps 60
-godot --headless --path . --script tests/dash_lab.gd --fixed-fps 60
-godot --headless --path . --script tests/dash_routes.gd --fixed-fps 60
-godot --headless --path . --script tests/ground_layout.gd --fixed-fps 60
-godot --headless --path . --script tests/editor.gd --fixed-fps 60
-godot --headless --path . --script tests/june_week.gd --fixed-fps 60
-godot --headless --path . --script tests/june_second.gd --fixed-fps 60
-godot --headless --path . --script tests/expanded_campaign.gd --fixed-fps 60
-godot --headless --path . --script tests/campaign_openings.gd --fixed-fps 60
-godot --headless --path . --script tests/expanded_routes.gd --fixed-fps 60
 godot --headless --path . --script tests/swimming.gd --fixed-fps 60
 ```
 
-Always set `YEARBOUND_SAVE_DIR` to a scratch folder for these tests. `smoke.gd` deliberately records completion; `mechanics.gd` deliberately damages a test save to exercise backup recovery. `campaign_openings.gd` checks the warmup routes. `expanded_routes.gd` begins at each first new checkpoint and travels through the extended course using normal input, then checks the exit or boss entry. These are reachability checks, not substitutes for human playtesting. `tests/capture.gd` renders the menus and every installed stage with the native renderer when `YEARBOUND_CAPTURE_DIR` points to an existing folder.
+`authored_routes.gd` checks the 40 ordinary journeys continuously from their entrances, without moving the player between route points. The boss has separate full-duration arena survival tests, a chase traversal and state/transition tests. These establish reachability, not final human difficulty balance. Set `YEARBOUND_CAPTURE_DIR` to capture native views with `tests/authored_capture.gd`. The native `ground_layout.gd` suite also probes framebuffer layering.
 
-See `docs/GROUND_AND_LAYERS.md` for the 0.5 layout and layering changes. See `docs/VALIDATION.md` for this build's results and limits, and `docs/MOVEMENT.md` for the 0.4 movement changes and tuning guide.
-
-## Next production milestones
-
-Continue testing the shared charge dash in the lab and across the monthly samples before committing to final stage designs. Replace sketch scores with individual compositions. Expand each approved sample into an approximately five-minute authored journey with distinct landmarks and optional discoveries. Expand the workshop with selection/move tools, detailed mechanic inspectors and per-day asset import. Expand device-specific controller glyphs, multiple save slots, localization, and formal accessibility review. Split the boss and growing mechanic families into dedicated resources/components when their complexity warrants it. Windows/Linux/Intel Mac exports need their respective Godot export templates; they are not included in this Apple silicon build.
+See [VALIDATION.md](docs/VALIDATION.md) for the delivered build’s verification and limits. Final pacing, human balance, physical controller testing and Windows/Linux/Intel Mac exports remain production work. The foundation deliberately leaves the second major mechanic and full storyline open.

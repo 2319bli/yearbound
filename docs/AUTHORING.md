@@ -5,7 +5,7 @@ All current terrain uses `grid_size: 48`. Platform `x`, `y`, `w` and `h` are mul
 # Adding a day
 
 1. Create `content/stages/MM-DD.json` using an existing file as a schema reference. Author a new layout and identity; copying terrain unchanged and recoloring it is not a finished day.
-2. Add its `MM-DD` identifier to `content/catalog.json` → `stages`. The application discovers it without a code change. Keep `featured` to the six review shortcuts for this UI.
+2. Add its `MM-DD` identifier to `content/catalog.json` → `stages`. The application discovers it without a code change. Use `featured` for the monthly review shortcuts.
 3. The calendar's availability derives from the catalog at runtime. All 365 dates already exist. The calendar is year-neutral and excludes leap day; the listed date sequence starts on 1 June and ends on 31 May.
 4. Assign a unique title, description, music path, terrain and mechanic arrangement. Use `content/themes.json` for palette values. Existing seasonal profile names also select background treatment such as pines, leaves or waterfalls.
 5. Run the content validator, then play from start to finish with standard controls and gentle journey off. Check optional routes and recovery after every checkpoint. Package again when the source is approved.
@@ -125,3 +125,7 @@ See `JUNE_02_08.md` for the independent 2–8 June design briefs and their `iden
 ## Monthly samples and campaign dash · 0.9
 
 All current stages opt into `abilities: ["charge_dash"]`. `ambience.month_scene` selects additional monthly scenery and weather through `content/month_scenes.json`; monthly terrain palettes remain in `terrain_styles.json`. See `MONTHLY_SAMPLES.md` for the new dates, landmark vocabulary and workshop round-trip contract.
+
+## Authored campaign blueprints
+
+The 41 current samples are compiled from explicit `content/layouts/MM-DD.json` room blueprints. See [AUTHORED_DAYS.md](AUTHORED_DAYS.md) for revisions, compilation, platform tracks, storm timing and the relationship to workshop exports. Ordinary new stage JSON is still supported directly.

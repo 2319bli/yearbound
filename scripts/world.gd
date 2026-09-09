@@ -22,6 +22,7 @@ var age := 0.0
 var respawn_delay := 0.0
 var flash := 0.0
 var boss_time := 0.0
+var june_boss: YBJuneBoss
 var boss_spawn_clock := 0.0
 var boss_attack := 0
 var complete := false
@@ -74,6 +75,10 @@ func setup(data: Dictionary, settings: Dictionary) -> void:
 	player.z_index = 20
 	player.position = checkpoint
 	add_child(player)
+	if spec.has("boss") and spec.boss.has("phases"):
+		june_boss=YBJuneBoss.new(self);june_boss.enter(0)
+	camera_x=clampf(checkpoint.x-400,0,maxf(0,float(spec.length)-1280));camera_y=clampf(checkpoint.y-430,float(spec.get("world_top",0)),0)
+	camera.position=Vector2(camera_x+640,camera_y+360)
 	# All world content shares the same camera and pixel composite, below the UI.
 	for entry in [["backdrop",-20],["scenery",-10],["environment",-5],["terrain",0],["markers",10],["hazards",25],["effects",30],["foreground",35],["signs",40]]:
 		var layer=YBWorldLayer.new()
@@ -88,17 +93,25 @@ func setup(data: Dictionary, settings: Dictionary) -> void:
 			burst(player.position,Color("dae4ba"),6))
 
 func snapshot() -> Dictionary:
-	return {"id":spec.id,"layout_revision":spec.get("layout_revision",1),"checkpoint_index":checkpoint_index,"elapsed":elapsed,"deaths":deaths,"collected":collected.keys(),"boss_time":floorf(boss_time/35)*35}
+	return {"id":spec.id,"layout_revision":spec.get("layout_revision",1),"checkpoint_index":checkpoint_index,"elapsed":elapsed,"deaths":deaths,"collected":collected.keys(),"boss_cleared":june_boss.cleared if june_boss else false,"boss_phase":june_boss.phase if june_boss else 0,"boss_time":floorf(boss_time/35)*35}
 
 func restore(state: Dictionary) -> void:
+	if int(state.get("layout_revision",-1))!=int(spec.get("layout_revision",1)):
+		state=state.duplicate(true);state.checkpoint_index=-1;state.collected=[];state.boss_time=0;state.boss_phase=0;state.boss_cleared=false
 	checkpoint_index = clampi(int(state.get("checkpoint_index",-1)),-1,spec.checkpoints.size()-1)
+	checkpoint=Vector2(spec.spawn[0],spec.spawn[1])
 	if checkpoint_index >= 0:
 		var c = spec.checkpoints[checkpoint_index]
 		checkpoint = Vector2(c[0],c[1])
 	elapsed = float(state.get("elapsed",0))
 	deaths = int(state.get("deaths",0))
+	collected.clear()
 	for i in state.get("collected",[]): collected[int(i)] = true
 	boss_time = clampf(float(state.get("boss_time",0)),0,70)
+	if june_boss:
+		june_boss.enter(int(state.get("boss_phase",0)))
+		if state.get("boss_cleared",false):
+			june_boss.phase_time=float(june_boss.data().duration);june_boss.cleared=true;june_boss.defeated=june_boss.phase==4;boss_time=june_boss.earned_time()
 	player.reset_at(checkpoint)
 	camera_x = clampf(player.position.x-400,0,maxf(0,float(spec.length)-1280))
 	camera_y = clampf(player.position.y-430,float(spec.get("world_top",0)),0)
@@ -124,7 +137,7 @@ func _physics_process(dt: float) -> void:
 	if respawn_delay > 0:
 		respawn_delay -= dt
 		if respawn_delay <= 0:
-			if spec.has("lab_stations"): age=0
+			if spec.has("lab_stations") or spec.has("design") and not boss_active: age=0
 			player.reset_at(checkpoint)
 			camera_x=clampf(checkpoint.x-400,0,maxf(0,float(spec.length)-1280));camera_y=clampf(checkpoint.y-430,float(spec.get("world_top",0)),0)
 			camera.position=Vector2(camera_x+640,camera_y+360)
@@ -139,14 +152,15 @@ func _physics_process(dt: float) -> void:
 		var body: StaticBody2D = platform.body
 		var old = body.position
 		if d.kind == "moving":
-			var axis = Vector2.RIGHT if d.axis == "x" else Vector2.DOWN
-			body.position = platform.base + axis*sin(age*float(d.speed))*float(d.distance)
-			if player.is_on_floor() and player.velocity.y >= 0 and absf(player.position.y-old.y) < 3 and player.position.x > old.x-10 and player.position.x < old.x+float(d.w)+10:
+			body.position = platform.base + YBPlatformMotion.offset(d,age)
+			# Fast authored tracks can move more than the legacy 3 px contact tolerance per tick.
+			var contact_margin=maxf(3,absf(body.position.y-old.y)+1) if d.has("motion_path") else 3.0
+			if player.is_on_floor() and player.velocity.y >= 0 and absf(player.position.y-old.y) < contact_margin and player.position.x > old.x-10 and player.position.x < old.x+float(d.w)+10:
 				player.position += body.position-old
 				player.remember_lift((body.position-old)/dt)
 		var standing = player.is_on_floor() and player.velocity.y >= 0 and absf(player.position.y-body.position.y) < 4 and player.position.x > body.position.x-8 and player.position.x < body.position.x+float(d.w)+8
 		if standing:
-			if d.kind == "ice": player.ice = true
+			if d.kind == "ice" or d.get("surface","")=="ice": player.ice = true
 			if d.kind == "spring":
 				player.bounce(float(d.get("power",850)))
 				sound.emit("spring")
@@ -183,20 +197,23 @@ func _physics_process(dt: float) -> void:
 			burst(mote,Color("ffe8a1"),8)
 	for i in spec.checkpoints.size():
 		var c = Vector2(spec.checkpoints[i][0],spec.checkpoints[i][1])
-		if i > checkpoint_index and player.position.distance_to(c) < 58:
+		if not june_boss and i > checkpoint_index and player.position.distance_to(c) < 58:
 			checkpoint_index = i
 			checkpoint = c
 			sound.emit("checkpoint")
 			burst(c-Vector2(0,48),Color("ffdf89"),22)
 			checkpoint_reached.emit()
 	for hazard in spec.hazards:
-		if hazard.type=="bramble":
+		if not YBStageHazards.active(hazard,age): continue
+		if YBStageHazards.rectangular(hazard):
 			var hitbox=Rect2(player.position-Vector2(10,38),Vector2(20,38))
 			if hitbox.intersects(Rect2(hazard.x,hazard.y,hazard.w,hazard.h)): die()
 			continue
 		var at = hazard_position(hazard)
 		if at.distance_to(player.position-Vector2(0,21)) < float(hazard.r)+15: die()
-	if spec.has("boss"):
+	if june_boss:
+		june_boss.update(dt)
+	elif spec.has("boss"):
 		if not boss_active and player.position.x>=float(spec.boss.get("arena_x",0))+48:
 			boss_active=true;boss_spawn_clock=2.0
 		if boss_active:
@@ -209,19 +226,12 @@ func _physics_process(dt: float) -> void:
 	camera_x = lerpf(camera_x,target,1-exp(-dt*5))
 	var vertical_target=clampf(player.position.y-430+clampf(player.velocity.y*.08,-55,70),float(spec.get("world_top",0)),0)
 	camera_y=lerpf(camera_y,vertical_target,1-exp(-dt*7))
-	if boss_active and spec.has("boss"): camera_x=float(spec.boss.get("arena_x",0));camera_y=0
+	if boss_active and spec.has("boss") and not june_boss: camera_x=float(spec.boss.get("arena_x",0));camera_y=0
 	camera.position = Vector2(camera_x+640,camera_y+360)
 	queue_redraw()
 
 func hazard_position(h: Dictionary) -> Vector2:
-	var at = Vector2(h.x,h.y)
-	if h.type == "icicle":
-		var cycle = fposmod(age+float(h.get("phase",0)),float(h.period))
-		at.y = -100 if cycle < 1.35 else 140+pow(cycle-1.35,2)*820
-	else:
-		var axis = Vector2.RIGHT if h.get("axis","y") == "x" else Vector2.DOWN
-		at += axis*sin(age*float(h.get("speed",1)))*float(h.get("distance",0))
-	return at
+	return YBStageHazards.position(h,age)
 
 func die() -> void:
 	if respawn_delay > 0 or complete: return
@@ -234,7 +244,9 @@ func die() -> void:
 	player.visible = false
 	player.velocity = Vector2.ZERO
 	sound.emit("death")
-	if spec.has("boss"):
+	if june_boss:
+		june_boss.retry()
+	elif spec.has("boss"):
 		boss_time = floorf(boss_time/35)*35
 		projectiles.clear()
 		boss_spawn_clock = 1.5
@@ -253,7 +265,8 @@ func dash_hazard_sweep(from: Vector2, to: Vector2) -> void:
 	if respawn_delay>0 or complete: return
 	var a=from-Vector2(0,19);var b=to-Vector2(0,19)
 	for hazard in spec.hazards:
-		if hazard.type=="bramble":
+		if not YBStageHazards.active(hazard,age): continue
+		if YBStageHazards.rectangular(hazard):
 			var rect=Rect2(hazard.x-10,hazard.y-19,hazard.w+20,hazard.h+38)
 			if segment_hits_rect(a,b,rect): die();return
 		else:
@@ -321,6 +334,7 @@ func draw_backdrop(n: Node2D) -> void:
 
 func draw_scenery(n: Node2D) -> void:
 	YBScenery.stage_layer(n,spec,platforms,0 if reduced_motion else age,camera_x,"back")
+	YBJourneyScenery.foreground_places(n,spec,Vector2(camera_x,camera_y),player.position,0 if reduced_motion else age)
 	if spec.get("grid_size",0)==48: return
 	for platform in platforms:
 		if platform.gone or platform.body.position.x+float(platform.data.w)<camera_x-100 or platform.body.position.x>camera_x+1380: continue
@@ -366,6 +380,16 @@ func draw_markers(n: Node2D) -> void:
 
 func draw_hazards(n: Node2D) -> void:
 	for h in spec.hazards:
+		if h.type=="storm":
+			if h.x+h.w<camera_x-32 or h.x>camera_x+1312: continue
+			var rect=Rect2(h.x,h.y,h.w,h.h)
+			if YBStageHazards.active(h,age):
+				n.draw_rect(rect,Color(.65,.86,1,.3));n.draw_line(Vector2(h.x+h.w*.5,h.y),Vector2(h.x+h.w*.5,h.y+h.h),Color("f2fbff"),7)
+			elif YBStageHazards.warning(h,age):
+				n.draw_rect(rect,Color(1,.7,.3,.13));n.draw_rect(rect,Color("f4c474"),false,2)
+			else:
+				n.draw_line(Vector2(h.x,h.y+h.h),Vector2(h.x+h.w,h.y+h.h),Color("779395"),3)
+			continue
 		if h.type=="bramble":
 			if h.x+h.w<camera_x-32 or h.x>camera_x+1312 or h.y+h.h<camera_y-32 or h.y>camera_y+752: continue
 			YBTerrainArt.bramble(n,Rect2(h.x,h.y,h.w,h.h),spec.season,h.get("direction","up"))
@@ -373,9 +397,10 @@ func draw_hazards(n: Node2D) -> void:
 		var at = hazard_position(h)
 		if h.type == "icicle":
 			var cycle = fposmod(age+float(h.get("phase",0)),float(h.period))
-			if cycle < 1.35:
-				n.draw_line(Vector2(h.x,240),Vector2(h.x,555),Color(1,0.71,0.39,0.25+sin(age*12)*0.12),2,true)
-				n.draw_circle(Vector2(h.x,260),7,Color("ffc987"),true,-1,true)
+			if cycle < float(h.get("warning_seconds",1.35)):
+				var warning_y=float(h.y) if h.get("local",false) else 240.0
+				n.draw_line(Vector2(h.x,warning_y),Vector2(h.x,float(h.get("floor_y",555))),Color(1,0.71,0.39,0.25+sin(age*12)*0.12),2,true)
+				n.draw_circle(Vector2(h.x,warning_y+20),7,Color("ffc987"),true,-1,true)
 			n.draw_colored_polygon(PackedVector2Array([at+Vector2(-13,-24),at+Vector2(13,-24),at+Vector2(0,23)]),Color("eaffff"))
 			n.draw_line(at+Vector2(-13,-24),at+Vector2(0,23),Color("427e9e"),3,true)
 		else:
@@ -403,6 +428,12 @@ func draw_signs(n: Node2D) -> void:
 				n.draw_string(font,Vector2(entry.x-w/2,entry.y+i*27),lines[i],HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color(1,0.96,0.82,alpha))
 
 func draw_environment(n: Node2D) -> void:
+	for p in platforms:
+		if p.data.kind!="moving" or not p.data.has("motion_path") or p.base.x<camera_x-1100 or p.base.x>camera_x+1400: continue
+		var track=PackedVector2Array()
+		for point in p.data.motion_path: track.append(p.base+Vector2(p.data.w*.5,24)+Vector2(point[0],point[1]))
+		track.append(track[0]);n.draw_polyline(track,Color(.77,.79,.65,.45),2)
+		for point in track: n.draw_circle(point,4,Color("b1b999"))
 	for zone in spec.zones:
 		if zone.x+zone.w>=camera_x-80 and zone.x<=camera_x+1360: draw_zone(n,zone)
 
@@ -414,7 +445,7 @@ func draw_effects(n: Node2D) -> void:
 	for zone in player.swimming.volumes:
 		if zone.x<=camera_x and zone.x+zone.w>=camera_x+1280: rain_floor=minf(rain_floor,zone.y)
 	if YBMonthScenery.scenes.has(scene): YBMonthScenery.weather(n,scene,camera_x,age if not reduced_motion else 0,rain_floor)
-	else: YBLandscape.foreground(n,spec.season,camera_x,age if not reduced_motion else 0)
+	elif not june_boss or not june_boss.defeated: YBLandscape.foreground(n,spec.season,camera_x,age if not reduced_motion else 0)
 	n.draw_set_transform(Vector2.ZERO)
 	YBWaterArt.foreground(n,player.swimming.volumes,camera_x,age if not reduced_motion else 0,player)
 
@@ -427,6 +458,11 @@ func draw_zone(n: Node2D, z: Dictionary) -> void:
 		if z.get("swimmable",false): YBWaterArt.volume(n,z,camera_x,age if not reduced_motion else 0)
 		return
 	if z.type=="updraft":
+		if z.get("visual","")=="wind":
+			for i in 22:
+				var at=Vector2(z.x+18+fposmod(i*47,z.w-36),z.y+fposmod(i*71-age*190,z.h))
+				n.draw_polyline(PackedVector2Array([at+Vector2(-7,7),at,at+Vector2(7,7)]),Color(.88,.96,.84,.42),1.5)
+			return
 		# Water falls at the far edge; curved spray reveals the rising air beside it.
 		for i in 18:
 			var x=float(z.x)+float(z.w)-27+i*1.4
@@ -453,6 +489,8 @@ func draw_zone(n: Node2D, z: Dictionary) -> void:
 			n.draw_line(Vector2(x,y),Vector2(x+28,y-3),Color(0.88,0.9,0.80,0.12+maxf(0,sin(age*1.5))*0.25),1,true)
 
 func draw_boss(n: Node2D) -> void:
+	if june_boss:
+		june_boss.draw(n);return
 	var origin=float(spec.boss.get("arena_x",0))
 	var at = Vector2(origin+640+sin(age*0.6)*180,165+sin(age*1.2)*18)
 	var bird=YBLandscape.texture("res://art/squallkeeper.png")

@@ -21,22 +21,24 @@ func run() -> void:
 	Input.action_press("jump");await frames(9)
 	check(p.velocity.y < -400,"buffered jump fires on landing")
 	Input.action_release("jump")
-	app.start_stage("06-15");await frames(3);p=app.world.player
+	app.start_stage("06-13");await frames(3);p=app.world.player
 	var spring=app.world.platforms.filter(func(item): return item.data.kind=="spring")[0]
 	p.reset_at(spring.body.position+Vector2(spring.data.w/2,-25));p.velocity.y=200;await frames(17)
 	check(p.velocity.y < -500,"bellflower platform launches player")
-	app.start_stage("10-12");await frames(3);p=app.world.player
+	app.start_stage("09-14");await frames(3);p=app.world.player
 	var leaf=app.world.platforms.filter(func(item): return item.data.kind=="crumble")[0]
 	p.reset_at(leaf.body.position+Vector2(leaf.data.w/2,-10));await frames(48)
 	check(leaf.gone,"leaf platform crumbles after contact")
 	await frames(235)
 	check(not leaf.gone,"leaf platform regenerates")
 	app.start_stage("01-18");await frames(3);p=app.world.player
-	p.reset_at(Vector2(850,app.world.spec.ground.y));await frames(4)
+	var frozen=app.world.platforms.filter(func(item):return item.data.kind=="ice")[0]
+	p.reset_at(frozen.body.position+Vector2(100,0));await frames(4)
 	p.velocity.x=300;await frames(10)
 	check(p.ice and p.velocity.x>250,"ice preserves momentum when input releases")
 	app.start_stage("03-09");await frames(3);p=app.world.player
-	p.reset_at(Vector2(1000,510));await frames(30)
+	var spray=app.world.spec.zones.filter(func(z):return z.type=="updraft")[0]
+	p.reset_at(Vector2(spray.x+spray.w*.5,510));await frames(30)
 	check(p.velocity.y<0 and p.position.y<490,"waterfall updraft lifts without an attack ability")
 	app.world.checkpoint_index=0;app.save_run();app.save_run()
 	var path=app.store.PATH

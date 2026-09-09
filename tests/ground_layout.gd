@@ -44,7 +44,7 @@ func run() -> void:
 		check(continuous,id+" has continuous collision at one flat ground height")
 		var old_run={"checkpoint_index":0,"collected":[0],"elapsed":12.0,"deaths":2}
 		w.restore(old_run);await frames(3)
-		check(absf(w.player.position.y-float(w.spec.ground.y))<2,id+" legacy checkpoint resumes on the new floor")
+		check(absf(w.player.position.y-float(w.spec.ground.y))<2 or w.player.swimming.submerged,id+" legacy checkpoint resumes on the floor or in physical water")
 		check(w.elapsed>=12 and w.deaths==2,id+" resume preserves time and death records")
 	app.start_stage("06-01");await frames(3)
 	var w=app.world

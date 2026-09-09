@@ -24,7 +24,7 @@ static func blank() -> Dictionary:
 	base.title="A day of your own";base.description="A layout made in the Yearbound workshop."
 	base.length=4608;base.spawn=[120,624];base.goal=[4488,624]
 	base.platforms=[];base.motes=[];base.checkpoints=[];base.hazards=[];base.zones=[];base.signs=[];base.decorations=[]
-	base.erase("decoration_profile");base.erase("challenge");base["world_top"]=0;base["abilities"]=["charge_dash"];base["editor_version"]=2
+	base.erase("decoration_profile");base.erase("challenge");base.erase("design");base.erase("journey_regions");base.erase("secret_areas");base["world_top"]=0;base["abilities"]=["charge_dash"];base["editor_version"]=2
 	return base
 func load_stage(value: Dictionary) -> void:
 	stage=value.duplicate(true);cells.clear();history.clear();future.clear();pending.clear()
@@ -218,22 +218,29 @@ static func errors(s: Variant, check_playable: bool=false) -> PackedStringArray:
 		if p.kind=="moving":
 			if not p.get("axis") in ["x","y"] or not number(p.get("distance")) or not number(p.get("speed")): return PackedStringArray(["Invalid moving block settings."])
 			if p.distance<=0 or p.distance>960 or p.speed<=0 or p.speed>6: out.append("Moving block settings are outside the supported range.")
+			if p.has("motion_path"):
+				if not p.motion_path is Array or p.motion_path.size()<2 or p.motion_path.size()>32 or not number(p.get("motion_seconds")) or p.motion_seconds<1: return PackedStringArray(["Invalid platform track."])
+				if p.has("motion_phase") and not number(p.motion_phase): return PackedStringArray(["Invalid platform phase."])
+				for offset in p.motion_path:
+					if not point(offset) or p.x+offset[0]<0 or p.x+p.w+offset[0]>s.length or p.y+offset[1]<top or p.y+p.h+offset[1]>720: return PackedStringArray(["A platform track leaves the stage bounds."])
 		if p.kind=="spring" and (not number(p.get("power")) or p.power<100 or p.power>1500): out.append("Invalid spring strength.")
 	for field in ["hazards","zones","decorations","signs"]:
 		for obj in s[field]:
 			if not obj is Dictionary: return PackedStringArray(["Invalid item in "+field])
 			for name in ["x","y"]:
 				if not number(obj.get(name)): return PackedStringArray(["Missing position in "+field])
-			for name in ["w","h","r","speed","distance","phase","period","width","height","scale"]:
+			for name in ["w","h","r","speed","distance","phase","period","width","height","scale","warning_seconds","active_seconds","fall_acceleration","floor_y"]:
 				if obj.has(name) and (not number(obj[name]) or absf(obj[name])>50000): return PackedStringArray(["Invalid numeric setting in "+field])
 			for name in ["w","h","r","width","height","scale","period"]:
 				if obj.has(name) and obj[name]<=0: return PackedStringArray(["Dimensions must be positive in "+field])
 			if field=="hazards":
 				if obj.get("direction","up") not in ["up","down","left","right"]: out.append("Unknown spike direction.")
-				if not obj.get("type") in ["bramble","blade","thorn","icicle"]: out.append("Unknown hazard.")
-				elif obj.type=="bramble" and (not obj.has("w") or not obj.has("h")): out.append("Bramble size is missing.")
-				elif obj.type!="bramble" and not obj.has("r"): out.append("Hazard radius is missing.")
+				if not obj.get("type") in ["bramble","blade","thorn","icicle","storm"]: out.append("Unknown hazard.")
+				elif obj.type in ["bramble","storm"] and (not obj.has("w") or not obj.has("h")): out.append("Hazard size is missing.")
+				elif obj.type not in ["bramble","storm"] and not obj.has("r"): out.append("Hazard radius is missing.")
 				elif obj.type=="icicle" and not obj.has("period"): out.append("Icicle timing is missing.")
+				if obj.type=="storm":
+					if not number(obj.get("period")) or not number(obj.get("active_seconds")) or not number(obj.get("warning_seconds")) or obj.active_seconds<=0 or obj.warning_seconds<0.5 or obj.period<=obj.active_seconds+obj.warning_seconds: out.append("Storm lanes need a safe interval and a visible warning.")
 			if field=="zones":
 				if not obj.get("type") in ["water","wind","updraft","current"] or not obj.has("w") or not obj.has("h") or (obj.type!="water" and not point(obj.get("force"))): out.append("Invalid environmental zone.")
 				if obj.has("swimmable") and (obj.type!="water" or not obj.swimmable is bool): out.append("Only water zones can have a boolean swimmable flag.")
@@ -243,12 +250,43 @@ static func errors(s: Variant, check_playable: bool=false) -> PackedStringArray:
 				if obj.has("platform"): out.append("Use world positions for editor decorations.")
 				if obj.has("season") and not obj.season in SEASONS: out.append("Unknown decoration season.")
 			if field=="signs" and (not obj.get("text") is String or obj.text.length()>500): out.append("Invalid sign text.")
-	if s.has("boss") and (not s.boss is Dictionary or not number(s.boss.get("duration")) or s.boss.duration!=105): out.append("This editor preserves the existing 105-second boss pattern only.")
+	if s.has("journey_regions"):
+		if not s.journey_regions is Array or s.journey_regions.is_empty():out.append("Journey places must be a nonempty list.")
+		else:
+			var boundary=0.0
+			for region in s.journey_regions:
+				if not region is Dictionary or not number(region.get("x")) or not number(region.get("y")) or not number(region.get("w")):
+					out.append("A journey place needs numeric bounds.");continue
+				if region.x!=boundary or region.w<=0 or region.x+region.w>s.length:out.append("Journey places must connect inside the stage bounds.")
+				if not YBJourneyScenery.PLATES.has(region.get("place","")) or not YBJourneyScenery.LIGHT.has(region.get("light","day")):out.append("A journey place uses an unknown environment or light setting.")
+				boundary=region.x+region.w
+	if s.has("secret_areas"):
+		if not s.secret_areas is Array:out.append("Secret areas must be a list.")
+		else:
+			for area in s.secret_areas:
+				if not area is Dictionary or not area.get("rect") is Array or area.rect.size()!=4 or not area.rect.all(number):out.append("A secret area needs four numeric rectangle values.")
+				elif area.rect[2]<=0 or area.rect[3]<=0:out.append("A secret area needs positive dimensions.")
+	if s.has("boss"):
+		if not s.boss is Dictionary or not number(s.boss.get("duration")) or s.boss.duration<=0:out.append("Boss timing must be positive.")
+		elif s.boss.has("phases"):
+			if not s.boss.phases is Array or s.boss.phases.size()!=5:out.append("The June boss needs five arenas.")
+			else:
+				var boundary=0.0;var duration=0.0
+				for phase in s.boss.phases:
+					if not phase is Dictionary or not number(phase.get("from_x")) or not number(phase.get("to_x")) or not number(phase.get("duration")) or not number(phase.get("warning")) or not number(phase.get("interval")) or not point(phase.get("checkpoint")):
+						out.append("A boss arena has incomplete timing or bounds.");continue
+					if phase.from_x!=boundary or phase.to_x<=phase.from_x or phase.to_x>s.length or phase.duration<=0 or phase.warning<.5 or phase.interval<=0:out.append("Boss arenas need connected bounds and readable warnings.")
+					if phase.get("pattern","") not in ["rain","terraces","chase","crosswind","final"]:out.append("Unknown boss arena pattern.")
+					boundary=phase.to_x;duration+=phase.duration
+				if not is_equal_approx(duration,float(s.boss.duration)):out.append("Boss duration must match its arena timings.")
+		elif s.boss.duration!=105:out.append("Legacy bosses use the existing 105-second pattern.")
 	if not out.is_empty() or not check_playable: return out
 	for pos in [s.spawn,s.goal]+s.checkpoints:
 		if pos[0]<12 or pos[0]>s.length-12 or pos[1]<top+48 or pos[1]>720: out.append("A start, exit or checkpoint is outside the playable area.");continue
 		var foot=Vector2(pos[0],pos[1]);var body=Rect2(foot-Vector2(12,42),Vector2(24,41))
 		var supported=s.has("ground") and absf(s.ground.y-foot.y)<1
+		for zone in s.zones:
+			if zone.type=="water" and zone.get("swimmable",false) and Rect2(zone.x,zone.y,zone.w,zone.h).has_point(foot): supported=true
 		for p in s.platforms:
 			if Rect2(p.x,p.y,p.w,p.h).intersects(body): out.append("A start, exit or checkpoint is inside a solid block.");break
 			if p.kind not in ["moving","spring","crumble"] and absf(p.y-foot.y)<1 and foot.x>=p.x+10 and foot.x<=p.x+p.w-10: supported=true

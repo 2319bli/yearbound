@@ -1,0 +1,2904 @@
+{
+  "schema_version": 1,
+  "revision": 13,
+  "day": "11-19",
+  "identity": "Submerged sluice maze",
+  "intent": "Swim through offset wall openings, manage currents, and change depth throughout the route.",
+  "world_top": -3072,
+  "spawn": [
+    120,
+    624
+  ],
+  "length": 17376,
+  "goal": [
+    17256,
+    624
+  ],
+  "sections": [
+    {
+      "name": "The flooded entrance",
+      "lesson": "Swim up to the first opening · down to the next",
+      "origin": [
+        0,
+        0
+      ],
+      "width": 2592,
+      "platforms": [
+        {
+          "x": 0,
+          "y": -816,
+          "w": 2592,
+          "h": 48,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": -768,
+          "w": 96,
+          "h": 960,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": 480,
+          "w": 96,
+          "h": 144,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 816,
+          "y": -768,
+          "w": 96,
+          "h": 672,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 816,
+          "y": 192,
+          "w": 96,
+          "h": 432,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1344,
+          "y": -768,
+          "w": 96,
+          "h": 288,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1344,
+          "y": -96,
+          "w": 96,
+          "h": 720,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1920,
+          "y": -768,
+          "w": 96,
+          "h": 816,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1920,
+          "y": 336,
+          "w": 96,
+          "h": 288,
+          "kind": "block",
+          "material": "stone"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 192,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 192,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": -96,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": -96,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": -480,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": -480,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": -120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": -120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 48,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 48,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        }
+      ],
+      "zones": [
+        {
+          "x": 0,
+          "y": -960,
+          "w": 2592,
+          "h": 1680,
+          "type": "water",
+          "swimmable": true
+        },
+        {
+          "x": 432,
+          "y": 192,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            130,
+            -30
+          ]
+        },
+        {
+          "x": 912,
+          "y": -96,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -130,
+            -30
+          ]
+        },
+        {
+          "x": 1440,
+          "y": -480,
+          "w": 336,
+          "h": 384,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            130,
+            -30
+          ]
+        },
+        {
+          "x": 2016,
+          "y": 48,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -130,
+            -30
+          ]
+        }
+      ],
+      "motes": [
+        [
+          120.0,
+          559
+        ],
+        [
+          144,
+          463
+        ],
+        [
+          240,
+          271
+        ],
+        [
+          528,
+          271
+        ],
+        [
+          720,
+          -17
+        ],
+        [
+          1008,
+          -17
+        ],
+        [
+          1248,
+          -353
+        ],
+        [
+          1536,
+          -353
+        ],
+        [
+          1824,
+          127
+        ],
+        [
+          2112,
+          127
+        ],
+        [
+          2448,
+          463
+        ]
+      ],
+      "checkpoints": [],
+      "decorations": [
+        {
+          "type": "boathouse",
+          "x": 480,
+          "y": 480,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        },
+        {
+          "type": "boathouse",
+          "x": 960,
+          "y": 192,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        },
+        {
+          "type": "boathouse",
+          "x": 1488,
+          "y": -96,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        },
+        {
+          "type": "boathouse",
+          "x": 2064,
+          "y": 336,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        }
+      ],
+      "signs": [
+        {
+          "x": 288,
+          "y": 388,
+          "text": "Swim up to the first opening · down to the next"
+        }
+      ],
+      "route": [
+        {
+          "at": [
+            120.0,
+            624
+          ],
+          "action": "start"
+        },
+        {
+          "at": [
+            144,
+            528
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            240,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            528,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            720,
+            48
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1008,
+            48
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1248,
+            -288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1536,
+            -288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1824,
+            192
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2112,
+            192
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2448,
+            528
+          ],
+          "action": "swim"
+        }
+      ]
+    },
+    {
+      "name": "The descending lock",
+      "lesson": "Follow the openings down through the lock",
+      "origin": [
+        2592,
+        0
+      ],
+      "width": 2688,
+      "platforms": [
+        {
+          "x": 0,
+          "y": -816,
+          "w": 2688,
+          "h": 48,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": -768,
+          "w": 96,
+          "h": 192,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": -192,
+          "w": 96,
+          "h": 816,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 864,
+          "y": -768,
+          "w": 96,
+          "h": 480,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 864,
+          "y": 0,
+          "w": 96,
+          "h": 624,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1392,
+          "y": -768,
+          "w": 96,
+          "h": 720,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1392,
+          "y": 240,
+          "w": 96,
+          "h": 384,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1968,
+          "y": -768,
+          "w": 96,
+          "h": 960,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1968,
+          "y": 480,
+          "w": 96,
+          "h": 144,
+          "kind": "block",
+          "material": "stone"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": -576,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": -576,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": -216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": -216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": -288,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": -288,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": -24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": -24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": -48,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": -48,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 192,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 192,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        }
+      ],
+      "zones": [
+        {
+          "x": 0,
+          "y": -960,
+          "w": 2688,
+          "h": 1680,
+          "type": "water",
+          "swimmable": true
+        },
+        {
+          "x": 432,
+          "y": -576,
+          "w": 336,
+          "h": 384,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            190,
+            -30
+          ]
+        },
+        {
+          "x": 960,
+          "y": -288,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -190,
+            -30
+          ]
+        },
+        {
+          "x": 1488,
+          "y": -48,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            190,
+            -30
+          ]
+        },
+        {
+          "x": 2064,
+          "y": 192,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -190,
+            -30
+          ]
+        }
+      ],
+      "motes": [
+        [
+          96,
+          463
+        ],
+        [
+          144,
+          463
+        ],
+        [
+          240,
+          -449
+        ],
+        [
+          528,
+          -449
+        ],
+        [
+          768,
+          -209
+        ],
+        [
+          1056,
+          -209
+        ],
+        [
+          1296,
+          31
+        ],
+        [
+          1584,
+          31
+        ],
+        [
+          1872,
+          271
+        ],
+        [
+          2160,
+          271
+        ],
+        [
+          2544,
+          463
+        ]
+      ],
+      "checkpoints": [
+        [
+          96,
+          528
+        ]
+      ],
+      "decorations": [
+        {
+          "type": "flood_marker",
+          "x": 480,
+          "y": -192,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        },
+        {
+          "type": "flood_marker",
+          "x": 1008,
+          "y": 0,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        },
+        {
+          "type": "flood_marker",
+          "x": 1536,
+          "y": 240,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        },
+        {
+          "type": "flood_marker",
+          "x": 2112,
+          "y": 480,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        }
+      ],
+      "signs": [
+        {
+          "x": 144,
+          "y": 388,
+          "text": "Follow the openings down through the lock"
+        }
+      ],
+      "route": [
+        {
+          "at": [
+            96,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            144,
+            528
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            240,
+            -384
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            528,
+            -384
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            768,
+            -144
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1056,
+            -144
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1296,
+            96
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1584,
+            96
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1872,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2160,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2544,
+            528
+          ],
+          "action": "swim"
+        }
+      ]
+    },
+    {
+      "name": "Between the sunken beams",
+      "lesson": "Reverse depth between the long beams",
+      "origin": [
+        5280,
+        0
+      ],
+      "width": 2784,
+      "platforms": [
+        {
+          "x": 0,
+          "y": -816,
+          "w": 2784,
+          "h": 48,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": -768,
+          "w": 96,
+          "h": 912,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": 432,
+          "w": 96,
+          "h": 192,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 864,
+          "y": -768,
+          "w": 96,
+          "h": 288,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 864,
+          "y": -192,
+          "w": 96,
+          "h": 816,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1440,
+          "y": -768,
+          "w": 96,
+          "h": 864,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1440,
+          "y": 384,
+          "w": 96,
+          "h": 240,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2064,
+          "y": -768,
+          "w": 96,
+          "h": 336,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2064,
+          "y": -48,
+          "w": 96,
+          "h": 672,
+          "kind": "block",
+          "material": "stone"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 144,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 144,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": -480,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": -480,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": -216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": -216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 96,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 96,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": -432,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": -432,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": -72,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": -72,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        }
+      ],
+      "zones": [
+        {
+          "x": 0,
+          "y": -960,
+          "w": 2784,
+          "h": 1680,
+          "type": "water",
+          "swimmable": true
+        },
+        {
+          "x": 432,
+          "y": 144,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            220,
+            -30
+          ]
+        },
+        {
+          "x": 960,
+          "y": -480,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -220,
+            -30
+          ]
+        },
+        {
+          "x": 1536,
+          "y": 96,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            220,
+            -30
+          ]
+        },
+        {
+          "x": 2160,
+          "y": -432,
+          "w": 336,
+          "h": 384,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -220,
+            -30
+          ]
+        }
+      ],
+      "motes": [
+        [
+          96,
+          463
+        ],
+        [
+          144,
+          463
+        ],
+        [
+          240,
+          223
+        ],
+        [
+          528,
+          223
+        ],
+        [
+          768,
+          -401
+        ],
+        [
+          1056,
+          -401
+        ],
+        [
+          1344,
+          175
+        ],
+        [
+          1632,
+          175
+        ],
+        [
+          1968,
+          -305
+        ],
+        [
+          2256,
+          -305
+        ],
+        [
+          2640,
+          463
+        ]
+      ],
+      "checkpoints": [
+        [
+          96,
+          528
+        ]
+      ],
+      "decorations": [
+        {
+          "type": "boathouse",
+          "x": 480,
+          "y": 432,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        },
+        {
+          "type": "boathouse",
+          "x": 1008,
+          "y": -192,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        },
+        {
+          "type": "boathouse",
+          "x": 1584,
+          "y": 384,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        },
+        {
+          "type": "boathouse",
+          "x": 2208,
+          "y": -48,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        }
+      ],
+      "signs": [
+        {
+          "x": 144,
+          "y": 388,
+          "text": "Reverse depth between the long beams"
+        }
+      ],
+      "route": [
+        {
+          "at": [
+            96,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            144,
+            528
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            240,
+            288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            528,
+            288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            768,
+            -336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1056,
+            -336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1344,
+            240
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1632,
+            240
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1968,
+            -240
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2256,
+            -240
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2640,
+            528
+          ],
+          "action": "swim"
+        }
+      ]
+    },
+    {
+      "name": "The bell chamber",
+      "lesson": "Climb to the bell chamber, then dive to the outlet",
+      "origin": [
+        8064,
+        0
+      ],
+      "width": 3168,
+      "platforms": [
+        {
+          "x": 0,
+          "y": -816,
+          "w": 3168,
+          "h": 48,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": -768,
+          "w": 96,
+          "h": 960,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": 480,
+          "w": 96,
+          "h": 144,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 864,
+          "y": -768,
+          "w": 96,
+          "h": 624,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 864,
+          "y": 144,
+          "w": 96,
+          "h": 480,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1392,
+          "y": -768,
+          "w": 96,
+          "h": 192,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1392,
+          "y": -288,
+          "w": 96,
+          "h": 912,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1968,
+          "y": -768,
+          "w": 96,
+          "h": 528,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1968,
+          "y": 48,
+          "w": 96,
+          "h": 576,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2496,
+          "y": -768,
+          "w": 96,
+          "h": 912,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2496,
+          "y": 432,
+          "w": 96,
+          "h": 192,
+          "kind": "block",
+          "material": "stone"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 192,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 192,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": -144,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": -144,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": -576,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": -576,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": -312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": -312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": -240,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": -240,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 144,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 144,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        }
+      ],
+      "zones": [
+        {
+          "x": 0,
+          "y": -960,
+          "w": 3168,
+          "h": 1680,
+          "type": "water",
+          "swimmable": true
+        },
+        {
+          "x": 432,
+          "y": 192,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            150,
+            -30
+          ]
+        },
+        {
+          "x": 960,
+          "y": -144,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -150,
+            -30
+          ]
+        },
+        {
+          "x": 1488,
+          "y": -576,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            150,
+            -30
+          ]
+        },
+        {
+          "x": 2064,
+          "y": -240,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -150,
+            -30
+          ]
+        },
+        {
+          "x": 2592,
+          "y": 144,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            150,
+            -30
+          ]
+        }
+      ],
+      "motes": [
+        [
+          96,
+          463
+        ],
+        [
+          144,
+          463
+        ],
+        [
+          240,
+          271
+        ],
+        [
+          528,
+          271
+        ],
+        [
+          768,
+          -65
+        ],
+        [
+          1056,
+          -65
+        ],
+        [
+          1296,
+          -497
+        ],
+        [
+          1584,
+          -497
+        ],
+        [
+          1872,
+          -161
+        ],
+        [
+          2160,
+          -161
+        ],
+        [
+          2400,
+          223
+        ],
+        [
+          2688,
+          223
+        ],
+        [
+          3024,
+          463
+        ]
+      ],
+      "checkpoints": [
+        [
+          96,
+          528
+        ]
+      ],
+      "decorations": [
+        {
+          "type": "flood_marker",
+          "x": 480,
+          "y": 480,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        },
+        {
+          "type": "flood_marker",
+          "x": 1008,
+          "y": 144,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        },
+        {
+          "type": "flood_marker",
+          "x": 1536,
+          "y": -288,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        },
+        {
+          "type": "flood_marker",
+          "x": 2112,
+          "y": 48,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        },
+        {
+          "type": "flood_marker",
+          "x": 2640,
+          "y": 432,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        }
+      ],
+      "signs": [
+        {
+          "x": 144,
+          "y": 388,
+          "text": "Climb to the bell chamber, then dive to the outlet"
+        }
+      ],
+      "route": [
+        {
+          "at": [
+            96,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            144,
+            528
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            240,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            528,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            768,
+            0
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1056,
+            0
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1296,
+            -432
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1584,
+            -432
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1872,
+            -96
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2160,
+            -96
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2400,
+            288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2688,
+            288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            3024,
+            528
+          ],
+          "action": "swim"
+        }
+      ]
+    },
+    {
+      "name": "Against the sluice current",
+      "lesson": "Use the open chamber to steady yourself before each current",
+      "origin": [
+        11232,
+        0
+      ],
+      "width": 2880,
+      "platforms": [
+        {
+          "x": 0,
+          "y": -816,
+          "w": 2880,
+          "h": 48,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": -768,
+          "w": 96,
+          "h": 288,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": -96,
+          "w": 96,
+          "h": 720,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 912,
+          "y": -768,
+          "w": 96,
+          "h": 912,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 912,
+          "y": 432,
+          "w": 96,
+          "h": 192,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1488,
+          "y": -768,
+          "w": 96,
+          "h": 240,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1488,
+          "y": -240,
+          "w": 96,
+          "h": 864,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2112,
+          "y": -768,
+          "w": 96,
+          "h": 816,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2112,
+          "y": 336,
+          "w": 96,
+          "h": 288,
+          "kind": "block",
+          "material": "stone"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": -480,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": -480,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": -120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": -120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 144,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 144,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": -528,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": -528,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": -264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": -264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": 48,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 48,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        }
+      ],
+      "zones": [
+        {
+          "x": 0,
+          "y": -960,
+          "w": 2880,
+          "h": 1680,
+          "type": "water",
+          "swimmable": true
+        },
+        {
+          "x": 432,
+          "y": -480,
+          "w": 336,
+          "h": 384,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            270,
+            -30
+          ]
+        },
+        {
+          "x": 1008,
+          "y": 144,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -270,
+            -30
+          ]
+        },
+        {
+          "x": 1584,
+          "y": -528,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            270,
+            -30
+          ]
+        },
+        {
+          "x": 2208,
+          "y": 48,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -270,
+            -30
+          ]
+        }
+      ],
+      "motes": [
+        [
+          96,
+          463
+        ],
+        [
+          144,
+          463
+        ],
+        [
+          240,
+          -353
+        ],
+        [
+          528,
+          -353
+        ],
+        [
+          816,
+          223
+        ],
+        [
+          1104,
+          223
+        ],
+        [
+          1392,
+          -449
+        ],
+        [
+          1680,
+          -449
+        ],
+        [
+          2016,
+          127
+        ],
+        [
+          2304,
+          127
+        ],
+        [
+          2736,
+          463
+        ]
+      ],
+      "checkpoints": [
+        [
+          96,
+          528
+        ]
+      ],
+      "decorations": [
+        {
+          "type": "boathouse",
+          "x": 480,
+          "y": -96,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        },
+        {
+          "type": "boathouse",
+          "x": 1056,
+          "y": 432,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        },
+        {
+          "type": "boathouse",
+          "x": 1632,
+          "y": -240,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        },
+        {
+          "type": "boathouse",
+          "x": 2256,
+          "y": 336,
+          "width": 240,
+          "height": 210,
+          "layer": "back",
+          "phase": 3,
+          "scale": 0.6
+        }
+      ],
+      "signs": [
+        {
+          "x": 144,
+          "y": 388,
+          "text": "Use the open chamber to steady yourself before each current"
+        }
+      ],
+      "route": [
+        {
+          "at": [
+            96,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            144,
+            528
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            240,
+            -288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            528,
+            -288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            816,
+            288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1104,
+            288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1392,
+            -384
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1680,
+            -384
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2016,
+            192
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2304,
+            192
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2736,
+            528
+          ],
+          "action": "swim"
+        }
+      ]
+    },
+    {
+      "name": "The last submerged passage",
+      "lesson": "Follow the lanterns through the final changes in depth",
+      "origin": [
+        14112,
+        0
+      ],
+      "width": 3264,
+      "platforms": [
+        {
+          "x": 0,
+          "y": -816,
+          "w": 3264,
+          "h": 48,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": -768,
+          "w": 96,
+          "h": 960,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 336,
+          "y": 480,
+          "w": 96,
+          "h": 144,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 864,
+          "y": -768,
+          "w": 96,
+          "h": 384,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 864,
+          "y": 0,
+          "w": 96,
+          "h": 624,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1440,
+          "y": -768,
+          "w": 96,
+          "h": 192,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1440,
+          "y": -288,
+          "w": 96,
+          "h": 912,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2016,
+          "y": -768,
+          "w": 96,
+          "h": 624,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2016,
+          "y": 144,
+          "w": 96,
+          "h": 480,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2544,
+          "y": -768,
+          "w": 96,
+          "h": 960,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2544,
+          "y": 480,
+          "w": 96,
+          "h": 144,
+          "kind": "block",
+          "material": "stone"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 192,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 192,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": -384,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": -384,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": -24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": -24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": -576,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": -576,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": -312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": -312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": -144,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": -144,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 192,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 192,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        }
+      ],
+      "zones": [
+        {
+          "x": 0,
+          "y": -960,
+          "w": 3264,
+          "h": 1680,
+          "type": "water",
+          "swimmable": true
+        },
+        {
+          "x": 432,
+          "y": 192,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            180,
+            -30
+          ]
+        },
+        {
+          "x": 960,
+          "y": -384,
+          "w": 336,
+          "h": 384,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -180,
+            -30
+          ]
+        },
+        {
+          "x": 1536,
+          "y": -576,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            180,
+            -30
+          ]
+        },
+        {
+          "x": 2112,
+          "y": -144,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            -180,
+            -30
+          ]
+        },
+        {
+          "x": 2640,
+          "y": 192,
+          "w": 336,
+          "h": 336,
+          "type": "current",
+          "submerged": true,
+          "force": [
+            180,
+            -30
+          ]
+        }
+      ],
+      "motes": [
+        [
+          96,
+          463
+        ],
+        [
+          144,
+          463
+        ],
+        [
+          240,
+          271
+        ],
+        [
+          528,
+          271
+        ],
+        [
+          768,
+          -257
+        ],
+        [
+          1056,
+          -257
+        ],
+        [
+          1344,
+          -497
+        ],
+        [
+          1632,
+          -497
+        ],
+        [
+          1920,
+          -65
+        ],
+        [
+          2208,
+          -65
+        ],
+        [
+          2448,
+          271
+        ],
+        [
+          2736,
+          271
+        ],
+        [
+          3120,
+          463
+        ]
+      ],
+      "checkpoints": [
+        [
+          96,
+          528
+        ]
+      ],
+      "decorations": [
+        {
+          "type": "flood_marker",
+          "x": 480,
+          "y": 480,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        },
+        {
+          "type": "flood_marker",
+          "x": 1008,
+          "y": 0,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        },
+        {
+          "type": "flood_marker",
+          "x": 1584,
+          "y": -288,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        },
+        {
+          "type": "flood_marker",
+          "x": 2160,
+          "y": 144,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        },
+        {
+          "type": "flood_marker",
+          "x": 2688,
+          "y": 480,
+          "width": 230,
+          "height": 100,
+          "phase": 6,
+          "layer": "back",
+          "scale": 0.6
+        }
+      ],
+      "signs": [
+        {
+          "x": 144,
+          "y": 388,
+          "text": "Follow the lanterns through the final changes in depth"
+        }
+      ],
+      "route": [
+        {
+          "at": [
+            96,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            144,
+            528
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            240,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            528,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            768,
+            -192
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1056,
+            -192
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1344,
+            -432
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1632,
+            -432
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1920,
+            0
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2208,
+            0
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2448,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2736,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            3120,
+            528
+          ],
+          "action": "swim"
+        }
+      ]
+    }
+  ]
+}

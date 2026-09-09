@@ -30,7 +30,7 @@ exec "$YEARBOUND_BIN_DIR/YearboundRuntime" --main-pack "$YEARBOUND_BIN_DIR/../Re
 '''
  (mac/'Yearbound').write_text(launcher)
  for name in ['Yearbound','YearboundRuntime']:(mac/name).chmod(0o755)
- info={'CFBundleName':'Yearbound','CFBundleDisplayName':'Yearbound','CFBundleIdentifier':'games.yearbound.foundation','CFBundleVersion':'0.12.0','CFBundleShortVersionString':'0.12.0','CFBundlePackageType':'APPL','CFBundleExecutable':'Yearbound','CFBundleIconFile':'Yearbound.icns','NSHighResolutionCapable':True,'LSMinimumSystemVersion':'12.0'}
+ info={'CFBundleName':'Yearbound','CFBundleDisplayName':'Yearbound','CFBundleIdentifier':'games.yearbound.foundation','CFBundleVersion':'0.13.0','CFBundleShortVersionString':'0.13.0','CFBundlePackageType':'APPL','CFBundleExecutable':'Yearbound','CFBundleIconFile':'Yearbound.icns','NSHighResolutionCapable':True,'LSMinimumSystemVersion':'12.0'}
  with (app/'Contents/Info.plist').open('wb') as f:plistlib.dump(info,f)
  shutil.copy2(project/'docs/GODOT_LICENSE.txt',resources/'GODOT_LICENSE.txt')
  shutil.copy2(project/'docs/ENGINE_NOTICES.txt',resources/'ENGINE_NOTICES.txt')

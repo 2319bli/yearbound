@@ -35,7 +35,7 @@ func run() -> void:
 			for checkpoint in spec.checkpoints:
 				app.world.player.reset_at(Vector2(checkpoint[0],checkpoint[1]));await frames(5)
 				check((app.world.player.is_on_floor() or app.world.player.swimming.submerged) and app.world.deaths==0,id+" checkpoint is safe and clear")
-	check(months.size()==12 and app.stage_order.size()==29,"29 playable days cover all twelve months")
+	check(months.size()==12 and app.stage_order.size()==41,"41 playable days cover all twelve months")
 	check(music.size()==8 and identities.size()==8,"new samples each have an independent identity and music reference")
 	app.save_run();var before=app.store.data.duplicate(true);app.start_lab();await frames(3)
 	check(app.world.spec.length==44160 and app.world.spec.lab_stations.size()==17,"lab has more than doubled with six extended courses")

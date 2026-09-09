@@ -234,7 +234,10 @@ func draw_background(n: Node2D) -> void:
 	# The distant landscape shifts gently during a climb; screen-space UI stays put.
 	var vertical=world.camera_y if show_world else 0.0
 	n.draw_set_transform(Vector2(0,clampf(-vertical*.04,0,48)))
-	YBLandscape.background(n,season,cam,time,store.data.settings.reduced_motion,str(world.spec.get("background","")) if show_world else "",ambience)
+	if show_world and world.spec.has("journey_regions"):
+		YBJourneyScenery.background(n,world.spec.journey_regions,world.player.position.x,cam,0 if store.data.settings.reduced_motion else time,clampf(world.june_boss.aftermath/2,0,1) if world.june_boss else 0)
+	else:
+		YBLandscape.background(n,season,cam,time,store.data.settings.reduced_motion,str(world.spec.get("background","")) if show_world else "",ambience)
 	n.draw_set_transform(Vector2.ZERO)
 	if season in ["june","mill"]: YBScenery.atmosphere(n,cam,time,store.data.settings.reduced_motion)
 
@@ -287,7 +290,7 @@ func draw_title(n: Node2D) -> void:
 	label(n,"The first sunlit path",Vector2(931,132),17,INK)
 	button(n,"lab","Charge dash lab   →",Rect2(831,175,356,48),true)
 	label(n,"Experiment · tune · repeat",Vector2(849,248),14,CREAM)
-	label(n,"FOUNDATION EDITION  ·  0.12.0",Vector2(995,684),11,Color("e6eac7"),true)
+	label(n,"FOUNDATION EDITION  ·  0.13.0",Vector2(995,684),11,Color("e6eac7"),true)
 
 func draw_calendar(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color(0.07,0.18,0.20,0.94))
@@ -346,14 +349,18 @@ func draw_hud(n: Node2D) -> void:
 	label(n,clock_text(world.elapsed)+"   ·   Esc / Start: pause",Vector2(1002,78),12,CREAM)
 	if world.spec.has("boss") and world.boss_active:
 		panel(n,Rect2(417,25,446,67),Color(0.1,0.2,0.25,0.93),11)
-		var phase=mini(3,int(world.boss_time/35)+1)
-		label(n,"THE SQUALLKEEPER  ·  PHASE "+str(phase)+" / 3",Vector2(640,48),12,CREAM,true)
+		var phase=world.june_boss.phase+1 if world.june_boss else mini(3,int(world.boss_time/35)+1)
+		var phases=world.spec.boss.phases.size() if world.june_boss else 3
+		label(n,"THE SQUALLKEEPER  ·  PHASE "+str(phase)+" / "+str(phases),Vector2(640,48),12,CREAM,true)
 		panel(n,Rect2(439,61,402,10),Color("3c5560"),5)
-		panel(n,Rect2(439,61,402*maxf(0,1-world.boss_time/105),10),GOLD,5)
-		label(n,"SURVIVE THE STORM  ·  Each phase is a checkpoint",Vector2(640,696),13,CREAM,true)
+		panel(n,Rect2(439,61,402*maxf(0,1-world.boss_time/float(world.spec.boss.duration)),10),GOLD,5)
+		label(n,("The sky is clear · reach the gate" if world.june_boss.defeated else ("Follow the open gate to the next arena" if world.june_boss.cleared else str(world.june_boss.data().name))) if world.june_boss else "SURVIVE THE STORM  ·  Each phase is a checkpoint",Vector2(640,696),13,CREAM,true)
 	else:
 		panel(n,Rect2(445,33,390,7),Color(0.12,0.27,0.27,0.25),4)
 		panel(n,Rect2(445,33,390*clampf(world.player.position.x/float(world.spec.length),0,1),7),CREAM,4)
+	if world.spec.has("journey_regions") and not world.spec.has("boss"):
+		var area=YBJourneyScenery.index_at(world.spec.journey_regions,world.player.position.x)
+		label(n,str(area+1)+" / "+str(world.spec.journey_regions.size())+"  ·  "+str(world.spec.journey_regions[area].name),Vector2(640,65),12,CREAM,true)
 	if world.player.ability is YBChargeDash:
 		var dash=world.player.ability as YBChargeDash
 		var unavailable="RECHARGING" if world.player.swimming.submerged else "LAND TO RESET"
@@ -418,11 +425,11 @@ func draw_settings(n: Node2D) -> void:
 
 func draw_about(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color(0.07,0.18,0.2,0.96))
-	label(n,"FIELD NOTES  /  FOUNDATION 0.12.0",Vector2(90,81),12,GOLD)
+	label(n,"FIELD NOTES  /  FOUNDATION 0.13.0",Vector2(90,81),12,GOLD)
 	label(n,"A whole year starts here.",Vector2(87,148),46,CREAM,false,true)
 	wrapped(n,"Yearbound is a platforming journey from 1 June to 31 May. Each date will become its own place: its own atmosphere, music and reason to take one more leap.",Vector2(90,213),750,23,CREAM)
-	wrapped(n,"This foundation contains "+str(stages.size())+" playable days, with a sample in every month and seventeen distinct days at the beginning of June. Follow the sunmotes, light the checkpoint lanterns and find each day's door. On 30 June, read the amber warnings and survive three phases to calm the Squallkeeper. There is no attack button.",Vector2(90,344),750,18,MUTED)
-	wrapped(n,"1–17 June use the supplied Yearbound music. The later sample days use original synthesized sketch scores. The world uses detailed pixel-art landscapes and sprites, animated terrain and weather, and a traveller in a copper scarf. Background and sprite art was generated for this project.",Vector2(90,473),750,16,MUTED)
+	wrapped(n,"This foundation contains "+str(stages.size())+" playable days, including the full June chapter and a sample in every other month. Follow the sunmotes, light the checkpoint lanterns and find each day's door. On 30 June, read the amber warnings and travel through five storm arenas to calm the Squallkeeper. There is no attack button.",Vector2(90,344),750,18,MUTED)
+	wrapped(n,"1–22 June use the supplied Yearbound music. Later sample days use original synthesized sketch scores. The world uses detailed pixel-art landscapes and sprites, animated terrain and weather, and a traveller in a copper scarf. Background and sprite art was generated for this project.",Vector2(90,473),750,16,MUTED)
 	button(n,"back","← Back to the sunlight",Rect2(90,616,310,51),true)
 
 func draw_complete(n: Node2D) -> void:

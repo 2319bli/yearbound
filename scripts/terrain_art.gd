@@ -143,6 +143,7 @@ static func tile(n: Node2D, at: Vector2, data: Dictionary, stage: Dictionary, su
 		fill=Color("477250");light=Color("6b965a");top=Color("f4dc8d")
 	elif kind=="crumble":
 		fill=Color("966744");light=Color("c58b50");top=Color("f2cd89")
+		if data.get("surface","")=="ice": fill=Color("548d9e");light=Color("9dbbc5");top=Color("d6eced")
 	n.draw_rect(rect,ink(p,"outline"))
 	n.draw_rect(Rect2(at+Vector2(2,3),Vector2(44,42)),fill)
 	n.draw_rect(Rect2(at+Vector2(3,4),Vector2(3,36)),light)

@@ -101,7 +101,7 @@ func run() -> void:
 	var doc=YBLayoutDocument.new();doc.load_stage(w.spec)
 	check(YBLayoutDocument.same(doc.compile().zones,w.spec.zones),"workshop round-trip retains physical water and currents")
 	for index in w.spec.checkpoints.size():
-		w.restore({"checkpoint_index":index,"deaths":2,"elapsed":32});await frames(6)
+		w.restore({"layout_revision":w.spec.get("layout_revision",1),"checkpoint_index":index,"deaths":2,"elapsed":32});await frames(6)
 		check(w.player.swimming.submerged and w.deaths==2 and w.respawn_delay<=0,"underwater checkpoint restores safely")
 	w.die();await frames(35)
 	check(w.player.active and w.player.swimming.submerged and w.player.ability.air_used==0,"death restores swimming and dash at the saved lantern")
@@ -110,10 +110,11 @@ func run() -> void:
 	await frames(55);check(app.audio.water_filter.cutoff_hz>20000,"leaving water restores the normal music filter")
 	app.start_stage("11-19");await frames(4);w=app.world
 	# Input-driven waypoints through every alternating over/under passage.
-	var points=[Vector2(360,480),Vector2(760,450),Vector2(850,330),Vector2(1230,330),Vector2(1480,540),Vector2(2010,540),Vector2(2070,480),Vector2(2350,480),Vector2(2430,560),Vector2(2520,606),Vector2(2820,420),Vector2(2940,310),Vector2(3340,310),Vector2(3660,310),Vector2(3720,565),Vector2(4100,565),Vector2(4260,550),Vector2(4340,280),Vector2(4740,280),Vector2(5000,550),Vector2(5112,605),Vector2(5350,545),Vector2(5890,545),Vector2(5920,210),Vector2(6260,210),Vector2(6670,275),Vector2(6800,540),Vector2(7220,540),Vector2(7512,608)]
+	var points=[]
+	for node in w.spec.challenge.route: points.append(Vector2(node.at[0],node.at[1]-(30 if node.action in ["walk","start"] else 0)))
 	var reached=0
 	for target in points:
-		for tick in 360:
+		for tick in 900:
 			var delta=target-w.player.position
 			if delta.length()<23 or w.complete: break
 			Input.action_release("left");Input.action_release("right");Input.action_release("aim_up");Input.action_release("aim_down")
@@ -125,6 +126,6 @@ func run() -> void:
 		reached+=1
 	release()
 	print("ROUTE underwater waypoints=",reached,"/",points.size()," complete=",w.complete," deaths=",w.deaths)
-	check(reached==points.size() and w.checkpoint_index==1 and w.deaths==0,"November's original passages still reach both opening checkpoints without deaths; expanded chambers are verified separately")
+	check(reached==points.size() and w.checkpoint_index==w.spec.checkpoints.size()-1 and w.deaths==0,"November traverses every authored channel and reaches every underwater checkpoint without deaths")
 	root.remove_child(app);app.queue_free();await frames(3)
 	print("SWIMMING TEST COMPLETE: ",failures," failures");quit(1 if failures else 0)

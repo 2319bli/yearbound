@@ -34,10 +34,10 @@ func run() -> void:
 			check(app.world.player.is_on_floor() and app.world.deaths==0,id+" checkpoint remains safe")
 	check(keys.size()==9 and music.size()==9 and types.size()==9 and plates.size()==9,"nine different scenes, landscape plates, soundtracks and landmark combinations")
 	check(app.stage_order.slice(0,17)==Array(range(1,18)).map(func(day): return "06-%02d"%day),"calendar progression covers 1–17 June in order")
-	check(app.stages.size()==29,"29 playable days retain every existing monthly sample")
-	check(YBLayoutDocument.blank().id=="06-18","new workshop layouts choose the next unfinished date")
+	check(app.stages.size()==41,"41 playable days retain every existing monthly sample")
+	check(YBLayoutDocument.blank().id=="07-01","new workshop layouts choose the next unfinished date")
 	app.open_editor();await frames(3)
-	check(app.editor.sample_ids.size()==29 and app.editor.fields.music.item_count==29,"workshop discovers all 29 samples and tracks")
+	check(app.editor.sample_ids.size()==41 and app.editor.fields.music.item_count==41,"workshop discovers all 41 samples and tracks")
 	var bad=app.stages["06-09"].duplicate(true);bad.ambience.june_scene="missing"
 	check(not YBLayoutDocument.errors(bad).is_empty(),"invalid new scene identifiers are rejected")
 	root.remove_child(app);app.queue_free();await frames(3)

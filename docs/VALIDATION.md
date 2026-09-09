@@ -2,6 +2,23 @@
 
 Environment: Apple M4 / macOS, Godot 4.6.2, native OpenGL compatibility renderer. Delivered app is Apple silicon ARM64, includes its own runtime, and uses an ad-hoc development signature. The original Documents/Yearbound music folder was read and copied from, never edited.
 
+## Full June chapter and authored journeys · 0.13.0
+
+All 30 June dates are playable, alongside eleven other-month samples: 41 stages and 219 explicit gameplay sections. Each ordinary June day connects five places; 30 June connects five boss arenas. The 365-day calendar retains 324 unfinished dates. All stages have at least 50 independent spike placements. The blueprint audit finds no identical complete-room geometry or duplicate contact hazards; this structural check does not replace human assessment of variety.
+
+- Twelve packaged assertion suites pass: authored routes, June boss routes, June chapter, authored campaign, authored mechanics, editor, smoke, controller, charge dash, swimming, year-round and native ground/layers. All test saves are isolated from normal progress.
+- The normal-input traversal completes all 40 ordinary stages continuously from spawn to exit with zero deaths, without relocating the player between route points. November also completes all 70 underwater route points. These checks establish reachability, not five-minute pacing or final human difficulty.
+- Boss traversal checks survive the full duration of arenas 1, 2, 4 and 5 with zero deaths, and complete the advancing-storm chase with normal input and live attacks. Each boss fixture begins at its arena entry or test perch; this is not a continuous whole-boss playthrough. Separate progression checks cover physical phase gates, checkpoint retries, saved clearance, telegraphs, the chase wall and the aftermath exit.
+- Chapter checks cover 30 five-place journeys, altitude carried into later sections, the evening-to-night sequences, Garden Maze route reversals and optional chambers, and workshop round trips. All 41 starts/checkpoints are supported and safe; an uninterrupted run to the right encounters a gameplay decision within the first 750 pixels. Missing or older layout revisions reset incompatible in-progress positions while retaining elapsed time and deaths; matching revisions and boss phase clearance restore correctly.
+- Mechanic checks exercise moving-platform track corners, dwells, ordinary and fast diagonal passenger carry, pausing, storm warnings/contact/dash sweeps, local icicle floors, crumble/ice surfaces and updrafts. Existing movement, charge, swimming, input and workshop contracts pass.
+- Ninety-one native packaged captures cover title/calendar/settings, every opening, five-place sequences for nine representative June days, the boss aftermath and Garden Maze workshop. Representative daytime, interior, maze, night and boss views were visually inspected. Native framebuffer probes verify scenery, terrain, player, hazards, foreground and UI layering. Captures are in `Previews/June-chapter` beside the source project.
+- A byte comparison against `v0.12.0` verifies all ten controller/tuning/lab files and all 124 existing art/audio files are unchanged. This includes the original charge profile with horizontal multiplier 1.5 and the 17-station Dash Lab. The five supplied MP3s for 18–22 June match their originals; hashes are recorded in `JUNE_MUSIC_18_22.json`. Dates 23–29 use seven distinct temporary synthesized scores.
+- `python3 tools/build_authored_stages.py --check` and the content validator pass for the checked-in blueprints and compiled stages. Source-only checks also pass the earlier June scene and seasonal-mechanic regressions. No old procedural challenge extension is used by the runtime or compiler.
+
+The standalone 0.13.0 Apple silicon app retains its verified ad-hoc development signature. App and source archives pass ZIP integrity checks. Source includes the complete authoring pipeline; app exports exclude development tests, tools and documentation. The GitHub repository was restored to the user's approved private visibility before this source update. Historical verification below describes earlier versions and their then-current content counts.
+
+No assertion, parser, script or native rendering errors remained in the final suites. Restricted headless runs may print existing macOS certificate or shutdown resource-cleanup messages. Physical controller hardware, final human balance, five-minute stage pacing and notarized public distribution remain unverified.
+
 ## Expanded campaign, GitHub and workshop · 0.12.0
 
 All 29 playable dates are at least twice their previous length, with six additional named challenge sections, 116–164 independent spike placements and 864–1,488 pixels of elevation change. The original openings remain warmups. See `EXPANDED_CAMPAIGN.md` for every date’s measurements and the authoring pipeline.
@@ -85,7 +102,7 @@ The test suites keep progress in isolated scratch folders. Normal player saves a
 
 ## What these checks do not establish
 
-No physical gamepad was connected. Standard stick, D-pad and face-button mappings are implemented, but device-specific layout, Bluetooth behavior and rumble are not validated. No claim of full human difficulty testing, accessibility certification, production balancing, five-minute stage lengths, or a finished 30-hour campaign is made. Boss phase and completion logic are tested; extended human testing of all attack combinations remains a tuning step. The five added scores are musical sketches, not final 365-track soundtrack production.
+No physical gamepad was connected. Standard stick, D-pad and face-button mappings are implemented, but device-specific layout, Bluetooth behavior and rumble are not validated. No claim of full human difficulty testing, accessibility certification, production balancing, five-minute stage lengths, or a finished 30-hour campaign is made. Boss phase and completion logic are tested; extended human testing of all attack combinations remains a tuning step. Temporary synthesized scores are musical sketches, not final 365-track soundtrack production.
 
 The build has been tested locally on Apple silicon only. Intel Mac, Windows and Linux builds and notarized public distribution are future packaging work. Source is included so those targets can use Godot's appropriate export templates later.
 
