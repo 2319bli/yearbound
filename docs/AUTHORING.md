@@ -48,12 +48,12 @@ Platform base fields: `{x,y,w,h,kind}`. Supported `kind` values:
 
 Hazards:
 
-- `bramble`: `{type,x,y,w,h}`. A static patch with pale triangular tips; 18–20 px high and roughly 64–88 px wide in the samples. The drawn tips define the top of its forgiving collision rectangle. Keep clear space overhead for the intended jump.
+- `bramble`: `{type,x,y,w,h}`. A static patch with pale triangular tips. Optional `direction` is `up`, `down`, `left` or `right` (default `up`). The rectangle describes the whole dangerous region; rotate its width/height appropriately for wall spikes. The drawn tips define the top of its forgiving collision rectangle. Keep clear space overhead for the intended jump.
 
 - `blade` / `thorn`: `{type,x,y,r,axis,distance,speed}`. Animated circular collision with a visually pointed silhouette.
 - `icicle`: `{type,x,y,r,period,phase}`. Amber warning for the opening 1.35 seconds of a cycle, then a falling shard. Tune period so it travels below the screen before repeating.
 
-Zones: `{type,x,y,w,h,force:[ax,ay]}`. `wind` optionally has `pulse:true`; `updraft` adds vertical force and rising visual arrows; `current` is a shallow horizontal conveyor; `water` is a background annotation. Forces are accelerations, not speeds. Normal gravity is 2800 ascending / 3200 descending. The March updrafts use a vertical force of -3650 to overcome it. Bellflower flight uses a separate, longer arc with 1650 / 1920 gravity. Lift needs to exceed the active gravity. Begin lift corridors early enough that a player can clear the underside of elevated solid platforms.
+Zones: `{type,x,y,w,h,force:[ax,ay]}`. `wind` optionally has `pulse:true`; `updraft` adds vertical force and rising visual arrows; `current` is a shallow horizontal conveyor; `water` becomes physical when it has `swimmable:true`; see `UNDERWATER.md`. Forces are accelerations, not speeds. Normal gravity is 2800 ascending / 3200 descending. The March updrafts use a vertical force of -3650 to overcome it. Bellflower flight uses a separate, longer arc with 1650 / 1920 gravity. Lift needs to exceed the active gravity. Begin lift corridors early enough that a player can clear the underside of elevated solid platforms.
 
 Signs: `{x,y,text}`. A newline separates two lines. Keep signs within the screen at the intended viewing location. They fade with distance.
 
@@ -65,7 +65,7 @@ A normal jump launches at 480 px/s upward (515 with gentle journey), with up to 
 
 Coyote time is 0.10 seconds; the input buffer is 0.12 seconds and is consumed on the landing tick. Upward corner correction searches at most 8 logical pixels sideways, requiring an empty lateral path and upward sweep. This is a small corner forgiveness feature, not a wall-climbing mechanic. Moving lifts contribute bounded momentum, remembered for 0.10 seconds. Checkpoints clear all jump, lift, spring and wind state. See `MOVEMENT.md` for measured behavior and reference notes.
 
-`player.ability` implements the `YBPlayerAbility` pre-motion, post-base-motion, post-collision and interruption hooks. The first implementation is `YBChargeDash`, enabled by `"abilities": ["charge_dash"]` in the dedicated lab JSON. Existing stage files do not opt in yet. See `CHARGE_DASH.md` for the tuning resource, exported profile format and signals. Stage logic communicates through `wind`, `ice`, and `bounce` rather than altering input code.
+`player.ability` implements the `YBPlayerAbility` pre-motion, post-base-motion, post-collision and interruption hooks. The first implementation is `YBChargeDash`, enabled by `"abilities": ["charge_dash"]` in a stage JSON. It is enabled throughout the current campaign and by default in new workshop layouts. The workshop toggle, undo/redo and export preserve this choice. See `CHARGE_DASH.md` for the tuning resource, exported profile format and signals. Stage logic communicates through `wind`, `ice`, and `bounce` rather than altering input code.
 
 ## Content stability
 
@@ -81,7 +81,7 @@ A stage may set `"background": "res://art/my_day.png"` to use its own landscape.
 
 The five 64×64 maps in `art/materials/` preserve the earlier texture experiments and can be regenerated with `tools/bake_materials.gd`. The current terrain renderer uses palette-driven shapes instead of these maps, keeping faces quieter and top edges consistent. `art/trees.png` contains June, October and January trees; source rectangles are defined in `landscape.gd`. `art/squallkeeper.png` is the transparent boss sprite. Art provenance and generation prompts are in `art/README.md`.
 
-`art/pixel_world.gdshader` composites scenery, terrain and actors on a consistent 640×360 pixel grid. The HUD, menus and text render above it at native resolution for readability. Stage dimensions, physics and collision remain in the existing 1280×720 logical space. Increase or decrease `pixel_grid` to explore a different visual resolution without rewriting level geometry.
+`art/pixel_world.gdshader` composites scenery, terrain and actors on a consistent 640×360 pixel grid. The HUD, menus and text render above it at native resolution for readability. The viewport remains 1280×720 logical pixels. Stages can set `world_top` from 0 down to -3072 on the 48-pixel grid, retaining the bottom at 720. Terrain, markers, hazards, scenery and water use world coordinates; the camera follows both axes and snaps to a restored checkpoint. The workshop compiles negative rows and preserves `world_top`. Increase or decrease `pixel_grid` to explore a different visual resolution without rewriting level geometry.
 
 The art cache retains at most sixteen textures and evicts the least recently used resource. Visiting more dates therefore does not retain every stage painting indefinitely.
 

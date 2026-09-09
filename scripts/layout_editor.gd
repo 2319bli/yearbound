@@ -12,6 +12,7 @@ var host: Node2D
 var document=YBLayoutDocument.new()
 var tool="ground"
 var rectangle_mode=false
+var spike_direction="up"
 var view=Vector2.ZERO
 var zoom=0.6
 var cursor=Vector2i(-1,-1)
@@ -79,7 +80,7 @@ func build_controls() -> void:
 		for prop in document.stage.decorations:
 			if prop.type=="tree": prop.season=document.stage.season
 		document.end_edit();sync_fields())
-	var length=SpinBox.new();length.position=Vector2(940,98);length.size=Vector2(112,32);length.min_value=27;length.max_value=1024;length.step=1;length.suffix="blocks";style_control(length);fields.length=length
+	var length=SpinBox.new();length.position=Vector2(940,98);length.size=Vector2(112,32);length.min_value=27;length.max_value=2048;length.step=1;length.suffix="blocks";style_control(length);fields.length=length
 	length.value_changed.connect(func(value):
 		if syncing: return
 		var problem=document.resize_columns(int(value))
@@ -91,6 +92,15 @@ func build_controls() -> void:
 	style_control(music);fields.music=music
 	music.get_popup().max_size=Vector2i(650,480)
 	music.item_selected.connect(func(index): if not syncing: edit_metadata("music",host.stages[sample_ids[index]].music))
+	var height=OptionButton.new();height.position=Vector2(718,140);height.size=Vector2(163,27)
+	for rows in [15,31,47,63,79]: height.add_item("Height: "+str(rows)+" rows",rows)
+	style_control(height);fields.height=height
+	height.item_selected.connect(func(index):
+		if syncing: return
+		var problem=document.resize_height(height.get_item_id(index))
+		if not problem.is_empty(): say(problem,true)
+		else: say("Shift-scroll, Up/Down or Space-drag to explore the taller canvas.")
+		sync_fields();clamp_view())
 	sample_menu=OptionButton.new();sample_menu.position=Vector2(24,96);sample_menu.size=Vector2(232,32);sample_menu.add_item("Copy a sample day…")
 	for id in sample_ids: sample_menu.add_item(host.date_label(id))
 	style_control(sample_menu)
@@ -115,6 +125,10 @@ func sync_fields() -> void:
 	for day in range(1,count+1): fields.day.add_item(str(day),day)
 	fields.day.select(int(document.stage.id.substr(3,2))-1)
 	fields.season.select(YBLayoutDocument.SEASONS.find(document.stage.season));fields.length.value=document.columns()
+	var height_index=fields.height.get_item_index(document.row_count())
+	if height_index<0:
+		fields.height.add_item("Height: "+str(document.row_count())+" rows",document.row_count());height_index=fields.height.item_count-1
+	fields.height.select(height_index)
 	for i in sample_ids.size():
 		if host.stages[sample_ids[i]].music==document.stage.music: fields.music.select(i)
 	syncing=false;queue_redraw()
@@ -170,13 +184,15 @@ func _process(dt: float) -> void:
 func canvas_cell(at: Vector2) -> Vector2i: return Vector2i((((at-CANVAS.position)/zoom+view)/48.0).floor())
 func clamp_view() -> void:
 	view.x=clampf(view.x,0,maxf(0,float(document.stage.length)-CANVAS.size.x/zoom))
-	view.y=clampf(view.y,0,maxf(0,720-CANVAS.size.y/zoom))
+	view.y=clampf(view.y,float(document.stage.get("world_top",0)),maxf(float(document.stage.get("world_top",0)),720-CANVAS.size.y/zoom))
 func change_zoom(amount: float) -> void:
 	var center=view+CANVAS.size/(2*zoom)
 	zoom=clampf(zoom+amount,0.3,1.4);view=center-CANVAS.size/(2*zoom);clamp_view()
+func paint_tool() -> String:
+	return "erase" if erasing else ("spikes_"+spike_direction if tool=="spikes" else tool)
 func finish_stroke() -> void:
 	if stroke:
-		if rectangle_mode: document.paint_rectangle(rectangle_start,cursor,"erase" if erasing else tool)
+		if rectangle_mode: document.paint_rectangle(rectangle_start,cursor,paint_tool())
 		document.end_edit()
 	stroke=false;panning=false
 func _notification(what: int) -> void:
@@ -204,12 +220,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif event.keycode==KEY_E: tool="erase"
 		elif event.keycode==KEY_LEFT: view.x-=144;clamp_view()
 		elif event.keycode==KEY_RIGHT: view.x+=144;clamp_view()
+		elif event.keycode==KEY_UP: view.y-=144;clamp_view()
+		elif event.keycode==KEY_DOWN: view.y+=144;clamp_view()
 		get_viewport().set_input_as_handled()
 	if event is InputEventMouseMotion:
 		var mouse=get_viewport().get_mouse_position();cursor=canvas_cell(mouse)
 		if panning: view-=event.relative/zoom;clamp_view()
 		elif stroke and not rectangle_mode and CANVAS.has_point(mouse):
-			document.paint_line(last_cell,cursor,"erase" if erasing else tool);last_cell=cursor
+			document.paint_line(last_cell,cursor,paint_tool());last_cell=cursor
 	if event is InputEventMouseButton:
 		var mouse=get_viewport().get_mouse_position();cursor=canvas_cell(mouse)
 		if not event.pressed and event.button_index in [MOUSE_BUTTON_LEFT,MOUSE_BUTTON_RIGHT,MOUSE_BUTTON_MIDDLE]: finish_stroke();return
@@ -217,16 +235,19 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.button_index==MOUSE_BUTTON_LEFT:
 			for button in buttons:
 				if button.rect.has_point(mouse): action(button.id);get_viewport().set_input_as_handled();return
-			if MAP.has_point(mouse): view.x=(mouse.x-MAP.position.x)/MAP.size.x*document.stage.length-CANVAS.size.x/(zoom*2);clamp_view();return
+			if MAP.has_point(mouse):
+				view.x=(mouse.x-MAP.position.x)/MAP.size.x*document.stage.length-CANVAS.size.x/(zoom*2)
+				view.y=document.first_row()*48+(mouse.y-MAP.position.y)/MAP.size.y*document.row_count()*48-CANVAS.size.y/(zoom*2);clamp_view();return
 		if not CANVAS.has_point(mouse): return
 		if event.button_index in [MOUSE_BUTTON_WHEEL_UP,MOUSE_BUTTON_WHEEL_DOWN]:
 			var direction=1 if event.button_index==MOUSE_BUTTON_WHEEL_DOWN else -1
 			if event.is_command_or_control_pressed(): change_zoom(-direction*.1)
+			elif event.shift_pressed: view.y+=direction*144;clamp_view()
 			else: view.x+=direction*144;clamp_view()
 		elif event.button_index==MOUSE_BUTTON_MIDDLE or event.button_index==MOUSE_BUTTON_LEFT and Input.is_physical_key_pressed(KEY_SPACE): panning=true
 		elif event.button_index in [MOUSE_BUTTON_LEFT,MOUSE_BUTTON_RIGHT]:
 			stroke=true;erasing=event.button_index==MOUSE_BUTTON_RIGHT;rectangle_start=cursor;last_cell=cursor;document.begin_edit()
-			if not rectangle_mode: document.paint(cursor,"erase" if erasing else tool)
+			if not rectangle_mode: document.paint(cursor,paint_tool())
 		get_viewport().set_input_as_handled()
 func action(id: String) -> void:
 	finish_stroke()
@@ -247,13 +268,20 @@ func action(id: String) -> void:
 		"redo": document.redo();sync_fields()
 		"test": playtest()
 		"home": home()
+		"dash":
+			var abilities=document.stage.get("abilities",[]).duplicate()
+			if "charge_dash" in abilities: abilities.erase("charge_dash")
+			else: abilities.append("charge_dash")
+			edit_metadata("abilities",abilities);say("Charge dash "+("enabled. Playtest uses your current Dash Lab tuning." if "charge_dash" in abilities else "disabled for this layout."))
+		"spike_direction":
+			var directions=["up","right","down","left"];spike_direction=directions[(directions.find(spike_direction)+1)%4];tool="spikes"
 		"brush": rectangle_mode=false
 		"rect": rectangle_mode=true
 		"minus": change_zoom(-.1)
 		"plus": change_zoom(.1)
 		"fit": zoom=.6;view=Vector2.ZERO
 		"folder": OS.shell_open(ProjectSettings.globalize_path(folder))
-		"help": show_message("BUILD A DAY\n\nChoose a block and drag to paint. Right-drag erases. Rectangle fills larger areas; it also works with the eraser and wind/water tools.\n\nPlace Start, Exit and Lanterns in empty cells immediately above solid terrain. Erase both ground rows to make a pit. One normal jump reaches two blocks.\n\nSpace-drag or middle-drag pans; scroll moves sideways. ⌘/Ctrl + scroll zooms. Click the overview to travel further.\n\n⌘/Ctrl Z: undo · Shift Z: redo · S: save · O: open · F5: playtest. Esc returns from a test. Drafts save locally; Save layout creates a JSON file you can share.\n\nTree/flower brushes decorate the background. Zones push right, lift up, or carry downstream. Moving blocks travel two cells. Existing sample hazards and bosses are preserved when copying a sample.")
+		"help": show_message("BUILD A DAY\n\nChoose a block and drag to paint. Right-drag erases. Rectangle fills larger areas; it also works with the eraser and wind/water tools.\n\nPlace Start, Exit and Lanterns in empty cells immediately above solid terrain. Erase both ground rows to make a pit. One normal jump reaches two blocks.\n\nCharge dash toggles the ability for this day; Playtest uses the current Dash Lab profile. Height expands the canvas upward. The Spikes arrow cycles floor, wall and ceiling hazards.\n\nSpace-drag or middle-drag pans; scroll moves sideways. Shift-scroll or Up/Down pans vertically. ⌘/Ctrl + scroll zooms. Click the overview to travel further.\n\n⌘/Ctrl Z: undo · Shift Z: redo · S: save · O: open · F5: playtest. Esc returns from a test. Drafts save locally; Save layout creates a JSON file you can share.\n\nTree/flower brushes decorate the background. Zones push right, lift up, or carry downstream. Moving blocks travel two cells. Existing sample hazards and bosses are preserved when copying a sample.")
 func ui_button(id: String, text: String, rect: Rect2, active: bool=false, small: bool=false) -> void:
 	var hover=rect.has_point(get_viewport().get_mouse_position())
 	host.panel(self,rect,host.GOLD if active else (Color("3b5b5b") if hover else Color("29474b")),5)
@@ -278,11 +306,12 @@ func _draw() -> void:
 	field_label("ENVIRONMENT",Vector2(24,539))
 	for i in range(18,21):
 		var j=i-18;var item=TOOLS[i];ui_button("tool:"+item[0],item[1],Rect2(24+(j%2)*119,551+(j/2)*35,113,29),tool==item[0],true)
+	ui_button("spike_direction","Spikes "+{"up":"↑","right":"→","down":"↓","left":"←"}[spike_direction],Rect2(143,586,113,29),tool=="spikes",true)
 	ui_button("folder","Open layouts folder",Rect2(24,637,232,33),false,true)
 	host.label(self,"Local draft · "+("saved" if saved_revision==document.revision else "saving…"),Vector2(24,698),12,host.MUTED)
 	ui_button("brush","Brush · B",Rect2(280,140,106,27),not rectangle_mode,true)
 	ui_button("rect","Rectangle · G",Rect2(394,140,138,27),rectangle_mode,true)
-	host.label(self,"Right-drag: erase   ·   Space-drag: pan",Vector2(551,159),12,host.MUTED)
+	ui_button("dash","Charge dash: "+("On" if "charge_dash" in document.stage.get("abilities",[]) else "Off"),Rect2(550,140,160,27),"charge_dash" in document.stage.get("abilities",[]),true)
 	ui_button("minus","−",Rect2(992,140,36,27));ui_button("plus","+",Rect2(1035,140,36,27));ui_button("fit","Fit",Rect2(1078,140,52,27),false,true)
 	host.label(self,str(roundi(zoom*100))+"%  /  "+str(document.columns())+" columns",Vector2(1140,159),11,host.MUTED)
 	draw_rect(CANVAS.grow(1),Color("5a7776"),false,1)
@@ -290,9 +319,9 @@ func _draw() -> void:
 	draw_rect(MAP,Color("0b2027"))
 	for k in document.cells:
 		var c=YBLayoutDocument.coord(k)
-		draw_rect(Rect2(MAP.position+Vector2(float(c.x)/document.columns()*MAP.size.x,float(c.y)/15*MAP.size.y),Vector2(maxf(1,MAP.size.x/document.columns()),3)),Color("81a18c"))
-	for pos in [document.stage.spawn,document.stage.goal]: draw_circle(MAP.position+Vector2(pos[0]/document.stage.length*MAP.size.x,17),3,host.GOLD)
-	draw_rect(Rect2(MAP.position+Vector2(view.x/document.stage.length*MAP.size.x,0),Vector2(minf(MAP.size.x,CANVAS.size.x/zoom/document.stage.length*MAP.size.x),MAP.size.y)),host.GOLD,false,1)
+		draw_rect(Rect2(MAP.position+Vector2(float(c.x)/document.columns()*MAP.size.x,float(c.y-document.first_row())/document.row_count()*MAP.size.y),Vector2(maxf(1,MAP.size.x/document.columns()),3)),Color("81a18c"))
+	for pos in [document.stage.spawn,document.stage.goal]: draw_circle(MAP.position+Vector2(pos[0]/document.stage.length*MAP.size.x,(pos[1]-document.first_row()*48)/(document.row_count()*48.0)*MAP.size.y),3,host.GOLD)
+	draw_rect(Rect2(MAP.position+Vector2(view.x/document.stage.length*MAP.size.x,(view.y-document.first_row()*48)/(document.row_count()*48.0)*MAP.size.y),Vector2(minf(MAP.size.x,CANVAS.size.x/zoom/document.stage.length*MAP.size.x),minf(MAP.size.y,CANVAS.size.y/zoom/(document.row_count()*48.0)*MAP.size.y))),host.GOLD,false,1)
 	var message=status.left(117)
 	host.label(self,message,Vector2(280,698),13,Color("f0ab91") if status_error else host.MUTED)
 func draw_canvas(n: Node2D) -> void:
@@ -300,8 +329,8 @@ func draw_canvas(n: Node2D) -> void:
 	n.draw_set_transform(-view*zoom,0,Vector2.ONE*zoom)
 	var first=maxi(0,floori(view.x/48));var last=mini(document.columns(),ceili((view.x+CANVAS.size.x/zoom)/48)+1)
 	for x in range(first,last):
-		if x%8<4: n.draw_rect(Rect2(x*48,0,48,720),Color(0.4,0.7,0.7,.025))
-		for y in 15:
+		if x%8<4: n.draw_rect(Rect2(x*48,document.first_row()*48,48,document.row_count()*48),Color(0.4,0.7,0.7,.025))
+		for y in range(maxi(document.first_row(),floori(view.y/48)),mini(15,ceili((view.y+CANVAS.size.y/zoom)/48))):
 			var at=Vector2i(x,y);var k=YBLayoutDocument.key(at)
 			if document.cells.has(k): YBTerrainArt.tile(n,Vector2(at)*48,document.cells[k],document.stage,not document.cells.has(YBLayoutDocument.key(at-Vector2i(0,1))) or document.cells[k].kind!="ground")
 	for zone in document.stage.zones:
@@ -309,7 +338,7 @@ func draw_canvas(n: Node2D) -> void:
 		n.draw_rect(rect,Color(.35,.75,.88,.18));n.draw_rect(rect,Color(.5,.8,.9,.5),false,1)
 		n.draw_string(host.font,rect.position+Vector2(10,28),"↑" if zone.type=="updraft" else "→",HORIZONTAL_ALIGNMENT_LEFT,-1,20,Color("b3e9e9"))
 	for h in document.stage.hazards:
-		if h.type=="bramble": YBTerrainArt.bramble(n,Rect2(h.x,h.y,h.w,h.h),document.stage.season)
+		if h.type=="bramble": YBTerrainArt.bramble(n,Rect2(h.x,h.y,h.w,h.h),document.stage.season,h.get("direction","up"))
 		else: n.draw_circle(Vector2(h.x,h.y),float(h.r),Color("d08b77"));n.draw_string(host.font,Vector2(h.x-6,h.y+5),"!",HORIZONTAL_ALIGNMENT_LEFT,-1,18,Color("fff2cc"))
 	for d in document.stage.decorations:
 		var at=Vector2(d.x,d.y)
@@ -322,8 +351,8 @@ func draw_canvas(n: Node2D) -> void:
 			var at=Vector2(pos[0],pos[1]);var tint=Color("91e5c0") if field=="spawn" else host.GOLD
 			n.draw_rect(Rect2(at-Vector2(12,40),Vector2(24,40)),Color(tint,.25));n.draw_rect(Rect2(at-Vector2(12,40),Vector2(24,40)),tint,false,2)
 			n.draw_string(host.font,at-Vector2(6,14),"S" if field=="spawn" else ("E" if field=="goal" else "L"),HORIZONTAL_ALIGNMENT_LEFT,-1,16,tint)
-	for x in range(first,last+1): n.draw_line(Vector2(x*48,0),Vector2(x*48,720),Color(.5,.7,.7,.17),1/zoom)
-	for y in 16: n.draw_line(Vector2(first*48,y*48),Vector2(last*48,y*48),Color(.5,.7,.7,.17),1/zoom)
+	for x in range(first,last+1): n.draw_line(Vector2(x*48,document.first_row()*48),Vector2(x*48,720),Color(.5,.7,.7,.17),1/zoom)
+	for y in range(document.first_row(),16): n.draw_line(Vector2(first*48,y*48),Vector2(last*48,y*48),Color(.5,.7,.7,.17),1/zoom)
 	if CANVAS.has_point(get_viewport().get_mouse_position()) and document.inside(cursor):
 		var rect=Rect2(Vector2(cursor)*48,Vector2(48,48))
 		if stroke and rectangle_mode:

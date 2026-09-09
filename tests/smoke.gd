@@ -19,7 +19,7 @@ func run() -> void:
 	for id in app.stage_order:
 		app.start_stage(id)
 		await frames(45)
-		check(app.world.player.is_on_floor(),id+" spawn lands on solid terrain")
+		check(app.world.player.is_on_floor() or app.world.player.swimming.submerged,id+" spawn settles on terrain or in physical water")
 		check(app.world.deaths==0,id+" spawn is safe")
 		check(ResourceLoader.exists(app.stages[id].music),id+" audio loads")
 		app.pause_game()
@@ -49,6 +49,7 @@ func run() -> void:
 	var loaded=YBSave.new()
 	check(loaded.data.has("run") and loaded.data.run.collected.has(2.0),"checkpoint and collectibles survive save reload")
 	app.start_stage("06-30");await frames(20)
+	app.world.player.reset_at(Vector2(app.world.spec.boss.get("arena_x",0)+96,624));await frames(5)
 	app.world.boss_time=35.1;app.world.die();await frames(40)
 	check(app.world.boss_time>=35 and app.world.boss_time<36,"boss death preserves completed phase")
 	app.world.boss_time=104.99;app.world.projectiles.clear();await frames(3)

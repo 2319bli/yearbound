@@ -199,12 +199,20 @@ static func obstacle(n: Node2D, rect: Rect2, material: String, p: Dictionary) ->
 	# A contact shadow anchors solid obstacles to the terrain underneath.
 	n.draw_rect(Rect2(at+Vector2(0,rect.size.y-4),Vector2(rect.size.x,4)),ink(p,"outline"))
 
-static func bramble(n: Node2D, rect: Rect2, season: String) -> void:
+static func bramble(n: Node2D, rect: Rect2, season: String, direction: String="up") -> void:
 	var edge=Color("edb788") if season!="winter" else Color("ddf0ed")
 	var body=Color("68494b") if season!="winter" else Color("6b9fb3")
-	n.draw_rect(Rect2(rect.position+Vector2(0,rect.size.y-4),Vector2(rect.size.x,4)),Color("394449"))
-	for x in range(0,int(rect.size.x)-2,12):
-		var at=rect.position+Vector2(x,0)
-		var width=minf(12,rect.size.x-x)
-		n.draw_colored_polygon(PackedVector2Array([at+Vector2(0,rect.size.y),at+Vector2(width*.5,0),at+Vector2(width,rect.size.y)]),body)
-		n.draw_line(at+Vector2(1,rect.size.y-3),at+Vector2(width*.5,1),edge,2)
+	var length=rect.size.y if direction in ["left","right"] else rect.size.x
+	var depth=rect.size.x if direction in ["left","right"] else rect.size.y
+	for x in range(0,int(length)-2,12):
+		var width=minf(12,length-x)
+		var triangle=PackedVector2Array()
+		for v in [Vector2(x,depth),Vector2(x+width*.5,0),Vector2(x+width,depth)]:
+			var point=v
+			match direction:
+				"down": point=Vector2(v.x,depth-v.y)
+				"left": point=Vector2(v.y,v.x)
+				"right": point=Vector2(depth-v.y,v.x)
+			triangle.append(rect.position+point)
+		n.draw_colored_polygon(triangle,body)
+		n.draw_line(triangle[0],triangle[1],edge,2)

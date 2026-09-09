@@ -16,6 +16,8 @@ var checkpoint_index := -1
 var elapsed := 0.0
 var deaths := 0
 var camera_x := 0.0
+var camera_y := 0.0
+var boss_active := false
 var age := 0.0
 var respawn_delay := 0.0
 var flash := 0.0
@@ -34,6 +36,7 @@ func setup(data: Dictionary, settings: Dictionary) -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
 	spec = data
+	boss_active=spec.has("boss") and not spec.boss.has("arena_x")
 	assist = settings.assist
 	reduced_motion = settings.reduced_motion
 	font = SystemFont.new()
@@ -98,6 +101,9 @@ func restore(state: Dictionary) -> void:
 	boss_time = clampf(float(state.get("boss_time",0)),0,70)
 	player.reset_at(checkpoint)
 	camera_x = clampf(player.position.x-400,0,maxf(0,float(spec.length)-1280))
+	camera_y = clampf(player.position.y-430,float(spec.get("world_top",0)),0)
+	if spec.has("boss"): boss_active=not spec.boss.has("arena_x") or player.position.x>=float(spec.boss.arena_x)+48
+	camera.position=Vector2(camera_x+640,camera_y+360)
 
 func set_running(value: bool) -> void:
 	if not value and running and player and player.ability: player.ability.interrupt(player,"paused")
@@ -120,6 +126,8 @@ func _physics_process(dt: float) -> void:
 		if respawn_delay <= 0:
 			if spec.has("lab_stations"): age=0
 			player.reset_at(checkpoint)
+			camera_x=clampf(checkpoint.x-400,0,maxf(0,float(spec.length)-1280));camera_y=clampf(checkpoint.y-430,float(spec.get("world_top",0)),0)
+			camera.position=Vector2(camera_x+640,camera_y+360)
 			player.visible = true
 			player.active = true
 		queue_redraw()
@@ -163,7 +171,7 @@ func _physics_process(dt: float) -> void:
 			var force = Vector2(zone.force[0],zone.force[1])
 			if zone.get("pulse",false): force *= maxf(0,sin(age*1.5))
 			player.wind += force
-			if zone.type == "updraft": player.velocity.y = maxf(player.velocity.y,-590)
+			if zone.type == "updraft" and (not player.ability or not player.ability.controls_motion()): player.velocity.y = maxf(player.velocity.y,-590)
 	if player.position.y > 825 or player.position.x < -70: die()
 	player.position.x = clampf(player.position.x,-45,float(spec.length)-12)
 	for i in spec.motes.size():
@@ -189,13 +197,20 @@ func _physics_process(dt: float) -> void:
 		var at = hazard_position(hazard)
 		if at.distance_to(player.position-Vector2(0,21)) < float(hazard.r)+15: die()
 	if spec.has("boss"):
-		update_boss(dt)
+		if not boss_active and player.position.x>=float(spec.boss.get("arena_x",0))+48:
+			boss_active=true;boss_spawn_clock=2.0
+		if boss_active:
+			player.position.x=clampf(player.position.x,float(spec.boss.get("arena_x",0))+24,float(spec.length)-24)
+			update_boss(dt)
 	else:
 		var goal = Vector2(spec.goal[0],spec.goal[1])
 		if player.position.distance_to(goal) < 58: win()
 	var target = clampf(player.position.x-430+(player.velocity.x*0.15 if not reduced_motion else 0),0,maxf(0,float(spec.length)-1280))
 	camera_x = lerpf(camera_x,target,1-exp(-dt*5))
-	camera.position = Vector2(camera_x+640,360)
+	var vertical_target=clampf(player.position.y-430+clampf(player.velocity.y*.08,-55,70),float(spec.get("world_top",0)),0)
+	camera_y=lerpf(camera_y,vertical_target,1-exp(-dt*7))
+	if boss_active and spec.has("boss"): camera_x=float(spec.boss.get("arena_x",0));camera_y=0
+	camera.position = Vector2(camera_x+640,camera_y+360)
 	queue_redraw()
 
 func hazard_position(h: Dictionary) -> Vector2:
@@ -261,18 +276,19 @@ func update_boss(dt: float) -> void:
 	if boss_time >= float(spec.boss.duration):
 		win()
 		return
+	var origin=float(spec.boss.get("arena_x",0))
 	var phase = mini(2,int(boss_time/35))
 	boss_spawn_clock -= dt
 	if boss_spawn_clock <= 0:
 		boss_attack += 1
 		boss_spawn_clock = [2.3,1.85,1.45][phase] * (1.3 if assist else 1.0)
-		var target_x = clampf(player.position.x,60,1220)
+		var target_x = clampf(player.position.x,origin+60,origin+1220)
 		projectiles.append({"pos":Vector2(target_x,-40),"vel":Vector2(0,360+phase*55),"delay":0.9 if not assist else 1.3,"r":19.0,"kind":"rain"})
 		if phase >= 1:
 			var side = -1 if boss_attack%2 else 1
-			projectiles.append({"pos":Vector2(-30 if side == 1 else 1310,574 if boss_attack%3 else 445),"vel":Vector2(side*(310+phase*30),0),"delay":1.0,"r":18.0,"kind":"sweep"})
+			projectiles.append({"pos":Vector2(origin+(-30 if side == 1 else 1310),574 if boss_attack%3 else 445),"vel":Vector2(side*(310+phase*30),0),"delay":1.0,"r":18.0,"kind":"sweep"})
 		if phase == 2 and boss_attack%2 == 0:
-			projectiles.append({"pos":Vector2(clampf(target_x+180,50,1230),-40),"vel":Vector2(0,430),"delay":1.1,"r":19.0,"kind":"rain"})
+			projectiles.append({"pos":Vector2(clampf(target_x+180,origin+50,origin+1230),-40),"vel":Vector2(0,430),"delay":1.1,"r":19.0,"kind":"rain"})
 	for i in range(projectiles.size()-1,-1,-1):
 		var projectile = projectiles[i]
 		projectile.delay -= dt
@@ -281,7 +297,7 @@ func update_boss(dt: float) -> void:
 		if projectile.pos.distance_to(player.position-Vector2(0,21)) < projectile.r+13:
 			die()
 			return
-		if projectile.pos.y > 760 or projectile.pos.x < -100 or projectile.pos.x > 1380: projectiles.remove_at(i)
+		if projectile.pos.y > 760 or projectile.pos.x < origin-100 or projectile.pos.x > origin+1380: projectiles.remove_at(i)
 
 func burst(at: Vector2, tint: Color, count: int) -> void:
 	if reduced_motion: count = mini(count,4)
@@ -351,7 +367,8 @@ func draw_markers(n: Node2D) -> void:
 func draw_hazards(n: Node2D) -> void:
 	for h in spec.hazards:
 		if h.type=="bramble":
-			YBTerrainArt.bramble(n,Rect2(h.x,h.y,h.w,h.h),spec.season)
+			if h.x+h.w<camera_x-32 or h.x>camera_x+1312 or h.y+h.h<camera_y-32 or h.y>camera_y+752: continue
+			YBTerrainArt.bramble(n,Rect2(h.x,h.y,h.w,h.h),spec.season,h.get("direction","up"))
 			continue
 		var at = hazard_position(h)
 		if h.type == "icicle":
@@ -369,7 +386,7 @@ func draw_hazards(n: Node2D) -> void:
 				poly.append(at+Vector2.from_angle(j*TAU/16+age*2)*radius)
 			n.draw_colored_polygon(poly,Color("553e48"))
 			n.draw_circle(at,7,Color("eda66b"),true,-1,true)
-	if spec.has("boss"): draw_boss(n)
+	if spec.has("boss") and boss_active: draw_boss(n)
 
 func draw_foreground(n: Node2D) -> void:
 	YBScenery.stage_layer(n,spec,platforms,0 if reduced_motion else age,camera_x,"front")
@@ -391,7 +408,7 @@ func draw_environment(n: Node2D) -> void:
 
 func draw_effects(n: Node2D) -> void:
 	for particle in particles: n.draw_circle(particle.pos,maxf(1,particle.life*5),Color(particle.color,minf(1,particle.life*2)),true,-1,true)
-	n.draw_set_transform(Vector2(camera_x,0))
+	n.draw_set_transform(Vector2(camera_x,camera_y))
 	var scene=str(spec.get("ambience",{}).get("month_scene",""))
 	var rain_floor=780.0
 	for zone in player.swimming.volumes:
@@ -436,7 +453,8 @@ func draw_zone(n: Node2D, z: Dictionary) -> void:
 			n.draw_line(Vector2(x,y),Vector2(x+28,y-3),Color(0.88,0.9,0.80,0.12+maxf(0,sin(age*1.5))*0.25),1,true)
 
 func draw_boss(n: Node2D) -> void:
-	var at = Vector2(640+sin(age*0.6)*180,165+sin(age*1.2)*18)
+	var origin=float(spec.boss.get("arena_x",0))
+	var at = Vector2(origin+640+sin(age*0.6)*180,165+sin(age*1.2)*18)
 	var bird=YBLandscape.texture("res://art/squallkeeper.png")
 	if bird:
 		var width=344.0
@@ -452,7 +470,7 @@ func draw_boss(n: Node2D) -> void:
 				n.draw_line(Vector2(pos.x,280),Vector2(pos.x,598),Color(1,0.77,0.39,0.6),2,true)
 				n.draw_circle(Vector2(pos.x,582),8,Color("ffd08d"),true,-1,true)
 			else:
-				n.draw_line(Vector2(0,pos.y),Vector2(1280,pos.y),Color(1,0.76,0.4,0.35),2,true)
+				n.draw_line(Vector2(origin,pos.y),Vector2(origin+1280,pos.y),Color(1,0.76,0.4,0.35),2,true)
 		else:
 			n.draw_circle(pos,projectile.r+6,Color(1,0.7,0.35,0.15),true,-1,true)
 			n.draw_circle(pos,projectile.r,Color("eda65c"),true,-1,true)

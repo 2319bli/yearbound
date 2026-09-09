@@ -1,6 +1,12 @@
-# Yearbound · Foundation 0.11.0
+# Yearbound · Foundation 0.12.0
 
-A native Godot platformer about travelling from 1 June to 31 May. Twenty-nine playable reference days establish the movement, visual and content systems. The first seventeen June days each have their own setting; the supplied 1–17 June tracks are included. Every month now has a playable sample. The other 336 dates are deliberately unfinished.
+A native Godot platformer about travelling from 1 June to 31 May. Twenty-nine playable days now include extended vertical challenge routes, each at least twice its previous length and with 116–164 separate spike placements. The first seventeen June days each have their own setting; the supplied 1–17 June tracks are included. Every month now has a playable sample. The other 336 dates are deliberately unfinished.
+
+## GitHub and building
+
+The private repository is `2319bli/Yearbound`. Tag `v0.11.0` preserves the tested foundation before the workshop and campaign expansion. The repository includes the editable source, art and music; generated app packages, caches and player saves are excluded.
+
+Clone the repository and import `project.godot` in Godot 4.6.2. On an Apple silicon Mac with Godot installed at `/Applications/Godot.app`, run `python3 tools/build_macos.py` to create `Yearbound.app` beside the project. Set `GODOT_BIN` for a different Godot executable. The downloadable app supplied alongside this project is already built.
 
 ## Play
 
@@ -20,11 +26,11 @@ Choose **19 November** in the calendar. Swim with **WASD / arrows / IJKL**, or t
 
 Choose **Charge dash lab** on the title screen. Hold **Shift / C** (controller **X / West / RB**), aim with WASD/arrows/IJKL or the left stick, then release. Short, medium and long holds blend smoothly, with different steering and momentum tradeoffs. **Esc / Start** opens seventeen stations and the complete live tuning panel; export a tuning JSON file to share your preferred feel. Controls can be rebound in Settings or from the lab panel. See `docs/CHARGE_DASH.md`.
 
-Lab attempts are isolated from campaign progress. Its tuning profile is shared with campaign play. The original thirteen layouts retain their geometry; all playable days now opt into charge dash. The lab is 44,160 logical pixels long, up from 21,120, with six extended courses.
+Lab attempts are isolated from campaign progress. Its tuning profile is shared with campaign play. The campaign keeps its established openings and adds longer vertical challenges; all playable days opt into charge dash. The lab is 44,160 logical pixels long, up from 21,120, with six extended courses.
 
 ## Layout workshop
 
-Choose **Layout workshop** on the title screen to paint square blocks, place markers, set the date/theme/music and playtest your layouts. Save a shareable `.yearbound.json` file for incorporation as a day. The editor includes undo/redo, rectangle fills, pan/zoom, sample copying and draft recovery. Campaign progress stays separate. See `docs/WORKSHOP.md` for the complete guide.
+Choose **Layout workshop** on the title screen to paint square blocks, place markers, set the date/theme/music and playtest your layouts. Save a shareable `.yearbound.json` file for incorporation as a day. The editor includes a visible charge-dash toggle, a height selector, four spike directions, undo/redo, rectangle fills, pan/zoom, sample copying and draft recovery. New layouts enable dash. Playtest uses the current Dash Lab profile and normal rebound controls. Campaign progress stays separate. See `docs/WORKSHOP.md` for the complete guide.
 
 ## The playable days
 
@@ -60,7 +66,7 @@ Choose **Layout workshop** on the title screen to paint square blocks, place mar
 | 11 April | A Rainbow Between Showers | Climb rain-washed garden terraces. Ride the rising spray and dash diagonally beneath the rainbow. |
 | 24 May | The Garden at the Edge of May | A long, lush garden path. Link flower springs, elevated walks and controlled diagonal landings. |
 
-These are compact reference stages: tens of seconds to roughly a minute at a clean run, longer with exploration and retries; the boss is 105 seconds without deaths. They do **not** yet meet the eventual five-minute-per-day target. The supplied 1–17 June soundtracks are included; the later sample tracks are original synthesized sketch scores intended for later musical development.
+The expanded stages span 13,152–23,808 logical pixels, with six named vertical challenge sections and 864–1,488 pixels of elevation change. All 29 have more than 50 independent spike placements (116–164, containing 756–1,162 visible tips). Existing openings act as a warmup; the longer courses combine sharp landing edges, underside/wall spikes, climbs, descents and checkpoint rest decks. The June boss follows a substantial approach and retains its 105-second survival fight. These are harder reference journeys, not a claim of final five-minute pacing or human difficulty balancing. See `docs/EXPANDED_CAMPAIGN.md` for the per-day measurements. The supplied 1–17 June soundtracks are included; the later sample tracks are original synthesized sketch scores intended for later musical development.
 
 See `docs/JUNE_09_17.md` for the latest nine June scenes, `docs/MONTHLY_SAMPLES.md` for the eight new monthly routes and `docs/JUNE_02_08.md` for the June decoration references.
 
@@ -112,20 +118,20 @@ godot --headless --path . --script tests/controller.gd --fixed-fps 60
 godot --headless --path . --script tests/charge_dash.gd --fixed-fps 60
 godot --headless --path . --script tests/year_round.gd --fixed-fps 60
 godot --headless --path . --script tests/dash_interaction.gd --fixed-fps 60
-godot --headless --path . --script tests/month_routes.gd --fixed-fps 60
 godot --headless --path . --script tests/lab_extended_routes.gd --fixed-fps 60
 godot --headless --path . --script tests/dash_lab.gd --fixed-fps 60
 godot --headless --path . --script tests/dash_routes.gd --fixed-fps 60
 godot --headless --path . --script tests/ground_layout.gd --fixed-fps 60
-godot --headless --path . --script tests/traversal.gd --fixed-fps 60
 godot --headless --path . --script tests/editor.gd --fixed-fps 60
 godot --headless --path . --script tests/june_week.gd --fixed-fps 60
-godot --headless --path . --script tests/june_week_traversal.gd --fixed-fps 60
 godot --headless --path . --script tests/june_second.gd --fixed-fps 60
-godot --headless --path . --script tests/june_second_routes.gd --fixed-fps 60
+godot --headless --path . --script tests/expanded_campaign.gd --fixed-fps 60
+godot --headless --path . --script tests/campaign_openings.gd --fixed-fps 60
+godot --headless --path . --script tests/expanded_routes.gd --fixed-fps 60
+godot --headless --path . --script tests/swimming.gd --fixed-fps 60
 ```
 
-Always set `YEARBOUND_SAVE_DIR` to a scratch folder for these tests. `smoke.gd` deliberately records completion; `mechanics.gd` deliberately damages a test save to exercise backup recovery. `traversal.gd` uses a simple running/jumping bot and reports retries; it is a reachability check, not a substitute for human playtesting. `tests/capture.gd` renders the menus and every installed stage with the native renderer when `YEARBOUND_CAPTURE_DIR` points to an existing folder.
+Always set `YEARBOUND_SAVE_DIR` to a scratch folder for these tests. `smoke.gd` deliberately records completion; `mechanics.gd` deliberately damages a test save to exercise backup recovery. `campaign_openings.gd` checks the warmup routes. `expanded_routes.gd` begins at each first new checkpoint and travels through the extended course using normal input, then checks the exit or boss entry. These are reachability checks, not substitutes for human playtesting. `tests/capture.gd` renders the menus and every installed stage with the native renderer when `YEARBOUND_CAPTURE_DIR` points to an existing folder.
 
 See `docs/GROUND_AND_LAYERS.md` for the 0.5 layout and layering changes. See `docs/VALIDATION.md` for this build's results and limits, and `docs/MOVEMENT.md` for the 0.4 movement changes and tuning guide.
 

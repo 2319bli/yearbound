@@ -231,7 +231,11 @@ func draw_background(n: Node2D) -> void:
 	n.material.set_shader_parameter("separation",float(ambience.get("separation",0.46 if season in ["june","mill"] else 0.32)))
 	var air=Color(ambience.get("haze","99b8b0"))
 	n.material.set_shader_parameter("air_color",Vector3(air.r,air.g,air.b))
+	# The distant landscape shifts gently during a climb; screen-space UI stays put.
+	var vertical=world.camera_y if show_world else 0.0
+	n.draw_set_transform(Vector2(0,clampf(-vertical*.04,0,48)))
 	YBLandscape.background(n,season,cam,time,store.data.settings.reduced_motion,str(world.spec.get("background","")) if show_world else "",ambience)
+	n.draw_set_transform(Vector2.ZERO)
 	if season in ["june","mill"]: YBScenery.atmosphere(n,cam,time,store.data.settings.reduced_motion)
 
 func draw_overlay(n: Node2D) -> void:
@@ -283,7 +287,7 @@ func draw_title(n: Node2D) -> void:
 	label(n,"The first sunlit path",Vector2(931,132),17,INK)
 	button(n,"lab","Charge dash lab   →",Rect2(831,175,356,48),true)
 	label(n,"Experiment · tune · repeat",Vector2(849,248),14,CREAM)
-	label(n,"FOUNDATION EDITION  ·  0.11.0",Vector2(995,684),11,Color("e6eac7"),true)
+	label(n,"FOUNDATION EDITION  ·  0.12.0",Vector2(995,684),11,Color("e6eac7"),true)
 
 func draw_calendar(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color(0.07,0.18,0.20,0.94))
@@ -338,9 +342,9 @@ func draw_hud(n: Node2D) -> void:
 	label(n,date_label(world.spec.id).to_upper(),Vector2(48,47),12,GOLD)
 	label(n,world.spec.title,Vector2(48,75),mini(20,int(20*310/maxf(310,heading.get_string_size(world.spec.title,HORIZONTAL_ALIGNMENT_LEFT,-1,20).x))),CREAM,false,true)
 	panel(n,Rect2(982,22,270,71),Color(0.09,0.22,0.25,0.9),11)
-	label(n,(str(maxi(0,ceili(105-world.boss_time)))+"s to calm the sky") if world.spec.has("boss") else ("✦  "+str(world.collected.size())+" / "+str(world.spec.motes.size())),Vector2(1002,52),18,GOLD)
+	label(n,(str(maxi(0,ceili(float(world.spec.boss.duration)-world.boss_time)))+"s to calm the sky") if world.spec.has("boss") and world.boss_active else ("✦  "+str(world.collected.size())+" / "+str(world.spec.motes.size())),Vector2(1002,52),18,GOLD)
 	label(n,clock_text(world.elapsed)+"   ·   Esc / Start: pause",Vector2(1002,78),12,CREAM)
-	if world.spec.has("boss"):
+	if world.spec.has("boss") and world.boss_active:
 		panel(n,Rect2(417,25,446,67),Color(0.1,0.2,0.25,0.93),11)
 		var phase=mini(3,int(world.boss_time/35)+1)
 		label(n,"THE SQUALLKEEPER  ·  PHASE "+str(phase)+" / 3",Vector2(640,48),12,CREAM,true)
@@ -414,7 +418,7 @@ func draw_settings(n: Node2D) -> void:
 
 func draw_about(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color(0.07,0.18,0.2,0.96))
-	label(n,"FIELD NOTES  /  FOUNDATION 0.11.0",Vector2(90,81),12,GOLD)
+	label(n,"FIELD NOTES  /  FOUNDATION 0.12.0",Vector2(90,81),12,GOLD)
 	label(n,"A whole year starts here.",Vector2(87,148),46,CREAM,false,true)
 	wrapped(n,"Yearbound is a platforming journey from 1 June to 31 May. Each date will become its own place: its own atmosphere, music and reason to take one more leap.",Vector2(90,213),750,23,CREAM)
 	wrapped(n,"This foundation contains "+str(stages.size())+" playable days, with a sample in every month and seventeen distinct days at the beginning of June. Follow the sunmotes, light the checkpoint lanterns and find each day's door. On 30 June, read the amber warnings and survive three phases to calm the Squallkeeper. There is no attack button.",Vector2(90,344),750,18,MUTED)
@@ -510,7 +514,7 @@ func start_editor_test(data: Dictionary) -> void:
 func return_to_editor() -> void:
 	if world: remove_child(world);world.queue_free();world=null
 	editor_test=false;lab_test=false;change_screen("editor");editor.show();Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
-	for action in ["left","right","jump"]: Input.action_release(action)
+	for action in ["left","right","jump","aim_up","aim_down","ability"]: Input.action_release(action)
 func draw_editor_complete(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color(0.06,0.17,0.2,.8))
 	panel(n,Rect2(360,200,560,330),Color("18363b"),14)
