@@ -54,13 +54,17 @@ func _ready() -> void:
 	audio = YBAudio.new();add_child(audio);audio.configure(store.data.settings)
 	audio.play_track("res://audio/june_opens_the_gate.mp3")
 	var back_layer = CanvasLayer.new();back_layer.layer=-10;add_child(back_layer)
-	background = Node2D.new();background.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;background.set_script(load("res://scripts/overlay.gd"));background.host=self;background.draw_method="draw_background";back_layer.add_child(background)
+	background = Node2D.new();background.texture_filter=CanvasItem.TEXTURE_FILTER_LINEAR;background.set_script(load("res://scripts/overlay.gd"));background.host=self;background.draw_method="draw_background";back_layer.add_child(background)
 	var distance_grade=ShaderMaterial.new();distance_grade.shader=load("res://art/background_grade.gdshader")
 	background.material=distance_grade
 	# Pixel-grid composite affects scenery and actors; text stays at native resolution.
+	# Visual overhaul: the composite now samples at the native 1280x720 grid, so the
+	# painterly scenery and composed terrain render at full fidelity. Restoring
+	# pixel_grid to Vector2(640,360) brings back the old coarse pixel look.
 	var pixel_layer=CanvasLayer.new();pixel_layer.layer=2;add_child(pixel_layer)
 	var pixel_pass=ColorRect.new();pixel_pass.size=Vector2(1280,720);pixel_pass.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	var pixel_material=ShaderMaterial.new();pixel_material.shader=load("res://art/pixel_world.gdshader")
+	pixel_material.set_shader_parameter("pixel_grid",Vector2(1280,720))
 	pixel_pass.material=pixel_material;pixel_layer.add_child(pixel_pass)
 	var layer = CanvasLayer.new();layer.layer=3;add_child(layer)
 	overlay = Node2D.new();overlay.set_script(load("res://scripts/overlay.gd"));overlay.host=self;layer.add_child(overlay)

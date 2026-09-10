@@ -34,7 +34,9 @@ var render_layers: Dictionary = {}
 var block_cells: Dictionary = {}
 
 func setup(data: Dictionary, settings: Dictionary) -> void:
-	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	# Painterly atlas art and sprites are scaled smoothly now that the world is
+	# no longer composited through a coarse pixel grid.
+	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
 	spec = data
 	boss_active=spec.has("boss") and not spec.boss.has("arena_x")
@@ -335,18 +337,22 @@ func draw_backdrop(n: Node2D) -> void:
 func draw_scenery(n: Node2D) -> void:
 	YBScenery.stage_layer(n,spec,platforms,0 if reduced_motion else age,camera_x,"back")
 	YBJourneyScenery.foreground_places(n,spec,Vector2(camera_x,camera_y),player.position,0 if reduced_motion else age)
-	if spec.get("grid_size",0)==48: return
+	var grid_stage=spec.get("grid_size",0)==48
 	for platform in platforms:
 		if platform.gone or platform.body.position.x+float(platform.data.w)<camera_x-100 or platform.body.position.x>camera_x+1380: continue
 		if platform.data.get("base_ground",false): continue
-		YBScenery.edge_plants(n,platform,spec,age)
 		var d: Dictionary=platform.data
 		var at: Vector2=platform.body.position
+		# Wood beams visually anchor to the ground with posts; on grid stages the
+		# post is only drawn for low beams so tall floating courses stay clean.
 		if d.kind=="wood":
-			for x in [17,float(d.w)-23]:
-				var foot=float(spec.ground.y)-at.y if spec.has("ground") else float(d.h)+38
-				n.draw_line(at+Vector2(x,d.h-2),at+Vector2(x,foot),Color("506858"),6)
-				n.draw_line(at+Vector2(x-10,d.h+1),at+Vector2(x,d.h+22),Color("71806a"),3)
+			var foot=float(spec.ground.y)-at.y if spec.has("ground") else float(d.h)+38
+			if not grid_stage or foot<=260:
+				for x in [17,float(d.w)-23]:
+					n.draw_line(at+Vector2(x,d.h-2),at+Vector2(x,foot),Color("506858"),6)
+					n.draw_line(at+Vector2(x-10,d.h+1),at+Vector2(x,d.h+22),Color("71806a"),3)
+		if grid_stage: continue
+		YBScenery.edge_plants(n,platform,spec,age)
 		if not YBScenery.active(spec) and d.kind=="ground":
 			if spec.season!="winter": YBLandscape.grass(n,at,float(d.w),spec.season,age,float(d.x))
 			if int(d.w)>370 and int(d.x)%3==0: YBLandscape.tree(n,at+Vector2(d.w-65,0),.75,spec.season,Color.WHITE)
