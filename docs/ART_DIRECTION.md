@@ -10,9 +10,9 @@ Terrain is no longer drawn as bordered 48×48 tiles, and the world is no longer 
 
 - The drawn silhouette always matches the collision rectangle exactly. Decoration never extends past it, and no decorative element may resemble a platform, cap or hazard.
 - Solid fill is continuous across a platform; adjoining platforms merge visually because borders are only drawn on **exposed** edges (detected via the shared `block_cells` occupancy map).
-- The walk edge is always the brightest element: a 2 px light line over a mid band with a scalloped underside. Interior texture (stones, strata, masonry courses, log grain, hay bands, ice sheen, crumble fissures) stays below the cap's contrast.
+- The walk edge is always the brightest element: a luminous crest with a hot highlight line over a mid band that spills 3 px past the sides and hangs a fringed lower edge into the body. Interior texture (strata, pebbles, rootlets, masonry courses, log grain and knots, hay straw, ice sheen, crumble plates, pixel-craft speckle) stays below the cap's contrast.
 - Cap vegetation is paired, curved, low blades (never single straight strokes, which read as spikes); frozen caps get low snow clumps instead. Springs keep their flower cap and chevron marker; moving timber keeps its diamond.
-- Underside shadow and notches stay inside the collision rect. Exposed sides get a dark rim with a thin lit inner line for thickness.
+- Undersides carry a shadow band, interior notches and short tapered drips hanging just below the mass — the Towerverse ragged underside. Drips are small, dark and clearly attached; they never resemble a standable surface or a hazard. Exposed sides get a dark rim, a thin lit bevel and damp moss streaks.
 - The pixel-composite pass remains in place but samples at the native 1280×720 grid; restoring `pixel_grid` to `Vector2(640,360)` in `main.gd` reverts it. Painterly textures use linear filtering.
 - The layout workshop still paints the legacy per-cell `tile()` look; playtests and the game itself show the composed masses.
 
