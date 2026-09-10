@@ -261,19 +261,19 @@ static func edge_rims(n: Node2D, rect: Rect2, left_open: bool, right_open: bool,
 	# Exposed vertical faces: dark outer rim, thin lit bevel inside, and
 	# optional damp streaks trailing down from the cap.
 	if left_open:
-		n.draw_rect(Rect2(rect.position,Vector2(3,rect.size.y)),rim)
-		n.draw_rect(Rect2(rect.position+Vector2(3,4),Vector2(1,maxf(0,rect.size.y-8))),lit)
+		n.draw_rect(Rect2(rect.position,Vector2(4,rect.size.y)),rim)
+		n.draw_rect(Rect2(rect.position+Vector2(4,4),Vector2(2,maxf(0,rect.size.y-8))),lit)
 		if moss.a>0:
 			for y in range(16,int(rect.size.y)-8,31):
 				if YBLandscape.hash_value(seed_value+y*2.9)<0.5: continue
-				n.draw_rect(Rect2(rect.position+Vector2(3,y),Vector2(2,5+YBLandscape.hash_value(y)*8)),moss)
+				n.draw_rect(Rect2(rect.position+Vector2(4,y),Vector2(2,5+YBLandscape.hash_value(y)*8)),moss)
 	if right_open:
-		n.draw_rect(Rect2(Vector2(rect.end.x-3,rect.position.y),Vector2(3,rect.size.y)),rim)
-		n.draw_rect(Rect2(Vector2(rect.end.x-4,rect.position.y+4),Vector2(1,maxf(0,rect.size.y-8))),lit)
+		n.draw_rect(Rect2(Vector2(rect.end.x-4,rect.position.y),Vector2(4,rect.size.y)),rim)
+		n.draw_rect(Rect2(Vector2(rect.end.x-6,rect.position.y+4),Vector2(2,maxf(0,rect.size.y-8))),lit)
 		if moss.a>0:
 			for y in range(20,int(rect.size.y)-8,29):
 				if YBLandscape.hash_value(seed_value+y*3.7)<0.55: continue
-				n.draw_rect(Rect2(Vector2(rect.end.x-5,rect.position.y+y),Vector2(2,4+YBLandscape.hash_value(y+7)*7)),moss)
+				n.draw_rect(Rect2(Vector2(rect.end.x-7,rect.position.y+y),Vector2(2,4+YBLandscape.hash_value(y+7)*7)),moss)
 
 static func underside(n: Node2D, rect: Rect2, dark: Color, rim: Color, seed_value: float) -> void:
 	# Shadowed underside: a dark band inside the rect, notches rising into it,
@@ -343,22 +343,40 @@ static func mass(n: Node2D, rect: Rect2, d: Dictionary, stage: Dictionary, p: Di
 		bottom_open=false
 		for c in cols:
 			if not buried(occupied,gx+c,gy+rows): bottom_open=true;break
+	# Key every body to the scene's own palette: Towerverse terrain is always a
+	# darker, richer pocket of the environment's hue family, so masses neither
+	# blend into the backdrop nor stick out as foreign objects. Then deepen the
+	# body slightly so the luminous cap and the background bracket it.
+	var anchor_mid=ink(p,"soil");var anchor_light=ink(p,"soil_light");var anchor_dark=ink(p,"soil_dark")
+	if kind=="ice":
+		anchor_mid=ink(p,"grass");anchor_light=ink(p,"top");anchor_dark=ink(p,"grass_shadow")
+	elif kind=="block" and material=="hay":
+		anchor_mid=ink(p,"top");anchor_light=ink(p,"wood_top");anchor_dark=ink(p,"seam")
+	elif kind in ["crumble","spring"]:
+		anchor_mid=ink(p,"soil_light");anchor_light=ink(p,"seam");anchor_dark=ink(p,"soil_dark")
+	fill=fill.lerp(anchor_mid,0.4).darkened(0.05)
+	light=light.lerp(anchor_light,0.4)
+	dark=dark.lerp(anchor_dark,0.4)
 	# Body.
 	var rim=fill.darkened(0.42)
 	if kind=="block" and material=="stone":
-		# Carved masonry: framed courses, staggered joints and moss settling
-		# from the cap. Reads as hewn stone and merges across cells.
+		# Carved masonry: dense framed courses, staggered joints, two-tone brick
+		# clusters and moss settling from the cap. Merges across cells.
 		n.draw_rect(rect,fill)
 		n.draw_rect(Rect2(rect.position+Vector2(0,12),Vector2(rect.size.x,6)),Color(light,0.4))
-		for y in range(14,int(rect.size.y)-4,14):
+		for y in range(13,int(rect.size.y)-4,12):
 			n.draw_line(rect.position+Vector2(2,y),rect.position+Vector2(rect.size.x-2,y),Color(dark,0.55),1)
 			n.draw_line(rect.position+Vector2(2,y+1),rect.position+Vector2(rect.size.x-2,y+1),Color(light,0.25),1)
-			for x in range(22 if posmod(y,28)==0 else 6,int(rect.size.x)-6,30):
-				n.draw_line(rect.position+Vector2(x,y-13),rect.position+Vector2(x,y),Color(dark,0.45),1)
+			for x in range(20 if posmod(y,24)==0 else 6,int(rect.size.x)-6,26):
+				n.draw_line(rect.position+Vector2(x,y-11),rect.position+Vector2(x,y),Color(dark,0.45),1)
+			for x in range(10,int(rect.size.x)-14,37):
+				var h1=YBLandscape.hash_value(seed_value+x*2.9+y)
+				if h1<0.5: continue
+				n.draw_rect(Rect2(rect.position+Vector2(x,y-8),Vector2(7+h1*5,3)),Color(light if h1>0.75 else dark,0.4))
 		for x in range(6,int(rect.size.x)-8,23):
 			if YBLandscape.hash_value(seed_value+x*1.7)<0.5: continue
 			n.draw_rect(Rect2(rect.position+Vector2(x,9+YBLandscape.hash_value(x+seed_value)*8),Vector2(5,3)),Color(cap_low,0.55))
-		speckle(n,rect,[light,dark],13,seed_value,0.4)
+		speckle(n,rect,[light,dark],11,seed_value,0.45)
 	elif kind=="block" and material=="log":
 		# Stacked timber: plank courses, grain streaks, knots and end grain.
 		n.draw_rect(rect,fill)
@@ -417,6 +435,15 @@ static func mass(n: Node2D, rect: Rect2, d: Dictionary, stage: Dictionary, p: Di
 			n.draw_polyline(crack,dark.darkened(0.25),1.5,true)
 	else:
 		earth_body(n,rect,fill,light,dark,seed_value)
+	# Ornate inner frame and carved centrepiece on larger earth/stone masses —
+	# the Towerverse panel language, kept well below cap contrast.
+	if kind in ["ground","spring"] or (kind=="block" and material=="stone"):
+		if rect.size.x>110 and rect.size.y>60:
+			n.draw_rect(rect.grow(-9),Color(dark,0.45),false,1)
+			n.draw_rect(rect.grow(-11),Color(light,0.28),false,1)
+			var c=rect.get_center()
+			n.draw_colored_polygon(PackedVector2Array([c+Vector2(-5,0),c+Vector2(0,-5),c+Vector2(5,0),c+Vector2(0,5)]),Color(dark,0.5))
+			n.draw_colored_polygon(PackedVector2Array([c+Vector2(-2,0),c+Vector2(0,-2),c+Vector2(2,0),c+Vector2(0,2)]),Color(light,0.4))
 	# Exposed-edge treatment, then the cap last so nothing covers the walk edge.
 	var moss=Color(cap_low,0.55) if kind in ["block","ground","spring"] and material=="stone" else Color.TRANSPARENT
 	edge_rims(n,rect,left_open,right_open,rim,Color(light,0.7),moss,seed_value)
