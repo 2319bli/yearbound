@@ -3,7 +3,7 @@
   "id": "06-18",
   "title": "The Garden Maze",
   "season": "june",
-  "description": "A hedge maze of crumbling roofs and doubling-back paths: crawl corridors, roof runs, bramble dead-ends and a final climb to the raised terrace.",
+  "description": "A hedge maze of crumbling roofs and doubling-back paths: crawl corridors, roof runs, bramble dead-ends and a final climb to the raised terrace. Expert redesign: moving hedge gates and closing maze rosettes.",
   "music": "res://audio/06-18_The_Garden_Maze.mp3",
   "spawn": [
     120,
@@ -202,7 +202,7 @@
     {
       "x": 5376,
       "y": 336,
-      "w": 192,
+      "w": 288,
       "h": 48,
       "kind": "block",
       "material": "stone"
@@ -914,6 +914,48 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-0",
+      "x": 1026.0,
+      "y": 480.0,
+      "period": 3.4,
+      "phase": 0.0,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-1",
+      "x": 1558.0,
+      "y": 480.0,
+      "period": 3.59,
+      "phase": 0.71,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-2",
+      "x": 2055.0,
+      "y": 480.0,
+      "period": 3.78,
+      "phase": 1.42,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
       "type": "bramble",
       "x": 4800,
       "y": 600,
@@ -1018,6 +1060,75 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-3",
+      "x": 3826.0,
+      "y": 480.0,
+      "period": 3.97,
+      "phase": 2.13,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-4",
+      "x": 4808.0,
+      "y": 0.0,
+      "period": 4.16,
+      "phase": 2.84,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-18-machine-5",
+      "x": 4482.0,
+      "y": 600.0,
+      "period": 3.4,
+      "phase": 0.55,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-6",
+      "x": 5796.0,
+      "y": 480.0,
+      "period": 3.59,
+      "phase": 1.26,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-7",
+      "x": 7603.0,
+      "y": 480.0,
+      "period": 3.78,
+      "phase": 1.97,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
       "type": "bramble",
       "x": 9168,
       "y": 456,
@@ -1064,6 +1175,88 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-8",
+      "x": 8819.0,
+      "y": 336.0,
+      "period": 3.97,
+      "phase": 2.68,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-18-machine-9",
+      "x": 9443.0,
+      "y": 456.0,
+      "period": 4.16,
+      "phase": 0.39,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-10",
+      "x": 9104.0,
+      "y": 96.0,
+      "period": 3.4,
+      "phase": 1.1,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-11",
+      "x": 8869.0,
+      "y": 336.0,
+      "period": 3.97,
+      "phase": 2.68,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-12",
+      "x": 9419.0,
+      "y": 336.0,
+      "period": 3.78,
+      "phase": 2.52,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-18-machine-13",
+      "x": 11193.0,
+      "y": 216.0,
+      "period": 3.97,
+      "phase": 0.23,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
     },
     {
       "type": "bramble",
@@ -1400,6 +1593,19 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-18-machine-14",
+      "x": 12356.0,
+      "y": 600.0,
+      "period": 4.16,
+      "phase": 0.94,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
     },
     {
       "type": "bramble",
@@ -1984,6 +2190,75 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-15",
+      "x": 16170.0,
+      "y": 480.0,
+      "period": 3.4,
+      "phase": 1.65,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-16",
+      "x": 17312.0,
+      "y": -48.0,
+      "period": 3.59,
+      "phase": 2.36,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-17",
+      "x": 18194.0,
+      "y": -48.0,
+      "period": 3.78,
+      "phase": 0.07,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-18-machine-18",
+      "x": 18952.0,
+      "y": 72.0,
+      "period": 3.97,
+      "phase": 0.78,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-18-machine-19",
+      "x": 19668.0,
+      "y": -48.0,
+      "period": 4.16,
+      "phase": 1.49,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
     }
   ],
   "motes": [
@@ -2359,27 +2634,27 @@
     {
       "x": 240,
       "y": 484,
-      "text": "The formal garden gate\nCrouch the clipped corridor, hop the beds, trust the crumbling roof"
+      "text": "The formal garden gate\nRead the latch; dash through as the gate opens."
     },
     {
       "x": 3752,
       "y": 484,
-      "text": "The hedge maze\nThe path doubles back above the fountain wall · look beneath the ivy"
+      "text": "The hedge maze\nRead the latch; dash through as the gate opens."
     },
     {
       "x": 8168,
       "y": 484,
-      "text": "The fountain courtyard\nCircle the fountain, then take the crumbling terrace walk high above it"
+      "text": "The fountain courtyard\nRead the latch; dash through as the gate opens."
     },
     {
       "x": 12008,
       "y": 484,
-      "text": "The hidden overgrown garden\nBramble dead-ends below · the rotting causeway rides above the garden"
+      "text": "The hidden overgrown garden\nRead the latch; dash through as the gate opens."
     },
     {
       "x": 16136,
       "y": 484,
-      "text": "The raised garden terrace\nClimb the gardener’s stair and hold the line"
+      "text": "The raised garden terrace\nRead the latch; dash through as the gate opens."
     }
   ],
   "goal": [
@@ -2693,7 +2968,7 @@
   "ground": {
     "y": 624
   },
-  "layout_revision": 15,
+  "layout_revision": 16,
   "grid_size": 48,
   "abilities": [
     "charge_dash"
@@ -2706,7 +2981,7 @@
     "rooms": [
       {
         "name": "The formal garden gate",
-        "lesson": "Crouch the clipped corridor, hop the beds, trust the crumbling roof",
+        "lesson": "Crouch the clipped corridor, hop the beds, trust the crumbling roof. Read the latch; dash through as the gate opens.",
         "from_x": 0,
         "to_x": 3552,
         "start": [
@@ -2720,7 +2995,7 @@
       },
       {
         "name": "The hedge maze",
-        "lesson": "The path doubles back above the fountain wall · look beneath the ivy",
+        "lesson": "The path doubles back above the fountain wall · look beneath the ivy. Read the latch; dash through as the gate opens.",
         "from_x": 3552,
         "to_x": 7968,
         "start": [
@@ -2734,7 +3009,7 @@
       },
       {
         "name": "The fountain courtyard",
-        "lesson": "Circle the fountain, then take the crumbling terrace walk high above it",
+        "lesson": "Circle the fountain, then take the crumbling terrace walk high above it. Read the latch; dash through as the gate opens.",
         "from_x": 7968,
         "to_x": 11808,
         "start": [
@@ -2748,7 +3023,7 @@
       },
       {
         "name": "The hidden overgrown garden",
-        "lesson": "Bramble dead-ends below · the rotting causeway rides above the garden",
+        "lesson": "Bramble dead-ends below · the rotting causeway rides above the garden. Read the latch; dash through as the gate opens.",
         "from_x": 11808,
         "to_x": 15936,
         "start": [
@@ -2762,7 +3037,7 @@
       },
       {
         "name": "The raised garden terrace",
-        "lesson": "Climb the gardener’s stair to the raised terrace and hold the line",
+        "lesson": "Climb the gardener’s stair to the raised terrace and hold the line. Read the latch; dash through as the gate opens.",
         "from_x": 15936,
         "to_x": 20064,
         "start": [
@@ -2818,8 +3093,34 @@
       },
       {
         "at": [
+          930.0,
+          624.0
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          1170.0,
+          624.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-0",
+        "travel_mode": "walk",
+        "room": 0
+      },
+      {
+        "at": [
           1200.0,
           624.0
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          1332,
+          624
         ],
         "action": "walk",
         "room": 0
@@ -2830,6 +3131,24 @@
           624.0
         ],
         "action": "short",
+        "room": 0
+      },
+      {
+        "at": [
+          1475.8,
+          624.0
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          1688.2,
+          624.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-1",
+        "travel_mode": "walk",
         "room": 0
       },
       {
@@ -2846,6 +3165,24 @@
           624.0
         ],
         "action": "short",
+        "room": 0
+      },
+      {
+        "at": [
+          1959.0,
+          624.0
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          2199.0,
+          624.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-2",
+        "travel_mode": "walk",
         "room": 0
       },
       {
@@ -2882,6 +3219,22 @@
       },
       {
         "at": [
+          3000,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          3240,
+          624
+        ],
+        "action": "dash",
+        "room": 0
+      },
+      {
+        "at": [
           3400.0,
           624.0
         ],
@@ -2898,7 +3251,7 @@
       },
       {
         "at": [
-          4052.0,
+          3730.0,
           624.0
         ],
         "action": "walk",
@@ -2906,10 +3259,28 @@
       },
       {
         "at": [
+          3910,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-3",
+        "travel_mode": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          3984,
+          336
+        ],
+        "action": "dash",
+        "room": 1
+      },
+      {
+        "at": [
           4176.0,
           528.0
         ],
-        "action": "jump",
+        "action": "drop",
         "room": 1
       },
       {
@@ -2938,8 +3309,8 @@
       },
       {
         "at": [
-          5472.0,
-          336.0
+          5616,
+          336
         ],
         "action": "walk",
         "room": 1
@@ -2958,6 +3329,24 @@
           144.0
         ],
         "action": "jump",
+        "room": 1
+      },
+      {
+        "at": [
+          4952.0,
+          144.0
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          4712.0,
+          144.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-4",
+        "travel_mode": "walk",
         "room": 1
       },
       {
@@ -2994,6 +3383,24 @@
       },
       {
         "at": [
+          4362.0,
+          624.0
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          4602.0,
+          624.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-5",
+        "travel_mode": "walk",
+        "room": 1
+      },
+      {
+        "at": [
           4652.0,
           624.0
         ],
@@ -3022,6 +3429,24 @@
           624.0
         ],
         "action": "jump",
+        "room": 1
+      },
+      {
+        "at": [
+          5700.0,
+          624.0
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          5940.0,
+          624.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-6",
+        "travel_mode": "walk",
         "room": 1
       },
       {
@@ -3106,6 +3531,24 @@
       },
       {
         "at": [
+          7507.0,
+          624.0
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          7747.0,
+          624.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-7",
+        "travel_mode": "walk",
+        "room": 1
+      },
+      {
+        "at": [
           7852.0,
           624.0
         ],
@@ -3146,6 +3589,24 @@
       },
       {
         "at": [
+          8723.0,
+          480.0
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          8963.0,
+          480.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-8",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           9018.0,
           480.0
         ],
@@ -3158,6 +3619,24 @@
           480.0
         ],
         "action": "jump",
+        "room": 2
+      },
+      {
+        "at": [
+          9330.5,
+          480.0
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          9555.5,
+          480.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-9",
+        "travel_mode": "walk",
         "room": 2
       },
       {
@@ -3194,6 +3673,24 @@
       },
       {
         "at": [
+          9248.0,
+          240.0
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          9008.0,
+          240.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-10",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           8668.0,
           240.0
         ],
@@ -3210,6 +3707,24 @@
       },
       {
         "at": [
+          8780.5,
+          480.0
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          9005.5,
+          480.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-11",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           9018.0,
           480.0
         ],
@@ -3222,6 +3737,24 @@
           480.0
         ],
         "action": "jump",
+        "room": 2
+      },
+      {
+        "at": [
+          9330.5,
+          480.0
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          9555.5,
+          480.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-12",
+        "travel_mode": "walk",
         "room": 2
       },
       {
@@ -3274,6 +3807,24 @@
       },
       {
         "at": [
+          11073.0,
+          240.0
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          11313.0,
+          240.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-13",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           11368.0,
           240.0
         ],
@@ -3302,6 +3853,24 @@
           624.0
         ],
         "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          12236.0,
+          624.0
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          12476.0,
+          624.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-14",
+        "travel_mode": "walk",
         "room": 3
       },
       {
@@ -3434,6 +4003,24 @@
       },
       {
         "at": [
+          16074.0,
+          624.0
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          16314.0,
+          624.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-15",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           16356.0,
           624.0
         ],
@@ -3498,6 +4085,24 @@
       },
       {
         "at": [
+          17216.0,
+          96.0
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          17456.0,
+          96.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-16",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           17736.0,
           96.0
         ],
@@ -3510,6 +4115,24 @@
           96.0
         ],
         "action": "jump",
+        "room": 4
+      },
+      {
+        "at": [
+          18098.0,
+          96.0
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          18338.0,
+          96.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-17",
+        "travel_mode": "walk",
         "room": 4
       },
       {
@@ -3530,6 +4153,24 @@
       },
       {
         "at": [
+          18832.0,
+          96.0
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          19072.0,
+          96.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-18",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           19136.0,
           96.0
         ],
@@ -3546,6 +4187,24 @@
       },
       {
         "at": [
+          19572.0,
+          96.0
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          19812.0,
+          96.0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-18-machine-19",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           19944.0,
           96.0
         ],
@@ -3556,14 +4215,14 @@
     "spike_placements": 142,
     "visible_spikes": 568,
     "vertical_travel": 528.0,
-    "intent": "A hedge maze of crumbling roofs and doubling-back paths: crawl corridors, roof runs, bramble dead-ends and a final climb to the raised terrace."
+    "intent": "A hedge maze of crumbling roofs and doubling-back paths: crawl corridors, roof runs, bramble dead-ends and a final climb to the raised terrace. Expert redesign: moving hedge gates and closing maze rosettes."
   },
   "editor_version": 2,
   "design": {
     "identity": "The Garden Maze",
     "blueprint": "res://content/layouts/06-18.json",
-    "intent": "A hedge maze of crumbling roofs and doubling-back paths: crawl corridors, roof runs, bramble dead-ends and a final climb to the raised terrace.",
-    "opening": "Crouch the clipped corridor, hop the beds, trust the crumbling roof"
+    "intent": "A hedge maze of crumbling roofs and doubling-back paths: crawl corridors, roof runs, bramble dead-ends and a final climb to the raised terrace. Expert redesign: moving hedge gates and closing maze rosettes.",
+    "opening": "Crouch the clipped corridor, hop the beds, trust the crumbling roof. Read the latch; dash through as the gate opens."
   },
   "journey_regions": [
     {
@@ -3663,5 +4322,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "shutter",
+    "secondary": "bloom",
+    "mechanisms": 20
   }
 }

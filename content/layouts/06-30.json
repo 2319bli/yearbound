@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-30",
   "identity": "The Squallkeeper",
-  "intent": "Survive five connected storm arenas: first rain, moving terraces, a fleeing causeway, crosswinds and the final squall.",
+  "intent": "Survive five connected storm arenas: first rain, moving terraces, a fleeing causeway, crosswinds and the final squall. Expert redesign: storm conductors and squall rotors.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The first squall",
-      "lesson": "Read the amber warning · dodge the falling seeds",
+      "lesson": "Read the amber warning · dodge the falling seeds. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         0,
         0
@@ -421,7 +421,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The first squall\nRead the amber warning · dodge the falling seeds"
+          "text": "The first squall\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -470,7 +470,7 @@
     },
     {
       "name": "The wind-tossed terraces",
-      "lesson": "Keep moving between the terraces",
+      "lesson": "Keep moving between the terraces. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         1920,
         0
@@ -958,7 +958,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The wind-tossed terraces\nKeep moving between the terraces"
+          "text": "The wind-tossed terraces\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -1007,7 +1007,7 @@
     },
     {
       "name": "Run with the storm",
-      "lesson": "The storm is behind you · keep travelling",
+      "lesson": "The storm is behind you · keep travelling. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         4320,
         0
@@ -1695,6 +1695,50 @@
           "w": 48,
           "h": 24,
           "direction": "down"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-30-machine-0",
+          "x": 1185.6,
+          "y": 384,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-30-machine-1",
+          "x": 1977.6,
+          "y": 432,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-30-machine-2",
+          "x": 2889.6,
+          "y": 384,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -1838,7 +1882,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Run with the storm\nThe storm is behind you · keep travelling"
+          "text": "Run with the storm\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -1879,6 +1923,22 @@
         },
         {
           "at": [
+            1086.2399999999998,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1284.96,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-30-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1296,
             528
           ],
@@ -1900,6 +1960,22 @@
         },
         {
           "at": [
+            1902.2399999999998,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2100.96,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-30-machine-1",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2112,
             576
           ],
@@ -1918,6 +1994,22 @@
             528
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            2769.6,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3009.6,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-30-machine-2",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1950,7 +2042,7 @@
     },
     {
       "name": "The crossing winds",
-      "lesson": "Alternate shelter and open crossings",
+      "lesson": "Alternate shelter and open crossings. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         8160,
         0
@@ -2422,7 +2514,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The crossing winds\nAlternate shelter and open crossings"
+          "text": "The crossing winds\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -2471,7 +2563,7 @@
     },
     {
       "name": "The last light returns",
-      "lesson": "Survive the last squall · reach the light",
+      "lesson": "Survive the last squall · reach the light. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         10464,
         0
@@ -2991,7 +3083,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The last light returns\nSurvive the last squall · reach the light"
+          "text": "The last light returns\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -3046,5 +3138,11 @@
     "rows": 2,
     "inset": 2,
     "aftermath_cell": 5
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "arc",
+    "secondary": "windmill",
+    "mechanisms": 3
   }
 }

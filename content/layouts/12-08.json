@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 13,
+  "revision": 16,
   "day": "12-08",
   "identity": "Snow shelters and falling ice",
-  "intent": "Pause under cabin roofs, read falling-ice warnings, then cross the open snow.",
+  "intent": "Pause under cabin roofs, read falling-ice warnings, then cross the open snow. Expert redesign: frost vents and snow-loaded falling shoes.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -17,7 +17,7 @@
   "sections": [
     {
       "name": "The first white shelter",
-      "lesson": "The amber mark warns where ice will fall",
+      "lesson": "The amber mark warns where ice will fall. Wait for the spout to die, then cross the vent.",
       "origin": [
         0,
         0
@@ -431,6 +431,48 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-0",
+          "x": 912.0,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-1",
+          "x": 1728.0,
+          "y": 480,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-2",
+          "x": 1968.0,
+          "y": 480,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -521,7 +563,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The amber mark warns where ice will fall"
+          "text": "The first white shelter\nWait for the spout to die, then cross the vent."
         }
       ],
       "route": [
@@ -570,6 +612,22 @@
         },
         {
           "at": [
+            828.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1044.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1056,
             624
           ],
@@ -606,10 +664,42 @@
         },
         {
           "at": [
+            1644.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1860.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-1",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1872,
             624
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            1884.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2100.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-2",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -656,7 +746,7 @@
     },
     {
       "name": "The cabin terraces",
-      "lesson": "Jump the snow-covered cabin walls",
+      "lesson": "Jump the snow-covered cabin walls. Wait for the spout to die, then cross the vent.",
       "origin": [
         2880,
         0
@@ -744,6 +834,48 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-3",
+          "x": 1548.0,
+          "y": 480,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-4",
+          "x": 2412.0,
+          "y": 480,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "12-08-machine-5",
+          "x": 3180.0,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -827,7 +959,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Jump the snow-covered cabin walls"
+          "text": "The cabin terraces\nWait for the spout to die, then cross the vent."
         }
       ],
       "route": [
@@ -882,6 +1014,22 @@
         },
         {
           "at": [
+            1453.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1690.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-3",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1704.0,
             624
           ],
@@ -900,6 +1048,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2317.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2554.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-4",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -924,6 +1088,22 @@
         },
         {
           "at": [
+            3085.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3322.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3336.0,
             624
           ],
@@ -938,7 +1118,7 @@
     },
     {
       "name": "The exposed snow road",
-      "lesson": "Leave the roof after the ice passes",
+      "lesson": "Leave the roof after the ice passes. Wait for the spout to die, then cross the vent.",
       "origin": [
         6336,
         0
@@ -1400,6 +1580,76 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-6",
+          "x": 336.0,
+          "y": 480,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "12-08-machine-7",
+          "x": 960.0,
+          "y": 480,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-8",
+          "x": 1200.0,
+          "y": 480,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-9",
+          "x": 1824.0,
+          "y": 480,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-10",
+          "x": 2088.0,
+          "y": 480,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -1495,7 +1745,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Leave the roof after the ice passes"
+          "text": "The exposed snow road\nWait for the spout to die, then cross the vent."
         }
       ],
       "route": [
@@ -1512,6 +1762,22 @@
             624
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            252.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            468.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-6",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1544,10 +1810,42 @@
         },
         {
           "at": [
+            876.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1092.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1104,
             624
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            1116.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1332.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-8",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1580,10 +1878,42 @@
         },
         {
           "at": [
+            1740.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1956.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-9",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1968,
             624
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            1992.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2232.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-10",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1630,7 +1960,7 @@
     },
     {
       "name": "Above the snowline",
-      "lesson": "Climb the cabin roofs above the drifting snow",
+      "lesson": "Climb the cabin roofs above the drifting snow. Wait for the spout to die, then cross the vent.",
       "origin": [
         9408,
         0
@@ -2250,6 +2580,48 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "12-08-machine-11",
+          "x": 516.0,
+          "y": 240,
+          "period": 3.59,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-12",
+          "x": 1356.0,
+          "y": 48,
+          "period": 3.78,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-13",
+          "x": 2244.0,
+          "y": -144,
+          "period": 3.97,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -2337,7 +2709,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Climb the cabin roofs above the drifting snow"
+          "text": "Above the snowline\nWait for the spout to die, then cross the vent."
         }
       ],
       "route": [
@@ -2358,6 +2730,22 @@
         },
         {
           "at": [
+            420.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            660.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-11",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             696.0,
             384
           ],
@@ -2373,6 +2761,22 @@
         },
         {
           "at": [
+            1260.0,
+            192
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1500.0,
+            192
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-12",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1560.0,
             192
           ],
@@ -2385,6 +2789,22 @@
           ],
           "action": "dash",
           "surface": "wood"
+        },
+        {
+          "at": [
+            2148.0,
+            0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2388.0,
+            0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-13",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2424,7 +2844,7 @@
     },
     {
       "name": "Between the fir shelters",
-      "lesson": "Cross one exposed opening at a time",
+      "lesson": "Cross one exposed opening at a time. Wait for the spout to die, then cross the vent.",
       "origin": [
         13056,
         0
@@ -2918,6 +3338,76 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-14",
+          "x": 360.0,
+          "y": 480,
+          "period": 4.16,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-15",
+          "x": 1008.0,
+          "y": 480,
+          "period": 3.4,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-16",
+          "x": 1272.0,
+          "y": 480,
+          "period": 3.59,
+          "phase": 2.36,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "12-08-machine-17",
+          "x": 1920.0,
+          "y": 480,
+          "period": 3.78,
+          "phase": 0.07,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "12-08-machine-18",
+          "x": 2184.0,
+          "y": 480,
+          "period": 3.97,
+          "phase": 0.78,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -3013,7 +3503,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Cross one exposed opening at a time"
+          "text": "Between the fir shelters\nWait for the spout to die, then cross the vent."
         }
       ],
       "route": [
@@ -3030,6 +3520,22 @@
             624
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            264.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            504.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-14",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3062,10 +3568,42 @@
         },
         {
           "at": [
+            924.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1140.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-15",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1152,
             624
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            1176.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1416.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-16",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3098,10 +3636,42 @@
         },
         {
           "at": [
+            1836.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2052.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-17",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2064,
             624
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            2088.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2328.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "12-08-machine-18",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3148,7 +3718,7 @@
     },
     {
       "name": "The first frozen stream",
-      "lesson": "Brake on stone before the final frozen cuts",
+      "lesson": "Brake on stone before the final frozen cuts. Wait for the spout to die, then cross the vent.",
       "origin": [
         16224,
         0
@@ -3419,7 +3989,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Brake on stone before the final frozen cuts"
+          "text": "The first frozen stream\nWait for the spout to die, then cross the vent."
         }
       ],
       "route": [
@@ -3539,5 +4109,11 @@
     "rows": 4,
     "inset": 2
   },
-  "journey": true
+  "journey": true,
+  "difficulty": {
+    "edition": "expert",
+    "signature": "geyser",
+    "secondary": "press",
+    "mechanisms": 19
+  }
 }

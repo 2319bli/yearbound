@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 13,
+  "revision": 16,
   "day": "11-19",
   "identity": "Submerged sluice maze",
-  "intent": "Swim through offset wall openings, manage currents, and change depth throughout the route.",
+  "intent": "Swim through offset wall openings, manage currents, and change depth throughout the route. Expert redesign: submerged sluice doors and algae cutters.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -17,7 +17,7 @@
   "sections": [
     {
       "name": "The flooded entrance",
-      "lesson": "Swim up to the first opening · down to the next",
+      "lesson": "Swim up to the first opening · down to the next. Read the latch; dash through as the gate opens.",
       "origin": [
         0,
         0
@@ -225,6 +225,62 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-0",
+          "x": 360.0,
+          "y": 192,
+          "period": 4.2,
+          "phase": 0.0,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-1",
+          "x": 840.0,
+          "y": -96,
+          "period": 4.39,
+          "phase": 0.71,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-2",
+          "x": 1368.0,
+          "y": -432,
+          "period": 4.58,
+          "phase": 1.42,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "11-19-machine-3",
+          "x": 1968.0,
+          "y": 167,
+          "period": 4.7700000000000005,
+          "phase": 2.13,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
         }
       ],
       "zones": [
@@ -378,7 +434,7 @@
         {
           "x": 288,
           "y": 388,
-          "text": "Swim up to the first opening · down to the next"
+          "text": "The flooded entrance\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -405,6 +461,22 @@
         },
         {
           "at": [
+            264.0,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            504.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-0",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             528,
             336
           ],
@@ -416,6 +488,22 @@
             48
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            744.0,
+            48
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            984.0,
+            48
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-1",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -433,6 +521,22 @@
         },
         {
           "at": [
+            1272.0,
+            -288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1512.0,
+            -288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-2",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             1536,
             -288
           ],
@@ -444,6 +548,22 @@
             192
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            1848.0,
+            192
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2088.0,
+            192
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-3",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -468,7 +588,7 @@
     },
     {
       "name": "The descending lock",
-      "lesson": "Follow the openings down through the lock",
+      "lesson": "Follow the openings down through the lock. Read the latch; dash through as the gate opens.",
       "origin": [
         2592,
         0
@@ -676,6 +796,62 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-4",
+          "x": 360.0,
+          "y": -528,
+          "period": 4.96,
+          "phase": 2.84,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-5",
+          "x": 888.0,
+          "y": -288,
+          "period": 4.2,
+          "phase": 0.55,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "11-19-machine-6",
+          "x": 1440.0,
+          "y": 71,
+          "period": 4.39,
+          "phase": 1.26,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-7",
+          "x": 1992.0,
+          "y": 192,
+          "period": 4.58,
+          "phase": 1.97,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [
@@ -834,7 +1010,7 @@
         {
           "x": 144,
           "y": 388,
-          "text": "Follow the openings down through the lock"
+          "text": "The descending lock\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -861,6 +1037,22 @@
         },
         {
           "at": [
+            264.0,
+            -384
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            504.0,
+            -384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-4",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             528,
             -384
           ],
@@ -872,6 +1064,22 @@
             -144
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            792.0,
+            -144
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1032.0,
+            -144
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-5",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -889,6 +1097,22 @@
         },
         {
           "at": [
+            1320.0,
+            96
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1560.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-6",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             1584,
             96
           ],
@@ -900,6 +1124,22 @@
             336
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            1896.0,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2136.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-7",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -924,7 +1164,7 @@
     },
     {
       "name": "Between the sunken beams",
-      "lesson": "Reverse depth between the long beams",
+      "lesson": "Reverse depth between the long beams. Read the latch; dash through as the gate opens.",
       "origin": [
         5280,
         0
@@ -1132,6 +1372,62 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-8",
+          "x": 360.0,
+          "y": 144,
+          "period": 4.7700000000000005,
+          "phase": 2.68,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "11-19-machine-9",
+          "x": 912.0,
+          "y": -361,
+          "period": 4.96,
+          "phase": 0.39,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-10",
+          "x": 1464.0,
+          "y": 96,
+          "period": 4.2,
+          "phase": 1.1,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-11",
+          "x": 2088.0,
+          "y": -384,
+          "period": 4.39,
+          "phase": 1.81,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [
@@ -1290,7 +1586,7 @@
         {
           "x": 144,
           "y": 388,
-          "text": "Reverse depth between the long beams"
+          "text": "Between the sunken beams\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -1317,6 +1613,22 @@
         },
         {
           "at": [
+            264.0,
+            288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            504.0,
+            288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-8",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             528,
             288
           ],
@@ -1328,6 +1640,22 @@
             -336
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            792.0,
+            -336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1032.0,
+            -336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-9",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -1345,6 +1673,22 @@
         },
         {
           "at": [
+            1368.0,
+            240
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1608.0,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-10",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             1632,
             240
           ],
@@ -1356,6 +1700,22 @@
             -240
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            1992.0,
+            -240
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2232.0,
+            -240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-11",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -1380,7 +1740,7 @@
     },
     {
       "name": "The bell chamber",
-      "lesson": "Climb to the bell chamber, then dive to the outlet",
+      "lesson": "Climb to the bell chamber, then dive to the outlet. Read the latch; dash through as the gate opens.",
       "origin": [
         8064,
         0
@@ -1636,6 +1996,76 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "11-19-machine-12",
+          "x": 384.0,
+          "y": 311,
+          "period": 4.58,
+          "phase": 2.52,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-13",
+          "x": 888.0,
+          "y": -144,
+          "period": 4.7700000000000005,
+          "phase": 0.23,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-14",
+          "x": 1416.0,
+          "y": -576,
+          "period": 4.96,
+          "phase": 0.94,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-15",
+          "x": 1992.0,
+          "y": -240,
+          "period": 4.2,
+          "phase": 1.65,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "11-19-machine-16",
+          "x": 2544.0,
+          "y": 263,
+          "period": 4.39,
+          "phase": 2.36,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
         }
       ],
       "zones": [
@@ -1824,7 +2254,7 @@
         {
           "x": 144,
           "y": 388,
-          "text": "Climb to the bell chamber, then dive to the outlet"
+          "text": "The bell chamber\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -1851,6 +2281,22 @@
         },
         {
           "at": [
+            264.0,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            504.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-12",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             528,
             336
           ],
@@ -1862,6 +2308,22 @@
             0
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            792.0,
+            0
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1032.0,
+            0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-13",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -1879,6 +2341,22 @@
         },
         {
           "at": [
+            1320.0,
+            -432
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1560.0,
+            -432
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-14",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             1584,
             -432
           ],
@@ -1893,6 +2371,22 @@
         },
         {
           "at": [
+            1896.0,
+            -96
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2136.0,
+            -96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-15",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             2160,
             -96
           ],
@@ -1904,6 +2398,22 @@
             288
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            2424.0,
+            288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2664.0,
+            288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-16",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -1928,7 +2438,7 @@
     },
     {
       "name": "Against the sluice current",
-      "lesson": "Use the open chamber to steady yourself before each current",
+      "lesson": "Use the open chamber to steady yourself before each current. Read the latch; dash through as the gate opens.",
       "origin": [
         11232,
         0
@@ -2136,6 +2646,62 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-17",
+          "x": 360.0,
+          "y": -432,
+          "period": 4.58,
+          "phase": 0.07,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-18",
+          "x": 936.0,
+          "y": 144,
+          "period": 4.7700000000000005,
+          "phase": 0.78,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-19",
+          "x": 1512.0,
+          "y": -528,
+          "period": 4.96,
+          "phase": 1.49,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "11-19-machine-20",
+          "x": 2160.0,
+          "y": 167,
+          "period": 4.2,
+          "phase": 2.2,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
         }
       ],
       "zones": [
@@ -2294,7 +2860,7 @@
         {
           "x": 144,
           "y": 388,
-          "text": "Use the open chamber to steady yourself before each current"
+          "text": "Against the sluice current\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -2321,6 +2887,22 @@
         },
         {
           "at": [
+            264.0,
+            -288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            504.0,
+            -288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-17",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             528,
             -288
           ],
@@ -2332,6 +2914,22 @@
             288
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            840.0,
+            288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1080.0,
+            288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-18",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -2349,6 +2947,22 @@
         },
         {
           "at": [
+            1416.0,
+            -384
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1656.0,
+            -384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-19",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             1680,
             -384
           ],
@@ -2360,6 +2974,22 @@
             192
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            2040.0,
+            192
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2280.0,
+            192
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-20",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -2384,7 +3014,7 @@
     },
     {
       "name": "The last submerged passage",
-      "lesson": "Follow the lanterns through the final changes in depth",
+      "lesson": "Follow the lanterns through the final changes in depth. Read the latch; dash through as the gate opens.",
       "origin": [
         14112,
         0
@@ -2640,6 +3270,76 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-21",
+          "x": 360.0,
+          "y": 192,
+          "period": 4.39,
+          "phase": 2.91,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-22",
+          "x": 888.0,
+          "y": -336,
+          "period": 4.58,
+          "phase": 0.62,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "11-19-machine-23",
+          "x": 1488.0,
+          "y": -457,
+          "period": 4.7700000000000005,
+          "phase": 1.33,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-24",
+          "x": 2040.0,
+          "y": -144,
+          "period": 4.96,
+          "phase": 2.04,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "11-19-machine-25",
+          "x": 2568.0,
+          "y": 192,
+          "period": 4.2,
+          "phase": 2.75,
+          "safe_seconds": 1.6,
+          "warning_seconds": 0.65,
+          "color": "64a8af",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [
@@ -2828,7 +3528,7 @@
         {
           "x": 144,
           "y": 388,
-          "text": "Follow the lanterns through the final changes in depth"
+          "text": "The last submerged passage\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -2855,6 +3555,22 @@
         },
         {
           "at": [
+            264.0,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            504.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-21",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             528,
             336
           ],
@@ -2866,6 +3582,22 @@
             -192
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            792.0,
+            -192
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1032.0,
+            -192
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-22",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -2883,6 +3615,22 @@
         },
         {
           "at": [
+            1368.0,
+            -432
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            1608.0,
+            -432
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-23",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             1632,
             -432
           ],
@@ -2897,6 +3645,22 @@
         },
         {
           "at": [
+            1944.0,
+            0
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2184.0,
+            0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-24",
+          "travel_mode": "swim"
+        },
+        {
+          "at": [
             2208,
             0
           ],
@@ -2908,6 +3672,22 @@
             336
           ],
           "action": "swim"
+        },
+        {
+          "at": [
+            2472.0,
+            336
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            2712.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "11-19-machine-25",
+          "travel_mode": "swim"
         },
         {
           "at": [
@@ -2937,5 +3717,11 @@
     "rows": 4,
     "inset": 2
   },
-  "journey": true
+  "journey": true,
+  "difficulty": {
+    "edition": "expert",
+    "signature": "shutter",
+    "secondary": "sawrail",
+    "mechanisms": 26
+  }
 }

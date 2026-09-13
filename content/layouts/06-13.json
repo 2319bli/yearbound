@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-13",
   "identity": "Wildflower Way",
-  "intent": "Travel through colour from a country path to dense flowers, rocky hillsides, a lively clearing and an open ridge.",
+  "intent": "Travel through colour from a country path to dense flowers, rocky hillsides, a lively clearing and an open ridge. Expert redesign: flower-head pulses and swinging pollinator baskets.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The country flower path",
-      "lesson": "Low hops follow the flowers",
+      "lesson": "Low hops follow the flowers. Pass while the thorn head is folded.",
       "origin": [
         0,
         0
@@ -74,6 +74,72 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-13-machine-0",
+          "x": 727.2,
+          "y": 600,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-13-machine-1",
+          "x": 1399.2,
+          "y": 600,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-13-machine-2",
+          "x": 1807.2,
+          "y": 552,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-13-machine-3",
+          "x": 2167.2,
+          "y": 480,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-13-machine-4",
+          "x": 2983.2,
+          "y": 600,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -248,7 +314,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The country flower path\nLow hops follow the flowers"
+          "text": "The country flower path\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -289,6 +355,22 @@
         },
         {
           "at": [
+            625.6800000000001,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            828.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-13-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             840.0,
             624
           ],
@@ -317,6 +399,22 @@
         },
         {
           "at": [
+            1297.68,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1500.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-13-machine-1",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1512.0,
             624
           ],
@@ -331,6 +429,22 @@
         },
         {
           "at": [
+            1705.6799999999998,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1908.7199999999998,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-13-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1920,
             576
           ],
@@ -342,6 +456,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2071.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2311.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-13-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -373,6 +503,22 @@
         },
         {
           "at": [
+            2863.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3103.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-13-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3144.0,
             624
           ],
@@ -387,7 +533,7 @@
     },
     {
       "name": "The dense flower meadow",
-      "lesson": "Bellflowers lift you above the flower drifts",
+      "lesson": "Bellflowers lift you above the flower drifts. Pass while the thorn head is folded.",
       "origin": [
         3264,
         0
@@ -856,7 +1002,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The dense flower meadow\nBellflowers lift you above the flower drifts"
+          "text": "The dense flower meadow\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -923,7 +1069,7 @@
     },
     {
       "name": "The flower-covered rocks",
-      "lesson": "Climb through the rocky flower beds",
+      "lesson": "Climb through the rocky flower beds. Pass while the thorn head is folded.",
       "origin": [
         6816,
         0
@@ -1499,6 +1645,47 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-13-machine-5",
+          "x": 1248.0,
+          "y": 312,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-13-machine-6",
+          "x": 2136.0,
+          "y": 5,
+          "period": 5.6,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 140,
+          "head_radius": 21,
+          "swing": 0.65
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-13-machine-7",
+          "x": 3024.0,
+          "y": 24,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -1606,7 +1793,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The flower-covered rocks\nClimb through the rocky flower beds"
+          "text": "The flower-covered rocks\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -1640,6 +1827,22 @@
         },
         {
           "at": [
+            1140.0,
+            336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1356.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-13-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1368.0,
             336
           ],
@@ -1654,6 +1857,22 @@
         },
         {
           "at": [
+            2016.0,
+            192
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2256.0,
+            192
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-13-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2280.0,
             192
           ],
@@ -1665,6 +1884,22 @@
             48
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            2916.0,
+            48
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3132.0,
+            48
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-13-machine-7",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1689,7 +1924,7 @@
     },
     {
       "name": "The pollinator clearing",
-      "lesson": "Land softly on the separated garden stones",
+      "lesson": "Land softly on the separated garden stones. Pass while the thorn head is folded.",
       "origin": [
         10560,
         -576
@@ -2081,7 +2316,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The pollinator clearing\nLand softly on the separated garden stones"
+          "text": "The pollinator clearing\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -2141,7 +2376,7 @@
     },
     {
       "name": "The panoramic ridge",
-      "lesson": "The last crossing overlooks the whole meadow",
+      "lesson": "The last crossing overlooks the whole meadow. Pass while the thorn head is folded.",
       "origin": [
         14304,
         -576
@@ -2834,6 +3069,45 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-13-machine-8",
+          "x": 588.0,
+          "y": 456,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-13-machine-9",
+          "x": 1500.0,
+          "y": 264,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-13-machine-10",
+          "x": 2436.0,
+          "y": 72,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -2941,7 +3215,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The panoramic ridge\nThe last crossing overlooks the whole meadow"
+          "text": "The panoramic ridge\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -2962,6 +3236,22 @@
         },
         {
           "at": [
+            468.0,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            708.0,
+            480
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-13-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             744.0,
             480
           ],
@@ -2977,6 +3267,22 @@
         },
         {
           "at": [
+            1380.0,
+            288
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1620.0,
+            288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-13-machine-9",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1704.0,
             288
           ],
@@ -2989,6 +3295,22 @@
           ],
           "action": "dash",
           "surface": "wood"
+        },
+        {
+          "at": [
+            2316.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2556.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-13-machine-10",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3033,5 +3355,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "bloom",
+    "secondary": "pendulum",
+    "mechanisms": 11
   }
 }

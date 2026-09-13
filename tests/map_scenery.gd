@@ -42,7 +42,7 @@ func run() -> void:
 		for i in range(1, regions.size()):
 			var x = float(regions[i].x)
 			check(YBMapScenery.selection(regions, x - 1).index == i - 1 and YBMapScenery.selection(regions, x + 301).index == i, "forward travel and backtracking select the physical place")
-	check(paths.size() == 41 and cells == 219, "every playable map and all 219 named places have custom art")
+	check(paths.size() == catalog.stages.size() and cells == 259, "every playable map and all 259 named places have custom art")
 	var sample = JSON.parse_string(FileAccess.get_file_as_string("res://content/stages/06-01.json"))
 	var bad = sample.duplicate(true); bad.scenery.columns = 0
 	check(not YBLayoutDocument.errors(bad, false).is_empty(), "invalid atlas dimensions are rejected")

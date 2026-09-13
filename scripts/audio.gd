@@ -38,6 +38,7 @@ func _ready() -> void:
 	tones["charge_full"]=tone(1120,.13)
 	tones["dash"]=dash_sound()
 	tones["water"]=tone(210,.18)
+	tones["mechanism"]=tone(105,.09)
 
 func water_feedback(submerged: bool, dt: float) -> void:
 	water_mix=move_toward(water_mix,1.0 if submerged else 0.0,dt*2)

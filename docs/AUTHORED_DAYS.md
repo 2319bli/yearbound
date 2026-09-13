@@ -1,22 +1,22 @@
-# Authored campaign layouts · 0.14.0
+# Authored campaign layouts · 0.15.0
 
-There are 41 playable dates. All 30 June journeys follow the five-place chapter described in [JUNE_CHAPTER.md](JUNE_CHAPTER.md). The other months retain their rebuilt routes and now also have their own artwork for every named section.
+There are 51 playable dates. Ten new expert journeys and all seasonal mechanism settings are described in [OBSTACLES.md](OBSTACLES.md). All 30 June journeys follow the five-place chapter described in [JUNE_CHAPTER.md](JUNE_CHAPTER.md). The other months retain their rebuilt routes and now also have their own artwork for every named section.
 
 ## Other months
 
 | Day | Gameplay | Length (px) | Spike entries |
 |---|---|---:|---:|
 | 07-16 | Long wind-driven runs alternate with stone braking bays and high harvest walks. | 20,544 | 128 |
-| 08-23 | Read the weather from cover, then board the ferry and transfer across the open lake. | 19,008 | 283 |
-| 09-14 | Stable trunks separate brittle bridges; long stationary charges are costly on leaves. | 20,064 | 289 |
-| 10-12 | Use roofed refuges to read lightning; travel during the dark interval. | 23,136 | 392 |
+| 08-23 | Read the weather from cover, then board the ferry and transfer across the open lake. | 19,008 | 280 |
+| 09-14 | Stable trunks separate brittle bridges; long stationary charges are costly on leaves. | 24,672 | 370 |
+| 10-12 | Use roofed refuges to read lightning; travel during the dark interval. | 23,136 | 65 |
 | 11-19 | Swim through offset wall openings, manage currents, and change depth throughout the route. | 17,376 | 104 |
 | 12-08 | Pause under cabin roofs, read falling-ice warnings, then cross the open snow. | 19,680 | 238 |
-| 01-18 | Long slick runs build momentum; small rock islands set up each precision launch. | 21,984 | 204 |
-| 02-17 | Cracked pale shelves are both slippery and fragile; exposed stone is the place to prepare. | 20,928 | 227 |
-| 03-09 | Rising spray carries the player through tall shafts; control the sideways exit onto dry ledges. | 21,984 | 381 |
+| 01-18 | Long slick runs build momentum; small rock islands set up each precision launch. | 26,592 | 285 |
+| 02-17 | Cracked pale shelves are both slippery and fragile; exposed stone is the place to prepare. | 25,536 | 308 |
+| 03-09 | Rising spray carries the player through tall shafts; control the sideways exit onto dry ledges. | 26,592 | 462 |
 | 04-11 | Move through rain-washed archways, choosing low jumps or diagonal launches to fit the openings. | 19,968 | 410 |
-| 05-24 | A deliberate callback course links flower bounces, fragile trellises, lift transfers and rain arches. | 23,712 | 387 |
+| 05-24 | A deliberate callback course links flower bounces, fragile trellises, lift transfers and rain arches. | 28,320 | 393 |
 
 Each ordinary day introduces an obstacle or movement decision on the first screen. May intentionally combines earlier mechanics as a culmination. Geometry uses 48-pixel blocks above a continuous flat base floor. All days retain at least 50 actual spike placements; no decorative tooth count is substituted for contact hazards. June prioritizes the requested five-place journeys over preserving the previous expansion’s exact lengths.
 

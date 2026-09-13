@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-05",
   "identity": "The Meadow Express",
-  "intent": "Approach the rural station, ride moving cargo through the railway, and race out into open country.",
+  "intent": "Approach the rural station, ride moving cargo through the railway, and race out into open country. Expert redesign: rail signals and freight-stamping pistons.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The quiet meadow",
-      "lesson": "Find the station beyond the fences",
+      "lesson": "Find the station beyond the fences. Read the latch; dash through as the gate opens.",
       "origin": [
         0,
         0
@@ -74,6 +74,34 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-0",
+          "x": 1279.2,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-1",
+          "x": 2023.2,
+          "y": 480,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -248,7 +276,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The quiet meadow\nFind the station beyond the fences"
+          "text": "The quiet meadow\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -317,6 +345,22 @@
         },
         {
           "at": [
+            1201.68,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1404.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1416.0,
             624
           ],
@@ -342,6 +386,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1927.1999999999998,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2167.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -387,7 +447,7 @@
     },
     {
       "name": "The rural platform",
-      "lesson": "Duck under the station beams",
+      "lesson": "Duck under the station beams. Read the latch; dash through as the gate opens.",
       "origin": [
         2976,
         0
@@ -1139,6 +1199,90 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-2",
+          "x": 700.8,
+          "y": 432,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-3",
+          "x": 1214.4,
+          "y": 480,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-05-machine-4",
+          "x": 1900.8,
+          "y": 384,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-5",
+          "x": 2366.4,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-6",
+          "x": 3004.8,
+          "y": 432,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-7",
+          "x": 3386.4,
+          "y": 480,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -1336,7 +1480,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The rural platform\nDuck under the station beams"
+          "text": "The rural platform\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -1377,6 +1521,22 @@
         },
         {
           "at": [
+            604.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            844.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             969.5999999999999,
             576
           ],
@@ -1388,6 +1548,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1118.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1358.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1419,6 +1595,22 @@
         },
         {
           "at": [
+            1804.8000000000002,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2044.8000000000002,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2121.6000000000004,
             528
           ],
@@ -1430,6 +1622,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2270.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2510.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-5",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1461,6 +1669,22 @@
         },
         {
           "at": [
+            2908.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3148.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3177.6000000000004,
             576
           ],
@@ -1472,6 +1696,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3304.5599999999995,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3516.24,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-7",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1489,7 +1729,7 @@
     },
     {
       "name": "Cargo in motion",
-      "lesson": "Board the cargo truck · watch its rail",
+      "lesson": "Board the cargo truck · watch its rail. Read the latch; dash through as the gate opens.",
       "origin": [
         6624,
         0
@@ -2256,7 +2496,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Cargo in motion\nBoard the cargo truck · watch its rail"
+          "text": "Cargo in motion\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -2343,7 +2583,7 @@
     },
     {
       "name": "Beside the rails",
-      "lesson": "Transfer between the loading roofs",
+      "lesson": "Transfer between the loading roofs. Read the latch; dash through as the gate opens.",
       "origin": [
         10080,
         0
@@ -3011,6 +3251,48 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-05-machine-8",
+          "x": 564.0,
+          "y": 288,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-9",
+          "x": 1476.0,
+          "y": 144,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-10",
+          "x": 2436.0,
+          "y": 0,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -3118,7 +3400,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Beside the rails\nTransfer between the loading roofs"
+          "text": "Beside the rails\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -3139,6 +3421,22 @@
         },
         {
           "at": [
+            468.0,
+            432
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            708.0,
+            432
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             792.0,
             432
           ],
@@ -3154,6 +3452,22 @@
         },
         {
           "at": [
+            1380.0,
+            288
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1620.0,
+            288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-9",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1704.0,
             288
           ],
@@ -3166,6 +3480,22 @@
           ],
           "action": "dash",
           "surface": "wood"
+        },
+        {
+          "at": [
+            2340.0,
+            144
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2580.0,
+            144
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-10",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3205,7 +3535,7 @@
     },
     {
       "name": "The country express",
-      "lesson": "Carry the tailwind into the final fields",
+      "lesson": "Carry the tailwind into the final fields. Read the latch; dash through as the gate opens.",
       "origin": [
         14016,
         0
@@ -3301,6 +3631,118 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-11",
+          "x": 463.2,
+          "y": 384,
+          "period": 3.59,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-12",
+          "x": 871.2,
+          "y": 480,
+          "period": 3.78,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-13",
+          "x": 1399.2,
+          "y": 384,
+          "period": 3.97,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-05-machine-14",
+          "x": 1879.2,
+          "y": 480,
+          "period": 4.16,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-15",
+          "x": 2431.2,
+          "y": 336,
+          "period": 3.4,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-16",
+          "x": 2863.2,
+          "y": 480,
+          "period": 3.59,
+          "phase": 2.36,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-05-machine-17",
+          "x": 3367.2,
+          "y": 384,
+          "period": 3.78,
+          "phase": 0.07,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-05-machine-18",
+          "x": 3751.2,
+          "y": 480,
+          "period": 3.97,
+          "phase": 0.78,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [
@@ -3492,7 +3934,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The country express\nCarry the tailwind into the final fields"
+          "text": "The country express\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -3519,6 +3961,22 @@
         },
         {
           "at": [
+            367.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            607.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-11",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             624,
             528
           ],
@@ -3530,6 +3988,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            775.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1015.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-12",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3547,6 +4021,22 @@
         },
         {
           "at": [
+            1303.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1543.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-13",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1584,
             528
           ],
@@ -3558,6 +4048,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1783.1999999999998,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2023.1999999999998,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-14",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3575,6 +4081,22 @@
         },
         {
           "at": [
+            2335.2,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2575.2,
+            480
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-15",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2592,
             480
           ],
@@ -3586,6 +4108,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2767.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3007.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-16",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3603,6 +4141,22 @@
         },
         {
           "at": [
+            3289.68,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3492.72,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-17",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3504,
             528
           ],
@@ -3614,6 +4168,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3655.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3895.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-05-machine-18",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3636,5 +4206,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "shutter",
+    "secondary": "press",
+    "mechanisms": 19
   }
 }

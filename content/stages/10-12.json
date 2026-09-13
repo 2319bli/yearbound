@@ -3,7 +3,7 @@
   "id": "10-12",
   "title": "A rustle before thunder",
   "season": "autumn",
-  "description": "Read each staggered lightning lane from a roofed pocket, hop the bramble cuts between strikes, and cross only while the lane is dark.",
+  "description": "Read each staggered lightning lane from a roofed pocket, hop the bramble cuts between strikes, and cross only while the lane is dark. Expert redesign: crossed storm beams and shelter doors.",
   "music": "res://audio/autumn.wav",
   "spawn": [
     120,
@@ -445,6 +445,36 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "10-12-machine-0",
+      "x": 1368.0,
+      "y": 480,
+      "period": 3.4,
+      "phase": 0.0,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "10-12-machine-1",
+      "x": 2184.0,
+      "y": 480,
+      "period": 3.59,
+      "phase": 0.71,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
       "type": "storm",
       "x": 3600,
       "y": -3072,
@@ -590,6 +620,36 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "10-12-machine-2",
+      "x": 4068.0,
+      "y": 480,
+      "period": 3.78,
+      "phase": 1.42,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "10-12-machine-3",
+      "x": 5448.0,
+      "y": 480,
+      "period": 3.97,
+      "phase": 2.13,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
       "type": "storm",
       "x": 6912,
       "y": -3072,
@@ -694,7 +754,7 @@
     },
     {
       "type": "bramble",
-      "x": 7584,
+      "x": 7632,
       "y": 528,
       "w": 48,
       "h": 24,
@@ -1030,6 +1090,50 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "10-12-machine-4",
+      "x": 17976.0,
+      "y": 480,
+      "period": 4.16,
+      "phase": 2.84,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "10-12-machine-5",
+      "x": 18936.0,
+      "y": 480,
+      "period": 3.4,
+      "phase": 0.55,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "10-12-machine-6",
+      "x": 19296.0,
+      "y": 480,
+      "period": 3.59,
+      "phase": 1.26,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
       "type": "storm",
       "x": 20352,
       "y": -3072,
@@ -1101,6 +1205,50 @@
       "w": 480,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "10-12-machine-7",
+      "x": 21360.0,
+      "y": 240,
+      "period": 3.78,
+      "phase": 1.97,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "10-12-machine-8",
+      "x": 21840.0,
+      "y": 240,
+      "period": 3.97,
+      "phase": 2.68,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "10-12-machine-9",
+      "x": 22812.0,
+      "y": 480,
+      "period": 4.16,
+      "phase": 0.39,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
     }
   ],
   "motes": [
@@ -1577,37 +1725,37 @@
     {
       "x": 144,
       "y": 484,
-      "text": "Amber warns · white lightning hurts · cross when dark"
+      "text": "The first thunder lane\nThe amber guide is safe; the bright beam is lethal."
     },
     {
       "x": 3024,
       "y": 484,
-      "text": "The roof keeps you low between the storm lanes"
+      "text": "Below the storm wall\nThe amber guide is safe; the bright beam is lethal."
     },
     {
       "x": 6480,
       "y": 484,
-      "text": "Each lane has its own warning rhythm"
+      "text": "The staggered strikes\nThe amber guide is safe; the bright beam is lethal."
     },
     {
       "x": 9552,
       "y": 484,
-      "text": "Climb around the tower before the next exposed crossing"
+      "text": "The lightning lookout\nThe amber guide is safe; the bright beam is lethal."
     },
     {
       "x": 13008,
       "y": 484,
-      "text": "Take one refuge at a time"
+      "text": "The long storm arcade\nThe amber guide is safe; the bright beam is lethal."
     },
     {
       "x": 16176,
       "y": 484,
-      "text": "Brake against the gust between the storm walls"
+      "text": "The storm wind\nThe amber guide is safe; the bright beam is lethal."
     },
     {
       "x": 19632,
       "y": 484,
-      "text": "Cross the high storm walk to the final shelter"
+      "text": "Out of the thunder\nThe amber guide is safe; the bright beam is lethal."
     }
   ],
   "goal": [
@@ -1617,7 +1765,7 @@
   "ground": {
     "y": 624
   },
-  "layout_revision": 15,
+  "layout_revision": 16,
   "decorations": [
     {
       "type": "tree",
@@ -1752,7 +1900,7 @@
     "rooms": [
       {
         "name": "The first thunder lane",
-        "lesson": "Amber warns · white lightning hurts · cross when dark",
+        "lesson": "Amber warns · white lightning hurts · cross when dark. The amber guide is safe; the bright beam is lethal.",
         "from_x": 0,
         "to_x": 2880,
         "start": [
@@ -1766,7 +1914,7 @@
       },
       {
         "name": "Below the storm wall",
-        "lesson": "The roof keeps you low between the storm lanes",
+        "lesson": "The roof keeps you low between the storm lanes. The amber guide is safe; the bright beam is lethal.",
         "from_x": 2880,
         "to_x": 6336,
         "start": [
@@ -1780,7 +1928,7 @@
       },
       {
         "name": "The staggered strikes",
-        "lesson": "Each lane has its own warning rhythm",
+        "lesson": "Each lane has its own warning rhythm. The amber guide is safe; the bright beam is lethal.",
         "from_x": 6336,
         "to_x": 9408,
         "start": [
@@ -1794,7 +1942,7 @@
       },
       {
         "name": "The lightning lookout",
-        "lesson": "Climb around the tower before the next exposed crossing",
+        "lesson": "Climb around the tower before the next exposed crossing. The amber guide is safe; the bright beam is lethal.",
         "from_x": 9408,
         "to_x": 12864,
         "start": [
@@ -1808,7 +1956,7 @@
       },
       {
         "name": "The long storm arcade",
-        "lesson": "Take one refuge at a time",
+        "lesson": "Take one refuge at a time. The amber guide is safe; the bright beam is lethal.",
         "from_x": 12864,
         "to_x": 16032,
         "start": [
@@ -1822,7 +1970,7 @@
       },
       {
         "name": "The storm wind",
-        "lesson": "Brake against the gust between the storm walls",
+        "lesson": "Brake against the gust between the storm walls. The amber guide is safe; the bright beam is lethal.",
         "from_x": 16032,
         "to_x": 19488,
         "start": [
@@ -1836,7 +1984,7 @@
       },
       {
         "name": "Out of the thunder",
-        "lesson": "Cross the high storm walk to the final shelter",
+        "lesson": "Cross the high storm walk to the final shelter. The amber guide is safe; the bright beam is lethal.",
         "from_x": 19488,
         "to_x": 23136,
         "start": [
@@ -1871,7 +2019,7 @@
           528,
           624
         ],
-        "action": "jump",
+        "action": "dash",
         "room": 0
       },
       {
@@ -1904,7 +2052,25 @@
           1200,
           624
         ],
-        "action": "jump",
+        "action": "dash",
+        "room": 0
+      },
+      {
+        "at": [
+          1248.0,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          1488.0,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "10-12-machine-0",
+        "travel_mode": "walk",
         "room": 0
       },
       {
@@ -1929,7 +2095,25 @@
           2016,
           624
         ],
-        "action": "jump",
+        "action": "dash",
+        "room": 0
+      },
+      {
+        "at": [
+          2064.0,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          2304.0,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "10-12-machine-1",
+        "travel_mode": "walk",
         "room": 0
       },
       {
@@ -1954,7 +2138,7 @@
           2832,
           624
         ],
-        "action": "jump",
+        "action": "dash",
         "room": 0
       },
       {
@@ -1978,7 +2162,7 @@
           3456,
           624
         ],
-        "action": "jump",
+        "action": "short",
         "room": 1
       },
       {
@@ -2011,7 +2195,25 @@
           3936,
           624
         ],
-        "action": "jump",
+        "action": "short",
+        "room": 1
+      },
+      {
+        "at": [
+          3949.2,
+          624
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          4186.8,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "10-12-machine-2",
+        "travel_mode": "walk",
         "room": 1
       },
       {
@@ -2035,7 +2237,7 @@
           4656,
           624
         ],
-        "action": "jump",
+        "action": "short",
         "room": 1
       },
       {
@@ -2068,7 +2270,25 @@
           5184,
           624
         ],
-        "action": "jump",
+        "action": "short",
+        "room": 1
+      },
+      {
+        "at": [
+          5328.0,
+          624
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          5568.0,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "10-12-machine-3",
+        "travel_mode": "walk",
         "room": 1
       },
       {
@@ -2101,7 +2321,7 @@
           6096,
           624
         ],
-        "action": "jump",
+        "action": "short",
         "room": 1
       },
       {
@@ -2133,7 +2353,7 @@
           6768,
           624
         ],
-        "action": "jump",
+        "action": "dash",
         "room": 2
       },
       {
@@ -2163,7 +2383,7 @@
       },
       {
         "at": [
-          7224,
+          7272,
           624
         ],
         "action": "jump",
@@ -2188,10 +2408,10 @@
       },
       {
         "at": [
-          7632,
+          7608,
           624
         ],
-        "action": "jump",
+        "action": "short",
         "room": 2
       },
       {
@@ -2225,7 +2445,7 @@
           8400,
           624
         ],
-        "action": "jump",
+        "action": "dash",
         "room": 2
       },
       {
@@ -2258,7 +2478,7 @@
           8928,
           624
         ],
-        "action": "jump",
+        "action": "dash",
         "room": 2
       },
       {
@@ -2274,7 +2494,7 @@
           9312,
           624
         ],
-        "action": "jump",
+        "action": "dash",
         "room": 2
       },
       {
@@ -2453,7 +2673,7 @@
           13704,
           624
         ],
-        "action": "jump",
+        "action": "short",
         "room": 4
       },
       {
@@ -2486,7 +2706,7 @@
           14184,
           624
         ],
-        "action": "jump",
+        "action": "short",
         "room": 4
       },
       {
@@ -2519,7 +2739,7 @@
           14664,
           624
         ],
-        "action": "jump",
+        "action": "short",
         "room": 4
       },
       {
@@ -2552,7 +2772,7 @@
           15144,
           624
         ],
-        "action": "jump",
+        "action": "short",
         "room": 4
       },
       {
@@ -2585,7 +2805,7 @@
           15624,
           624
         ],
-        "action": "jump",
+        "action": "short",
         "room": 4
       },
       {
@@ -2672,6 +2892,24 @@
       },
       {
         "at": [
+          17868.0,
+          624
+        ],
+        "action": "walk",
+        "room": 5
+      },
+      {
+        "at": [
+          18084.0,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "10-12-machine-4",
+        "travel_mode": "walk",
+        "room": 5
+      },
+      {
+        "at": [
           18096,
           624
         ],
@@ -2705,6 +2943,24 @@
       },
       {
         "at": [
+          18828.0,
+          624
+        ],
+        "action": "walk",
+        "room": 5
+      },
+      {
+        "at": [
+          19044.0,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "10-12-machine-5",
+        "travel_mode": "walk",
+        "room": 5
+      },
+      {
+        "at": [
           19056,
           624
         ],
@@ -2718,6 +2974,24 @@
         ],
         "action": "timed",
         "gate_x": 19104,
+        "room": 5
+      },
+      {
+        "at": [
+          19212.0,
+          624
+        ],
+        "action": "walk",
+        "room": 5
+      },
+      {
+        "at": [
+          19428.0,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "10-12-machine-6",
+        "travel_mode": "walk",
         "room": 5
       },
       {
@@ -2798,7 +3072,7 @@
           20928,
           384
         ],
-        "action": "jump",
+        "action": "dash",
         "room": 6
       },
       {
@@ -2820,6 +3094,24 @@
       },
       {
         "at": [
+          21240.0,
+          384
+        ],
+        "action": "walk",
+        "room": 6
+      },
+      {
+        "at": [
+          21480.0,
+          384
+        ],
+        "action": "mechanism",
+        "obstacle_id": "10-12-machine-7",
+        "travel_mode": "walk",
+        "room": 6
+      },
+      {
+        "at": [
           21504,
           384
         ],
@@ -2831,7 +3123,25 @@
           21744,
           384
         ],
-        "action": "jump",
+        "action": "dash",
+        "room": 6
+      },
+      {
+        "at": [
+          21756.0,
+          384
+        ],
+        "action": "walk",
+        "room": 6
+      },
+      {
+        "at": [
+          21972.0,
+          384
+        ],
+        "action": "mechanism",
+        "obstacle_id": "10-12-machine-8",
+        "travel_mode": "walk",
         "room": 6
       },
       {
@@ -2877,6 +3187,24 @@
       },
       {
         "at": [
+          22692.0,
+          624
+        ],
+        "action": "walk",
+        "room": 6
+      },
+      {
+        "at": [
+          22932.0,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "10-12-machine-9",
+        "travel_mode": "walk",
+        "room": 6
+      },
+      {
+        "at": [
           23016,
           624
         ],
@@ -2887,14 +3215,14 @@
     "spike_placements": 65,
     "visible_spikes": 1128,
     "vertical_travel": 960,
-    "intent": "Read each staggered lightning lane from a roofed pocket, hop the bramble cuts between strikes, and cross only while the lane is dark."
+    "intent": "Read each staggered lightning lane from a roofed pocket, hop the bramble cuts between strikes, and cross only while the lane is dark. Expert redesign: crossed storm beams and shelter doors."
   },
   "editor_version": 2,
   "design": {
     "identity": "Lightning lanes and storm cover",
     "blueprint": "res://content/layouts/10-12.json",
-    "intent": "Read each staggered lightning lane from a roofed pocket, hop the bramble cuts between strikes, and cross only while the lane is dark.",
-    "opening": "Amber warns · white lightning hurts · cross when dark"
+    "intent": "Read each staggered lightning lane from a roofed pocket, hop the bramble cuts between strikes, and cross only while the lane is dark. Expert redesign: crossed storm beams and shelter doors.",
+    "opening": "Amber warns · white lightning hurts · cross when dark. The amber guide is safe; the bright beam is lethal."
   },
   "journey_regions": [
     {
@@ -2967,5 +3295,11 @@
     "columns": 2,
     "rows": 4,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "arc",
+    "secondary": "shutter",
+    "mechanisms": 10
   }
 }

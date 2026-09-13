@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-07",
   "identity": "The Sunflower Shortcut",
-  "intent": "Enter the sunflower fields, discover a sheltered shortcut through the crops, and rejoin the valley above the farm.",
+  "intent": "Enter the sunflower fields, discover a sheltered shortcut through the crops, and rejoin the valley above the farm. Expert redesign: opening seedheads and turning farm fans.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The familiar field path",
-      "lesson": "Low fences lead into the crop",
+      "lesson": "Low fences lead into the crop. Pass while the thorn head is folded.",
       "origin": [
         0,
         0
@@ -74,6 +74,45 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-07-machine-0",
+          "x": 1159.2,
+          "y": 600,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-07-machine-1",
+          "x": 1927.2,
+          "y": 600,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-07-machine-2",
+          "x": 2719.2,
+          "y": 600,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -248,7 +287,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The familiar field path\nLow fences lead into the crop"
+          "text": "The familiar field path\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -317,6 +356,22 @@
         },
         {
           "at": [
+            1057.68,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1260.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-07-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1272.0,
             624
           ],
@@ -342,6 +397,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1807.1999999999998,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2047.1999999999998,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-07-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -373,6 +444,22 @@
         },
         {
           "at": [
+            2599.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2839.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-07-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2856.0,
             624
           ],
@@ -387,7 +474,7 @@
     },
     {
       "name": "Above the sunflowers",
-      "lesson": "Use the raised crop walk",
+      "lesson": "Use the raised crop walk. Pass while the thorn head is folded.",
       "origin": [
         2976,
         0
@@ -1042,7 +1129,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Above the sunflowers\nUse the raised crop walk"
+          "text": "Above the sunflowers\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -1129,7 +1216,7 @@
     },
     {
       "name": "The hidden crop route",
-      "lesson": "Look for gaps leading back beneath the leaves",
+      "lesson": "Look for gaps leading back beneath the leaves. Pass while the thorn head is folded.",
       "origin": [
         6336,
         0
@@ -1512,6 +1599,19 @@
           "w": 48,
           "h": 24,
           "direction": "down"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-07-machine-3",
+          "x": 3588.0,
+          "y": 600,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -1645,7 +1745,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The hidden crop route\nLook for gaps leading back beneath the leaves"
+          "text": "The hidden crop route\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -1721,6 +1821,22 @@
         },
         {
           "at": [
+            3469.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3706.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-07-machine-3",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3720.0,
             624
           ],
@@ -1735,7 +1851,7 @@
     },
     {
       "name": "Over the farm fences",
-      "lesson": "Climb past the seed stores",
+      "lesson": "Climb past the seed stores. Pass while the thorn head is folded.",
       "origin": [
         10176,
         0
@@ -2275,6 +2391,46 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-07-machine-4",
+          "x": 1224.0,
+          "y": 240,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-07-machine-5",
+          "x": 2040.0,
+          "y": 216,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-07-machine-6",
+          "x": 2832.0,
+          "y": 72,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -2382,7 +2538,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Over the farm fences\nClimb past the seed stores"
+          "text": "Over the farm fences\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -2416,6 +2572,22 @@
         },
         {
           "at": [
+            1140.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1356.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-07-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1368.0,
             384
           ],
@@ -2430,6 +2602,22 @@
         },
         {
           "at": [
+            1920.0,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2160.0,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-07-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2184.0,
             240
           ],
@@ -2441,6 +2629,22 @@
             96
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            2724.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2940.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-07-machine-6",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2465,7 +2669,7 @@
     },
     {
       "name": "The shortcut rejoins the valley",
-      "lesson": "Descend towards the familiar lane",
+      "lesson": "Descend towards the familiar lane. Pass while the thorn head is folded.",
       "origin": [
         13728,
         -528
@@ -2537,6 +2741,61 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-07-machine-7",
+          "x": 1224.0,
+          "y": 840,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-07-machine-8",
+          "x": 2016.0,
+          "y": 984,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-07-machine-9",
+          "x": 2808.0,
+          "y": 1128,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-07-machine-10",
+          "x": 3180.0,
+          "y": 984,
+          "period": 7.5,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
         }
       ],
       "zones": [],
@@ -2640,7 +2899,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The shortcut rejoins the valley\nDescend towards the familiar lane"
+          "text": "The shortcut rejoins the valley\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -2667,6 +2926,22 @@
         },
         {
           "at": [
+            1116.0,
+            864
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1332.0,
+            864
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-07-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1344,
             864
           ],
@@ -2678,6 +2953,22 @@
             1008
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1896.0,
+            1008
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2136.0,
+            1008
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-07-machine-8",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2695,10 +2986,42 @@
         },
         {
           "at": [
+            2700.0,
+            1152
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2916.0,
+            1152
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-07-machine-9",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2928,
             1152
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            3060.0,
+            1152
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3300.0,
+            1152
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-07-machine-10",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2733,5 +3056,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "bloom",
+    "secondary": "windmill",
+    "mechanisms": 11
   }
 }

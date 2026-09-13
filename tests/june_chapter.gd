@@ -9,7 +9,7 @@ func check(ok: bool, message: String) -> void:
 func run() -> void:
 	var app=load("res://main.tscn").instantiate();root.add_child(app);await frames(4)
 	check(app.stage_order.slice(0,30)==Array(range(1,31)).map(func(day):return "06-%02d"%day),"June contains every date in chapter order")
-	check(app.stage_order.size()==41,"all eleven other-month samples are retained")
+	check(app.stage_order.size()==51,"all earlier dates and ten new obstacle examples are retained")
 	for day in range(1,31):
 		var id="06-%02d"%day;var s=app.stages[id]
 		check(s.journey_regions.size()==5 and s.challenge.rooms.size()==5,id+" contains five connected places")

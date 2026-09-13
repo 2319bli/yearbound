@@ -1,6 +1,17 @@
-# Build verification · 9 September 2026
+# Build verification · 13 September 2026
 
 Environment: Apple M4 / macOS, Godot 4.6.2, native OpenGL compatibility renderer. Delivered app is Apple silicon ARM64, includes its own runtime, and uses an ad-hoc development signature. The original Documents/Yearbound music folder was read and copied from, never edited.
+
+## Seasonal obstacle expansion · 0.15.0 · 13 September 2026
+
+The delivered campaign has 51 playable dates, 259 named places and 831 moving/timed mechanisms. Ten new four-place journeys have independent artwork, temporary scores and distinct combinations of windmills, pendulums, presses, shutters, vents, thorns, rail cutters, lightning, physical water, updrafts and freight platforms. All 41 earlier dates gained obstacles; nine also gained vertical transfer galleries. The June boss has denser survival attack schedules.
+
+- All 50 ordinary routes completed continuously from their entrances with zero deaths in three disjoint clean batches. The test driver uses real movement, jump, charge/release, swimming and waiting inputs. It does not relocate the player between waypoints. The four survival boss arenas each completed their full duration, and the advancing-wall chase completed with zero deaths; those boss checks use isolated arena starts.
+- Content validation, compiler freshness, mechanism geometry, swept contact, safe warning intervals, pause timing, 51-stage workshop round trips, smoke, June chapter, scenery and swimming suites passed. Base-controller and charge-dash regression suites passed. A shutter regression checks that its extension cannot invade the waiting area outside the marked gate.
+- The standalone app passed mechanism, smoke, workshop and map-scenery suites. Native framebuffer tests verified terrain/player/hazard/UI layering and background atlas sampling, transitions, backtracking and vertical coverage. Native views were reviewed across all ten new seasonal identities, June windmills and calendar cards. Long calendar descriptions fit; level signs stay inside the viewport. Timber rotor mounts draw behind terrain and the player, while dangerous sails remain in the hazard layer.
+- Original player, movement, charge-dash and swimming scripts/tuning, the 17-station lab, and the incoming terrain renderer/palettes were compared byte-for-byte with the preserved starting checkout. All are unchanged. The original 41 map atlases are retained. New art provenance is in `art/maps/PROVENANCE_EXPANSION.json`.
+
+Machine-readable outcomes, per-stage hashes and test limits are in `validation_0_15.json`. Test saves were isolated from normal progress. Headless fixtures retain the known macOS certificate and resource-cleanup notices; no script/parse errors were reported by successful checks. The Apple silicon app uses the existing local development signature. Physical controller testing, human difficulty/pacing, notarization and other operating-system exports remain future work. “Ten times harder” was treated as an expert design target, not an objectively measured multiplier.
 
 ## Custom map backgrounds · 0.14.0
 

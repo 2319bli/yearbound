@@ -235,10 +235,12 @@ static func errors(s: Variant, check_playable: bool=false) -> PackedStringArray:
 				if obj.has(name) and obj[name]<=0: return PackedStringArray(["Dimensions must be positive in "+field])
 			if field=="hazards":
 				if obj.get("direction","up") not in ["up","down","left","right"]: out.append("Unknown spike direction.")
-				if not obj.get("type") in ["bramble","blade","thorn","icicle","storm"]: out.append("Unknown hazard.")
+				if not obj.get("type") in ["bramble","blade","thorn","icicle","storm","mechanism"]: out.append("Unknown hazard.")
 				elif obj.type in ["bramble","storm"] and (not obj.has("w") or not obj.has("h")): out.append("Hazard size is missing.")
-				elif obj.type not in ["bramble","storm"] and not obj.has("r"): out.append("Hazard radius is missing.")
+				elif obj.type not in ["bramble","storm","mechanism"] and not obj.has("r"): out.append("Hazard radius is missing.")
 				elif obj.type=="icicle" and not obj.has("period"): out.append("Icicle timing is missing.")
+				if obj.type=="mechanism":
+					out.append_array(YBObstacleRules.errors(obj))
 				if obj.type=="storm":
 					if not number(obj.get("period")) or not number(obj.get("active_seconds")) or not number(obj.get("warning_seconds")) or obj.active_seconds<=0 or obj.warning_seconds<0.5 or obj.period<=obj.active_seconds+obj.warning_seconds: out.append("Storm lanes need a safe interval and a visible warning.")
 			if field=="zones":

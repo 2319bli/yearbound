@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-09",
   "identity": "The Glasshouse Run",
-  "intent": "Cross the formal garden, enter the glasshouse’s high interior, pass through maintenance tunnels, and leave along its roof.",
+  "intent": "Cross the formal garden, enter the glasshouse’s high interior, pass through maintenance tunnels, and leave along its roof. Expert redesign: glasshouse vents and seed-tray presses.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The formal garden",
-      "lesson": "Jump between the planted borders",
+      "lesson": "Jump between the planted borders. Green is open. Amber warns before the press falls.",
       "origin": [
         0,
         0
@@ -74,6 +74,76 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-0",
+          "x": 1111.2,
+          "y": 384,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-1",
+          "x": 1519.2,
+          "y": 480,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-2",
+          "x": 1951.2,
+          "y": 384,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-09-machine-3",
+          "x": 2359.2,
+          "y": 480,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-4",
+          "x": 3103.2,
+          "y": 480,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -248,7 +318,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The formal garden\nJump between the planted borders"
+          "text": "The formal garden\nGreen is open. Amber warns before the press falls."
         }
       ],
       "route": [
@@ -303,6 +373,22 @@
         },
         {
           "at": [
+            1033.68,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1236.72,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1248,
             528
           ],
@@ -314,6 +400,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1423.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1663.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -331,6 +433,22 @@
         },
         {
           "at": [
+            1855.1999999999998,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2095.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2112,
             528
           ],
@@ -342,6 +460,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2263.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2503.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -373,6 +507,22 @@
         },
         {
           "at": [
+            3025.68,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3228.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3240.0,
             624
           ],
@@ -387,7 +537,7 @@
     },
     {
       "name": "The glasshouse entrance",
-      "lesson": "Step up into the glass gallery",
+      "lesson": "Step up into the glass gallery. Green is open. Amber warns before the press falls.",
       "origin": [
         3360,
         0
@@ -915,6 +1065,34 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-5",
+          "x": 1944.0,
+          "y": 96,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-6",
+          "x": 2760.0,
+          "y": -48,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -1022,7 +1200,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The glasshouse entrance\nStep up into the glass gallery"
+          "text": "The glasshouse entrance\nGreen is open. Amber warns before the press falls."
         }
       ],
       "route": [
@@ -1070,6 +1248,22 @@
         },
         {
           "at": [
+            1860.0,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2076.0,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2088.0,
             240
           ],
@@ -1081,6 +1275,22 @@
             96
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            2676.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2892.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-6",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1105,7 +1315,7 @@
     },
     {
       "name": "The palm-house canopy",
-      "lesson": "Cross the broad galleries over the palms",
+      "lesson": "Cross the broad galleries over the palms. Green is open. Amber warns before the press falls.",
       "origin": [
         6816,
         -528
@@ -1798,6 +2008,48 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-7",
+          "x": 540.0,
+          "y": 288,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-09-machine-8",
+          "x": 1476.0,
+          "y": 96,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-9",
+          "x": 2508.0,
+          "y": -96,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -1905,7 +2157,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The palm-house canopy\nCross the broad galleries over the palms"
+          "text": "The palm-house canopy\nGreen is open. Amber warns before the press falls."
         }
       ],
       "route": [
@@ -1926,6 +2178,22 @@
         },
         {
           "at": [
+            444.0,
+            432
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            684.0,
+            432
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             744.0,
             432
           ],
@@ -1941,6 +2209,22 @@
         },
         {
           "at": [
+            1380.0,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1620.0,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1704.0,
             240
           ],
@@ -1953,6 +2237,22 @@
           ],
           "action": "dash",
           "surface": "wood"
+        },
+        {
+          "at": [
+            2412.0,
+            48
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2652.0,
+            48
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-9",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1992,7 +2292,7 @@
     },
     {
       "name": "The maintenance tunnels",
-      "lesson": "Short jumps fit under the service beams",
+      "lesson": "Short jumps fit under the service beams. Green is open. Amber warns before the press falls.",
       "origin": [
         10848,
         -528
@@ -2824,6 +3124,90 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-09-machine-10",
+          "x": 724.8,
+          "y": 432,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-11",
+          "x": 1262.4,
+          "y": 480,
+          "period": 3.59,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-12",
+          "x": 1996.8,
+          "y": 384,
+          "period": 3.78,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-13",
+          "x": 2510.4,
+          "y": 480,
+          "period": 3.97,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-09-machine-14",
+          "x": 3172.8,
+          "y": 432,
+          "period": 4.16,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-15",
+          "x": 3578.4,
+          "y": 480,
+          "period": 3.4,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -3033,7 +3417,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The maintenance tunnels\nShort jumps fit under the service beams"
+          "text": "The maintenance tunnels\nGreen is open. Amber warns before the press falls."
         }
       ],
       "route": [
@@ -3074,6 +3458,22 @@
         },
         {
           "at": [
+            628.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            868.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-10",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1017.5999999999999,
             576
           ],
@@ -3085,6 +3485,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1166.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1406.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-11",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3116,6 +3532,22 @@
         },
         {
           "at": [
+            1900.8000000000002,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2140.8,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-12",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2265.6000000000004,
             528
           ],
@@ -3127,6 +3559,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2414.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2654.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-13",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3158,6 +3606,22 @@
         },
         {
           "at": [
+            3076.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3316.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-14",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3369.6000000000004,
             576
           ],
@@ -3169,6 +3633,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3496.5599999999995,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3708.24,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-15",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3186,7 +3666,7 @@
     },
     {
       "name": "Along the rooftop beams",
-      "lesson": "The last roof opens back into the garden",
+      "lesson": "The last roof opens back into the garden. Green is open. Amber warns before the press falls.",
       "origin": [
         14688,
         -528
@@ -3863,6 +4343,62 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-16",
+          "x": 540.0,
+          "y": 336,
+          "period": 3.59,
+          "phase": 2.36,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-17",
+          "x": 1404.0,
+          "y": 192,
+          "period": 3.78,
+          "phase": 0.07,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-09-machine-18",
+          "x": 2364.0,
+          "y": 48,
+          "period": 3.97,
+          "phase": 0.78,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-09-machine-19",
+          "x": 3228.0,
+          "y": 288,
+          "period": 4.16,
+          "phase": 1.49,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -3970,7 +4506,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Along the rooftop beams\nThe last roof opens back into the garden"
+          "text": "Along the rooftop beams\nGreen is open. Amber warns before the press falls."
         }
       ],
       "route": [
@@ -3991,6 +4527,22 @@
         },
         {
           "at": [
+            445.2,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            682.8,
+            480
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-16",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             696.0,
             480
           ],
@@ -4003,6 +4555,22 @@
           ],
           "action": "jump",
           "surface": "wood"
+        },
+        {
+          "at": [
+            1308.0,
+            336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1548.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-17",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -4021,6 +4589,22 @@
         },
         {
           "at": [
+            2268.0,
+            192
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2508.0,
+            192
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-18",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2568.0,
             192
           ],
@@ -4033,6 +4617,22 @@
           ],
           "action": "jump",
           "surface": "wood"
+        },
+        {
+          "at": [
+            3133.2,
+            432
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3370.8,
+            432
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-09-machine-19",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -4074,5 +4674,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "press",
+    "secondary": "geyser",
+    "mechanisms": 20
   }
 }

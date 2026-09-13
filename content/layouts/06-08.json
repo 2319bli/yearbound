@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-08",
   "identity": "Lanterns in the Breeze",
-  "intent": "Follow evening light from the meadow into woodland dusk, through lantern gardens, and out beneath a deep-blue sky.",
+  "intent": "Follow evening light from the meadow into woodland dusk, through lantern gardens, and out beneath a deep-blue sky. Expert redesign: swinging lantern weights and garden gates.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The late-afternoon meadow",
-      "lesson": "Hop through the last warm sunlight",
+      "lesson": "Hop through the last warm sunlight. Follow the weight as it swings away.",
       "origin": [
         0,
         0
@@ -82,6 +82,76 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-08-machine-0",
+          "x": 1063.2,
+          "y": 384,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-08-machine-1",
+          "x": 1447.2,
+          "y": 480,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-08-machine-2",
+          "x": 1879.2,
+          "y": 384,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-08-machine-3",
+          "x": 2263.2,
+          "y": 480,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-08-machine-4",
+          "x": 3007.2,
+          "y": 480,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -256,7 +326,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The late-afternoon meadow\nHop through the last warm sunlight"
+          "text": "The late-afternoon meadow\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -311,6 +381,22 @@
         },
         {
           "at": [
+            985.6800000000001,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1188.72,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1200,
             528
           ],
@@ -322,6 +408,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1351.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1591.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -339,6 +441,22 @@
         },
         {
           "at": [
+            1801.6799999999998,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2004.7199999999998,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2016,
             528
           ],
@@ -350,6 +468,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2167.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2407.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -381,6 +515,22 @@
         },
         {
           "at": [
+            2929.68,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3132.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3144.0,
             624
           ],
@@ -395,7 +545,7 @@
     },
     {
       "name": "The sunset path",
-      "lesson": "Cross the sun-warmed garden stones",
+      "lesson": "Cross the sun-warmed garden stones. Follow the weight as it swings away.",
       "origin": [
         3264,
         0
@@ -754,7 +904,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The sunset path\nCross the sun-warmed garden stones"
+          "text": "The sunset path\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -813,7 +963,7 @@
     },
     {
       "name": "The dusk woodland edge",
-      "lesson": "Keep below the darkening branches",
+      "lesson": "Keep below the darkening branches. Follow the weight as it swings away.",
       "origin": [
         6720,
         0
@@ -1581,6 +1731,80 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-08-machine-5",
+          "x": 724.8,
+          "y": 370,
+          "period": 5.2,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 158,
+          "head_radius": 21,
+          "swing": 1.02
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-08-machine-6",
+          "x": 1214.4,
+          "y": 480,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-08-machine-7",
+          "x": 1948.8,
+          "y": 322,
+          "period": 6.0,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 158,
+          "head_radius": 21,
+          "swing": 0.9199999999999999
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-08-machine-8",
+          "x": 2438.4,
+          "y": 437,
+          "period": 4.8,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 140,
+          "head_radius": 21,
+          "swing": 0.65
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-08-machine-9",
+          "x": 3076.8,
+          "y": 389,
+          "period": 5.2,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 140,
+          "head_radius": 21,
+          "swing": 0.65
         }
       ],
       "zones": [],
@@ -1778,7 +2002,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The dusk woodland edge\nKeep below the darkening branches"
+          "text": "The dusk woodland edge\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -1819,6 +2043,22 @@
         },
         {
           "at": [
+            604.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            844.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             969.5999999999999,
             576
           ],
@@ -1830,6 +2070,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1118.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1358.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-6",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1861,6 +2117,22 @@
         },
         {
           "at": [
+            1828.8000000000002,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2068.8,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2169.6000000000004,
             528
           ],
@@ -1872,6 +2144,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2318.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2558.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-8",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1903,6 +2191,22 @@
         },
         {
           "at": [
+            2956.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3196.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-9",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3225.6000000000004,
             576
           ],
@@ -1931,7 +2235,7 @@
     },
     {
       "name": "The lantern gardens",
-      "lesson": "Climb through the lit porticoes",
+      "lesson": "Climb through the lit porticoes. Follow the weight as it swings away.",
       "origin": [
         10368,
         0
@@ -2452,7 +2756,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The lantern gardens\nClimb through the lit porticoes"
+          "text": "The lantern gardens\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -2543,7 +2847,7 @@
     },
     {
       "name": "Under the deep-blue sky",
-      "lesson": "The final garden terrace opens to the stars",
+      "lesson": "The final garden terrace opens to the stars. Follow the weight as it swings away.",
       "origin": [
         14208,
         0
@@ -3119,6 +3423,49 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-08-machine-10",
+          "x": 1224.0,
+          "y": 240,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-08-machine-11",
+          "x": 2088.0,
+          "y": 53,
+          "period": 6.0,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 140,
+          "head_radius": 21,
+          "swing": 0.65
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-08-machine-12",
+          "x": 2952.0,
+          "y": -48,
+          "period": 3.78,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -3226,7 +3573,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Under the deep-blue sky\nThe final garden terrace opens to the stars"
+          "text": "Under the deep-blue sky\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -3260,6 +3607,22 @@
         },
         {
           "at": [
+            1140.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1356.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-10",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1368.0,
             384
           ],
@@ -3274,6 +3637,22 @@
         },
         {
           "at": [
+            1968.0,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2208.0,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-11",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2232.0,
             240
           ],
@@ -3285,6 +3664,22 @@
             96
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            2868.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3084.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-08-machine-12",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3315,5 +3710,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "pendulum",
+    "secondary": "shutter",
+    "mechanisms": 13
   }
 }

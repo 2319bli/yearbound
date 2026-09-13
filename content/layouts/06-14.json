@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-14",
   "identity": "The Woodland Detour",
-  "intent": "Leave a sunny field, pass into deep woodland, cross its fallen timber and emerge into a bright clearing.",
+  "intent": "Leave a sunny field, pass into deep woodland, cross its fallen timber and emerge into a bright clearing. Expert redesign: travelling branch cutters and thorn nests.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The sunny field",
-      "lesson": "Find the gap beneath the trees",
+      "lesson": "Find the gap beneath the trees. Let the cutter finish its sweep before crossing.",
       "origin": [
         0,
         0
@@ -74,6 +74,61 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-0",
+          "x": 1303.2,
+          "y": 599,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-1",
+          "x": 1711.2,
+          "y": 551,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-2",
+          "x": 2095.2,
+          "y": 599,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-14-machine-3",
+          "x": 2887.2,
+          "y": 600,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -248,7 +303,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The sunny field\nFind the gap beneath the trees"
+          "text": "The sunny field\nLet the cutter finish its sweep before crossing."
         }
       ],
       "route": [
@@ -317,6 +372,22 @@
         },
         {
           "at": [
+            1201.68,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1404.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1416.0,
             624
           ],
@@ -331,6 +402,22 @@
         },
         {
           "at": [
+            1609.6799999999998,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1812.7199999999998,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-1",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1824,
             576
           ],
@@ -342,6 +429,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1975.1999999999998,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2215.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-2",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -373,6 +476,22 @@
         },
         {
           "at": [
+            2767.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3007.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-3",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3048.0,
             624
           ],
@@ -387,7 +506,7 @@
     },
     {
       "name": "The woodland entrance",
-      "lesson": "Follow the first root terraces",
+      "lesson": "Follow the first root terraces. Let the cutter finish its sweep before crossing.",
       "origin": [
         3168,
         0
@@ -746,7 +865,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The woodland entrance\nFollow the first root terraces"
+          "text": "The woodland entrance\nLet the cutter finish its sweep before crossing."
         }
       ],
       "route": [
@@ -805,7 +924,7 @@
     },
     {
       "name": "The shaded forest floor",
-      "lesson": "Use small jumps under the roots",
+      "lesson": "Use small jumps under the roots. Let the cutter finish its sweep before crossing.",
       "origin": [
         6624,
         0
@@ -1605,6 +1724,75 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-4",
+          "x": 748.8,
+          "y": 551,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-14-machine-5",
+          "x": 1286.4,
+          "y": 600,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-6",
+          "x": 1996.8,
+          "y": 503,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-7",
+          "x": 2486.4,
+          "y": 599,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-8",
+          "x": 3148.8,
+          "y": 551,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
         }
       ],
       "zones": [],
@@ -1802,7 +1990,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The shaded forest floor\nUse small jumps under the roots"
+          "text": "The shaded forest floor\nLet the cutter finish its sweep before crossing."
         }
       ],
       "route": [
@@ -1843,6 +2031,22 @@
         },
         {
           "at": [
+            628.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            868.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1017.5999999999999,
             576
           ],
@@ -1854,6 +2058,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1166.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1406.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-5",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1885,6 +2105,22 @@
         },
         {
           "at": [
+            1876.8000000000002,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2116.8,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2217.6000000000004,
             528
           ],
@@ -1896,6 +2132,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2366.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2606.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-7",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1927,6 +2179,22 @@
         },
         {
           "at": [
+            3028.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3268.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3321.6000000000004,
             576
           ],
@@ -1955,7 +2223,7 @@
     },
     {
       "name": "The fallen-log canopy",
-      "lesson": "Go around the fallen trunk and back over its branches",
+      "lesson": "Go around the fallen trunk and back over its branches. Let the cutter finish its sweep before crossing.",
       "origin": [
         10368,
         0
@@ -2362,6 +2630,19 @@
           "w": 48,
           "h": 24,
           "direction": "down"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-14-machine-9",
+          "x": 3780.0,
+          "y": 600,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -2495,7 +2776,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The fallen-log canopy\nGo around the fallen trunk and back over its branches"
+          "text": "The fallen-log canopy\nLet the cutter finish its sweep before crossing."
         }
       ],
       "route": [
@@ -2571,6 +2852,22 @@
         },
         {
           "at": [
+            3661.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3898.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-9",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3912.0,
             624
           ],
@@ -2585,7 +2882,7 @@
     },
     {
       "name": "The bright clearing",
-      "lesson": "The forest gives way to open sunlight",
+      "lesson": "The forest gives way to open sunlight. Let the cutter finish its sweep before crossing.",
       "origin": [
         14400,
         0
@@ -2649,6 +2946,116 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-10",
+          "x": 487.2,
+          "y": 551,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-11",
+          "x": 919.2,
+          "y": 599,
+          "period": 3.59,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-12",
+          "x": 1399.2,
+          "y": 503,
+          "period": 3.78,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-14-machine-13",
+          "x": 1855.2,
+          "y": 600,
+          "period": 3.97,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-14",
+          "x": 2383.2,
+          "y": 503,
+          "period": 4.16,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-15",
+          "x": 2839.2,
+          "y": 599,
+          "period": 3.4,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-14-machine-16",
+          "x": 3295.2,
+          "y": 551,
+          "period": 3.59,
+          "phase": 2.36,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-14-machine-17",
+          "x": 3727.2,
+          "y": 600,
+          "period": 3.78,
+          "phase": 0.07,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -2828,7 +3235,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The bright clearing\nThe forest gives way to open sunlight"
+          "text": "The bright clearing\nLet the cutter finish its sweep before crossing."
         }
       ],
       "route": [
@@ -2855,6 +3262,22 @@
         },
         {
           "at": [
+            367.2,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            607.2,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-10",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             624,
             576
           ],
@@ -2866,6 +3289,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            799.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1039.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-11",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2883,6 +3322,22 @@
         },
         {
           "at": [
+            1279.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1519.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-12",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1536,
             528
           ],
@@ -2894,6 +3349,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1735.1999999999998,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1975.1999999999998,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-13",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2911,6 +3382,22 @@
         },
         {
           "at": [
+            2263.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2503.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-14",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2544,
             528
           ],
@@ -2922,6 +3409,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2719.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2959.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-15",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2939,6 +3442,22 @@
         },
         {
           "at": [
+            3193.68,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3396.72,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-16",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3408,
             576
           ],
@@ -2950,6 +3469,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3607.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3847.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-14-machine-17",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2984,5 +3519,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "sawrail",
+    "secondary": "bloom",
+    "mechanisms": 18
   }
 }

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-20",
   "identity": "The Long Grass",
-  "intent": "Let the meadow grow into tall grass, find the half-hidden path network, climb its wooden walk and emerge into open fields.",
+  "intent": "Let the meadow grow into tall grass, find the half-hidden path network, climb its wooden walk and emerge into open fields. Expert redesign: grass seedheads and low mowing rails.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The short meadow",
-      "lesson": "The first path is easy to read",
+      "lesson": "The first path is easy to read. Pass while the thorn head is folded.",
       "origin": [
         0,
         0
@@ -74,6 +74,72 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-0",
+          "x": 679.2,
+          "y": 600,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-1",
+          "x": 1375.2,
+          "y": 600,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-2",
+          "x": 1807.2,
+          "y": 504,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-20-machine-3",
+          "x": 2215.2,
+          "y": 599,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-4",
+          "x": 3007.2,
+          "y": 600,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -248,7 +314,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The short meadow\nThe first path is easy to read"
+          "text": "The short meadow\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -289,6 +355,22 @@
         },
         {
           "at": [
+            577.6800000000001,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            780.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             792.0,
             624
           ],
@@ -317,6 +399,22 @@
         },
         {
           "at": [
+            1255.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1495.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-1",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1512.0,
             624
           ],
@@ -331,6 +429,22 @@
         },
         {
           "at": [
+            1705.6799999999998,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1908.7199999999998,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1920,
             528
           ],
@@ -342,6 +456,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2095.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2335.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -373,6 +503,22 @@
         },
         {
           "at": [
+            2887.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3127.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3144.0,
             624
           ],
@@ -387,7 +533,7 @@
     },
     {
       "name": "Where the grass grows tall",
-      "lesson": "Read the clear block tops beneath the grass",
+      "lesson": "Read the clear block tops beneath the grass. Pass while the thorn head is folded.",
       "origin": [
         3264,
         0
@@ -1187,6 +1333,72 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-5",
+          "x": 724.8,
+          "y": 552,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-6",
+          "x": 1238.4,
+          "y": 600,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-20-machine-7",
+          "x": 1972.8,
+          "y": 503,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-8",
+          "x": 2486.4,
+          "y": 600,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-9",
+          "x": 3148.8,
+          "y": 552,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -1384,7 +1596,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Where the grass grows tall\nRead the clear block tops beneath the grass"
+          "text": "Where the grass grows tall\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -1425,6 +1637,22 @@
         },
         {
           "at": [
+            604.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            844.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             969.5999999999999,
             576
           ],
@@ -1436,6 +1664,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1118.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1358.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-6",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1467,6 +1711,22 @@
         },
         {
           "at": [
+            1852.8000000000002,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2092.8,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2217.6000000000004,
             528
           ],
@@ -1478,6 +1738,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2366.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2606.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-8",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1506,6 +1782,22 @@
             576
           ],
           "action": "short"
+        },
+        {
+          "at": [
+            3028.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3268.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-9",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1538,7 +1830,7 @@
     },
     {
       "name": "The hidden path network",
-      "lesson": "A side opening returns beneath the main trail",
+      "lesson": "A side opening returns beneath the main trail. Pass while the thorn head is folded.",
       "origin": [
         7008,
         0
@@ -2102,7 +2394,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The hidden path network\nA side opening returns beneath the main trail"
+          "text": "The hidden path network\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -2193,7 +2485,7 @@
     },
     {
       "name": "The wooden grass walk",
-      "lesson": "Climb onto the clear boards above the grass",
+      "lesson": "Climb onto the clear boards above the grass. Pass while the thorn head is folded.",
       "origin": [
         11136,
         0
@@ -2829,6 +3121,59 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-20-machine-10",
+          "x": 528.0,
+          "y": 503,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-11",
+          "x": 1392.0,
+          "y": 360,
+          "period": 3.59,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-12",
+          "x": 2400.0,
+          "y": 216,
+          "period": 3.78,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-13",
+          "x": 3384.0,
+          "y": 72,
+          "period": 3.97,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -2936,7 +3281,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The wooden grass walk\nClimb onto the clear boards above the grass"
+          "text": "The wooden grass walk\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -2956,6 +3301,22 @@
         },
         {
           "at": [
+            420.0,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            636.0,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-10",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             648.0,
             528
           ],
@@ -2967,6 +3328,22 @@
             384
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            1272.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1512.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-11",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2984,6 +3361,22 @@
         },
         {
           "at": [
+            2280.0,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2520.0,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-12",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2568.0,
             240
           ],
@@ -2995,6 +3388,22 @@
             96
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            3264.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3504.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-13",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3019,7 +3428,7 @@
     },
     {
       "name": "The clear field",
-      "lesson": "The path and sky open up again",
+      "lesson": "The path and sky open up again. Pass while the thorn head is folded.",
       "origin": [
         15264,
         -528
@@ -3092,6 +3501,112 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-14",
+          "x": 511.2,
+          "y": 552,
+          "period": 4.16,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-15",
+          "x": 991.2,
+          "y": 600,
+          "period": 3.4,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-16",
+          "x": 1543.2,
+          "y": 504,
+          "period": 3.59,
+          "phase": 2.36,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-20-machine-17",
+          "x": 2071.2,
+          "y": 599,
+          "period": 3.78,
+          "phase": 0.07,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-18",
+          "x": 2647.2,
+          "y": 504,
+          "period": 3.97,
+          "phase": 0.78,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-19",
+          "x": 3151.2,
+          "y": 600,
+          "period": 4.16,
+          "phase": 1.49,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-20-machine-20",
+          "x": 3655.2,
+          "y": 552,
+          "period": 3.4,
+          "phase": 2.2,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-20-machine-21",
+          "x": 4111.2,
+          "y": 599,
+          "period": 3.59,
+          "phase": 2.91,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
         }
       ],
       "zones": [],
@@ -3271,7 +3786,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The clear field\nThe path and sky open up again"
+          "text": "The clear field\nPass while the thorn head is folded."
         }
       ],
       "route": [
@@ -3298,6 +3813,22 @@
         },
         {
           "at": [
+            391.2,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            631.2,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-14",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             672,
             576
           ],
@@ -3309,6 +3840,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            871.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1111.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-15",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3326,6 +3873,22 @@
         },
         {
           "at": [
+            1423.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1663.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-16",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1728,
             528
           ],
@@ -3337,6 +3900,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1951.1999999999998,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2191.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-17",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3354,6 +3933,22 @@
         },
         {
           "at": [
+            2527.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2767.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-18",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2832,
             528
           ],
@@ -3365,6 +3960,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3031.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3271.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-19",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3382,6 +3993,22 @@
         },
         {
           "at": [
+            3535.2,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3775.2,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-20",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3792,
             576
           ],
@@ -3393,6 +4020,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3991.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4231.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-20-machine-21",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3427,5 +4070,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "bloom",
+    "secondary": "sawrail",
+    "mechanisms": 22
   }
 }

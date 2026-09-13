@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-21",
   "identity": "Midsummer Run",
-  "intent": "Cross the brightest June morning, a flower valley and sunlit climb to a huge midsummer plateau and golden-evening horizon.",
+  "intent": "Cross the brightest June morning, a flower valley and sunlit climb to a huge midsummer plateau and golden-evening horizon. Expert redesign: midsummer light gates and rotating sun sails.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The midsummer morning",
-      "lesson": "Begin beneath the longest day’s sky",
+      "lesson": "Begin beneath the longest day’s sky. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         0,
         0
@@ -74,6 +74,128 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-0",
+          "x": 463.2,
+          "y": 432,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-1",
+          "x": 871.2,
+          "y": 480,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-2",
+          "x": 1303.2,
+          "y": 384,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-21-machine-3",
+          "x": 1759.2,
+          "y": 456,
+          "period": 8.05,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-4",
+          "x": 2287.2,
+          "y": 384,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-5",
+          "x": 2767.2,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-6",
+          "x": 3271.2,
+          "y": 432,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-21-machine-7",
+          "x": 3727.2,
+          "y": 456,
+          "period": 8.05,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
         }
       ],
       "zones": [],
@@ -248,7 +370,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The midsummer morning\nBegin beneath the longest day’s sky"
+          "text": "The midsummer morning\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -275,6 +397,22 @@
         },
         {
           "at": [
+            361.67999999999995,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            564.72,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             576,
             576
           ],
@@ -286,6 +424,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            751.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            991.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -303,6 +457,22 @@
         },
         {
           "at": [
+            1183.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1423.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1440,
             528
           ],
@@ -314,6 +484,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1639.1999999999998,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1879.1999999999998,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -331,6 +517,22 @@
         },
         {
           "at": [
+            2167.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2407.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2448,
             528
           ],
@@ -342,6 +544,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2647.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2887.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-5",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -359,6 +577,22 @@
         },
         {
           "at": [
+            3151.2,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3391.2,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3408,
             576
           ],
@@ -370,6 +604,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3607.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3847.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-7",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -387,7 +637,7 @@
     },
     {
       "name": "The flower valley",
-      "lesson": "Follow the wide valley’s bellflower arcs",
+      "lesson": "Follow the wide valley’s bellflower arcs. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         4032,
         0
@@ -936,7 +1186,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The flower valley\nFollow the wide valley’s bellflower arcs"
+          "text": "The flower valley\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -1003,7 +1253,7 @@
     },
     {
       "name": "The sunlit hill",
-      "lesson": "Climb from flowers into the long light",
+      "lesson": "Climb from flowers into the long light. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         8256,
         0
@@ -1675,6 +1925,67 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-8",
+          "x": 552.0,
+          "y": 336,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-21-machine-9",
+          "x": 1488.0,
+          "y": 120,
+          "period": 6.95,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-10",
+          "x": 2496.0,
+          "y": -48,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-11",
+          "x": 3504.0,
+          "y": -240,
+          "period": 3.59,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -1782,7 +2093,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The sunlit hill\nClimb from flowers into the long light"
+          "text": "The sunlit hill\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -1802,6 +2113,22 @@
         },
         {
           "at": [
+            432.0,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            672.0,
+            480
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             696.0,
             480
           ],
@@ -1813,6 +2140,22 @@
             288
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            1368.0,
+            288
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1608.0,
+            288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-9",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1830,6 +2173,22 @@
         },
         {
           "at": [
+            2376.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2616.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-10",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2664.0,
             96
           ],
@@ -1841,6 +2200,22 @@
             -96
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            3384.0,
+            -96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3624.0,
+            -96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-11",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1865,7 +2240,7 @@
     },
     {
       "name": "The midsummer plateau",
-      "lesson": "A broad high crossing under an enormous sky",
+      "lesson": "A broad high crossing under an enormous sky. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         12576,
         -720
@@ -2766,6 +3141,67 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-21-machine-12",
+          "x": 684.0,
+          "y": 312,
+          "period": 6.4,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-13",
+          "x": 1884.0,
+          "y": 144,
+          "period": 3.97,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-14",
+          "x": 3156.0,
+          "y": -48,
+          "period": 4.16,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-15",
+          "x": 4284.0,
+          "y": 240,
+          "period": 3.4,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -2873,7 +3309,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The midsummer plateau\nA broad high crossing under an enormous sky"
+          "text": "The midsummer plateau\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -2894,6 +3330,22 @@
         },
         {
           "at": [
+            564.0,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            804.0,
+            480
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-12",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             936.0,
             480
           ],
@@ -2906,6 +3358,22 @@
           ],
           "action": "dash",
           "surface": "wood"
+        },
+        {
+          "at": [
+            1764.0,
+            288
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2004.0,
+            288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-13",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2924,6 +3392,22 @@
         },
         {
           "at": [
+            3036.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3276.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-14",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3432.0,
             96
           ],
@@ -2936,6 +3420,22 @@
           ],
           "action": "jump",
           "surface": "wood"
+        },
+        {
+          "at": [
+            4164.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4404.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-15",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2960,7 +3460,7 @@
     },
     {
       "name": "The golden-evening horizon",
-      "lesson": "Keep moving into the warm evening light",
+      "lesson": "Keep moving into the warm evening light. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         17760,
         -720
@@ -3041,6 +3541,126 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-16",
+          "x": 559.2,
+          "y": 432,
+          "period": 3.59,
+          "phase": 2.36,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-17",
+          "x": 1111.2,
+          "y": 480,
+          "period": 3.78,
+          "phase": 0.07,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-18",
+          "x": 1735.2,
+          "y": 384,
+          "period": 3.97,
+          "phase": 0.78,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-21-machine-19",
+          "x": 2335.2,
+          "y": 456,
+          "period": 8.05,
+          "phase": 1.49,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-20",
+          "x": 3031.2,
+          "y": 384,
+          "period": 3.4,
+          "phase": 2.2,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-21",
+          "x": 3655.2,
+          "y": 480,
+          "period": 3.59,
+          "phase": 2.91,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-21-machine-22",
+          "x": 4279.2,
+          "y": 432,
+          "period": 3.78,
+          "phase": 0.62,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-21-machine-23",
+          "x": 4711.2,
+          "y": 480,
+          "period": 3.97,
+          "phase": 1.33,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -3220,7 +3840,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The golden-evening horizon\nKeep moving into the warm evening light"
+          "text": "The golden-evening horizon\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -3247,6 +3867,22 @@
         },
         {
           "at": [
+            439.20000000000005,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            679.2,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-16",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             768,
             576
           ],
@@ -3258,6 +3894,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            991.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1231.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-17",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3275,6 +3927,22 @@
         },
         {
           "at": [
+            1615.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1855.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-18",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1968,
             528
           ],
@@ -3286,6 +3954,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2215.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2455.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-19",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3303,6 +3987,22 @@
         },
         {
           "at": [
+            2911.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3151.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-20",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3264,
             528
           ],
@@ -3314,6 +4014,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3535.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3775.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-21",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3331,6 +4047,22 @@
         },
         {
           "at": [
+            4159.2,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4399.2,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-22",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             4464,
             576
           ],
@@ -3342,6 +4074,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            4615.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4855.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-21-machine-23",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3364,5 +4112,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "arc",
+    "secondary": "windmill",
+    "mechanisms": 24
   }
 }

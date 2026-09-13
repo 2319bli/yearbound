@@ -4,9 +4,9 @@ This directory is the canonical editable Godot project and Git repository. Start
 
 ## Project state
 
-- Godot 4.6.2; native Apple silicon desktop build, currently version 0.14.0.
-- 41 playable dates: all of June plus one sample in each other month. The full calendar has 365 dates.
-- Every map has its own artwork, covering 219 named places. See `docs/MAP_SCENERY.md` and `art/maps/PROVENANCE.json`.
+- Godot 4.6.2; native Apple silicon desktop build, currently version 0.15.0.
+- 51 playable dates: all of June plus 21 seasonal samples. The full calendar has 365 dates.
+- Every map has its own artwork, covering 259 named places. See `docs/MAP_SCENERY.md` and both `art/maps/PROVENANCE*.json` records.
 - The repository `https://github.com/2319bli/yearbound` is intentionally public, following the owner's latest preference.
 
 ## Working together
@@ -22,6 +22,7 @@ This directory is the canonical editable Godot project and Git repository. Start
 - Edit `content/layouts/MM-DD.json` for authored layout changes, then compile with `python3 tools/build_authored_stages.py --write`. The game consumes `content/stages/`; avoid edits there that the compiler will overwrite.
 - Each day should have its own scenery and gameplay identity. Keep terrain tops and hazards clearly separated from background decoration.
 - Preserve the existing responsive movement unless the task explicitly calls for tuning it. The approved charge-dash profile is the original profile with horizontal multiplier **1.5**. Keep the 17-station Dash Lab available.
+- Mechanisms are authored as `type: "mechanism"` hazards; see `docs/OBSTACLES.md`. Drawn geometry and swept contact must agree. Keep warning intervals harmless.
 - November is physically underwater. Preserve swimming support and workshop metadata when changing shared stage systems.
 - The second major ability and full storyline are intentionally undecided.
 

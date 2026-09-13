@@ -3,7 +3,7 @@
   "id": "07-16",
   "title": "The Long Light of Barley Common",
   "season": "mill",
-  "description": "Tailwind sprint through the barley: pulsing gusts, polished ice lanes with stone braking bays and awn brambles. Read the gust, commit, brake on stone.",
+  "description": "Tailwind sprint through the barley: pulsing gusts, polished ice lanes with stone braking bays and awn brambles. Read the gust, commit, brake on stone. Expert redesign: barley fans and fast harvest gates.",
   "music": "res://audio/july.wav",
   "terrain_style": "july",
   "grid_size": 48,
@@ -19,7 +19,7 @@
   "ground": {
     "y": 624
   },
-  "layout_revision": 15,
+  "layout_revision": 16,
   "abilities": [
     "charge_dash"
   ],
@@ -635,6 +635,20 @@
       "direction": "down"
     },
     {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "07-16-machine-0",
+      "x": 9516.0,
+      "y": 480,
+      "period": 3.4,
+      "phase": 0.0,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
       "type": "bramble",
       "x": 10560,
       "y": 360,
@@ -1203,6 +1217,50 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "07-16-machine-1",
+      "x": 10308.0,
+      "y": 240,
+      "period": 3.59,
+      "phase": 0.71,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "windmill",
+      "id": "07-16-machine-2",
+      "x": 11220.0,
+      "y": 24,
+      "period": 7.5,
+      "phase": 1.42,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 132,
+      "blades": 3,
+      "thickness": 7,
+      "rotation_direction": -1
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "07-16-machine-3",
+      "x": 12060.0,
+      "y": -144,
+      "period": 3.97,
+      "phase": 2.13,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
       "type": "bramble",
       "x": 13632,
       "y": 600,
@@ -1283,6 +1341,34 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "07-16-machine-4",
+      "x": 15996.0,
+      "y": 480,
+      "period": 4.16,
+      "phase": 2.84,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "07-16-machine-5",
+      "x": 16812.0,
+      "y": 480,
+      "period": 3.4,
+      "phase": 0.55,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
       "type": "bramble",
       "x": 17328,
       "y": 600,
@@ -1337,6 +1423,22 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "windmill",
+      "id": "07-16-machine-6",
+      "x": 20268.0,
+      "y": 456,
+      "period": 7.5,
+      "phase": 1.26,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 132,
+      "blades": 4,
+      "thickness": 7,
+      "rotation_direction": -1
     }
   ],
   "motes": [
@@ -1711,32 +1813,32 @@
     {
       "x": 288,
       "y": 484,
-      "text": "The wind gusts and dies · vault the awn beds"
+      "text": "The hot tailwind\nPass behind a turning sail; the gold edge is dangerous."
     },
     {
       "x": 3408,
       "y": 484,
-      "text": "Carry speed across the smooth runs · stop on stone"
+      "text": "Polished threshing boards\nPass behind a turning sail; the gold edge is dangerous."
     },
     {
       "x": 6672,
       "y": 484,
-      "text": "Gusting headwind pockets · keep your footing"
+      "text": "Between the harvest walls\nPass behind a turning sail; the gold edge is dangerous."
     },
     {
       "x": 9936,
       "y": 484,
-      "text": "Climb onto the granary roofs above the heat"
+      "text": "The granary walk\nPass behind a turning sail; the gold edge is dangerous."
     },
     {
       "x": 13584,
       "y": 484,
-      "text": "Commit between gusts · the stacks are your brakes"
+      "text": "The long hot straight\nPass behind a turning sail; the gold edge is dangerous."
     },
     {
       "x": 17232,
       "y": 484,
-      "text": "The evening wind pushes back in waves"
+      "text": "The evening headwind\nPass behind a turning sail; the gold edge is dangerous."
     }
   ],
   "decorations": [
@@ -1844,7 +1946,7 @@
     "rooms": [
       {
         "name": "The hot tailwind",
-        "lesson": "The wind gusts and dies · vault the awn beds, brake on the stacks",
+        "lesson": "The wind gusts and dies · vault the awn beds, brake on the stacks. Pass behind a turning sail; the gold edge is dangerous.",
         "from_x": 0,
         "to_x": 3264,
         "start": [
@@ -1858,7 +1960,7 @@
       },
       {
         "name": "Polished threshing boards",
-        "lesson": "Carry speed across the polished ice · stop on stone",
+        "lesson": "Carry speed across the polished ice · stop on stone. Pass behind a turning sail; the gold edge is dangerous.",
         "from_x": 3264,
         "to_x": 6528,
         "start": [
@@ -1872,7 +1974,7 @@
       },
       {
         "name": "Between the harvest walls",
-        "lesson": "Gusting walls of barley · vault low between the awns",
+        "lesson": "Gusting walls of barley · vault low between the awns. Pass behind a turning sail; the gold edge is dangerous.",
         "from_x": 6528,
         "to_x": 9792,
         "start": [
@@ -1886,7 +1988,7 @@
       },
       {
         "name": "The granary walk",
-        "lesson": "Climb onto the granary roofs above the heat",
+        "lesson": "Climb onto the granary roofs above the heat. Pass behind a turning sail; the gold edge is dangerous.",
         "from_x": 9792,
         "to_x": 13440,
         "start": [
@@ -1900,7 +2002,7 @@
       },
       {
         "name": "The long hot straight",
-        "lesson": "Commit to the cuts between gusts, then brake on the wide stacks",
+        "lesson": "Commit to the cuts between gusts, then brake on the wide stacks. Pass behind a turning sail; the gold edge is dangerous.",
         "from_x": 13440,
         "to_x": 17088,
         "start": [
@@ -1914,7 +2016,7 @@
       },
       {
         "name": "The evening headwind",
-        "lesson": "The last run pushes back in waves",
+        "lesson": "The last run pushes back in waves. Pass behind a turning sail; the gold edge is dangerous.",
         "from_x": 17088,
         "to_x": 20544,
         "start": [
@@ -2262,6 +2364,24 @@
       },
       {
         "at": [
+          9421.2,
+          624
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          9658.8,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "07-16-machine-0",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           9672.0,
           624
         ],
@@ -2287,6 +2407,24 @@
       },
       {
         "at": [
+          10212.0,
+          384
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          10452.0,
+          384
+        ],
+        "action": "mechanism",
+        "obstacle_id": "07-16-machine-1",
+        "travel_mode": "walk",
+        "room": 3
+      },
+      {
+        "at": [
           10488.0,
           384
         ],
@@ -2304,6 +2442,24 @@
       },
       {
         "at": [
+          11100.0,
+          192
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          11340.0,
+          192
+        ],
+        "action": "mechanism",
+        "obstacle_id": "07-16-machine-2",
+        "travel_mode": "walk",
+        "room": 3
+      },
+      {
+        "at": [
           11400.0,
           192
         ],
@@ -2317,6 +2473,24 @@
         ],
         "action": "dash",
         "surface": "wood",
+        "room": 3
+      },
+      {
+        "at": [
+          11965.2,
+          0
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          12202.8,
+          0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "07-16-machine-3",
+        "travel_mode": "walk",
         "room": 3
       },
       {
@@ -2426,6 +2600,24 @@
       },
       {
         "at": [
+          15901.2,
+          624
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          16138.8,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "07-16-machine-4",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           16152.0,
           624
         ],
@@ -2446,6 +2638,24 @@
           624
         ],
         "action": "drop",
+        "room": 4
+      },
+      {
+        "at": [
+          16717.2,
+          624
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          16954.8,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "07-16-machine-5",
+        "travel_mode": "walk",
         "room": 4
       },
       {
@@ -2562,6 +2772,24 @@
       },
       {
         "at": [
+          20148.0,
+          624
+        ],
+        "action": "walk",
+        "room": 5
+      },
+      {
+        "at": [
+          20388.0,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "07-16-machine-6",
+        "travel_mode": "walk",
+        "room": 5
+      },
+      {
+        "at": [
           20424.0,
           624
         ],
@@ -2572,14 +2800,14 @@
     "spike_placements": 128,
     "visible_spikes": 512,
     "vertical_travel": 624,
-    "intent": "Tailwind sprint through the barley: pulsing gusts, polished ice lanes with stone braking bays and awn brambles. Read the gust, commit, brake on stone."
+    "intent": "Tailwind sprint through the barley: pulsing gusts, polished ice lanes with stone braking bays and awn brambles. Read the gust, commit, brake on stone. Expert redesign: barley fans and fast harvest gates."
   },
   "editor_version": 2,
   "design": {
     "identity": "Barley tailwind sprint",
     "blueprint": "res://content/layouts/07-16.json",
-    "intent": "Tailwind sprint through the barley: pulsing gusts, polished ice lanes with stone braking bays and awn brambles. Read the gust, commit, brake on stone.",
-    "opening": "The wind gusts and dies · vault the awn beds, brake on the stacks"
+    "intent": "Tailwind sprint through the barley: pulsing gusts, polished ice lanes with stone braking bays and awn brambles. Read the gust, commit, brake on stone. Expert redesign: barley fans and fast harvest gates.",
+    "opening": "The wind gusts and dies · vault the awn beds, brake on the stacks. Pass behind a turning sail; the gold edge is dangerous."
   },
   "journey_regions": [
     {
@@ -2643,5 +2871,11 @@
     "columns": 2,
     "rows": 4,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "windmill",
+    "secondary": "shutter",
+    "mechanisms": 7
   }
 }

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-29",
   "identity": "Last Light of June",
-  "intent": "Follow June’s last afternoon through sunset, woodland shadows and lantern light to the quiet threshold of the storm.",
+  "intent": "Follow June’s last afternoon through sunset, woodland shadows and lantern light to the quiet threshold of the storm. Expert redesign: dusk sail transfers and gathering storm arcs.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The last afternoon fields",
-      "lesson": "Follow the warm light towards the ridge",
+      "lesson": "Follow the warm light towards the ridge. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         0,
         0
@@ -82,6 +82,129 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-29-machine-0",
+          "x": 463.2,
+          "y": 432,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-29-machine-1",
+          "x": 847.2,
+          "y": 480,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-2",
+          "x": 1327.2,
+          "y": 360,
+          "period": 7.5,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-29-machine-3",
+          "x": 1807.2,
+          "y": 480,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-4",
+          "x": 2359.2,
+          "y": 360,
+          "period": 6.4,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-5",
+          "x": 2887.2,
+          "y": 456,
+          "period": 6.95,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-29-machine-6",
+          "x": 3415.2,
+          "y": 432,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-29-machine-7",
+          "x": 3895.2,
+          "y": 480,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -256,7 +379,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The last afternoon fields\nFollow the warm light towards the ridge"
+          "text": "The last afternoon fields\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -283,6 +406,22 @@
         },
         {
           "at": [
+            361.67999999999995,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            564.72,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             576,
             576
           ],
@@ -294,6 +433,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            727.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            967.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -311,6 +466,22 @@
         },
         {
           "at": [
+            1207.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1447.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1488,
             528
           ],
@@ -322,6 +493,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1687.1999999999998,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1927.1999999999998,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -339,6 +526,22 @@
         },
         {
           "at": [
+            2239.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2479.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2544,
             528
           ],
@@ -350,6 +553,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2767.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3007.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-5",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -367,6 +586,22 @@
         },
         {
           "at": [
+            3295.2,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3535.2,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3552,
             576
           ],
@@ -378,6 +613,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3775.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4015.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-7",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -395,7 +646,7 @@
     },
     {
       "name": "The sunset ridge",
-      "lesson": "Climb into the last sunlight",
+      "lesson": "Climb into the last sunlight. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         4224,
         0
@@ -1115,6 +1366,69 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-8",
+          "x": 552.0,
+          "y": 392,
+          "period": 6.4,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 96,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-9",
+          "x": 1512.0,
+          "y": 216,
+          "period": 6.95,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-29-machine-10",
+          "x": 2640.0,
+          "y": 96,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-11",
+          "x": 3792.0,
+          "y": -72,
+          "period": 8.05,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
         }
       ],
       "zones": [],
@@ -1222,7 +1536,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The sunset ridge\nClimb into the last sunlight"
+          "text": "The sunset ridge\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -1242,6 +1556,22 @@
         },
         {
           "at": [
+            432.0,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            672.0,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             696.0,
             528
           ],
@@ -1253,6 +1583,22 @@
             384
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            1392.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1632.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-9",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1270,6 +1616,22 @@
         },
         {
           "at": [
+            2520.0,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2760.0,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-10",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2856.0,
             240
           ],
@@ -1281,6 +1643,22 @@
             96
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            3672.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3912.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-11",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1305,7 +1683,7 @@
     },
     {
       "name": "The shadowed woodland",
-      "lesson": "Keep below the dark woodland branches",
+      "lesson": "Keep below the dark woodland branches. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         8832,
         -528
@@ -2226,6 +2604,100 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-12",
+          "x": 796.8,
+          "y": 408,
+          "period": 6.4,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-29-machine-13",
+          "x": 1406.4,
+          "y": 480,
+          "period": 3.97,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-14",
+          "x": 2212.8,
+          "y": 360,
+          "period": 7.5,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-15",
+          "x": 2822.4,
+          "y": 456,
+          "period": 8.05,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-16",
+          "x": 3580.8,
+          "y": 408,
+          "period": 6.4,
+          "phase": 2.36,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-29-machine-17",
+          "x": 4106.4,
+          "y": 480,
+          "period": 3.78,
+          "phase": 0.07,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -2423,7 +2895,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The shadowed woodland\nKeep below the dark woodland branches"
+          "text": "The shadowed woodland\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -2464,6 +2936,22 @@
         },
         {
           "at": [
+            676.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            916.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-12",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1113.6,
             576
           ],
@@ -2475,6 +2963,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1286.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1526.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-13",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2506,6 +3010,22 @@
         },
         {
           "at": [
+            2092.8,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2332.8,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-14",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2505.6000000000004,
             528
           ],
@@ -2517,6 +3037,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2702.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2942.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-15",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2548,6 +3084,22 @@
         },
         {
           "at": [
+            3460.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3700.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-16",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3801.6000000000004,
             576
           ],
@@ -2559,6 +3111,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3986.3999999999996,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4226.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-17",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2576,7 +3144,7 @@
     },
     {
       "name": "The lantern countryside",
-      "lesson": "Use the lanterns to read the old stone passages",
+      "lesson": "Use the lanterns to read the old stone passages. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         13248,
         -528
@@ -3049,6 +3617,21 @@
           "w": 48,
           "h": 24,
           "direction": "down"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-29-machine-18",
+          "x": 4356.0,
+          "y": 480,
+          "period": 3.97,
+          "phase": 0.78,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -3170,7 +3753,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The lantern countryside\nUse the lanterns to read the old stone passages"
+          "text": "The lantern countryside\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -3246,6 +3829,22 @@
         },
         {
           "at": [
+            4237.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4474.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-18",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             4488.0,
             624
           ],
@@ -3261,7 +3860,7 @@
     },
     {
       "name": "The storm’s quiet threshold",
-      "lesson": "Cross the last dark terraces · the keeper waits beyond",
+      "lesson": "Cross the last dark terraces · the keeper waits beyond. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         17856,
         -528
@@ -4058,6 +4657,69 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-19",
+          "x": 660.0,
+          "y": 312,
+          "period": 8.05,
+          "phase": 1.49,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-20",
+          "x": 1740.0,
+          "y": 168,
+          "period": 6.4,
+          "phase": 2.2,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-29-machine-21",
+          "x": 2868.0,
+          "y": -24,
+          "period": 6.95,
+          "phase": 2.91,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-29-machine-22",
+          "x": 3900.0,
+          "y": 240,
+          "period": 3.78,
+          "phase": 0.62,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -4165,7 +4827,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The storm’s quiet threshold\nCross the last dark terraces · the keeper waits beyond"
+          "text": "The storm’s quiet threshold\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -4186,6 +4848,22 @@
         },
         {
           "at": [
+            540.0,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            780.0,
+            480
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-19",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             888.0,
             480
           ],
@@ -4198,6 +4876,22 @@
           ],
           "action": "jump",
           "surface": "wood"
+        },
+        {
+          "at": [
+            1620.0,
+            336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1860.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-20",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -4216,6 +4910,22 @@
         },
         {
           "at": [
+            2748.0,
+            144
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2988.0,
+            144
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-21",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3096.0,
             144
           ],
@@ -4228,6 +4938,22 @@
           ],
           "action": "jump",
           "surface": "wood"
+        },
+        {
+          "at": [
+            3780.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4020.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-29-machine-22",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -4258,5 +4984,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "windmill",
+    "secondary": "arc",
+    "mechanisms": 23
   }
 }

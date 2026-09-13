@@ -1,6 +1,6 @@
-# Custom map scenery · 0.14.0
+# Custom map scenery · 0.15.0
 
-Every one of the 41 playable dates has its own original pixel-art atlas. All 219 named places select different views within their map's artwork. The June boss has an additional clearing-sky aftermath view. No finished date borrows another date's landscape or cycles through the small old biome library.
+Every one of the 51 playable dates has its own original pixel-art atlas. All 259 named places select different views within their map's artwork. The June boss has an additional clearing-sky aftermath view. No finished date borrows another date's landscape or cycles through the small old biome library.
 
 The map's scenery follows its actual route: the watermill grows closer before the player enters its gear-filled interior; the glasshouse moves from formal gardens through palms and maintenance tunnels to the roof. Orchard and ridge views gain altitude, riverbanks change width and depth, the Garden Maze is surrounded by clipped hedge corridors, and 8/29 June progress into night. November's views are all physically underwater, while the spring, thaw and deep-winter sets depict their own waterways and structures.
 
@@ -10,11 +10,11 @@ The game samples a single atlas cell at a time, with a smooth spatial blend over
 
 The existing grade reduces background contrast near the gameplay plane. Native terrain, hazards, the player, local scenery and weather keep their existing separate drawing layers. No generated picture contains the game's collision blocks or hazards. Broad code-drawn landmark placeholders are suppressed where the atlas now paints those buildings; local plants, wind, spray and lanterns remain animated. An explicitly authored decoration can set `draw_over_atlas: true` to opt back in. The renderer retains at most two map atlases, independently of the smaller shared prop cache. Original source PNGs are preserved intact; the engine crops their cells during drawing.
 
-The layouts, checkpoints, movement, charge/swimming settings, music and 17-station Dash Lab are unchanged. This visual update does not invalidate current runs.
+The original 41 atlases remain intact. Version 0.15 adds ten 2×2 atlases and redesigns gameplay while retaining the movement, charge/swimming settings and 17-station Dash Lab. Older unfinished runs restart at the new layout entrance.
 
 ## Adding or editing a map's art
 
-Place the artwork in `art/maps/MM-DD.png`. Use equal 16:9 cells in a regular grid. The current June atlases have three columns and two rows; other-month atlases have two columns and four rows. Extra cells are reserved local views, except June 30's final cell, which is used for the aftermath.
+Place the artwork in `art/maps/MM-DD.png`. Use equal 16:9 cells in a regular grid. The current June atlases have three columns and two rows; the original other-month atlases have two columns and four rows, and the ten expansion atlases have two columns and two rows. Extra cells are reserved local views, except June 30's final cell, which is used for the aftermath.
 
 In the day blueprint, add:
 
@@ -35,4 +35,4 @@ Do not reuse another day’s artwork merely because its place has the same broad
 
 ## Provenance
 
-All new atlases were generated with the built-in `image_gen` tool for this project. Exact prompts, map/section names, atlas grids, dimensions and final file hashes are recorded in `art/maps/PROVENANCE.json`. There was no CLI/API fallback and no third-party image download. The old background files remain available for earlier exports and source history.
+All new atlases were generated with the built-in `image_gen` tool for this project. Exact prompts, map/section names, atlas grids, dimensions and final file hashes are recorded in `art/maps/PROVENANCE.json` and `art/maps/PROVENANCE_EXPANSION.json`. There was no CLI/API fallback and no third-party image download. The old background files remain available for earlier exports and source history.

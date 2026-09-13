@@ -206,6 +206,10 @@ func _physics_process(dt: float) -> void:
 			burst(c-Vector2(0,48),Color("ffdf89"),22)
 			checkpoint_reached.emit()
 	for hazard in spec.hazards:
+		if hazard.type=="mechanism":
+			if absf(hazard.x-player.position.x)<320 and YBObstacles.state(hazard,age)=="active" and YBObstacles.state(hazard,age-dt)=="warning": sound.emit("mechanism")
+			if YBObstacles.touches(hazard,age,player.position,player.position): die()
+			continue
 		if not YBStageHazards.active(hazard,age): continue
 		if YBStageHazards.rectangular(hazard):
 			var hitbox=Rect2(player.position-Vector2(10,38),Vector2(20,38))
@@ -267,6 +271,9 @@ func dash_hazard_sweep(from: Vector2, to: Vector2) -> void:
 	if respawn_delay>0 or complete: return
 	var a=from-Vector2(0,19);var b=to-Vector2(0,19)
 	for hazard in spec.hazards:
+		if hazard.type=="mechanism":
+			if YBObstacles.touches(hazard,age,from,to): die();return
+			continue
 		if not YBStageHazards.active(hazard,age): continue
 		if YBStageHazards.rectangular(hazard):
 			var rect=Rect2(hazard.x-10,hazard.y-19,hazard.w+20,hazard.h+38)
@@ -337,6 +344,13 @@ func draw_backdrop(n: Node2D) -> void:
 func draw_scenery(n: Node2D) -> void:
 	YBScenery.stage_layer(n,spec,platforms,0 if reduced_motion else age,camera_x,"back")
 	YBJourneyScenery.foreground_places(n,spec,Vector2(camera_x,camera_y),player.position,0 if reduced_motion else age)
+	for h in spec.hazards:
+		if h.type!="mechanism" or h.mechanism!="windmill" or absf(float(h.x)-camera_x-640)>1100:continue
+		var base=float(h.y)+220
+		for platform in platforms:
+			var rect=Rect2(platform.body.position,Vector2(platform.data.w,platform.data.h))
+			if not platform.gone and h.x>=rect.position.x and h.x<=rect.end.x and rect.position.y>float(h.y)+36:base=minf(base,rect.position.y)
+		YBObstacles.draw_mount(n,h,base)
 	var grid_stage=spec.get("grid_size",0)==48
 	for platform in platforms:
 		if platform.gone or platform.body.position.x+float(platform.data.w)<camera_x-100 or platform.body.position.x>camera_x+1380: continue
@@ -386,6 +400,9 @@ func draw_markers(n: Node2D) -> void:
 
 func draw_hazards(n: Node2D) -> void:
 	for h in spec.hazards:
+		if h.type=="mechanism":
+			if absf(float(h.x)-camera_x-640)<1000: YBObstacles.draw(n,h,age)
+			continue
 		if h.type=="storm":
 			if h.x+h.w<camera_x-32 or h.x>camera_x+1312: continue
 			var rect=Rect2(h.x,h.y,h.w,h.h)
@@ -430,8 +447,9 @@ func draw_signs(n: Node2D) -> void:
 			var lines = entry.text.split("\n")
 			for i in lines.size():
 				var w = font.get_string_size(lines[i],HORIZONTAL_ALIGNMENT_LEFT,-1,16).x
-				n.draw_style_box(box(Color(0.12,0.24,0.27,alpha*0.78),7),Rect2(entry.x-w/2-12,entry.y+i*27-19,w+24,25))
-				n.draw_string(font,Vector2(entry.x-w/2,entry.y+i*27),lines[i],HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color(1,0.96,0.82,alpha))
+				var text_x=clampf(float(entry.x)-w/2,camera_x+20,maxf(camera_x+20,camera_x+1260-w))
+				n.draw_style_box(box(Color(0.12,0.24,0.27,alpha*0.78),7),Rect2(text_x-12,entry.y+i*27-19,w+24,25))
+				n.draw_string(font,Vector2(text_x,entry.y+i*27),lines[i],HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color(1,0.96,0.82,alpha))
 
 func draw_environment(n: Node2D) -> void:
 	for p in platforms:

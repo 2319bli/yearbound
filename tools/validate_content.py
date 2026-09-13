@@ -68,8 +68,13 @@ for id in catalog['stages']:
   assert z['type'] in ['water','wind','updraft','current']
   if 'swimmable' in z: assert z['type']=='water' and type(z['swimmable']) is bool and z['w']>0 and z['h']>0
  for h in s['hazards']:
-  assert h['type'] in ['blade','thorn','icicle','bramble','storm']
-  if h['type']=='bramble':
+  assert h['type'] in ['blade','thorn','icicle','bramble','storm','mechanism']
+  if h['type']=='mechanism':
+   assert h['mechanism'] in ['windmill','pendulum','press','shutter','geyser','bloom','sawrail','arc'], (id,'unknown mechanism')
+   assert 3<=h['period']<=20 and isinstance(h['phase'],(float,int)), (id,'invalid mechanism timing')
+   if h['mechanism'] in ['windmill','pendulum']: assert 32<=h['radius']<=360
+   else: assert h['safe_seconds']>=.65 and h['warning_seconds']>=.5 and h['period']>=h['safe_seconds']+h['warning_seconds']+.5
+  elif h['type']=='bramble':
    assert h['w']>0 and h['h']>0
    assert h.get('direction','up') in ['up','down','left','right'], (id,'invalid spike direction',h)
   elif h['type']=='storm': assert h['w']>0 and h['h']>0 and h['period']>h['active_seconds']+h['warning_seconds'] and h['warning_seconds']>=.5

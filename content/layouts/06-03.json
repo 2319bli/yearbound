@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-03",
   "identity": "Kites Above the Clover",
-  "intent": "Climb from clover into kite-filled wind, then cross the exposed ridge above the valley.",
+  "intent": "Climb from clover into kite-filled wind, then cross the exposed ridge above the valley. Expert redesign: kite reels and charged crosswind wires.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "Clover beneath the strings",
-      "lesson": "Keep your first jumps low",
+      "lesson": "Keep your first jumps low. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         0,
         0
@@ -74,6 +74,66 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-03-machine-0",
+          "x": 1039.2,
+          "y": 384,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-03-machine-1",
+          "x": 1399.2,
+          "y": 480,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-03-machine-2",
+          "x": 1807.2,
+          "y": 384,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-03-machine-3",
+          "x": 2215.2,
+          "y": 480,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -248,7 +308,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "Clover beneath the strings\nKeep your first jumps low"
+          "text": "Clover beneath the strings\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -303,6 +363,22 @@
         },
         {
           "at": [
+            937.6800000000001,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1140.72,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-03-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1152,
             528
           ],
@@ -314,6 +390,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1297.68,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1500.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-03-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -331,6 +423,22 @@
         },
         {
           "at": [
+            1705.6799999999998,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1908.7199999999998,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-03-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1920,
             528
           ],
@@ -342,6 +450,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2095.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2335.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-03-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -387,7 +511,7 @@
     },
     {
       "name": "The windy hillside",
-      "lesson": "Rise with the hillside · brake into the wind",
+      "lesson": "Rise with the hillside · brake into the wind. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         3168,
         0
@@ -883,6 +1007,36 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-03-machine-4",
+          "x": 1200.0,
+          "y": 240,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-03-machine-5",
+          "x": 1968.0,
+          "y": 96,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [
@@ -1002,7 +1156,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The windy hillside\nRise with the hillside · brake into the wind"
+          "text": "The windy hillside\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -1036,6 +1190,22 @@
         },
         {
           "at": [
+            1092.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1308.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-03-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1320.0,
             384
           ],
@@ -1047,6 +1217,22 @@
             240
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            1860.0,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2076.0,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-03-machine-5",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1085,7 +1271,7 @@
     },
     {
       "name": "The kite field",
-      "lesson": "Ride the thermal · leave it sideways",
+      "lesson": "Ride the thermal · leave it sideways. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         6432,
         -528
@@ -1696,7 +1882,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The kite field\nRide the thermal · leave it sideways"
+          "text": "The kite field\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -1782,7 +1968,7 @@
     },
     {
       "name": "The high ridge",
-      "lesson": "Reverse once around the rocky shoulder",
+      "lesson": "Reverse once around the rocky shoulder. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         9504,
         -528
@@ -2343,6 +2529,21 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-03-machine-6",
+          "x": 2112.0,
+          "y": -96,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [
@@ -2480,7 +2681,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The high ridge\nReverse once around the rocky shoulder"
+          "text": "The high ridge\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -2542,6 +2743,22 @@
         },
         {
           "at": [
+            2004.0,
+            48
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2220.0,
+            48
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-03-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2232.0,
             48
           ],
@@ -2577,7 +2794,7 @@
     },
     {
       "name": "The exposed hilltop",
-      "lesson": "Cross the last wind-cut gaps",
+      "lesson": "Cross the last wind-cut gaps. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         12960,
         -1296
@@ -3238,6 +3455,53 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-03-machine-7",
+          "x": 540.0,
+          "y": 312,
+          "period": 8.05,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-03-machine-8",
+          "x": 1428.0,
+          "y": 200,
+          "period": 6.4,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 96,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "06-03-machine-9",
+          "x": 2340.0,
+          "y": 96,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -3345,7 +3609,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The exposed hilltop\nCross the last wind-cut gaps"
+          "text": "The exposed hilltop\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -3366,6 +3630,22 @@
         },
         {
           "at": [
+            420.0,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            660.0,
+            480
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-03-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             696.0,
             480
           ],
@@ -3381,6 +3661,22 @@
         },
         {
           "at": [
+            1308.0,
+            336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1548.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-03-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1608.0,
             336
           ],
@@ -3393,6 +3689,22 @@
           ],
           "action": "dash",
           "surface": "wood"
+        },
+        {
+          "at": [
+            2221.2,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2458.8,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-03-machine-9",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3438,5 +3750,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "windmill",
+    "secondary": "arc",
+    "mechanisms": 10
   }
 }

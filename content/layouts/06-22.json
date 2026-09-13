@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-22",
   "identity": "The Old Footbridge",
-  "intent": "Leave the lane, descend into the stream valley, approach the old footbridge, explore above and below it, and enter riverside woodland.",
+  "intent": "Leave the lane, descend into the stream valley, approach the old footbridge, explore above and below it, and enter riverside woodland. Expert redesign: bridge counterweights and falling support shoes.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The country lane",
-      "lesson": "Follow the low lane towards the water",
+      "lesson": "Follow the low lane towards the water. Follow the weight as it swings away.",
       "origin": [
         0,
         0
@@ -82,6 +82,106 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-22-machine-0",
+          "x": 703.2,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-22-machine-1",
+          "x": 1111.2,
+          "y": 384,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-22-machine-2",
+          "x": 1543.2,
+          "y": 437,
+          "period": 5.6,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 140,
+          "head_radius": 21,
+          "swing": 0.65
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-22-machine-3",
+          "x": 1999.2,
+          "y": 384,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-22-machine-4",
+          "x": 2455.2,
+          "y": 437,
+          "period": 4.8,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 140,
+          "head_radius": 21,
+          "swing": 0.65
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-22-machine-5",
+          "x": 2887.2,
+          "y": 432,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-22-machine-6",
+          "x": 3271.2,
+          "y": 480,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -256,7 +356,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The country lane\nFollow the low lane towards the water"
+          "text": "The country lane\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -297,6 +397,22 @@
         },
         {
           "at": [
+            625.6800000000001,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            828.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             840.0,
             624
           ],
@@ -308,6 +424,22 @@
             528
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            1033.68,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1236.72,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -325,6 +457,22 @@
         },
         {
           "at": [
+            1423.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1663.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1704.0,
             624
           ],
@@ -336,6 +484,22 @@
             528
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            1903.1999999999998,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2143.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -353,6 +517,22 @@
         },
         {
           "at": [
+            2335.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2575.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2616.0,
             624
           ],
@@ -364,6 +544,22 @@
             576
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            2809.68,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3012.72,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-5",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -381,6 +577,22 @@
         },
         {
           "at": [
+            3175.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3415.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3432.0,
             624
           ],
@@ -395,7 +607,7 @@
     },
     {
       "name": "The stream valley",
-      "lesson": "The valley narrows around the stream",
+      "lesson": "The valley narrows around the stream. Follow the weight as it swings away.",
       "origin": [
         3552,
         0
@@ -794,7 +1006,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The stream valley\nThe valley narrows around the stream"
+          "text": "The stream valley\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -853,7 +1065,7 @@
     },
     {
       "name": "The bridge approach",
-      "lesson": "Rise onto the old abutment",
+      "lesson": "Rise onto the old abutment. Follow the weight as it swings away.",
       "origin": [
         7392,
         0
@@ -1477,6 +1689,64 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-22-machine-7",
+          "x": 504.0,
+          "y": 384,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-22-machine-8",
+          "x": 1344.0,
+          "y": 240,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-22-machine-9",
+          "x": 2352.0,
+          "y": 53,
+          "period": 5.2,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 140,
+          "head_radius": 21,
+          "swing": 0.65
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-22-machine-10",
+          "x": 3336.0,
+          "y": -91,
+          "period": 5.6,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 140,
+          "head_radius": 21,
+          "swing": 0.65
         }
       ],
       "zones": [],
@@ -1584,7 +1854,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The bridge approach\nRise onto the old abutment"
+          "text": "The bridge approach\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -1604,6 +1874,22 @@
         },
         {
           "at": [
+            420.0,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            636.0,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             648.0,
             528
           ],
@@ -1615,6 +1901,22 @@
             384
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            1248.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1488.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-8",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1632,6 +1934,22 @@
         },
         {
           "at": [
+            2232.0,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2472.0,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-9",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2520.0,
             240
           ],
@@ -1643,6 +1961,22 @@
             96
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            3216.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3456.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-10",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1667,7 +2001,7 @@
     },
     {
       "name": "Above and below the footbridge",
-      "lesson": "Cross the deck · return beneath it for the hidden landing",
+      "lesson": "Cross the deck · return beneath it for the hidden landing. Follow the weight as it swings away.",
       "origin": [
         11424,
         -528
@@ -2138,6 +2472,20 @@
           "w": 48,
           "h": 24,
           "direction": "down"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-22-machine-11",
+          "x": 4332.0,
+          "y": 480,
+          "period": 3.59,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -2271,7 +2619,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Above and below the footbridge\nCross the deck · return beneath it for the hidden landing"
+          "text": "Above and below the footbridge\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -2347,6 +2695,22 @@
         },
         {
           "at": [
+            4237.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4474.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-11",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             4488.0,
             624
           ],
@@ -2361,7 +2725,7 @@
     },
     {
       "name": "The riverside wood",
-      "lesson": "The bridge gives way to a sheltered river path",
+      "lesson": "The bridge gives way to a sheltered river path. Follow the weight as it swings away.",
       "origin": [
         16032,
         -528
@@ -3234,6 +3598,94 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-22-machine-12",
+          "x": 772.8,
+          "y": 370,
+          "period": 4.8,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 158,
+          "head_radius": 21,
+          "swing": 0.82
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-22-machine-13",
+          "x": 1334.4,
+          "y": 437,
+          "period": 5.2,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 140,
+          "head_radius": 21,
+          "swing": 0.65
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-22-machine-14",
+          "x": 2092.8,
+          "y": 322,
+          "period": 5.6,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 158,
+          "head_radius": 21,
+          "swing": 1.02
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-22-machine-15",
+          "x": 2630.4,
+          "y": 480,
+          "period": 3.4,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-22-machine-16",
+          "x": 3364.8,
+          "y": 370,
+          "period": 4.8,
+          "phase": 2.36,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 158,
+          "head_radius": 21,
+          "swing": 0.9199999999999999
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-22-machine-17",
+          "x": 3770.4,
+          "y": 480,
+          "period": 3.78,
+          "phase": 0.07,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -3431,7 +3883,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The riverside wood\nThe bridge gives way to a sheltered river path"
+          "text": "The riverside wood\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -3472,6 +3924,22 @@
         },
         {
           "at": [
+            652.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            892.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-12",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1065.6,
             576
           ],
@@ -3483,6 +3951,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1214.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1454.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-13",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3514,6 +3998,22 @@
         },
         {
           "at": [
+            1972.8000000000002,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2212.8,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-14",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2361.6000000000004,
             528
           ],
@@ -3525,6 +4025,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2534.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2774.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-15",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3556,6 +4072,22 @@
         },
         {
           "at": [
+            3244.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3484.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-16",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3561.6000000000004,
             576
           ],
@@ -3567,6 +4099,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3688.5599999999995,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3900.24,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-22-machine-17",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3601,5 +4149,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "pendulum",
+    "secondary": "press",
+    "mechanisms": 18
   }
 }

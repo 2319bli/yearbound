@@ -3,7 +3,7 @@
   "id": "06-27",
   "title": "Meadow Overlook",
   "season": "june",
-  "description": "Climb from meadow through a wooded rise to cliffs and a broad overlook, then descend into a new valley.",
+  "description": "Climb from meadow through a wooded rise to cliffs and a broad overlook, then descend into a new valley. Expert redesign: cliff counterweights and overhead wind vanes.",
   "music": "res://audio/06-27_sketch.wav",
   "spawn": [
     120,
@@ -282,6 +282,109 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-27-machine-0",
+      "x": 775.2,
+      "y": 480,
+      "period": 3.4,
+      "phase": 0.0,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-27-machine-1",
+      "x": 1183.2,
+      "y": 384,
+      "period": 3.59,
+      "phase": 0.71,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-2",
+      "x": 1639.2,
+      "y": 437,
+      "period": 5.6,
+      "phase": 1.42,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 140,
+      "head_radius": 21,
+      "swing": 0.65
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "windmill",
+      "id": "06-27-machine-3",
+      "x": 2143.2,
+      "y": 360,
+      "period": 8.05,
+      "phase": 2.13,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 132,
+      "blades": 4,
+      "thickness": 7,
+      "rotation_direction": 1
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-4",
+      "x": 2623.2,
+      "y": 418,
+      "period": 4.8,
+      "phase": 2.84,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 158,
+      "head_radius": 21,
+      "swing": 0.9199999999999999
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-27-machine-5",
+      "x": 3079.2,
+      "y": 432,
+      "period": 3.4,
+      "phase": 0.55,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-6",
+      "x": 3535.2,
+      "y": 418,
+      "period": 5.6,
+      "phase": 1.26,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 158,
+      "head_radius": 21,
+      "swing": 0.82
     },
     {
       "type": "bramble",
@@ -924,6 +1027,67 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-7",
+      "x": 4392.0,
+      "y": 341,
+      "period": 6.0,
+      "phase": 1.97,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 140,
+      "head_radius": 21,
+      "swing": 0.65
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-8",
+      "x": 5328.0,
+      "y": 197,
+      "period": 4.8,
+      "phase": 2.68,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 140,
+      "head_radius": 21,
+      "swing": 0.65
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "windmill",
+      "id": "06-27-machine-9",
+      "x": 6360.0,
+      "y": 72,
+      "period": 6.95,
+      "phase": 0.39,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 132,
+      "blades": 4,
+      "thickness": 7,
+      "rotation_direction": 1
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-10",
+      "x": 7392.0,
+      "y": -91,
+      "period": 5.6,
+      "phase": 1.1,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 140,
+      "head_radius": 21,
+      "swing": 0.65
+    },
+    {
       "type": "bramble",
       "x": 8736,
       "y": -504,
@@ -1554,6 +1718,96 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-27-machine-11",
+      "x": 8760.0,
+      "y": -240,
+      "period": 3.59,
+      "phase": 1.81,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "windmill",
+      "id": "06-27-machine-12",
+      "x": 9672.0,
+      "y": -456,
+      "period": 6.4,
+      "phase": 2.52,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 132,
+      "blades": 4,
+      "thickness": 7,
+      "rotation_direction": -1
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-27-machine-13",
+      "x": 8952.0,
+      "y": -624,
+      "period": 3.97,
+      "phase": 0.23,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-14",
+      "x": 9864.0,
+      "y": -859,
+      "period": 5.6,
+      "phase": 0.94,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 140,
+      "head_radius": 21,
+      "swing": 0.65
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-15",
+      "x": 10800.0,
+      "y": -1051,
+      "period": 6.0,
+      "phase": 1.65,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 140,
+      "head_radius": 21,
+      "swing": 0.65
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "windmill",
+      "id": "06-27-machine-16",
+      "x": 11736.0,
+      "y": -840,
+      "period": 6.4,
+      "phase": 2.36,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 132,
+      "blades": 3,
+      "thickness": 7,
+      "rotation_direction": -1
     },
     {
       "type": "bramble",
@@ -2380,6 +2634,67 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "windmill",
+      "id": "06-27-machine-17",
+      "x": 13260.0,
+      "y": -984,
+      "period": 6.95,
+      "phase": 0.07,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 132,
+      "blades": 3,
+      "thickness": 7,
+      "rotation_direction": 1
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-18",
+      "x": 14460.0,
+      "y": -1214,
+      "period": 5.6,
+      "phase": 0.78,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 158,
+      "head_radius": 21,
+      "swing": 0.82
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-19",
+      "x": 15780.0,
+      "y": -1406,
+      "period": 6.0,
+      "phase": 1.49,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 158,
+      "head_radius": 21,
+      "swing": 0.9199999999999999
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-20",
+      "x": 16932.0,
+      "y": -1118,
+      "period": 4.8,
+      "phase": 2.2,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 158,
+      "head_radius": 21,
+      "swing": 1.02
+    },
+    {
       "type": "bramble",
       "x": 18576,
       "y": -504,
@@ -2394,6 +2709,82 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-21",
+      "x": 18360.0,
+      "y": -667,
+      "period": 5.2,
+      "phase": 2.91,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 140,
+      "head_radius": 21,
+      "swing": 0.65
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-22",
+      "x": 19440.0,
+      "y": -446,
+      "period": 5.6,
+      "phase": 0.62,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 158,
+      "head_radius": 21,
+      "swing": 0.9199999999999999
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-23",
+      "x": 20616.0,
+      "y": -158,
+      "period": 6.0,
+      "phase": 1.33,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 158,
+      "head_radius": 21,
+      "swing": 1.02
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "windmill",
+      "id": "06-27-machine-24",
+      "x": 21816.0,
+      "y": 168,
+      "period": 6.4,
+      "phase": 2.04,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 132,
+      "blades": 4,
+      "thickness": 7,
+      "rotation_direction": -1
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "06-27-machine-25",
+      "x": 22260.0,
+      "y": 130,
+      "period": 5.2,
+      "phase": 2.75,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 158,
+      "head_radius": 21,
+      "swing": 0.9199999999999999
     }
   ],
   "motes": [
@@ -2669,27 +3060,27 @@
     {
       "x": 288,
       "y": 484,
-      "text": "The low meadow\nFollow the trail towards the wooded rise"
+      "text": "The low meadow\nFollow the weight as it swings away."
     },
     {
       "x": 3984,
       "y": 484,
-      "text": "The wooded rise\nRise through the shaded tree terraces"
+      "text": "The wooded rise\nFollow the weight as it swings away."
     },
     {
       "x": 8400,
       "y": -44,
-      "text": "The cliff terraces\nReverse around the cliff and climb to its top"
+      "text": "The cliff terraces\nFollow the weight as it swings away."
     },
     {
       "x": 12720,
       "y": -812,
-      "text": "The meadow overlook\nThe whole valley lies beneath the broad terrace"
+      "text": "The meadow overlook\nFollow the weight as it swings away."
     },
     {
       "x": 17904,
       "y": -812,
-      "text": "Into the new valley\nFollow the far side into a different landscape"
+      "text": "Into the new valley\nFollow the weight as it swings away."
     }
   ],
   "goal": [
@@ -3013,7 +3404,7 @@
   "ground": {
     "y": 624
   },
-  "layout_revision": 14,
+  "layout_revision": 16,
   "grid_size": 48,
   "abilities": [
     "charge_dash"
@@ -3026,7 +3417,7 @@
     "rooms": [
       {
         "name": "The low meadow",
-        "lesson": "Follow the trail towards the wooded rise",
+        "lesson": "Follow the trail towards the wooded rise. Follow the weight as it swings away.",
         "from_x": 0,
         "to_x": 3840,
         "start": [
@@ -3040,7 +3431,7 @@
       },
       {
         "name": "The wooded rise",
-        "lesson": "Rise through the shaded tree terraces",
+        "lesson": "Rise through the shaded tree terraces. Follow the weight as it swings away.",
         "from_x": 3840,
         "to_x": 8256,
         "start": [
@@ -3054,7 +3445,7 @@
       },
       {
         "name": "The cliff terraces",
-        "lesson": "Reverse around the cliff and climb to its top",
+        "lesson": "Reverse around the cliff and climb to its top. Follow the weight as it swings away.",
         "from_x": 8256,
         "to_x": 12576,
         "start": [
@@ -3068,7 +3459,7 @@
       },
       {
         "name": "The meadow overlook",
-        "lesson": "The whole valley lies beneath the broad terrace",
+        "lesson": "The whole valley lies beneath the broad terrace. Follow the weight as it swings away.",
         "from_x": 12576,
         "to_x": 17760,
         "start": [
@@ -3082,7 +3473,7 @@
       },
       {
         "name": "Into the new valley",
-        "lesson": "Follow the far side into a different landscape",
+        "lesson": "Follow the far side into a different landscape. Follow the weight as it swings away.",
         "from_x": 17760,
         "to_x": 22656,
         "start": [
@@ -3138,6 +3529,24 @@
       },
       {
         "at": [
+          679.2,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          919.2,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-0",
+        "travel_mode": "walk",
+        "room": 0
+      },
+      {
+        "at": [
           936.0,
           624
         ],
@@ -3150,6 +3559,24 @@
           528
         ],
         "action": "jump",
+        "room": 0
+      },
+      {
+        "at": [
+          1087.2,
+          528
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          1327.2,
+          528
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-1",
+        "travel_mode": "walk",
         "room": 0
       },
       {
@@ -3170,6 +3597,24 @@
       },
       {
         "at": [
+          1519.2,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          1759.2,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-2",
+        "travel_mode": "walk",
+        "room": 0
+      },
+      {
+        "at": [
           1800.0,
           624
         ],
@@ -3182,6 +3627,24 @@
           528
         ],
         "action": "jump",
+        "room": 0
+      },
+      {
+        "at": [
+          2023.1999999999998,
+          528
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          2263.2,
+          528
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-3",
+        "travel_mode": "walk",
         "room": 0
       },
       {
@@ -3202,6 +3665,24 @@
       },
       {
         "at": [
+          2503.2,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          2743.2,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-4",
+        "travel_mode": "walk",
+        "room": 0
+      },
+      {
+        "at": [
           2808.0,
           624
         ],
@@ -3218,6 +3699,24 @@
       },
       {
         "at": [
+          3001.68,
+          576
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          3204.72,
+          576
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-5",
+        "travel_mode": "walk",
+        "room": 0
+      },
+      {
+        "at": [
           3216,
           576
         ],
@@ -3230,6 +3729,24 @@
           624
         ],
         "action": "drop",
+        "room": 0
+      },
+      {
+        "at": [
+          3415.2,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          3655.2,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-6",
+        "travel_mode": "walk",
         "room": 0
       },
       {
@@ -3258,6 +3775,24 @@
       },
       {
         "at": [
+          4272.0,
+          528
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          4512.0,
+          528
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-7",
+        "travel_mode": "walk",
+        "room": 1
+      },
+      {
+        "at": [
           4536.0,
           528
         ],
@@ -3270,6 +3805,24 @@
           384
         ],
         "action": "dash",
+        "room": 1
+      },
+      {
+        "at": [
+          5208.0,
+          384
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          5448.0,
+          384
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-8",
+        "travel_mode": "walk",
         "room": 1
       },
       {
@@ -3290,6 +3843,24 @@
       },
       {
         "at": [
+          6240.0,
+          240
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          6480.0,
+          240
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-9",
+        "travel_mode": "walk",
+        "room": 1
+      },
+      {
+        "at": [
           6552.0,
           240
         ],
@@ -3302,6 +3873,24 @@
           96
         ],
         "action": "dash",
+        "room": 1
+      },
+      {
+        "at": [
+          7272.0,
+          96
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          7512.0,
+          96
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-10",
+        "travel_mode": "walk",
         "room": 1
       },
       {
@@ -3338,6 +3927,24 @@
       },
       {
         "at": [
+          8676.0,
+          -96
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          8892.0,
+          -96
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-11",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           8904.0,
           -96
         ],
@@ -3354,6 +3961,24 @@
       },
       {
         "at": [
+          9552.0,
+          -288
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          9792.0,
+          -288
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-12",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           9768.0,
           -288
         ],
@@ -3362,10 +3987,47 @@
       },
       {
         "at": [
+          9552,
+          -288
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-12",
+        "room": 2
+      },
+      {
+        "at": [
+          9552,
+          -288
+        ],
+        "action": "wait_gate",
+        "obstacle_id": "06-27-machine-13",
+        "lead_seconds": 1.5,
+        "room": 2
+      },
+      {
+        "at": [
           8856.0,
           -480
         ],
         "action": "dash",
+        "room": 2
+      },
+      {
+        "at": [
+          8868.0,
+          -480
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          9084.0,
+          -480
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-13",
+        "travel_mode": "walk",
         "room": 2
       },
       {
@@ -3386,6 +4048,24 @@
       },
       {
         "at": [
+          9744.0,
+          -672
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          9984.0,
+          -672
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-14",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           10008.0,
           -672
         ],
@@ -3402,6 +4082,24 @@
       },
       {
         "at": [
+          10680.0,
+          -864
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          10920.0,
+          -864
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-15",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           10968.0,
           -864
         ],
@@ -3414,6 +4112,24 @@
           -672
         ],
         "action": "dash",
+        "room": 2
+      },
+      {
+        "at": [
+          11616.0,
+          -672
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          11856.0,
+          -672
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-16",
+        "travel_mode": "walk",
         "room": 2
       },
       {
@@ -3451,6 +4167,24 @@
       },
       {
         "at": [
+          13140.0,
+          -816
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          13380.0,
+          -816
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-17",
+        "travel_mode": "walk",
+        "room": 3
+      },
+      {
+        "at": [
           13512.0,
           -816
         ],
@@ -3464,6 +4198,24 @@
         ],
         "action": "dash",
         "surface": "wood",
+        "room": 3
+      },
+      {
+        "at": [
+          14340.0,
+          -1008
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          14580.0,
+          -1008
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-18",
+        "travel_mode": "walk",
         "room": 3
       },
       {
@@ -3485,6 +4237,24 @@
       },
       {
         "at": [
+          15660.0,
+          -1200
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          15900.0,
+          -1200
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-19",
+        "travel_mode": "walk",
+        "room": 3
+      },
+      {
+        "at": [
           16056.0,
           -1200
         ],
@@ -3498,6 +4268,24 @@
         ],
         "action": "jump",
         "surface": "wood",
+        "room": 3
+      },
+      {
+        "at": [
+          16812.0,
+          -912
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          17052.0,
+          -912
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-20",
+        "travel_mode": "walk",
         "room": 3
       },
       {
@@ -3534,6 +4322,24 @@
       },
       {
         "at": [
+          18240.0,
+          -480
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          18480.0,
+          -480
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-21",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           18528,
           -480
         ],
@@ -3546,6 +4352,24 @@
           -240
         ],
         "action": "drop",
+        "room": 4
+      },
+      {
+        "at": [
+          19320.0,
+          -240
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          19560.0,
+          -240
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-22",
+        "travel_mode": "walk",
         "room": 4
       },
       {
@@ -3566,6 +4390,24 @@
       },
       {
         "at": [
+          20496.0,
+          48
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          20736.0,
+          48
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-23",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           20832,
           48
         ],
@@ -3582,10 +4424,46 @@
       },
       {
         "at": [
+          21696.0,
+          336
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          21936.0,
+          336
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-24",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           21984,
           336
         ],
         "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          22140.0,
+          336
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          22380.0,
+          336
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-27-machine-25",
+        "travel_mode": "walk",
         "room": 4
       },
       {
@@ -3600,14 +4478,14 @@
     "spike_placements": 266,
     "visible_spikes": 1064,
     "vertical_travel": 1824,
-    "intent": "Climb from meadow through a wooded rise to cliffs and a broad overlook, then descend into a new valley."
+    "intent": "Climb from meadow through a wooded rise to cliffs and a broad overlook, then descend into a new valley. Expert redesign: cliff counterweights and overhead wind vanes."
   },
   "editor_version": 2,
   "design": {
     "identity": "Meadow Overlook",
     "blueprint": "res://content/layouts/06-27.json",
-    "intent": "Climb from meadow through a wooded rise to cliffs and a broad overlook, then descend into a new valley.",
-    "opening": "Follow the trail towards the wooded rise"
+    "intent": "Climb from meadow through a wooded rise to cliffs and a broad overlook, then descend into a new valley. Expert redesign: cliff counterweights and overhead wind vanes.",
+    "opening": "Follow the trail towards the wooded rise. Follow the weight as it swings away."
   },
   "journey_regions": [
     {
@@ -3662,5 +4540,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "pendulum",
+    "secondary": "windmill",
+    "mechanisms": 26
   }
 }

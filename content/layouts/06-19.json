@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-19",
   "identity": "Hilltop Sprint",
-  "intent": "Sprint from the lower fields up a zigzagging ridge, cross the summit and descend the far side.",
+  "intent": "Sprint from the lower fields up a zigzagging ridge, cross the summit and descend the far side. Expert redesign: ridge fans and downhill rolling cutters.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The lower fields",
-      "lesson": "Build a steady rhythm across the fields",
+      "lesson": "Build a steady rhythm across the fields. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         0,
         0
@@ -90,6 +90,120 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-0",
+          "x": 463.2,
+          "y": 551,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-1",
+          "x": 847.2,
+          "y": 599,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-2",
+          "x": 1303.2,
+          "y": 503,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-3",
+          "x": 1711.2,
+          "y": 599,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-4",
+          "x": 2215.2,
+          "y": 503,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-19-machine-5",
+          "x": 2647.2,
+          "y": 456,
+          "period": 6.95,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-6",
+          "x": 3103.2,
+          "y": 551,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-7",
+          "x": 3487.2,
+          "y": 599,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
         }
       ],
       "zones": [
@@ -276,7 +390,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The lower fields\nBuild a steady rhythm across the fields"
+          "text": "The lower fields\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -303,6 +417,22 @@
         },
         {
           "at": [
+            361.67999999999995,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            564.72,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             576,
             576
           ],
@@ -314,6 +444,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            727.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            967.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -331,6 +477,22 @@
         },
         {
           "at": [
+            1183.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1423.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1440,
             528
           ],
@@ -342,6 +504,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1591.1999999999998,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1831.1999999999998,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -359,6 +537,22 @@
         },
         {
           "at": [
+            2095.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2335.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2352,
             528
           ],
@@ -370,6 +564,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2527.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2767.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-5",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -387,6 +597,22 @@
         },
         {
           "at": [
+            3001.68,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3204.72,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3216,
             576
           ],
@@ -398,6 +624,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3367.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3607.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-7",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -415,7 +657,7 @@
     },
     {
       "name": "The zigzag ascent",
-      "lesson": "Reverse around the hillside’s shoulders",
+      "lesson": "Reverse around the hillside’s shoulders. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         3744,
         0
@@ -1031,6 +1273,48 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-8",
+          "x": 1536.0,
+          "y": -121,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-9",
+          "x": 2352.0,
+          "y": -313,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-10",
+          "x": 3168.0,
+          "y": -121,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
         }
       ],
       "zones": [],
@@ -1174,7 +1458,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The zigzag ascent\nReverse around the hillside’s shoulders"
+          "text": "The zigzag ascent\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -1236,6 +1520,22 @@
         },
         {
           "at": [
+            1428.0,
+            -96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1644.0,
+            -96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1656.0,
             -96
           ],
@@ -1250,6 +1550,22 @@
         },
         {
           "at": [
+            2244.0,
+            -288
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2460.0,
+            -288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-9",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2472.0,
             -288
           ],
@@ -1261,6 +1577,22 @@
             -96
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            3060.0,
+            -96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3276.0,
+            -96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-10",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1285,7 +1617,7 @@
     },
     {
       "name": "The rocky ridge",
-      "lesson": "Brake on the broad rocks before the next cut",
+      "lesson": "Brake on the broad rocks before the next cut. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         7584,
         -720
@@ -2002,6 +2334,52 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-19-machine-11",
+          "x": 612.0,
+          "y": 312,
+          "period": 8.05,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-12",
+          "x": 1548.0,
+          "y": 263,
+          "period": 3.78,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-19-machine-13",
+          "x": 2556.0,
+          "y": -72,
+          "period": 6.95,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
         }
       ],
       "zones": [],
@@ -2109,7 +2487,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The rocky ridge\nBrake on the broad rocks before the next cut"
+          "text": "The rocky ridge\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -2130,6 +2508,22 @@
         },
         {
           "at": [
+            492.0,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            732.0,
+            480
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-11",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             792.0,
             480
           ],
@@ -2145,6 +2539,22 @@
         },
         {
           "at": [
+            1428.0,
+            288
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1668.0,
+            288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-12",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1752.0,
             288
           ],
@@ -2157,6 +2567,22 @@
           ],
           "action": "dash",
           "surface": "wood"
+        },
+        {
+          "at": [
+            2436.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2676.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-13",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2196,7 +2622,7 @@
     },
     {
       "name": "The exposed summit",
-      "lesson": "Gain the top against the wind",
+      "lesson": "Gain the top against the wind. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         11712,
         -720
@@ -2861,6 +3287,82 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-14",
+          "x": 552.0,
+          "y": 503,
+          "period": 4.16,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-19-machine-15",
+          "x": 1488.0,
+          "y": 216,
+          "period": 8.05,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-19-machine-16",
+          "x": 2496.0,
+          "y": 72,
+          "period": 6.4,
+          "phase": 2.36,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-19-machine-17",
+          "x": 3480.0,
+          "y": -72,
+          "period": 6.95,
+          "phase": 0.07,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-18",
+          "x": 3864.0,
+          "y": 71,
+          "period": 3.97,
+          "phase": 0.78,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
         }
       ],
       "zones": [
@@ -2980,7 +3482,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The exposed summit\nGain the top against the wind"
+          "text": "The exposed summit\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -3000,6 +3502,22 @@
         },
         {
           "at": [
+            432.0,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            672.0,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-14",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             696.0,
             528
           ],
@@ -3011,6 +3529,22 @@
             384
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            1368.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1608.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-15",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3028,6 +3562,22 @@
         },
         {
           "at": [
+            2376.0,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2616.0,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-16",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2664.0,
             240
           ],
@@ -3042,10 +3592,42 @@
         },
         {
           "at": [
+            3360.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3600.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-17",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3624.0,
             96
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            3744.0,
+            96
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3984.0,
+            96
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-18",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3063,7 +3645,7 @@
     },
     {
       "name": "The rapid descent",
-      "lesson": "Follow the terraces down the far side",
+      "lesson": "Follow the terraces down the far side. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         15936,
         -1248
@@ -3135,6 +3717,84 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-19-machine-19",
+          "x": 576.0,
+          "y": 648,
+          "period": 8.05,
+          "phase": 1.49,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-19-machine-20",
+          "x": 1560.0,
+          "y": 888,
+          "period": 6.4,
+          "phase": 2.2,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-19-machine-21",
+          "x": 2640.0,
+          "y": 1176,
+          "period": 6.95,
+          "phase": 2.91,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-19-machine-22",
+          "x": 3696.0,
+          "y": 1607,
+          "period": 3.78,
+          "phase": 0.62,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-19-machine-23",
+          "x": 4116.0,
+          "y": 1464,
+          "period": 8.05,
+          "phase": 1.33,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
         }
       ],
       "zones": [
@@ -3254,7 +3914,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The rapid descent\nFollow the terraces down the far side"
+          "text": "The rapid descent\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -3274,6 +3934,22 @@
         },
         {
           "at": [
+            456.0,
+            816
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            696.0,
+            816
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-19",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             720,
             816
           ],
@@ -3285,6 +3961,22 @@
             1056
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1440.0,
+            1056
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1680.0,
+            1056
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-20",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3302,6 +3994,22 @@
         },
         {
           "at": [
+            2520.0,
+            1344
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2760.0,
+            1344
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-21",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2832,
             1344
           ],
@@ -3316,10 +4024,42 @@
         },
         {
           "at": [
+            3576.0,
+            1632
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3816.0,
+            1632
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-22",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3840,
             1632
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            3996.0,
+            1632
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4236.0,
+            1632
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-19-machine-23",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3342,5 +4082,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "windmill",
+    "secondary": "sawrail",
+    "mechanisms": 24
   }
 }

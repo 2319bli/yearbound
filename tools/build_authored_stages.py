@@ -51,6 +51,9 @@ def compile_day(layout, current):
         stage["secret_areas"] = layout.get("secret_areas", [])
     if "scenery" in layout:
         stage["scenery"] = copy.deepcopy(layout["scenery"])
+    stage["difficulty"] = copy.deepcopy(layout.get("difficulty", {}))
+    if stage["difficulty"]:
+        stage["difficulty"]["mechanisms"] = sum(h["type"] == "mechanism" for h in stage["hazards"])
     stage["editor_version"] = 2
     stage["layout_revision"] = layout.get("revision", 13)
     stage["description"] = layout["intent"]

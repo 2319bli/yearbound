@@ -3,7 +3,7 @@
   "id": "06-03",
   "title": "Kites Above the Clover",
   "season": "june",
-  "description": "Climb from clover into kite-filled wind, then cross the exposed ridge above the valley.",
+  "description": "Climb from clover into kite-filled wind, then cross the exposed ridge above the valley. Expert redesign: kite reels and charged crosswind wires.",
   "music": "res://audio/06-03_Kites_Above_the_Clover.mp3",
   "background": "res://art/june/06-03.png",
   "terrain_style": "june_03",
@@ -300,6 +300,66 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "06-03-machine-0",
+      "x": 1039.2,
+      "y": 384,
+      "period": 3.4,
+      "phase": 0.0,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "06-03-machine-1",
+      "x": 1399.2,
+      "y": 480,
+      "period": 3.59,
+      "phase": 0.71,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "06-03-machine-2",
+      "x": 1807.2,
+      "y": 384,
+      "period": 3.78,
+      "phase": 1.42,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "06-03-machine-3",
+      "x": 2215.2,
+      "y": 480,
+      "period": 3.97,
+      "phase": 2.13,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
     },
     {
       "type": "bramble",
@@ -748,6 +808,36 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "06-03-machine-4",
+      "x": 4368.0,
+      "y": 240,
+      "period": 4.16,
+      "phase": 2.84,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "06-03-machine-5",
+      "x": 5136.0,
+      "y": 96,
+      "period": 3.4,
+      "phase": 0.55,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
     },
     {
       "type": "bramble",
@@ -1654,6 +1744,21 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "06-03-machine-6",
+      "x": 11616.0,
+      "y": -624,
+      "period": 3.59,
+      "phase": 1.26,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
       "type": "bramble",
       "x": 13728,
       "y": -840,
@@ -2236,6 +2341,53 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "windmill",
+      "id": "06-03-machine-7",
+      "x": 13500.0,
+      "y": -984,
+      "period": 8.05,
+      "phase": 1.97,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 132,
+      "blades": 3,
+      "thickness": 7,
+      "rotation_direction": 1
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "windmill",
+      "id": "06-03-machine-8",
+      "x": 14388.0,
+      "y": -1096,
+      "period": 6.4,
+      "phase": 2.68,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 96,
+      "blades": 3,
+      "thickness": 7,
+      "rotation_direction": -1
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "06-03-machine-9",
+      "x": 15300.0,
+      "y": -1200,
+      "period": 4.16,
+      "phase": 0.39,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
     }
   ],
   "motes": [
@@ -2550,27 +2702,27 @@
     {
       "x": 288,
       "y": 484,
-      "text": "Clover beneath the strings\nKeep your first jumps low"
+      "text": "Clover beneath the strings\nPass behind a turning sail; the gold edge is dangerous."
     },
     {
       "x": 3312,
       "y": 484,
-      "text": "The windy hillside\nRise with the hillside · brake into the wind"
+      "text": "The windy hillside\nPass behind a turning sail; the gold edge is dangerous."
     },
     {
       "x": 6576,
       "y": -44,
-      "text": "The kite field\nRide the thermal · leave it sideways"
+      "text": "The kite field\nPass behind a turning sail; the gold edge is dangerous."
     },
     {
       "x": 9648,
       "y": -44,
-      "text": "The high ridge\nReverse once around the rocky shoulder"
+      "text": "The high ridge\nPass behind a turning sail; the gold edge is dangerous."
     },
     {
       "x": 13104,
       "y": -812,
-      "text": "The exposed hilltop\nCross the last wind-cut gaps"
+      "text": "The exposed hilltop\nPass behind a turning sail; the gold edge is dangerous."
     }
   ],
   "decorations": [
@@ -2896,7 +3048,7 @@
     "charge_dash"
   ],
   "world_top": -3072,
-  "layout_revision": 14,
+  "layout_revision": 16,
   "challenge": {
     "revision": 2,
     "original_length": 0,
@@ -2904,7 +3056,7 @@
     "rooms": [
       {
         "name": "Clover beneath the strings",
-        "lesson": "Keep your first jumps low",
+        "lesson": "Keep your first jumps low. Pass behind a turning sail; the gold edge is dangerous.",
         "from_x": 0,
         "to_x": 3168,
         "start": [
@@ -2918,7 +3070,7 @@
       },
       {
         "name": "The windy hillside",
-        "lesson": "Rise with the hillside · brake into the wind",
+        "lesson": "Rise with the hillside · brake into the wind. Pass behind a turning sail; the gold edge is dangerous.",
         "from_x": 3168,
         "to_x": 6432,
         "start": [
@@ -2932,7 +3084,7 @@
       },
       {
         "name": "The kite field",
-        "lesson": "Ride the thermal · leave it sideways",
+        "lesson": "Ride the thermal · leave it sideways. Pass behind a turning sail; the gold edge is dangerous.",
         "from_x": 6432,
         "to_x": 9504,
         "start": [
@@ -2946,7 +3098,7 @@
       },
       {
         "name": "The high ridge",
-        "lesson": "Reverse once around the rocky shoulder",
+        "lesson": "Reverse once around the rocky shoulder. Pass behind a turning sail; the gold edge is dangerous.",
         "from_x": 9504,
         "to_x": 12960,
         "start": [
@@ -2960,7 +3112,7 @@
       },
       {
         "name": "The exposed hilltop",
-        "lesson": "Cross the last wind-cut gaps",
+        "lesson": "Cross the last wind-cut gaps. Pass behind a turning sail; the gold edge is dangerous.",
         "from_x": 12960,
         "to_x": 16800,
         "start": [
@@ -3032,6 +3184,24 @@
       },
       {
         "at": [
+          937.6800000000001,
+          528
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          1140.72,
+          528
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-03-machine-0",
+        "travel_mode": "walk",
+        "room": 0
+      },
+      {
+        "at": [
           1152,
           528
         ],
@@ -3044,6 +3214,24 @@
           624
         ],
         "action": "drop",
+        "room": 0
+      },
+      {
+        "at": [
+          1297.68,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          1500.72,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-03-machine-1",
+        "travel_mode": "walk",
         "room": 0
       },
       {
@@ -3064,6 +3252,24 @@
       },
       {
         "at": [
+          1705.6799999999998,
+          528
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          1908.7199999999998,
+          528
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-03-machine-2",
+        "travel_mode": "walk",
+        "room": 0
+      },
+      {
+        "at": [
           1920,
           528
         ],
@@ -3076,6 +3282,24 @@
           624
         ],
         "action": "drop",
+        "room": 0
+      },
+      {
+        "at": [
+          2095.2,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          2335.2,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-03-machine-3",
+        "travel_mode": "walk",
         "room": 0
       },
       {
@@ -3152,6 +3376,24 @@
       },
       {
         "at": [
+          4260.0,
+          384
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          4476.0,
+          384
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-03-machine-4",
+        "travel_mode": "walk",
+        "room": 1
+      },
+      {
+        "at": [
           4488.0,
           384
         ],
@@ -3164,6 +3406,24 @@
           240
         ],
         "action": "dash",
+        "room": 1
+      },
+      {
+        "at": [
+          5028.0,
+          240
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          5244.0,
+          240
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-03-machine-5",
+        "travel_mode": "walk",
         "room": 1
       },
       {
@@ -3346,6 +3606,24 @@
       },
       {
         "at": [
+          11508.0,
+          -480
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          11724.0,
+          -480
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-03-machine-6",
+        "travel_mode": "walk",
+        "room": 3
+      },
+      {
+        "at": [
           11736.0,
           -480
         ],
@@ -3395,6 +3673,24 @@
       },
       {
         "at": [
+          13380.0,
+          -816
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          13620.0,
+          -816
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-03-machine-7",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           13656.0,
           -816
         ],
@@ -3412,6 +3708,24 @@
       },
       {
         "at": [
+          14268.0,
+          -960
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          14508.0,
+          -960
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-03-machine-8",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           14568.0,
           -960
         ],
@@ -3425,6 +3739,24 @@
         ],
         "action": "dash",
         "surface": "wood",
+        "room": 4
+      },
+      {
+        "at": [
+          15181.2,
+          -1056
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          15418.8,
+          -1056
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-03-machine-9",
+        "travel_mode": "walk",
         "room": 4
       },
       {
@@ -3464,14 +3796,14 @@
     "spike_placements": 244,
     "visible_spikes": 976,
     "vertical_travel": 1680,
-    "intent": "Climb from clover into kite-filled wind, then cross the exposed ridge above the valley."
+    "intent": "Climb from clover into kite-filled wind, then cross the exposed ridge above the valley. Expert redesign: kite reels and charged crosswind wires."
   },
   "editor_version": 2,
   "design": {
     "identity": "Kites Above the Clover",
     "blueprint": "res://content/layouts/06-03.json",
-    "intent": "Climb from clover into kite-filled wind, then cross the exposed ridge above the valley.",
-    "opening": "Keep your first jumps low"
+    "intent": "Climb from clover into kite-filled wind, then cross the exposed ridge above the valley. Expert redesign: kite reels and charged crosswind wires.",
+    "opening": "Keep your first jumps low. Pass behind a turning sail; the gold edge is dangerous."
   },
   "journey_regions": [
     {
@@ -3528,5 +3860,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "windmill",
+    "secondary": "arc",
+    "mechanisms": 10
   }
 }

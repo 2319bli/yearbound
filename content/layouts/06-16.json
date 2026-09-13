@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-16",
   "identity": "The Hayfield Hop",
-  "intent": "Cross fresh meadow and cut rows, hop the hay stacks, pass through the loading barn and finish in warm golden fields.",
+  "intent": "Cross fresh meadow and cut rows, hop the hay stacks, pass through the loading barn and finish in warm golden fields. Expert redesign: hay balers and suspended pitchfork weights.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The fresh meadow",
-      "lesson": "Follow the farm path over low fences",
+      "lesson": "Follow the farm path over low fences. Green is open. Amber warns before the press falls.",
       "origin": [
         0,
         0
@@ -74,6 +74,76 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-0",
+          "x": 655.2,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-1",
+          "x": 1351.2,
+          "y": 480,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-2",
+          "x": 1783.2,
+          "y": 432,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-16-machine-3",
+          "x": 2167.2,
+          "y": 480,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-4",
+          "x": 2959.2,
+          "y": 480,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -248,7 +318,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The fresh meadow\nFollow the farm path over low fences"
+          "text": "The fresh meadow\nGreen is open. Amber warns before the press falls."
         }
       ],
       "route": [
@@ -289,6 +359,22 @@
         },
         {
           "at": [
+            577.6800000000001,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            780.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             792.0,
             624
           ],
@@ -317,6 +403,22 @@
         },
         {
           "at": [
+            1255.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1495.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-1",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1512.0,
             624
           ],
@@ -331,6 +433,22 @@
         },
         {
           "at": [
+            1705.6799999999998,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1908.7199999999998,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1920,
             576
           ],
@@ -342,6 +460,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2071.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2311.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -373,6 +507,22 @@
         },
         {
           "at": [
+            2863.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3103.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3144.0,
             624
           ],
@@ -387,7 +537,7 @@
     },
     {
       "name": "The cut hay rows",
-      "lesson": "Cross between the cut rows and drainage channels",
+      "lesson": "Cross between the cut rows and drainage channels. Green is open. Amber warns before the press falls.",
       "origin": [
         3264,
         0
@@ -770,7 +920,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The cut hay rows\nCross between the cut rows and drainage channels"
+          "text": "The cut hay rows\nGreen is open. Amber warns before the press falls."
         }
       ],
       "route": [
@@ -829,7 +979,7 @@
     },
     {
       "name": "The high hay bales",
-      "lesson": "Commit to the tall stacks · pause on their wide tops",
+      "lesson": "Commit to the tall stacks · pause on their wide tops. Green is open. Amber warns before the press falls.",
       "origin": [
         7008,
         0
@@ -917,6 +1067,48 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-5",
+          "x": 1860.0,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-16-machine-6",
+          "x": 2892.0,
+          "y": 480,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-7",
+          "x": 3756.0,
+          "y": 480,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -1060,7 +1252,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The high hay bales\nCommit to the tall stacks · pause on their wide tops"
+          "text": "The high hay bales\nGreen is open. Amber warns before the press falls."
         }
       ],
       "route": [
@@ -1115,6 +1307,22 @@
         },
         {
           "at": [
+            1764.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2004.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2040.0,
             624
           ],
@@ -1133,6 +1341,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2797.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3034.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-6",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1157,6 +1381,22 @@
         },
         {
           "at": [
+            3661.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3898.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3912.0,
             624
           ],
@@ -1171,7 +1411,7 @@
     },
     {
       "name": "The barn loading floor",
-      "lesson": "Keep your jumps below the loading beams",
+      "lesson": "Keep your jumps below the loading beams. Green is open. Amber warns before the press falls.",
       "origin": [
         11040,
         0
@@ -2019,6 +2259,92 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-16-machine-8",
+          "x": 772.8,
+          "y": 370,
+          "period": 4.8,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 158,
+          "head_radius": 21,
+          "swing": 1.02
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-9",
+          "x": 1310.4,
+          "y": 480,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-10",
+          "x": 2068.8,
+          "y": 384,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-11",
+          "x": 2630.4,
+          "y": 480,
+          "period": 3.59,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-16-machine-12",
+          "x": 3340.8,
+          "y": 389,
+          "period": 4.8,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 140,
+          "head_radius": 21,
+          "swing": 0.65
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-13",
+          "x": 3746.4,
+          "y": 480,
+          "period": 3.97,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -2216,7 +2542,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The barn loading floor\nKeep your jumps below the loading beams"
+          "text": "The barn loading floor\nGreen is open. Amber warns before the press falls."
         }
       ],
       "route": [
@@ -2257,6 +2583,22 @@
         },
         {
           "at": [
+            652.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            892.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1065.6,
             576
           ],
@@ -2268,6 +2610,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1214.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1454.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-9",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2299,6 +2657,22 @@
         },
         {
           "at": [
+            1972.8000000000002,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2212.8,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-10",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2361.6000000000004,
             528
           ],
@@ -2310,6 +2684,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2534.4,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2774.4,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-11",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2341,6 +2731,22 @@
         },
         {
           "at": [
+            3220.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3460.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-12",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3513.6000000000004,
             576
           ],
@@ -2352,6 +2758,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3650.3999999999996,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3890.3999999999996,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-13",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2369,7 +2791,7 @@
     },
     {
       "name": "The golden field",
-      "lesson": "Carry your rhythm out into the evening field",
+      "lesson": "Carry your rhythm out into the evening field. Green is open. Amber warns before the press falls.",
       "origin": [
         15072,
         0
@@ -2433,6 +2855,120 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-14",
+          "x": 487.2,
+          "y": 432,
+          "period": 4.16,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-15",
+          "x": 967.2,
+          "y": 480,
+          "period": 3.4,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-16",
+          "x": 1495.2,
+          "y": 384,
+          "period": 3.59,
+          "phase": 2.36,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-16-machine-17",
+          "x": 1999.2,
+          "y": 418,
+          "period": 5.2,
+          "phase": 0.07,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 158,
+          "head_radius": 21,
+          "swing": 1.02
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-18",
+          "x": 2527.2,
+          "y": 384,
+          "period": 3.97,
+          "phase": 0.78,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-19",
+          "x": 3031.2,
+          "y": 480,
+          "period": 4.16,
+          "phase": 1.49,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "06-16-machine-20",
+          "x": 3535.2,
+          "y": 432,
+          "period": 3.4,
+          "phase": 2.2,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-16-machine-21",
+          "x": 4015.2,
+          "y": 418,
+          "period": 5.2,
+          "phase": 2.91,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 158,
+          "head_radius": 21,
+          "swing": 0.82
         }
       ],
       "zones": [],
@@ -2612,7 +3148,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The golden field\nCarry your rhythm out into the evening field"
+          "text": "The golden field\nGreen is open. Amber warns before the press falls."
         }
       ],
       "route": [
@@ -2639,6 +3175,22 @@
         },
         {
           "at": [
+            391.2,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            631.2,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-14",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             672,
             576
           ],
@@ -2650,6 +3202,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            871.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1111.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-15",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2667,6 +3235,22 @@
         },
         {
           "at": [
+            1399.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1639.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-16",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1680,
             528
           ],
@@ -2678,6 +3262,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1879.1999999999998,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2119.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-17",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2695,6 +3295,22 @@
         },
         {
           "at": [
+            2431.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2671.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-18",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2736,
             528
           ],
@@ -2706,6 +3322,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2935.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3175.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-19",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2723,6 +3355,22 @@
         },
         {
           "at": [
+            3439.2,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3679.2,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-20",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3696,
             576
           ],
@@ -2734,6 +3382,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            3895.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4135.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-16-machine-21",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2756,5 +3420,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "press",
+    "secondary": "pendulum",
+    "mechanisms": 22
   }
 }

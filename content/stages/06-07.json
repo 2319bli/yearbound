@@ -3,7 +3,7 @@
   "id": "06-07",
   "title": "The Sunflower Shortcut",
   "season": "june",
-  "description": "Enter the sunflower fields, discover a sheltered shortcut through the crops, and rejoin the valley above the farm.",
+  "description": "Enter the sunflower fields, discover a sheltered shortcut through the crops, and rejoin the valley above the farm. Expert redesign: opening seedheads and turning farm fans.",
   "music": "res://audio/06-07_The_Sunflower_Shortcut.mp3",
   "background": "res://art/june/06-07.png",
   "terrain_style": "june_07",
@@ -294,6 +294,45 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-07-machine-0",
+      "x": 1159.2,
+      "y": 600,
+      "period": 3.4,
+      "phase": 0.0,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-07-machine-1",
+      "x": 1927.2,
+      "y": 600,
+      "period": 3.59,
+      "phase": 0.71,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-07-machine-2",
+      "x": 2719.2,
+      "y": 600,
+      "period": 3.78,
+      "phase": 1.42,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
     },
     {
       "type": "bramble",
@@ -1072,6 +1111,19 @@
       "direction": "down"
     },
     {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-07-machine-3",
+      "x": 9924.0,
+      "y": 600,
+      "period": 3.97,
+      "phase": 2.13,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
+    },
+    {
       "type": "bramble",
       "x": 10464,
       "y": 600,
@@ -1568,6 +1620,46 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-07-machine-4",
+      "x": 11400.0,
+      "y": 240,
+      "period": 4.16,
+      "phase": 2.84,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-07-machine-5",
+      "x": 12216.0,
+      "y": 216,
+      "period": 3.4,
+      "phase": 0.55,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-07-machine-6",
+      "x": 13008.0,
+      "y": 72,
+      "period": 3.59,
+      "phase": 1.26,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
+    },
+    {
       "type": "bramble",
       "x": 14352,
       "y": 168,
@@ -1582,6 +1674,61 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-07-machine-7",
+      "x": 14952.0,
+      "y": 312,
+      "period": 3.78,
+      "phase": 1.97,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-07-machine-8",
+      "x": 15744.0,
+      "y": 456,
+      "period": 3.97,
+      "phase": 2.68,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "bloom",
+      "id": "06-07-machine-9",
+      "x": 16536.0,
+      "y": 600,
+      "period": 4.16,
+      "phase": 0.39,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "9f7080",
+      "head_radius": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "windmill",
+      "id": "06-07-machine-10",
+      "x": 16908.0,
+      "y": 456,
+      "period": 7.5,
+      "phase": 1.1,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "radius": 132,
+      "blades": 3,
+      "thickness": 7,
+      "rotation_direction": -1
     }
   ],
   "motes": [
@@ -1853,27 +2000,27 @@
     {
       "x": 288,
       "y": 484,
-      "text": "The familiar field path\nLow fences lead into the crop"
+      "text": "The familiar field path\nPass while the thorn head is folded."
     },
     {
       "x": 3120,
       "y": 484,
-      "text": "Above the sunflowers\nUse the raised crop walk"
+      "text": "Above the sunflowers\nPass while the thorn head is folded."
     },
     {
       "x": 6480,
       "y": 484,
-      "text": "The hidden crop route\nLook for gaps leading back beneath the leaves"
+      "text": "The hidden crop route\nPass while the thorn head is folded."
     },
     {
       "x": 10320,
       "y": 484,
-      "text": "Over the farm fences\nClimb past the seed stores"
+      "text": "Over the farm fences\nPass while the thorn head is folded."
     },
     {
       "x": 13872,
       "y": -44,
-      "text": "The shortcut rejoins the valley\nDescend towards the familiar lane"
+      "text": "The shortcut rejoins the valley\nPass while the thorn head is folded."
     }
   ],
   "decorations": [
@@ -2199,7 +2346,7 @@
     "charge_dash"
   ],
   "world_top": -3072,
-  "layout_revision": 14,
+  "layout_revision": 16,
   "challenge": {
     "revision": 2,
     "original_length": 0,
@@ -2207,7 +2354,7 @@
     "rooms": [
       {
         "name": "The familiar field path",
-        "lesson": "Low fences lead into the crop",
+        "lesson": "Low fences lead into the crop. Pass while the thorn head is folded.",
         "from_x": 0,
         "to_x": 2976,
         "start": [
@@ -2221,7 +2368,7 @@
       },
       {
         "name": "Above the sunflowers",
-        "lesson": "Use the raised crop walk",
+        "lesson": "Use the raised crop walk. Pass while the thorn head is folded.",
         "from_x": 2976,
         "to_x": 6336,
         "start": [
@@ -2235,7 +2382,7 @@
       },
       {
         "name": "The hidden crop route",
-        "lesson": "Look for gaps leading back beneath the leaves",
+        "lesson": "Look for gaps leading back beneath the leaves. Pass while the thorn head is folded.",
         "from_x": 6336,
         "to_x": 10176,
         "start": [
@@ -2249,7 +2396,7 @@
       },
       {
         "name": "Over the farm fences",
-        "lesson": "Climb past the seed stores",
+        "lesson": "Climb past the seed stores. Pass while the thorn head is folded.",
         "from_x": 10176,
         "to_x": 13728,
         "start": [
@@ -2263,7 +2410,7 @@
       },
       {
         "name": "The shortcut rejoins the valley",
-        "lesson": "Descend towards the familiar lane",
+        "lesson": "Descend towards the familiar lane. Pass while the thorn head is folded.",
         "from_x": 13728,
         "to_x": 17280,
         "start": [
@@ -2351,6 +2498,24 @@
       },
       {
         "at": [
+          1057.68,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          1260.72,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-07-machine-0",
+        "travel_mode": "walk",
+        "room": 0
+      },
+      {
+        "at": [
           1272.0,
           624
         ],
@@ -2383,6 +2548,24 @@
       },
       {
         "at": [
+          1807.1999999999998,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          2047.1999999999998,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-07-machine-1",
+        "travel_mode": "walk",
+        "room": 0
+      },
+      {
+        "at": [
           2088.0,
           624
         ],
@@ -2411,6 +2594,24 @@
           624
         ],
         "action": "drop",
+        "room": 0
+      },
+      {
+        "at": [
+          2599.2,
+          624
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          2839.2,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-07-machine-2",
+        "travel_mode": "walk",
         "room": 0
       },
       {
@@ -2587,6 +2788,24 @@
       },
       {
         "at": [
+          9805.2,
+          624
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          10042.8,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-07-machine-3",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           10056.0,
           624
         ],
@@ -2627,6 +2846,24 @@
       },
       {
         "at": [
+          11316.0,
+          384
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          11532.0,
+          384
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-07-machine-4",
+        "travel_mode": "walk",
+        "room": 3
+      },
+      {
+        "at": [
           11544.0,
           384
         ],
@@ -2643,6 +2880,24 @@
       },
       {
         "at": [
+          12096.0,
+          240
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          12336.0,
+          240
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-07-machine-5",
+        "travel_mode": "walk",
+        "room": 3
+      },
+      {
+        "at": [
           12360.0,
           240
         ],
@@ -2655,6 +2910,24 @@
           96
         ],
         "action": "dash",
+        "room": 3
+      },
+      {
+        "at": [
+          12900.0,
+          96
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          13116.0,
+          96
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-07-machine-6",
+        "travel_mode": "walk",
         "room": 3
       },
       {
@@ -2699,6 +2972,24 @@
       },
       {
         "at": [
+          14844.0,
+          336
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          15060.0,
+          336
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-07-machine-7",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           15072,
           336
         ],
@@ -2711,6 +3002,24 @@
           480
         ],
         "action": "drop",
+        "room": 4
+      },
+      {
+        "at": [
+          15624.0,
+          480
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          15864.0,
+          480
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-07-machine-8",
+        "travel_mode": "walk",
         "room": 4
       },
       {
@@ -2731,10 +3040,46 @@
       },
       {
         "at": [
+          16428.0,
+          624
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          16644.0,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-07-machine-9",
+        "travel_mode": "walk",
+        "room": 4
+      },
+      {
+        "at": [
           16656,
           624
         ],
         "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          16788.0,
+          624
+        ],
+        "action": "walk",
+        "room": 4
+      },
+      {
+        "at": [
+          17028.0,
+          624
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-07-machine-10",
+        "travel_mode": "walk",
         "room": 4
       },
       {
@@ -2749,14 +3094,14 @@
     "spike_placements": 163,
     "visible_spikes": 652,
     "vertical_travel": 624,
-    "intent": "Enter the sunflower fields, discover a sheltered shortcut through the crops, and rejoin the valley above the farm."
+    "intent": "Enter the sunflower fields, discover a sheltered shortcut through the crops, and rejoin the valley above the farm. Expert redesign: opening seedheads and turning farm fans."
   },
   "editor_version": 2,
   "design": {
     "identity": "The Sunflower Shortcut",
     "blueprint": "res://content/layouts/06-07.json",
-    "intent": "Enter the sunflower fields, discover a sheltered shortcut through the crops, and rejoin the valley above the farm.",
-    "opening": "Low fences lead into the crop"
+    "intent": "Enter the sunflower fields, discover a sheltered shortcut through the crops, and rejoin the valley above the farm. Expert redesign: opening seedheads and turning farm fans.",
+    "opening": "Low fences lead into the crop. Pass while the thorn head is folded."
   },
   "journey_regions": [
     {
@@ -2823,5 +3168,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "bloom",
+    "secondary": "windmill",
+    "mechanisms": 11
   }
 }

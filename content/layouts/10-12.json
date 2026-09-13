@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 15,
+  "revision": 16,
   "day": "10-12",
   "identity": "Lightning lanes and storm cover",
-  "intent": "Read each staggered lightning lane from a roofed pocket, hop the bramble cuts between strikes, and cross only while the lane is dark.",
+  "intent": "Read each staggered lightning lane from a roofed pocket, hop the bramble cuts between strikes, and cross only while the lane is dark. Expert redesign: crossed storm beams and shelter doors.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -17,7 +17,7 @@
   "sections": [
     {
       "name": "The first thunder lane",
-      "lesson": "Amber warns · white lightning hurts · cross when dark",
+      "lesson": "Amber warns · white lightning hurts · cross when dark. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         0,
         0
@@ -183,6 +183,36 @@
           "w": 192,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "10-12-machine-0",
+          "x": 1368.0,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "10-12-machine-1",
+          "x": 2184.0,
+          "y": 480,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -273,7 +303,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Amber warns · white lightning hurts · cross when dark"
+          "text": "The first thunder lane\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -296,7 +326,7 @@
             528,
             624
           ],
-          "action": "jump"
+          "action": "dash"
         },
         {
           "at": [
@@ -325,7 +355,23 @@
             1200,
             624
           ],
-          "action": "jump"
+          "action": "dash"
+        },
+        {
+          "at": [
+            1248.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1488.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "10-12-machine-0",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -347,7 +393,23 @@
             2016,
             624
           ],
-          "action": "jump"
+          "action": "dash"
+        },
+        {
+          "at": [
+            2064.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2304.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "10-12-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -369,7 +431,7 @@
             2832,
             624
           ],
-          "action": "jump"
+          "action": "dash"
         }
       ],
       "visual": {
@@ -380,7 +442,7 @@
     },
     {
       "name": "Below the storm wall",
-      "lesson": "The roof keeps you low between the storm lanes",
+      "lesson": "The roof keeps you low between the storm lanes. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         2880,
         0
@@ -554,6 +616,36 @@
           "w": 624,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "10-12-machine-2",
+          "x": 1188.0,
+          "y": 480,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "10-12-machine-3",
+          "x": 2568.0,
+          "y": 480,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -661,7 +753,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The roof keeps you low between the storm lanes"
+          "text": "Below the storm wall\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -684,7 +776,7 @@
             576,
             624
           ],
-          "action": "jump"
+          "action": "short"
         },
         {
           "at": [
@@ -713,7 +805,23 @@
             1056,
             624
           ],
-          "action": "jump"
+          "action": "short"
+        },
+        {
+          "at": [
+            1069.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1306.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "10-12-machine-2",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -734,7 +842,7 @@
             1776,
             624
           ],
-          "action": "jump"
+          "action": "short"
         },
         {
           "at": [
@@ -763,7 +871,23 @@
             2304,
             624
           ],
-          "action": "jump"
+          "action": "short"
+        },
+        {
+          "at": [
+            2448.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2688.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "10-12-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -792,7 +916,7 @@
             3216,
             624
           ],
-          "action": "jump"
+          "action": "short"
         },
         {
           "at": [
@@ -810,7 +934,7 @@
     },
     {
       "name": "The staggered strikes",
-      "lesson": "Each lane has its own warning rhythm",
+      "lesson": "Each lane has its own warning rhythm. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         6336,
         0
@@ -954,7 +1078,7 @@
         },
         {
           "type": "bramble",
-          "x": 1248,
+          "x": 1296,
           "y": 528,
           "w": 48,
           "h": 24,
@@ -1094,7 +1218,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Each lane has its own warning rhythm"
+          "text": "The staggered strikes\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -1117,7 +1241,7 @@
             432,
             624
           ],
-          "action": "jump"
+          "action": "dash"
         },
         {
           "at": [
@@ -1143,7 +1267,7 @@
         },
         {
           "at": [
-            888,
+            936,
             624
           ],
           "action": "jump"
@@ -1165,10 +1289,10 @@
         },
         {
           "at": [
-            1296,
+            1272,
             624
           ],
-          "action": "jump"
+          "action": "short"
         },
         {
           "at": [
@@ -1198,7 +1322,7 @@
             2064,
             624
           ],
-          "action": "jump"
+          "action": "dash"
         },
         {
           "at": [
@@ -1227,7 +1351,7 @@
             2592,
             624
           ],
-          "action": "jump"
+          "action": "dash"
         },
         {
           "at": [
@@ -1241,7 +1365,7 @@
             2976,
             624
           ],
-          "action": "jump"
+          "action": "dash"
         },
         {
           "at": [
@@ -1259,7 +1383,7 @@
     },
     {
       "name": "The lightning lookout",
-      "lesson": "Climb around the tower before the next exposed crossing",
+      "lesson": "Climb around the tower before the next exposed crossing. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         9408,
         0
@@ -1653,7 +1777,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Climb around the tower before the next exposed crossing"
+          "text": "The lightning lookout\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -1780,7 +1904,7 @@
     },
     {
       "name": "The long storm arcade",
-      "lesson": "Take one refuge at a time",
+      "lesson": "Take one refuge at a time. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         12864,
         0
@@ -2020,7 +2144,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Take one refuge at a time"
+          "text": "The long storm arcade\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -2058,7 +2182,7 @@
             840,
             624
           ],
-          "action": "jump"
+          "action": "short"
         },
         {
           "at": [
@@ -2087,7 +2211,7 @@
             1320,
             624
           ],
-          "action": "jump"
+          "action": "short"
         },
         {
           "at": [
@@ -2116,7 +2240,7 @@
             1800,
             624
           ],
-          "action": "jump"
+          "action": "short"
         },
         {
           "at": [
@@ -2145,7 +2269,7 @@
             2280,
             624
           ],
-          "action": "jump"
+          "action": "short"
         },
         {
           "at": [
@@ -2174,7 +2298,7 @@
             2760,
             624
           ],
-          "action": "jump"
+          "action": "short"
         },
         {
           "at": [
@@ -2207,7 +2331,7 @@
     },
     {
       "name": "The storm wind",
-      "lesson": "Brake against the gust between the storm walls",
+      "lesson": "Brake against the gust between the storm walls. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         16032,
         0
@@ -2271,6 +2395,50 @@
           "w": 336,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "10-12-machine-4",
+          "x": 1944.0,
+          "y": 480,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "10-12-machine-5",
+          "x": 2904.0,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "10-12-machine-6",
+          "x": 3264.0,
+          "y": 480,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [
@@ -2367,7 +2535,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Brake against the gust between the storm walls"
+          "text": "The storm wind\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -2423,6 +2591,22 @@
         },
         {
           "at": [
+            1836.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2052.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "10-12-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2064,
             624
           ],
@@ -2452,6 +2636,22 @@
         },
         {
           "at": [
+            2796.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3012.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "10-12-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3024,
             624
           ],
@@ -2464,6 +2664,22 @@
           ],
           "action": "timed",
           "gate_x": 3072
+        },
+        {
+          "at": [
+            3180.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3396.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "10-12-machine-6",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2481,7 +2697,7 @@
     },
     {
       "name": "Out of the thunder",
-      "lesson": "Cross the high storm walk to the final shelter",
+      "lesson": "Cross the high storm walk to the final shelter. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         19488,
         0
@@ -2598,6 +2814,50 @@
           "w": 480,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "10-12-machine-7",
+          "x": 1872.0,
+          "y": 240,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "10-12-machine-8",
+          "x": 2352.0,
+          "y": 240,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "10-12-machine-9",
+          "x": 3324.0,
+          "y": 480,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -2685,7 +2945,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Cross the high storm walk to the final shelter"
+          "text": "Out of the thunder\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -2751,7 +3011,7 @@
             1440,
             384
           ],
-          "action": "jump"
+          "action": "dash"
         },
         {
           "at": [
@@ -2770,6 +3030,22 @@
         },
         {
           "at": [
+            1752.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1992.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "10-12-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2016,
             384
           ],
@@ -2780,7 +3056,23 @@
             2256,
             384
           ],
-          "action": "jump"
+          "action": "dash"
+        },
+        {
+          "at": [
+            2268.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2484.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "10-12-machine-8",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2820,6 +3112,22 @@
         },
         {
           "at": [
+            3204.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3444.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "10-12-machine-9",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3528,
             624
           ],
@@ -2839,5 +3147,11 @@
     "rows": 4,
     "inset": 2
   },
-  "journey": true
+  "journey": true,
+  "difficulty": {
+    "edition": "expert",
+    "signature": "arc",
+    "secondary": "shutter",
+    "mechanisms": 10
+  }
 }

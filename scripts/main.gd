@@ -296,7 +296,7 @@ func draw_title(n: Node2D) -> void:
 	label(n,"The first sunlit path",Vector2(931,132),17,INK)
 	button(n,"lab","Charge dash lab   →",Rect2(831,175,356,48),true)
 	label(n,"Experiment · tune · repeat",Vector2(849,248),14,CREAM)
-	label(n,"FOUNDATION EDITION  ·  0.14.0",Vector2(995,684),11,Color("e6eac7"),true)
+	label(n,"FOUNDATION EDITION  ·  0.15.0",Vector2(995,684),11,Color("e6eac7"),true)
 
 func draw_calendar(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color(0.07,0.18,0.20,0.94))
@@ -330,10 +330,10 @@ func draw_calendar(n: Node2D) -> void:
 	label(n,date_label(selected).to_upper(),Vector2(796,174),13,Color("547064"))
 	if not s.is_empty():
 		wrapped(n,s.title,Vector2(796,212),395,23,INK)
-		wrapped(n,s.description,Vector2(796,267),390,18,INK)
-		label(n,"A PLAYABLE CHAPTER",Vector2(796,387),11,Color("638070"))
+		wrapped(n,s.description,Vector2(796,267),390,15,INK)
+		label(n,"EXPERT ROUTE · TIMING & PRECISION" if s.get("difficulty",{}).get("edition","")=="expert" else "A PLAYABLE CHAPTER",Vector2(796,402),11,Color("638070"))
 		var result=store.data.results.get(selected,{})
-		label(n,("Best: "+clock_text(result.best_time)+"  ·  "+str(int(result.motes))+" sunmotes") if not result.is_empty() else ("Survival boss · five arenas" if s.has("boss") else "Explore · collect · reach the garden gate"),Vector2(796,415),15,INK)
+		label(n,("Best: "+clock_text(result.best_time)+"  ·  "+str(int(result.motes))+" sunmotes") if not result.is_empty() else ("Survival boss · five arenas" if s.has("boss") else "Explore · collect · reach the garden gate"),Vector2(796,434),14,INK)
 		button(n,"play","Enter this day   →",Rect2(796,472,400,54),true)
 	else:
 		label(n,"A day yet to be written",Vector2(796,225),28,INK,false,true)
@@ -432,7 +432,7 @@ func draw_settings(n: Node2D) -> void:
 
 func draw_about(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color(0.07,0.18,0.2,0.96))
-	label(n,"FIELD NOTES  /  FOUNDATION 0.14.0",Vector2(90,81),12,GOLD)
+	label(n,"FIELD NOTES  /  FOUNDATION 0.15.0",Vector2(90,81),12,GOLD)
 	label(n,"A whole year starts here.",Vector2(87,148),46,CREAM,false,true)
 	wrapped(n,"Yearbound is a platforming journey from 1 June to 31 May. Each date will become its own place: its own atmosphere, music and reason to take one more leap.",Vector2(90,213),750,23,CREAM)
 	wrapped(n,"This foundation contains "+str(stages.size())+" playable days, including the full June chapter and a sample in every other month. Follow the sunmotes, light the checkpoint lanterns and find each day's door. On 30 June, read the amber warnings and travel through five storm arenas to calm the Squallkeeper. There is no attack button.",Vector2(90,344),750,18,MUTED)

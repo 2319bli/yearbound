@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 13,
+  "revision": 16,
   "day": "04-11",
   "identity": "Rain arches and diagonal windows",
-  "intent": "Move through rain-washed archways, choosing low jumps or diagonal launches to fit the openings.",
+  "intent": "Move through rain-washed archways, choosing low jumps or diagonal launches to fit the openings. Expert redesign: rain conductors and closing blossom heads.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -17,7 +17,7 @@
   "sections": [
     {
       "name": "The first rain arch",
-      "lesson": "Small jumps fit beneath the rain arches",
+      "lesson": "Small jumps fit beneath the rain arches. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         0,
         0
@@ -737,6 +737,79 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "04-11-machine-0",
+          "x": 676.8,
+          "y": 432,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "04-11-machine-1",
+          "x": 1118.4,
+          "y": 480,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "04-11-machine-2",
+          "x": 1780.8,
+          "y": 384,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "04-11-machine-3",
+          "x": 2222.4,
+          "y": 600,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "04-11-machine-4",
+          "x": 2836.8,
+          "y": 432,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -839,7 +912,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "Small jumps fit beneath the rain arches"
+          "text": "The first rain arch\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -880,6 +953,22 @@
         },
         {
           "at": [
+            556.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            796.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             873.5999999999999,
             576
           ],
@@ -891,6 +980,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1001.7600000000001,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1235.04,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -922,6 +1027,22 @@
         },
         {
           "at": [
+            1660.8000000000002,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1900.8000000000002,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1977.6000000000001,
             528
           ],
@@ -933,6 +1054,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2105.76,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2339.04,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -964,6 +1101,22 @@
         },
         {
           "at": [
+            2716.8,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2956.8,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2985.6000000000004,
             576
           ],
@@ -992,7 +1145,7 @@
     },
     {
       "name": "Spray beside the blossom",
-      "lesson": "Rise with the spray · leave through the side opening",
+      "lesson": "Rise with the spray · leave through the side opening. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         3360,
         0
@@ -1558,7 +1711,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Rise with the spray · leave through the side opening"
+          "text": "Spray beside the blossom\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -1643,7 +1796,7 @@
     },
     {
       "name": "Between the rainbow arches",
-      "lesson": "Launch diagonally between the arch crowns",
+      "lesson": "Launch diagonally between the arch crowns. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         6336,
         0
@@ -2279,6 +2432,49 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "04-11-machine-5",
+          "x": 516.0,
+          "y": 240,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "04-11-machine-6",
+          "x": 1356.0,
+          "y": 168,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "04-11-machine-7",
+          "x": 2196.0,
+          "y": -144,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         }
       ],
       "zones": [],
@@ -2366,7 +2562,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Launch diagonally between the arch crowns"
+          "text": "Between the rainbow arches\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -2387,6 +2583,22 @@
         },
         {
           "at": [
+            397.2,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            634.8,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             648.0,
             384
           ],
@@ -2402,6 +2614,22 @@
         },
         {
           "at": [
+            1236.0,
+            192
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1476.0,
+            192
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1512.0,
             192
           ],
@@ -2414,6 +2642,22 @@
           ],
           "action": "dash",
           "surface": "wood"
+        },
+        {
+          "at": [
+            2077.2,
+            0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2314.8,
+            0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-7",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2453,7 +2697,7 @@
     },
     {
       "name": "The blossom arcade",
-      "lesson": "The arch height changes the jump you need",
+      "lesson": "The arch height changes the jump you need. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         9984,
         0
@@ -3237,6 +3481,77 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "04-11-machine-8",
+          "x": 676.8,
+          "y": 504,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "04-11-machine-9",
+          "x": 1166.4,
+          "y": 480,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "04-11-machine-10",
+          "x": 1852.8,
+          "y": 432,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "arc",
+          "id": "04-11-machine-11",
+          "x": 2318.4,
+          "y": 480,
+          "period": 3.59,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "04-11-machine-12",
+          "x": 2956.8,
+          "y": 504,
+          "period": 3.78,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -3340,7 +3655,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The arch height changes the jump you need"
+          "text": "The blossom arcade\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -3374,6 +3689,22 @@
         },
         {
           "at": [
+            556.8,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            796.8,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             921.5999999999999,
             528
           ],
@@ -3385,6 +3716,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1049.7600000000002,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1283.04,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-9",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3416,6 +3763,22 @@
         },
         {
           "at": [
+            1732.8000000000002,
+            576
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1972.8000000000002,
+            576
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-10",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2073.6000000000004,
             576
           ],
@@ -3427,6 +3790,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2201.76,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2435.04,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-11",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3458,6 +3837,22 @@
         },
         {
           "at": [
+            2836.8,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3076.8,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "04-11-machine-12",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3129.6000000000004,
             528
           ],
@@ -3486,7 +3881,7 @@
     },
     {
       "name": "The rainbow lookout",
-      "lesson": "Change direction around the garden’s high arches",
+      "lesson": "Change direction around the garden’s high arches. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         13536,
         0
@@ -4165,7 +4560,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Change direction around the garden’s high arches"
+          "text": "The rainbow lookout\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -4248,7 +4643,7 @@
     },
     {
       "name": "The final spring shower",
-      "lesson": "Carry the spray’s lift into the final dry landing",
+      "lesson": "Carry the spray’s lift into the final dry landing. The amber guide is safe; the bright beam is lethal.",
       "origin": [
         16992,
         0
@@ -4814,7 +5209,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Carry the spray’s lift into the final dry landing"
+          "text": "The final spring shower\nThe amber guide is safe; the bright beam is lethal."
         }
       ],
       "route": [
@@ -4904,5 +5299,11 @@
     "rows": 4,
     "inset": 2
   },
-  "journey": true
+  "journey": true,
+  "difficulty": {
+    "edition": "expert",
+    "signature": "arc",
+    "secondary": "bloom",
+    "mechanisms": 13
+  }
 }

@@ -3,7 +3,7 @@
   "id": "06-30",
   "title": "The Squallkeeper",
   "season": "boss",
-  "description": "Survive five connected storm arenas: first rain, moving terraces, a fleeing causeway, crosswinds and the final squall.",
+  "description": "Survive five connected storm arenas: first rain, moving terraces, a fleeing causeway, crosswinds and the final squall. Expert redesign: storm conductors and squall rotors.",
   "music": "res://audio/squall.wav",
   "spawn": [
     120,
@@ -1498,6 +1498,50 @@
       "direction": "down"
     },
     {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "06-30-machine-0",
+      "x": 5505.6,
+      "y": 384,
+      "period": 3.4,
+      "phase": 0.0,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "06-30-machine-1",
+      "x": 6297.6,
+      "y": 432,
+      "period": 3.59,
+      "phase": 0.71,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "06-30-machine-2",
+      "x": 7209.6,
+      "y": 384,
+      "period": 3.78,
+      "phase": 1.42,
+      "safe_seconds": 1.0,
+      "warning_seconds": 0.65,
+      "color": "b49364",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
+    },
+    {
       "type": "bramble",
       "x": 8736,
       "y": 600,
@@ -2443,27 +2487,27 @@
     {
       "x": 288,
       "y": 484,
-      "text": "The first squall\nRead the amber warning · dodge the falling seeds"
+      "text": "The first squall\nThe amber guide is safe; the bright beam is lethal."
     },
     {
       "x": 2064,
       "y": 484,
-      "text": "The wind-tossed terraces\nKeep moving between the terraces"
+      "text": "The wind-tossed terraces\nThe amber guide is safe; the bright beam is lethal."
     },
     {
       "x": 4464,
       "y": 484,
-      "text": "Run with the storm\nThe storm is behind you · keep travelling"
+      "text": "Run with the storm\nThe amber guide is safe; the bright beam is lethal."
     },
     {
       "x": 8304,
       "y": 484,
-      "text": "The crossing winds\nAlternate shelter and open crossings"
+      "text": "The crossing winds\nThe amber guide is safe; the bright beam is lethal."
     },
     {
       "x": 10608,
       "y": 484,
-      "text": "The last light returns\nSurvive the last squall · reach the light"
+      "text": "The last light returns\nThe amber guide is safe; the bright beam is lethal."
     }
   ],
   "goal": [
@@ -2484,8 +2528,8 @@
           120,
           624
         ],
-        "warning": 1.2,
-        "interval": 2.35
+        "warning": 1.056,
+        "interval": 1.504
       },
       {
         "name": "The wind-tossed terraces",
@@ -2497,8 +2541,8 @@
           2040,
           624
         ],
-        "warning": 1.1199999999999999,
-        "interval": 2.12
+        "warning": 0.986,
+        "interval": 1.357
       },
       {
         "name": "Run with the storm",
@@ -2523,8 +2567,8 @@
           8280,
           624
         ],
-        "warning": 0.96,
-        "interval": 1.6600000000000001
+        "warning": 0.845,
+        "interval": 1.062
       },
       {
         "name": "The last light returns",
@@ -2536,8 +2580,8 @@
           10584,
           624
         ],
-        "warning": 0.8799999999999999,
-        "interval": 1.4300000000000002
+        "warning": 0.774,
+        "interval": 0.915
       }
     ],
     "arena_x": 0
@@ -2545,7 +2589,7 @@
   "ground": {
     "y": 624
   },
-  "layout_revision": 14,
+  "layout_revision": 16,
   "decorations": [
     {
       "type": "boulder",
@@ -2750,7 +2794,7 @@
     "rooms": [
       {
         "name": "The first squall",
-        "lesson": "Read the amber warning · dodge the falling seeds",
+        "lesson": "Read the amber warning · dodge the falling seeds. The amber guide is safe; the bright beam is lethal.",
         "from_x": 0,
         "to_x": 1920,
         "start": [
@@ -2764,7 +2808,7 @@
       },
       {
         "name": "The wind-tossed terraces",
-        "lesson": "Keep moving between the terraces",
+        "lesson": "Keep moving between the terraces. The amber guide is safe; the bright beam is lethal.",
         "from_x": 1920,
         "to_x": 4320,
         "start": [
@@ -2778,7 +2822,7 @@
       },
       {
         "name": "Run with the storm",
-        "lesson": "The storm is behind you · keep travelling",
+        "lesson": "The storm is behind you · keep travelling. The amber guide is safe; the bright beam is lethal.",
         "from_x": 4320,
         "to_x": 8160,
         "start": [
@@ -2792,7 +2836,7 @@
       },
       {
         "name": "The crossing winds",
-        "lesson": "Alternate shelter and open crossings",
+        "lesson": "Alternate shelter and open crossings. The amber guide is safe; the bright beam is lethal.",
         "from_x": 8160,
         "to_x": 10464,
         "start": [
@@ -2806,7 +2850,7 @@
       },
       {
         "name": "The last light returns",
-        "lesson": "Survive the last squall · reach the light",
+        "lesson": "Survive the last squall · reach the light. The amber guide is safe; the bright beam is lethal.",
         "from_x": 10464,
         "to_x": 13056,
         "start": [
@@ -2942,6 +2986,24 @@
       },
       {
         "at": [
+          5406.24,
+          528
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          5604.96,
+          528
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-30-machine-0",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           5616,
           528
         ],
@@ -2966,6 +3028,24 @@
       },
       {
         "at": [
+          6222.24,
+          576
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          6420.96,
+          576
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-30-machine-1",
+        "travel_mode": "walk",
+        "room": 2
+      },
+      {
+        "at": [
           6432,
           576
         ],
@@ -2986,6 +3066,24 @@
           528
         ],
         "action": "jump",
+        "room": 2
+      },
+      {
+        "at": [
+          7089.6,
+          528
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          7329.6,
+          528
+        ],
+        "action": "mechanism",
+        "obstacle_id": "06-30-machine-2",
+        "travel_mode": "walk",
         "room": 2
       },
       {
@@ -3096,14 +3194,14 @@
     "spike_placements": 264,
     "visible_spikes": 1056,
     "vertical_travel": 288,
-    "intent": "Survive five connected storm arenas: first rain, moving terraces, a fleeing causeway, crosswinds and the final squall."
+    "intent": "Survive five connected storm arenas: first rain, moving terraces, a fleeing causeway, crosswinds and the final squall. Expert redesign: storm conductors and squall rotors."
   },
   "editor_version": 2,
   "design": {
     "identity": "The Squallkeeper",
     "blueprint": "res://content/layouts/06-30.json",
-    "intent": "Survive five connected storm arenas: first rain, moving terraces, a fleeing causeway, crosswinds and the final squall.",
-    "opening": "Read the amber warning · dodge the falling seeds"
+    "intent": "Survive five connected storm arenas: first rain, moving terraces, a fleeing causeway, crosswinds and the final squall. Expert redesign: storm conductors and squall rotors.",
+    "opening": "Read the amber warning · dodge the falling seeds. The amber guide is safe; the bright beam is lethal."
   },
   "journey_regions": [
     {
@@ -3164,5 +3262,11 @@
     "rows": 2,
     "inset": 2,
     "aftermath_cell": 5
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "arc",
+    "secondary": "windmill",
+    "mechanisms": 3
   }
 }

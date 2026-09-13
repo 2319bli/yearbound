@@ -1,29 +1,29 @@
 {
   "schema_version": 1,
-  "revision": 15,
+  "revision": 16,
   "day": "06-06",
   "identity": "Sunlight on the Waterwheel",
-  "intent": "Ride three paddle-wheel carousels and the great wheel itself; sluice currents push and drag over bramble basins while icicle drips fall through the machinery.",
+  "intent": "Ride three paddle-wheel carousels and the great wheel itself; sluice currents push and drag over bramble basins while icicle drips fall through the machinery. Expert redesign: counterturning waterwheels and pressurised sluices.",
   "world_top": -3072,
   "spawn": [
     120,
     624
   ],
-  "length": 16224,
+  "length": 20832,
   "goal": [
-    16104,
+    20712,
     624
   ],
   "journey": true,
   "sections": [
     {
       "name": "The riverside path",
-      "lesson": "Ride the sluice current, hop the root beds",
+      "lesson": "Ride the sluice current, hop the root beds. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         0,
         0
       ],
-      "width": 3168,
+      "width": 4704,
       "platforms": [
         {
           "x": 288,
@@ -48,6 +48,27 @@
           "h": 48,
           "kind": "block",
           "material": "log"
+        },
+        {
+          "x": 3264,
+          "y": 528,
+          "w": 336,
+          "h": 48,
+          "kind": "wood"
+        },
+        {
+          "x": 3792,
+          "y": 432,
+          "w": 336,
+          "h": 48,
+          "kind": "wood"
+        },
+        {
+          "x": 4320,
+          "y": 528,
+          "w": 288,
+          "h": 48,
+          "kind": "wood"
         }
       ],
       "hazards": [
@@ -128,6 +149,284 @@
           "phase": 1.8,
           "warning_seconds": 1.35,
           "floor_y": 624
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-06-machine-0",
+          "x": 2748.0,
+          "y": 456,
+          "period": 6.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-06-machine-800",
+          "x": 3432.0,
+          "y": 392,
+          "period": 6.4,
+          "phase": 1.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 96,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-06-machine-801",
+          "x": 3936.0,
+          "y": 288,
+          "period": 3.59,
+          "phase": 1.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-06-machine-802",
+          "x": 4464.0,
+          "y": 392,
+          "period": 7.5,
+          "phase": 2.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 96,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3264,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3312,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3360,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3408,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3840,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3888,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3936,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3984,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4032,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4080,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4128,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4176,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4224,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4272,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4320,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4368,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4416,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4464,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [
@@ -212,6 +511,18 @@
         [
           3050.0,
           559.0
+        ],
+        [
+          3432.0,
+          466
+        ],
+        [
+          3960.0,
+          370
+        ],
+        [
+          4464.0,
+          466
         ]
       ],
       "checkpoints": [],
@@ -311,7 +622,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The riverside path\nRide the sluice current, hop the root beds"
+          "text": "The riverside path\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -401,10 +712,81 @@
         },
         {
           "at": [
+            2628.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2868.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2952,
             624
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            3306,
+            528
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            3558,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-800",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
+            3834,
+            432
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            4086,
+            432
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-801",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
+            4362,
+            528
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            4566,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-802",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
+            4680,
+            624
+          ],
+          "action": "drop"
         }
       ],
       "visual": {
@@ -415,9 +797,9 @@
     },
     {
       "name": "The mill approach",
-      "lesson": "Board the paddle wheel to the sluice walk",
+      "lesson": "Board the paddle wheel to the sluice walk. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
-        3168,
+        4704,
         0
       ],
       "width": 3360,
@@ -957,6 +1339,22 @@
           "phase": 2.2,
           "warning_seconds": 1.35,
           "floor_y": 624
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-06-machine-1",
+          "x": 2892.0,
+          "y": 456,
+          "period": 6.95,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": 1
         }
       ],
       "zones": [],
@@ -1044,7 +1442,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The mill approach\nBoard the paddle wheel to the sluice walk"
+          "text": "The mill approach\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -1124,6 +1522,22 @@
         },
         {
           "at": [
+            2772.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3012.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-1",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3240,
             624
           ],
@@ -1138,12 +1552,12 @@
     },
     {
       "name": "Sunlight on the waterwheel",
-      "lesson": "Ride the great wheel to the high sluice",
+      "lesson": "Ride the great wheel to the high sluice. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
-        6528,
+        8064,
         0
       ],
-      "width": 3168,
+      "width": 4704,
       "platforms": [
         {
           "x": 240,
@@ -1324,6 +1738,27 @@
           "h": 48,
           "kind": "block",
           "material": "stone"
+        },
+        {
+          "x": 3264,
+          "y": 528,
+          "w": 336,
+          "h": 48,
+          "kind": "wood"
+        },
+        {
+          "x": 3792,
+          "y": 432,
+          "w": 336,
+          "h": 48,
+          "kind": "wood"
+        },
+        {
+          "x": 4320,
+          "y": 528,
+          "w": 288,
+          "h": 48,
+          "kind": "wood"
         }
       ],
       "hazards": [
@@ -1478,6 +1913,268 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-06-machine-820",
+          "x": 3432.0,
+          "y": 392,
+          "period": 6.4,
+          "phase": 0.2,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 96,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-06-machine-821",
+          "x": 3936.0,
+          "y": 288,
+          "period": 3.59,
+          "phase": 0.91,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-06-machine-822",
+          "x": 4464.0,
+          "y": 392,
+          "period": 7.5,
+          "phase": 1.62,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 96,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3264,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3312,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3360,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3408,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3840,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3888,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3936,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3984,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4032,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4080,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4128,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4176,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4224,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4272,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4320,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4368,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4416,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4464,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [
@@ -1546,6 +2243,18 @@
         [
           2950.0,
           559.0
+        ],
+        [
+          3432.0,
+          466
+        ],
+        [
+          3960.0,
+          370
+        ],
+        [
+          4464.0,
+          466
         ]
       ],
       "checkpoints": [
@@ -1610,7 +2319,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Sunlight on the waterwheel\nRide the great wheel to the high sluice"
+          "text": "Sunlight on the waterwheel\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -1692,6 +2401,61 @@
             624
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            3306,
+            528
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            3558,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-820",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
+            3834,
+            432
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            4086,
+            432
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-821",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
+            4362,
+            528
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            4566,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-822",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
+            4680,
+            624
+          ],
+          "action": "drop"
         }
       ],
       "visual": {
@@ -1702,9 +2466,9 @@
     },
     {
       "name": "Behind the mill",
-      "lesson": "Mind the dripping machinery and the sluice tongues",
+      "lesson": "Mind the dripping machinery and the sluice tongues. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
-        9696,
+        12768,
         0
       ],
       "width": 3456,
@@ -2138,6 +2902,20 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-06-machine-2",
+          "x": 2964.0,
+          "y": 480,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [
@@ -2252,7 +3030,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Behind the mill\nMind the dripping machinery and the sluice tongues"
+          "text": "Behind the mill\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -2337,6 +3115,22 @@
         },
         {
           "at": [
+            2868.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3108.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3240,
             624
           ],
@@ -2351,12 +3145,12 @@
     },
     {
       "name": "The rocky upstream",
-      "lesson": "One last wheel before the rocks",
+      "lesson": "One last wheel before the rocks. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
-        13152,
+        16224,
         0
       ],
-      "width": 3072,
+      "width": 4608,
       "platforms": [
         {
           "x": 240,
@@ -2529,6 +3323,27 @@
           "h": 48,
           "kind": "block",
           "material": "stone"
+        },
+        {
+          "x": 3168,
+          "y": 528,
+          "w": 336,
+          "h": 48,
+          "kind": "wood"
+        },
+        {
+          "x": 3696,
+          "y": 432,
+          "w": 336,
+          "h": 48,
+          "kind": "wood"
+        },
+        {
+          "x": 4224,
+          "y": 528,
+          "w": 288,
+          "h": 48,
+          "kind": "wood"
         }
       ],
       "hazards": [
@@ -2729,6 +3544,300 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-06-machine-3",
+          "x": 2340.0,
+          "y": 456,
+          "period": 8.05,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": 1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-06-machine-4",
+          "x": 2736.0,
+          "y": 456,
+          "period": 6.4,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-06-machine-840",
+          "x": 3336.0,
+          "y": 392,
+          "period": 6.4,
+          "phase": 2.4,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 96,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-06-machine-841",
+          "x": 3840.0,
+          "y": 288,
+          "period": 3.59,
+          "phase": 0.11,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "06-06-machine-842",
+          "x": 4368.0,
+          "y": 392,
+          "period": 7.5,
+          "phase": 0.82,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 96,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3264,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3312,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3360,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3408,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3840,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3888,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3936,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3984,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4032,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4080,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4128,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4176,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4224,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4272,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4320,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4368,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [],
@@ -2772,6 +3881,18 @@
         [
           2900.0,
           559.0
+        ],
+        [
+          3336.0,
+          466
+        ],
+        [
+          3864.0,
+          370
+        ],
+        [
+          4368.0,
+          466
         ]
       ],
       "checkpoints": [
@@ -2836,7 +3957,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The rocky upstream\nOne last wheel before the rocks"
+          "text": "The rocky upstream\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -2882,7 +4003,7 @@
             1440,
             432
           ],
-          "action": "drop"
+          "action": "fall_dash"
         },
         {
           "at": [
@@ -2900,6 +4021,22 @@
         },
         {
           "at": [
+            2220.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2460.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-3",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2520,
             624
           ],
@@ -2907,10 +4044,81 @@
         },
         {
           "at": [
+            2616.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2856.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2952,
             624
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            3210,
+            528
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            3462,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-840",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
+            3738,
+            432
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            3990,
+            432
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-841",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
+            4266,
+            528
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            4470,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-06-machine-842",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
+            4584,
+            624
+          ],
+          "action": "drop"
         }
       ],
       "visual": {
@@ -2926,5 +4134,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "windmill",
+    "secondary": "geyser",
+    "mechanisms": 14
   }
 }

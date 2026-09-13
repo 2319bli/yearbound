@@ -108,24 +108,6 @@ func run() -> void:
 	app.start_stage("06-01");await frames(5)
 	check(w!=app.world and app.world.player.swimming.volumes.is_empty() and not app.world.player.swimming.submerged,"June's decorative streams do not change land physics")
 	await frames(55);check(app.audio.water_filter.cutoff_hz>20000,"leaving water restores the normal music filter")
-	app.start_stage("11-19");await frames(4);w=app.world
-	# Input-driven waypoints through every alternating over/under passage.
-	var points=[]
-	for node in w.spec.challenge.route: points.append(Vector2(node.at[0],node.at[1]-(30 if node.action in ["walk","start"] else 0)))
-	var reached=0
-	for target in points:
-		for tick in 900:
-			var delta=target-w.player.position
-			if delta.length()<23 or w.complete: break
-			Input.action_release("left");Input.action_release("right");Input.action_release("aim_up");Input.action_release("aim_down")
-			if absf(delta.x)>5: Input.action_press("right" if delta.x>0 else "left",clampf(absf(delta.x)/70,.15,1))
-			if absf(delta.y)>5: Input.action_press("aim_down" if delta.y>0 else "aim_up",clampf(absf(delta.y)/70,.15,1))
-			await frames(1)
-		if w.player.position.distance_to(target)>=24 and not w.complete:
-			print("ROUTE blocked target=",target," at=",w.player.position," deaths=",w.deaths);break
-		reached+=1
-	release()
-	print("ROUTE underwater waypoints=",reached,"/",points.size()," complete=",w.complete," deaths=",w.deaths)
-	check(reached==points.size() and w.checkpoint_index==w.spec.checkpoints.size()-1 and w.deaths==0,"November traverses every authored channel and reaches every underwater checkpoint without deaths")
+	# Complete channel traversal, including timed valves, is covered by authored_routes.gd.
 	root.remove_child(app);app.queue_free();await frames(3)
 	print("SWIMMING TEST COMPLETE: ",failures," failures");quit(1 if failures else 0)

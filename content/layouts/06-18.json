@@ -65,12 +65,12 @@
       "hint": "Look beyond the main path."
     }
   ],
-  "revision": 15,
-  "intent": "A hedge maze of crumbling roofs and doubling-back paths: crawl corridors, roof runs, bramble dead-ends and a final climb to the raised terrace.",
+  "revision": 16,
+  "intent": "A hedge maze of crumbling roofs and doubling-back paths: crawl corridors, roof runs, bramble dead-ends and a final climb to the raised terrace. Expert redesign: moving hedge gates and closing maze rosettes.",
   "sections": [
     {
       "name": "The formal garden gate",
-      "lesson": "Crouch the clipped corridor, hop the beds, trust the crumbling roof",
+      "lesson": "Crouch the clipped corridor, hop the beds, trust the crumbling roof. Read the latch; dash through as the gate opens.",
       "origin": [
         0,
         0
@@ -194,6 +194,48 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-0",
+          "x": 1026.0,
+          "y": 480.0,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-1",
+          "x": 1558.0,
+          "y": 480.0,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-2",
+          "x": 2055.0,
+          "y": 480.0,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -348,7 +390,7 @@
         {
           "x": 240,
           "y": 484,
-          "text": "The formal garden gate\nCrouch the clipped corridor, hop the beds, trust the crumbling roof"
+          "text": "The formal garden gate\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -389,8 +431,31 @@
         },
         {
           "at": [
+            930.0,
+            624.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1170.0,
+            624.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1200.0,
             624.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1332,
+            624
           ],
           "action": "walk"
         },
@@ -400,6 +465,22 @@
             624.0
           ],
           "action": "short"
+        },
+        {
+          "at": [
+            1475.8,
+            624.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1688.2,
+            624.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -414,6 +495,22 @@
             624.0
           ],
           "action": "short"
+        },
+        {
+          "at": [
+            1959.0,
+            624.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2199.0,
+            624.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-2",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -445,6 +542,20 @@
         },
         {
           "at": [
+            3000,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3240,
+            624
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
             3400.0,
             624.0
           ],
@@ -459,7 +570,7 @@
     },
     {
       "name": "The hedge maze",
-      "lesson": "The path doubles back above the fountain wall · look beneath the ivy",
+      "lesson": "The path doubles back above the fountain wall · look beneath the ivy. Read the latch; dash through as the gate opens.",
       "origin": [
         3552,
         0
@@ -605,7 +716,7 @@
         {
           "x": 1824,
           "y": 336,
-          "w": 192,
+          "w": 288,
           "h": 48,
           "kind": "block",
           "material": "stone"
@@ -857,6 +968,75 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-3",
+          "x": 274.0,
+          "y": 480.0,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-4",
+          "x": 1256.0,
+          "y": 0.0,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-18-machine-5",
+          "x": 930.0,
+          "y": 600.0,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-6",
+          "x": 2244.0,
+          "y": 480.0,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-7",
+          "x": 4051.0,
+          "y": 480.0,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -1080,7 +1260,7 @@
         {
           "x": 200,
           "y": 484,
-          "text": "The hedge maze\nThe path doubles back above the fountain wall · look beneath the ivy"
+          "text": "The hedge maze\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -1093,17 +1273,33 @@
         },
         {
           "at": [
-            500.0,
+            178.0,
             624.0
           ],
           "action": "walk"
         },
         {
           "at": [
+            358,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-3",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
+            432,
+            336
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
             624.0,
             528.0
           ],
-          "action": "jump"
+          "action": "drop"
         },
         {
           "at": [
@@ -1128,8 +1324,8 @@
         },
         {
           "at": [
-            1920.0,
-            336.0
+            2064,
+            336
           ],
           "action": "walk"
         },
@@ -1146,6 +1342,22 @@
             144.0
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            1400.0,
+            144.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1160.0,
+            144.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-4",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1177,6 +1389,22 @@
         },
         {
           "at": [
+            810.0,
+            624.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1050.0,
+            624.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1100.0,
             624.0
           ],
@@ -1202,6 +1430,22 @@
             624.0
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            2148.0,
+            624.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2388.0,
+            624.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-6",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1275,6 +1519,22 @@
         },
         {
           "at": [
+            3955.0,
+            624.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4195.0,
+            624.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             4300.0,
             624.0
           ],
@@ -1289,7 +1549,7 @@
     },
     {
       "name": "The fountain courtyard",
-      "lesson": "Circle the fountain, then take the crumbling terrace walk high above it",
+      "lesson": "Circle the fountain, then take the crumbling terrace walk high above it. Read the latch; dash through as the gate opens.",
       "origin": [
         7968,
         0
@@ -1499,6 +1759,88 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-8",
+          "x": 851.0,
+          "y": 336.0,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-18-machine-9",
+          "x": 1475.0,
+          "y": 456.0,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-10",
+          "x": 1136.0,
+          "y": 96.0,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-11",
+          "x": 901.0,
+          "y": 336.0,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-12",
+          "x": 1451.0,
+          "y": 336.0,
+          "period": 3.78,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-18-machine-13",
+          "x": 3225.0,
+          "y": 216.0,
+          "period": 3.97,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -1610,7 +1952,7 @@
         {
           "x": 200,
           "y": 484,
-          "text": "The fountain courtyard\nCircle the fountain, then take the crumbling terrace walk high above it"
+          "text": "The fountain courtyard\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -1644,6 +1986,22 @@
         },
         {
           "at": [
+            755.0,
+            480.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            995.0,
+            480.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1050.0,
             480.0
           ],
@@ -1655,6 +2013,22 @@
             480.0
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            1362.5,
+            480.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1587.5,
+            480.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-9",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1686,6 +2060,22 @@
         },
         {
           "at": [
+            1280.0,
+            240.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1040.0,
+            240.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-10",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             700.0,
             240.0
           ],
@@ -1700,6 +2090,22 @@
         },
         {
           "at": [
+            812.5,
+            480.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1037.5,
+            480.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-11",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1050.0,
             480.0
           ],
@@ -1711,6 +2117,22 @@
             480.0
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            1362.5,
+            480.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1587.5,
+            480.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-12",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1756,6 +2178,22 @@
         },
         {
           "at": [
+            3105.0,
+            240.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3345.0,
+            240.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-13",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3400.0,
             240.0
           ],
@@ -1784,7 +2222,7 @@
     },
     {
       "name": "The hidden overgrown garden",
-      "lesson": "Bramble dead-ends below · the rotting causeway rides above the garden",
+      "lesson": "Bramble dead-ends below · the rotting causeway rides above the garden. Read the latch; dash through as the gate opens.",
       "origin": [
         11808,
         0
@@ -2416,6 +2854,19 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-18-machine-14",
+          "x": 548.0,
+          "y": 600.0,
+          "period": 4.16,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -2549,7 +3000,7 @@
         {
           "x": 200,
           "y": 484,
-          "text": "The hidden overgrown garden\nBramble dead-ends below · the rotting causeway rides above the garden"
+          "text": "The hidden overgrown garden\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -2559,6 +3010,22 @@
             624.0
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            428.0,
+            624.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            668.0,
+            624.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-14",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2674,7 +3141,7 @@
     },
     {
       "name": "The raised garden terrace",
-      "lesson": "Climb the gardener’s stair to the raised terrace and hold the line",
+      "lesson": "Climb the gardener’s stair to the raised terrace and hold the line. Read the latch; dash through as the gate opens.",
       "origin": [
         15936,
         0
@@ -3322,6 +3789,75 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-15",
+          "x": 234.0,
+          "y": 480.0,
+          "period": 3.4,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-16",
+          "x": 1376.0,
+          "y": -48.0,
+          "period": 3.59,
+          "phase": 2.36,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-17",
+          "x": 2258.0,
+          "y": -48.0,
+          "period": 3.78,
+          "phase": 0.07,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-18-machine-18",
+          "x": 3016.0,
+          "y": 72.0,
+          "period": 3.97,
+          "phase": 0.78,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "06-18-machine-19",
+          "x": 3732.0,
+          "y": -48.0,
+          "period": 4.16,
+          "phase": 1.49,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -3429,7 +3965,7 @@
         {
           "x": 200,
           "y": 484,
-          "text": "The raised garden terrace\nClimb the gardener’s stair and hold the line"
+          "text": "The raised garden terrace\nRead the latch; dash through as the gate opens."
         }
       ],
       "route": [
@@ -3439,6 +3975,22 @@
             624.0
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            138.0,
+            624.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            378.0,
+            624.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-15",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3498,6 +4050,22 @@
         },
         {
           "at": [
+            1280.0,
+            96.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1520.0,
+            96.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-16",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1800.0,
             96.0
           ],
@@ -3509,6 +4077,22 @@
             96.0
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            2162.0,
+            96.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2402.0,
+            96.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-17",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3526,6 +4110,22 @@
         },
         {
           "at": [
+            2896.0,
+            96.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3136.0,
+            96.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-18",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3200.0,
             96.0
           ],
@@ -3537,6 +4137,22 @@
             96.0
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            3636.0,
+            96.0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3876.0,
+            96.0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-18-machine-19",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -3552,5 +4168,11 @@
         "art_cell": 4
       }
     }
-  ]
+  ],
+  "difficulty": {
+    "edition": "expert",
+    "signature": "shutter",
+    "secondary": "bloom",
+    "mechanisms": 20
+  }
 }

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-04",
   "identity": "Sunpatches on the Orchard Wall",
-  "intent": "Travel from the country lane into orchard shade, then climb its stone boundary into sunlit terraces.",
+  "intent": "Travel from the country lane into orchard shade, then climb its stone boundary into sunlit terraces. Expert redesign: fruit weights and waking orchard briars.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The country lane",
-      "lesson": "Vault the orchard’s low boundary stones",
+      "lesson": "Vault the orchard’s low boundary stones. Follow the weight as it swings away.",
       "origin": [
         0,
         0
@@ -90,6 +90,84 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-0",
+          "x": 775.2,
+          "y": 600,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-1",
+          "x": 1183.2,
+          "y": 504,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-2",
+          "x": 1567.2,
+          "y": 600,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-3",
+          "x": 2023.2,
+          "y": 504,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-4",
+          "x": 2407.2,
+          "y": 600,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-5",
+          "x": 3127.2,
+          "y": 600,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -264,7 +342,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The country lane\nVault the orchard’s low boundary stones"
+          "text": "The country lane\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -305,6 +383,22 @@
         },
         {
           "at": [
+            673.6800000000001,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            876.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             888.0,
             624
           ],
@@ -316,6 +410,22 @@
             528
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            1081.68,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1284.72,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -333,6 +443,22 @@
         },
         {
           "at": [
+            1447.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1687.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1704.0,
             624
           ],
@@ -347,6 +473,22 @@
         },
         {
           "at": [
+            1903.1999999999998,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2143.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-3",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2160,
             528
           ],
@@ -358,6 +500,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2305.68,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2508.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-4",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -389,6 +547,22 @@
         },
         {
           "at": [
+            3025.68,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3228.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3240.0,
             624
           ],
@@ -403,7 +577,7 @@
     },
     {
       "name": "The orchard outskirts",
-      "lesson": "Cross between the first tree terraces",
+      "lesson": "Cross between the first tree terraces. Follow the weight as it swings away.",
       "origin": [
         3360,
         0
@@ -754,7 +928,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The orchard outskirts\nCross between the first tree terraces"
+          "text": "The orchard outskirts\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -813,7 +987,7 @@
     },
     {
       "name": "Inside the orchard",
-      "lesson": "Thread the branch passages in the shade",
+      "lesson": "Thread the branch passages in the shade. Follow the weight as it swings away.",
       "origin": [
         6720,
         0
@@ -1310,7 +1484,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Inside the orchard\nThread the branch passages in the shade"
+          "text": "Inside the orchard\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -1400,7 +1574,7 @@
     },
     {
       "name": "The old stone wall",
-      "lesson": "Climb the wall’s changing faces",
+      "lesson": "Climb the wall’s changing faces. Follow the weight as it swings away.",
       "origin": [
         10368,
         0
@@ -1968,6 +2142,19 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-6",
+          "x": 2208.0,
+          "y": -360,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -2107,7 +2294,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The old stone wall\nClimb the wall’s changing faces"
+          "text": "The old stone wall\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -2176,6 +2363,22 @@
         },
         {
           "at": [
+            2100.0,
+            -336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2316.0,
+            -336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2328.0,
             -336
           ],
@@ -2211,7 +2414,7 @@
     },
     {
       "name": "The upper sun terraces",
-      "lesson": "Wide terraces open into the light",
+      "lesson": "Wide terraces open into the light. Follow the weight as it swings away.",
       "origin": [
         13920,
         -768
@@ -2300,6 +2503,101 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-7",
+          "x": 487.2,
+          "y": 504,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-8",
+          "x": 895.2,
+          "y": 600,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-04-machine-9",
+          "x": 1423.2,
+          "y": 293,
+          "period": 5.2,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 140,
+          "head_radius": 21,
+          "swing": 0.65
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-10",
+          "x": 1879.2,
+          "y": 600,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "06-04-machine-11",
+          "x": 2407.2,
+          "y": 322,
+          "period": 6.0,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 158,
+          "head_radius": 21,
+          "swing": 1.02
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-12",
+          "x": 2863.2,
+          "y": 600,
+          "period": 3.78,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "06-04-machine-13",
+          "x": 3607.2,
+          "y": 600,
+          "period": 3.97,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "9f7080",
+          "head_radius": 38
         }
       ],
       "zones": [],
@@ -2479,7 +2777,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The upper sun terraces\nWide terraces open into the light"
+          "text": "The upper sun terraces\nFollow the weight as it swings away."
         }
       ],
       "route": [
@@ -2506,6 +2804,22 @@
         },
         {
           "at": [
+            367.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            607.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             624,
             528
           ],
@@ -2517,6 +2831,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            775.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1015.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-8",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2534,6 +2864,22 @@
         },
         {
           "at": [
+            1303.2,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1543.2,
+            480
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-9",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1584,
             480
           ],
@@ -2545,6 +2891,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1759.1999999999998,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1999.1999999999998,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-10",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2562,6 +2924,22 @@
         },
         {
           "at": [
+            2287.2,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2527.2,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-11",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2592,
             528
           ],
@@ -2573,6 +2951,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2743.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2983.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-12",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2604,6 +2998,22 @@
         },
         {
           "at": [
+            3505.68,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3708.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-04-machine-13",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3720.0,
             624
           ],
@@ -2623,5 +3033,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "pendulum",
+    "secondary": "bloom",
+    "mechanisms": 14
   }
 }

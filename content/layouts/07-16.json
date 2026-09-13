@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 15,
+  "revision": 16,
   "day": "07-16",
   "identity": "Barley tailwind sprint",
-  "intent": "Tailwind sprint through the barley: pulsing gusts, polished ice lanes with stone braking bays and awn brambles. Read the gust, commit, brake on stone.",
+  "intent": "Tailwind sprint through the barley: pulsing gusts, polished ice lanes with stone braking bays and awn brambles. Read the gust, commit, brake on stone. Expert redesign: barley fans and fast harvest gates.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -17,7 +17,7 @@
   "sections": [
     {
       "name": "The hot tailwind",
-      "lesson": "The wind gusts and dies · vault the awn beds, brake on the stacks",
+      "lesson": "The wind gusts and dies · vault the awn beds, brake on the stacks. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         0,
         0
@@ -204,7 +204,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The wind gusts and dies · vault the awn beds"
+          "text": "The hot tailwind\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -315,7 +315,7 @@
     },
     {
       "name": "Polished threshing boards",
-      "lesson": "Carry speed across the polished ice · stop on stone",
+      "lesson": "Carry speed across the polished ice · stop on stone. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         3264,
         0
@@ -590,7 +590,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Carry speed across the smooth runs · stop on stone"
+          "text": "Polished threshing boards\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -705,7 +705,7 @@
     },
     {
       "name": "Between the harvest walls",
-      "lesson": "Gusting walls of barley · vault low between the awns",
+      "lesson": "Gusting walls of barley · vault low between the awns. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         6528,
         0
@@ -903,6 +903,20 @@
           "w": 48,
           "h": 24,
           "direction": "down"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "07-16-machine-0",
+          "x": 2988.0,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [
@@ -999,7 +1013,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Gusting headwind pockets · keep your footing"
+          "text": "Between the harvest walls\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -1096,6 +1110,22 @@
         },
         {
           "at": [
+            2893.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3130.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "07-16-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3144.0,
             624
           ],
@@ -1110,7 +1140,7 @@
     },
     {
       "name": "The granary walk",
-      "lesson": "Climb onto the granary roofs above the heat",
+      "lesson": "Climb onto the granary roofs above the heat. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         9792,
         0
@@ -1746,6 +1776,50 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "07-16-machine-1",
+          "x": 516.0,
+          "y": 240,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "07-16-machine-2",
+          "x": 1428.0,
+          "y": 24,
+          "period": 7.5,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 3,
+          "thickness": 7,
+          "rotation_direction": -1
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "07-16-machine-3",
+          "x": 2268.0,
+          "y": -144,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -1833,7 +1907,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Climb onto the granary roofs above the heat"
+          "text": "The granary walk\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -1854,6 +1928,22 @@
         },
         {
           "at": [
+            420.0,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            660.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "07-16-machine-1",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             696.0,
             384
           ],
@@ -1869,6 +1959,22 @@
         },
         {
           "at": [
+            1308.0,
+            192
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1548.0,
+            192
+          ],
+          "action": "mechanism",
+          "obstacle_id": "07-16-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1608.0,
             192
           ],
@@ -1881,6 +1987,22 @@
           ],
           "action": "dash",
           "surface": "wood"
+        },
+        {
+          "at": [
+            2173.2,
+            0
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2410.8,
+            0
+          ],
+          "action": "mechanism",
+          "obstacle_id": "07-16-machine-3",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -1920,7 +2042,7 @@
     },
     {
       "name": "The long hot straight",
-      "lesson": "Commit to the cuts between gusts, then brake on the wide stacks",
+      "lesson": "Commit to the cuts between gusts, then brake on the wide stacks. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         13440,
         0
@@ -2040,6 +2162,34 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "07-16-machine-4",
+          "x": 2556.0,
+          "y": 480,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "07-16-machine-5",
+          "x": 3372.0,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [
@@ -2132,7 +2282,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Commit between gusts · the stacks are your brakes"
+          "text": "The long hot straight\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -2201,6 +2351,22 @@
         },
         {
           "at": [
+            2461.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2698.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "07-16-machine-4",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2712.0,
             624
           ],
@@ -2222,6 +2388,22 @@
         },
         {
           "at": [
+            3277.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3514.8,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "07-16-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3528.0,
             624
           ],
@@ -2236,7 +2418,7 @@
     },
     {
       "name": "The evening headwind",
-      "lesson": "The last run pushes back in waves",
+      "lesson": "The last run pushes back in waves. Pass behind a turning sail; the gold edge is dangerous.",
       "origin": [
         17088,
         0
@@ -2332,6 +2514,22 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "windmill",
+          "id": "07-16-machine-6",
+          "x": 3180.0,
+          "y": 456,
+          "period": 7.5,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "radius": 132,
+          "blades": 4,
+          "thickness": 7,
+          "rotation_direction": -1
         }
       ],
       "zones": [
@@ -2428,7 +2626,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The evening wind pushes back in waves"
+          "text": "The evening headwind\nPass behind a turning sail; the gold edge is dangerous."
         }
       ],
       "route": [
@@ -2525,6 +2723,22 @@
         },
         {
           "at": [
+            3060.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3300.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "07-16-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3336.0,
             624
           ],
@@ -2544,5 +2758,11 @@
     "rows": 4,
     "inset": 2
   },
-  "journey": true
+  "journey": true,
+  "difficulty": {
+    "edition": "expert",
+    "signature": "windmill",
+    "secondary": "shutter",
+    "mechanisms": 7
+  }
 }

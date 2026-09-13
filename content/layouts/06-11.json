@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 16,
   "day": "06-11",
   "identity": "Riverside Rush",
-  "intent": "Follow the upper river into rapids, race across bridges, climb the cliffs, then rush downhill alongside the water.",
+  "intent": "Follow the upper river into rapids, race across bridges, climb the cliffs, then rush downhill alongside the water. Expert redesign: river jets and drifting log cutters.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -18,7 +18,7 @@
   "sections": [
     {
       "name": "The upper riverbank",
-      "lesson": "Keep your rhythm beside the current",
+      "lesson": "Keep your rhythm beside the current. Wait for the spout to die, then cross the vent.",
       "origin": [
         0,
         0
@@ -82,6 +82,90 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-0",
+          "x": 751.2,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.0,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-1",
+          "x": 1159.2,
+          "y": 384,
+          "period": 3.59,
+          "phase": 0.71,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-2",
+          "x": 1567.2,
+          "y": 480,
+          "period": 3.78,
+          "phase": 1.42,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-11-machine-3",
+          "x": 2047.2,
+          "y": 503,
+          "period": 3.97,
+          "phase": 2.13,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-4",
+          "x": 2431.2,
+          "y": 480,
+          "period": 4.16,
+          "phase": 2.84,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-5",
+          "x": 3199.2,
+          "y": 480,
+          "period": 3.4,
+          "phase": 0.55,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -256,7 +340,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "The upper riverbank\nKeep your rhythm beside the current"
+          "text": "The upper riverbank\nWait for the spout to die, then cross the vent."
         }
       ],
       "route": [
@@ -297,6 +381,22 @@
         },
         {
           "at": [
+            673.6800000000001,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            876.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-0",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             888.0,
             624
           ],
@@ -308,6 +408,22 @@
             528
           ],
           "action": "jump"
+        },
+        {
+          "at": [
+            1081.68,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1284.72,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-1",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -325,6 +441,22 @@
         },
         {
           "at": [
+            1471.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1711.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-2",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1752.0,
             624
           ],
@@ -339,6 +471,22 @@
         },
         {
           "at": [
+            1945.6799999999998,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2148.72,
+            528
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-3",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2160,
             528
           ],
@@ -350,6 +498,22 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            2335.2,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2575.2,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-4",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -381,6 +545,22 @@
         },
         {
           "at": [
+            3121.68,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3324.72,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-5",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3336.0,
             624
           ],
@@ -395,7 +575,7 @@
     },
     {
       "name": "At the rapids edge",
-      "lesson": "Bounce over the racing water",
+      "lesson": "Bounce over the racing water. Wait for the spout to die, then cross the vent.",
       "origin": [
         3456,
         0
@@ -864,7 +1044,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "At the rapids edge\nBounce over the racing water"
+          "text": "At the rapids edge\nWait for the spout to die, then cross the vent."
         }
       ],
       "route": [
@@ -931,7 +1111,7 @@
     },
     {
       "name": "The bridge network",
-      "lesson": "Use the travelling bridge deck",
+      "lesson": "Use the travelling bridge deck. Wait for the spout to die, then cross the vent.",
       "origin": [
         7008,
         0
@@ -1329,6 +1509,20 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-6",
+          "x": 3252.0,
+          "y": 480,
+          "period": 3.59,
+          "phase": 1.26,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -1436,7 +1630,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The bridge network\nUse the travelling bridge deck"
+          "text": "The bridge network\nWait for the spout to die, then cross the vent."
         }
       ],
       "route": [
@@ -1509,6 +1703,22 @@
         },
         {
           "at": [
+            3156.0,
+            624
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3396.0,
+            624
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-6",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3432.0,
             624
           ],
@@ -1523,7 +1733,7 @@
     },
     {
       "name": "The riverside cliffs",
-      "lesson": "Gain the high cliff path",
+      "lesson": "Gain the high cliff path. Wait for the spout to die, then cross the vent.",
       "origin": [
         10560,
         0
@@ -2139,6 +2349,62 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-11-machine-7",
+          "x": 1248.0,
+          "y": 215,
+          "period": 3.78,
+          "phase": 1.97,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-8",
+          "x": 1416.0,
+          "y": -288,
+          "period": 3.97,
+          "phase": 2.68,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-9",
+          "x": 2304.0,
+          "y": -480,
+          "period": 4.16,
+          "phase": 0.39,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-10",
+          "x": 3144.0,
+          "y": -288,
+          "period": 3.4,
+          "phase": 1.1,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [],
@@ -2282,7 +2548,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The riverside cliffs\nGain the high cliff path"
+          "text": "The riverside cliffs\nWait for the spout to die, then cross the vent."
         }
       ],
       "route": [
@@ -2316,6 +2582,22 @@
         },
         {
           "at": [
+            1140.0,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1356.0,
+            240
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-7",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1368.0,
             240
           ],
@@ -2344,6 +2626,22 @@
         },
         {
           "at": [
+            1332.0,
+            -144
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1548.0,
+            -144
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-8",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             1560.0,
             -144
           ],
@@ -2358,6 +2656,22 @@
         },
         {
           "at": [
+            2208.0,
+            -336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2448.0,
+            -336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-9",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2472.0,
             -336
           ],
@@ -2369,6 +2683,22 @@
             -144
           ],
           "action": "dash"
+        },
+        {
+          "at": [
+            3060.0,
+            -144
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3276.0,
+            -144
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-10",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2393,7 +2723,7 @@
     },
     {
       "name": "Down beside the river",
-      "lesson": "Carry the current’s direction into the descent",
+      "lesson": "Carry the current’s direction into the descent. Wait for the spout to die, then cross the vent.",
       "origin": [
         14400,
         -768
@@ -2465,6 +2795,76 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-11",
+          "x": 528.0,
+          "y": 624,
+          "period": 3.59,
+          "phase": 1.81,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-12",
+          "x": 1416.0,
+          "y": 816,
+          "period": 3.78,
+          "phase": 2.52,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-13",
+          "x": 2400.0,
+          "y": 1056,
+          "period": 3.97,
+          "phase": 0.23,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "06-11-machine-14",
+          "x": 3336.0,
+          "y": 1367,
+          "period": 4.16,
+          "phase": 0.94,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "a0b9bd",
+          "head_radius": 22,
+          "travel": 38
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "geyser",
+          "id": "06-11-machine-15",
+          "x": 3660.0,
+          "y": 1248,
+          "period": 3.4,
+          "phase": 1.65,
+          "safe_seconds": 1.0,
+          "warning_seconds": 0.65,
+          "color": "b49364",
+          "w": 48,
+          "h": 144
         }
       ],
       "zones": [
@@ -2584,7 +2984,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Down beside the river\nCarry the current’s direction into the descent"
+          "text": "Down beside the river\nWait for the spout to die, then cross the vent."
         }
       ],
       "route": [
@@ -2604,6 +3004,22 @@
         },
         {
           "at": [
+            444.0,
+            768
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            660.0,
+            768
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-11",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             672,
             768
           ],
@@ -2615,6 +3031,22 @@
             960
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1320.0,
+            960
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1560.0,
+            960
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-12",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2632,6 +3064,22 @@
         },
         {
           "at": [
+            2304.0,
+            1200
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2544.0,
+            1200
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-13",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             2592,
             1200
           ],
@@ -2646,10 +3094,42 @@
         },
         {
           "at": [
+            3228.0,
+            1392
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3444.0,
+            1392
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-14",
+          "travel_mode": "walk"
+        },
+        {
+          "at": [
             3456,
             1392
           ],
           "action": "walk"
+        },
+        {
+          "at": [
+            3564.0,
+            1392
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3804.0,
+            1392
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-11-machine-15",
+          "travel_mode": "walk"
         },
         {
           "at": [
@@ -2672,5 +3152,11 @@
     "columns": 3,
     "rows": 2,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "geyser",
+    "secondary": "sawrail",
+    "mechanisms": 16
   }
 }

@@ -3,7 +3,7 @@
   "id": "11-19",
   "title": "Lanterns Beneath the Flood",
   "season": "autumn",
-  "description": "Swim through offset wall openings, manage currents, and change depth throughout the route.",
+  "description": "Swim through offset wall openings, manage currents, and change depth throughout the route. Expert redesign: submerged sluice doors and algae cutters.",
   "music": "res://audio/november.wav",
   "terrain_style": "november",
   "grid_size": 48,
@@ -19,7 +19,7 @@
   "ground": {
     "y": 624
   },
-  "layout_revision": 13,
+  "layout_revision": 16,
   "abilities": [
     "charge_dash"
   ],
@@ -641,6 +641,62 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-0",
+      "x": 360.0,
+      "y": 192,
+      "period": 4.2,
+      "phase": 0.0,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-1",
+      "x": 840.0,
+      "y": -96,
+      "period": 4.39,
+      "phase": 0.71,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-2",
+      "x": 1368.0,
+      "y": -432,
+      "period": 4.58,
+      "phase": 1.42,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "sawrail",
+      "id": "11-19-machine-3",
+      "x": 1968.0,
+      "y": 167,
+      "period": 4.7700000000000005,
+      "phase": 2.13,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "a0b9bd",
+      "head_radius": 22,
+      "travel": 38
+    },
+    {
       "type": "bramble",
       "x": 2928,
       "y": -576,
@@ -769,6 +825,62 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-4",
+      "x": 2952.0,
+      "y": -528,
+      "period": 4.96,
+      "phase": 2.84,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-5",
+      "x": 3480.0,
+      "y": -288,
+      "period": 4.2,
+      "phase": 0.55,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "sawrail",
+      "id": "11-19-machine-6",
+      "x": 4032.0,
+      "y": 71,
+      "period": 4.39,
+      "phase": 1.26,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "a0b9bd",
+      "head_radius": 22,
+      "travel": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-7",
+      "x": 4584.0,
+      "y": 192,
+      "period": 4.58,
+      "phase": 1.97,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
       "type": "bramble",
       "x": 5616,
       "y": 144,
@@ -895,6 +1007,62 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-8",
+      "x": 5640.0,
+      "y": 144,
+      "period": 4.7700000000000005,
+      "phase": 2.68,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "sawrail",
+      "id": "11-19-machine-9",
+      "x": 6192.0,
+      "y": -361,
+      "period": 4.96,
+      "phase": 0.39,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "a0b9bd",
+      "head_radius": 22,
+      "travel": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-10",
+      "x": 6744.0,
+      "y": 96,
+      "period": 4.2,
+      "phase": 1.1,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-11",
+      "x": 7368.0,
+      "y": -384,
+      "period": 4.39,
+      "phase": 1.81,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
     },
     {
       "type": "bramble",
@@ -1057,6 +1225,76 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "sawrail",
+      "id": "11-19-machine-12",
+      "x": 8448.0,
+      "y": 311,
+      "period": 4.58,
+      "phase": 2.52,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "a0b9bd",
+      "head_radius": 22,
+      "travel": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-13",
+      "x": 8952.0,
+      "y": -144,
+      "period": 4.7700000000000005,
+      "phase": 0.23,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-14",
+      "x": 9480.0,
+      "y": -576,
+      "period": 4.96,
+      "phase": 0.94,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-15",
+      "x": 10056.0,
+      "y": -240,
+      "period": 4.2,
+      "phase": 1.65,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "sawrail",
+      "id": "11-19-machine-16",
+      "x": 10608.0,
+      "y": 263,
+      "period": 4.39,
+      "phase": 2.36,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "a0b9bd",
+      "head_radius": 22,
+      "travel": 38
+    },
+    {
       "type": "bramble",
       "x": 11568,
       "y": -480,
@@ -1183,6 +1421,62 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-17",
+      "x": 11592.0,
+      "y": -432,
+      "period": 4.58,
+      "phase": 0.07,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-18",
+      "x": 12168.0,
+      "y": 144,
+      "period": 4.7700000000000005,
+      "phase": 0.78,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-19",
+      "x": 12744.0,
+      "y": -528,
+      "period": 4.96,
+      "phase": 1.49,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "sawrail",
+      "id": "11-19-machine-20",
+      "x": 13392.0,
+      "y": 167,
+      "period": 4.2,
+      "phase": 2.2,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "a0b9bd",
+      "head_radius": 22,
+      "travel": 38
     },
     {
       "type": "bramble",
@@ -1343,6 +1637,76 @@
       "w": 48,
       "h": 24,
       "direction": "up"
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-21",
+      "x": 14472.0,
+      "y": 192,
+      "period": 4.39,
+      "phase": 2.91,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-22",
+      "x": 15000.0,
+      "y": -336,
+      "period": 4.58,
+      "phase": 0.62,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "sawrail",
+      "id": "11-19-machine-23",
+      "x": 15600.0,
+      "y": -457,
+      "period": 4.7700000000000005,
+      "phase": 1.33,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "a0b9bd",
+      "head_radius": 22,
+      "travel": 38
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-24",
+      "x": 16152.0,
+      "y": -144,
+      "period": 4.96,
+      "phase": 2.04,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "11-19-machine-25",
+      "x": 16680.0,
+      "y": 192,
+      "period": 4.2,
+      "phase": 2.75,
+      "safe_seconds": 1.6,
+      "warning_seconds": 0.65,
+      "color": "64a8af",
+      "w": 48,
+      "h": 144
     }
   ],
   "motes": [
@@ -1993,32 +2357,32 @@
     {
       "x": 288,
       "y": 388,
-      "text": "Swim up to the first opening · down to the next"
+      "text": "The flooded entrance\nRead the latch; dash through as the gate opens."
     },
     {
       "x": 2736,
       "y": 388,
-      "text": "Follow the openings down through the lock"
+      "text": "The descending lock\nRead the latch; dash through as the gate opens."
     },
     {
       "x": 5424,
       "y": 388,
-      "text": "Reverse depth between the long beams"
+      "text": "Between the sunken beams\nRead the latch; dash through as the gate opens."
     },
     {
       "x": 8208,
       "y": 388,
-      "text": "Climb to the bell chamber, then dive to the outlet"
+      "text": "The bell chamber\nRead the latch; dash through as the gate opens."
     },
     {
       "x": 11376,
       "y": 388,
-      "text": "Use the open chamber to steady yourself before each current"
+      "text": "Against the sluice current\nRead the latch; dash through as the gate opens."
     },
     {
       "x": 14256,
       "y": 388,
-      "text": "Follow the lanterns through the final changes in depth"
+      "text": "The last submerged passage\nRead the latch; dash through as the gate opens."
     }
   ],
   "decorations": [
@@ -2306,7 +2670,7 @@
     "rooms": [
       {
         "name": "The flooded entrance",
-        "lesson": "Swim up to the first opening · down to the next",
+        "lesson": "Swim up to the first opening · down to the next. Read the latch; dash through as the gate opens.",
         "from_x": 0,
         "to_x": 2592,
         "start": [
@@ -2320,7 +2684,7 @@
       },
       {
         "name": "The descending lock",
-        "lesson": "Follow the openings down through the lock",
+        "lesson": "Follow the openings down through the lock. Read the latch; dash through as the gate opens.",
         "from_x": 2592,
         "to_x": 5280,
         "start": [
@@ -2334,7 +2698,7 @@
       },
       {
         "name": "Between the sunken beams",
-        "lesson": "Reverse depth between the long beams",
+        "lesson": "Reverse depth between the long beams. Read the latch; dash through as the gate opens.",
         "from_x": 5280,
         "to_x": 8064,
         "start": [
@@ -2348,7 +2712,7 @@
       },
       {
         "name": "The bell chamber",
-        "lesson": "Climb to the bell chamber, then dive to the outlet",
+        "lesson": "Climb to the bell chamber, then dive to the outlet. Read the latch; dash through as the gate opens.",
         "from_x": 8064,
         "to_x": 11232,
         "start": [
@@ -2362,7 +2726,7 @@
       },
       {
         "name": "Against the sluice current",
-        "lesson": "Use the open chamber to steady yourself before each current",
+        "lesson": "Use the open chamber to steady yourself before each current. Read the latch; dash through as the gate opens.",
         "from_x": 11232,
         "to_x": 14112,
         "start": [
@@ -2376,7 +2740,7 @@
       },
       {
         "name": "The last submerged passage",
-        "lesson": "Follow the lanterns through the final changes in depth",
+        "lesson": "Follow the lanterns through the final changes in depth. Read the latch; dash through as the gate opens.",
         "from_x": 14112,
         "to_x": 17376,
         "start": [
@@ -2416,6 +2780,24 @@
       },
       {
         "at": [
+          264.0,
+          336
+        ],
+        "action": "swim",
+        "room": 0
+      },
+      {
+        "at": [
+          504.0,
+          336
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-0",
+        "travel_mode": "swim",
+        "room": 0
+      },
+      {
+        "at": [
           528,
           336
         ],
@@ -2428,6 +2810,24 @@
           48
         ],
         "action": "swim",
+        "room": 0
+      },
+      {
+        "at": [
+          744.0,
+          48
+        ],
+        "action": "swim",
+        "room": 0
+      },
+      {
+        "at": [
+          984.0,
+          48
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-1",
+        "travel_mode": "swim",
         "room": 0
       },
       {
@@ -2448,6 +2848,24 @@
       },
       {
         "at": [
+          1272.0,
+          -288
+        ],
+        "action": "swim",
+        "room": 0
+      },
+      {
+        "at": [
+          1512.0,
+          -288
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-2",
+        "travel_mode": "swim",
+        "room": 0
+      },
+      {
+        "at": [
           1536,
           -288
         ],
@@ -2460,6 +2878,24 @@
           192
         ],
         "action": "swim",
+        "room": 0
+      },
+      {
+        "at": [
+          1848.0,
+          192
+        ],
+        "action": "swim",
+        "room": 0
+      },
+      {
+        "at": [
+          2088.0,
+          192
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-3",
+        "travel_mode": "swim",
         "room": 0
       },
       {
@@ -2504,6 +2940,24 @@
       },
       {
         "at": [
+          2856.0,
+          -384
+        ],
+        "action": "swim",
+        "room": 1
+      },
+      {
+        "at": [
+          3096.0,
+          -384
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-4",
+        "travel_mode": "swim",
+        "room": 1
+      },
+      {
+        "at": [
           3120,
           -384
         ],
@@ -2516,6 +2970,24 @@
           -144
         ],
         "action": "swim",
+        "room": 1
+      },
+      {
+        "at": [
+          3384.0,
+          -144
+        ],
+        "action": "swim",
+        "room": 1
+      },
+      {
+        "at": [
+          3624.0,
+          -144
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-5",
+        "travel_mode": "swim",
         "room": 1
       },
       {
@@ -2536,6 +3008,24 @@
       },
       {
         "at": [
+          3912.0,
+          96
+        ],
+        "action": "swim",
+        "room": 1
+      },
+      {
+        "at": [
+          4152.0,
+          96
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-6",
+        "travel_mode": "swim",
+        "room": 1
+      },
+      {
+        "at": [
           4176,
           96
         ],
@@ -2548,6 +3038,24 @@
           336
         ],
         "action": "swim",
+        "room": 1
+      },
+      {
+        "at": [
+          4488.0,
+          336
+        ],
+        "action": "swim",
+        "room": 1
+      },
+      {
+        "at": [
+          4728.0,
+          336
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-7",
+        "travel_mode": "swim",
         "room": 1
       },
       {
@@ -2592,6 +3100,24 @@
       },
       {
         "at": [
+          5544.0,
+          288
+        ],
+        "action": "swim",
+        "room": 2
+      },
+      {
+        "at": [
+          5784.0,
+          288
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-8",
+        "travel_mode": "swim",
+        "room": 2
+      },
+      {
+        "at": [
           5808,
           288
         ],
@@ -2604,6 +3130,24 @@
           -336
         ],
         "action": "swim",
+        "room": 2
+      },
+      {
+        "at": [
+          6072.0,
+          -336
+        ],
+        "action": "swim",
+        "room": 2
+      },
+      {
+        "at": [
+          6312.0,
+          -336
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-9",
+        "travel_mode": "swim",
         "room": 2
       },
       {
@@ -2624,6 +3168,24 @@
       },
       {
         "at": [
+          6648.0,
+          240
+        ],
+        "action": "swim",
+        "room": 2
+      },
+      {
+        "at": [
+          6888.0,
+          240
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-10",
+        "travel_mode": "swim",
+        "room": 2
+      },
+      {
+        "at": [
           6912,
           240
         ],
@@ -2636,6 +3198,24 @@
           -240
         ],
         "action": "swim",
+        "room": 2
+      },
+      {
+        "at": [
+          7272.0,
+          -240
+        ],
+        "action": "swim",
+        "room": 2
+      },
+      {
+        "at": [
+          7512.0,
+          -240
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-11",
+        "travel_mode": "swim",
         "room": 2
       },
       {
@@ -2680,6 +3260,24 @@
       },
       {
         "at": [
+          8328.0,
+          336
+        ],
+        "action": "swim",
+        "room": 3
+      },
+      {
+        "at": [
+          8568.0,
+          336
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-12",
+        "travel_mode": "swim",
+        "room": 3
+      },
+      {
+        "at": [
           8592,
           336
         ],
@@ -2692,6 +3290,24 @@
           0
         ],
         "action": "swim",
+        "room": 3
+      },
+      {
+        "at": [
+          8856.0,
+          0
+        ],
+        "action": "swim",
+        "room": 3
+      },
+      {
+        "at": [
+          9096.0,
+          0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-13",
+        "travel_mode": "swim",
         "room": 3
       },
       {
@@ -2712,6 +3328,24 @@
       },
       {
         "at": [
+          9384.0,
+          -432
+        ],
+        "action": "swim",
+        "room": 3
+      },
+      {
+        "at": [
+          9624.0,
+          -432
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-14",
+        "travel_mode": "swim",
+        "room": 3
+      },
+      {
+        "at": [
           9648,
           -432
         ],
@@ -2728,6 +3362,24 @@
       },
       {
         "at": [
+          9960.0,
+          -96
+        ],
+        "action": "swim",
+        "room": 3
+      },
+      {
+        "at": [
+          10200.0,
+          -96
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-15",
+        "travel_mode": "swim",
+        "room": 3
+      },
+      {
+        "at": [
           10224,
           -96
         ],
@@ -2740,6 +3392,24 @@
           288
         ],
         "action": "swim",
+        "room": 3
+      },
+      {
+        "at": [
+          10488.0,
+          288
+        ],
+        "action": "swim",
+        "room": 3
+      },
+      {
+        "at": [
+          10728.0,
+          288
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-16",
+        "travel_mode": "swim",
         "room": 3
       },
       {
@@ -2784,6 +3454,24 @@
       },
       {
         "at": [
+          11496.0,
+          -288
+        ],
+        "action": "swim",
+        "room": 4
+      },
+      {
+        "at": [
+          11736.0,
+          -288
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-17",
+        "travel_mode": "swim",
+        "room": 4
+      },
+      {
+        "at": [
           11760,
           -288
         ],
@@ -2796,6 +3484,24 @@
           288
         ],
         "action": "swim",
+        "room": 4
+      },
+      {
+        "at": [
+          12072.0,
+          288
+        ],
+        "action": "swim",
+        "room": 4
+      },
+      {
+        "at": [
+          12312.0,
+          288
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-18",
+        "travel_mode": "swim",
         "room": 4
       },
       {
@@ -2816,6 +3522,24 @@
       },
       {
         "at": [
+          12648.0,
+          -384
+        ],
+        "action": "swim",
+        "room": 4
+      },
+      {
+        "at": [
+          12888.0,
+          -384
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-19",
+        "travel_mode": "swim",
+        "room": 4
+      },
+      {
+        "at": [
           12912,
           -384
         ],
@@ -2828,6 +3552,24 @@
           192
         ],
         "action": "swim",
+        "room": 4
+      },
+      {
+        "at": [
+          13272.0,
+          192
+        ],
+        "action": "swim",
+        "room": 4
+      },
+      {
+        "at": [
+          13512.0,
+          192
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-20",
+        "travel_mode": "swim",
         "room": 4
       },
       {
@@ -2872,6 +3614,24 @@
       },
       {
         "at": [
+          14376.0,
+          336
+        ],
+        "action": "swim",
+        "room": 5
+      },
+      {
+        "at": [
+          14616.0,
+          336
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-21",
+        "travel_mode": "swim",
+        "room": 5
+      },
+      {
+        "at": [
           14640,
           336
         ],
@@ -2884,6 +3644,24 @@
           -192
         ],
         "action": "swim",
+        "room": 5
+      },
+      {
+        "at": [
+          14904.0,
+          -192
+        ],
+        "action": "swim",
+        "room": 5
+      },
+      {
+        "at": [
+          15144.0,
+          -192
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-22",
+        "travel_mode": "swim",
         "room": 5
       },
       {
@@ -2904,6 +3682,24 @@
       },
       {
         "at": [
+          15480.0,
+          -432
+        ],
+        "action": "swim",
+        "room": 5
+      },
+      {
+        "at": [
+          15720.0,
+          -432
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-23",
+        "travel_mode": "swim",
+        "room": 5
+      },
+      {
+        "at": [
           15744,
           -432
         ],
@@ -2920,6 +3716,24 @@
       },
       {
         "at": [
+          16056.0,
+          0
+        ],
+        "action": "swim",
+        "room": 5
+      },
+      {
+        "at": [
+          16296.0,
+          0
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-24",
+        "travel_mode": "swim",
+        "room": 5
+      },
+      {
+        "at": [
           16320,
           0
         ],
@@ -2932,6 +3746,24 @@
           336
         ],
         "action": "swim",
+        "room": 5
+      },
+      {
+        "at": [
+          16584.0,
+          336
+        ],
+        "action": "swim",
+        "room": 5
+      },
+      {
+        "at": [
+          16824.0,
+          336
+        ],
+        "action": "mechanism",
+        "obstacle_id": "11-19-machine-25",
+        "travel_mode": "swim",
         "room": 5
       },
       {
@@ -2954,14 +3786,14 @@
     "spike_placements": 104,
     "visible_spikes": 416,
     "vertical_travel": 1056,
-    "intent": "Swim through offset wall openings, manage currents, and change depth throughout the route."
+    "intent": "Swim through offset wall openings, manage currents, and change depth throughout the route. Expert redesign: submerged sluice doors and algae cutters."
   },
   "editor_version": 2,
   "design": {
     "identity": "Submerged sluice maze",
     "blueprint": "res://content/layouts/11-19.json",
-    "intent": "Swim through offset wall openings, manage currents, and change depth throughout the route.",
-    "opening": "Swim up to the first opening · down to the next"
+    "intent": "Swim through offset wall openings, manage currents, and change depth throughout the route. Expert redesign: submerged sluice doors and algae cutters.",
+    "opening": "Swim up to the first opening · down to the next. Read the latch; dash through as the gate opens."
   },
   "journey_regions": [
     {
@@ -3025,5 +3857,11 @@
     "columns": 2,
     "rows": 4,
     "inset": 2
+  },
+  "difficulty": {
+    "edition": "expert",
+    "signature": "shutter",
+    "secondary": "sawrail",
+    "mechanisms": 26
   }
 }
