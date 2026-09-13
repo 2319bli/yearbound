@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 13,
+  "revision": 15,
   "day": "08-23",
   "identity": "Lake ferries between storm shelters",
-  "intent": "Read the weather from cover, then board the ferry and transfer across the open lake.",
+  "intent": "Ferry crossings over a swimmable, bramble-seeded lake: board at the jetty, time the open-water storm lanes from cover, and never miss the last boat.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -17,7 +17,7 @@
   "sections": [
     {
       "name": "The first lake jetty",
-      "lesson": "Board the ferry when it reaches the jetty",
+      "lesson": "Board at the jetty · time the open-water storm from the far shore",
       "origin": [
         0,
         0
@@ -250,14 +250,6 @@
         },
         {
           "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1872,
           "y": 600,
           "w": 48,
@@ -375,9 +367,37 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "storm",
+          "x": 1584,
+          "y": -3072,
+          "w": 48,
+          "h": 3696,
+          "period": 4.8,
+          "active_seconds": 0.6,
+          "warning_seconds": 1.0,
+          "phase": 0.65
         }
       ],
-      "zones": [],
+      "zones": [
+        {
+          "type": "water",
+          "x": 336,
+          "y": 528,
+          "w": 1056,
+          "h": 96,
+          "swimmable": true
+        },
+        {
+          "type": "water",
+          "x": 1872,
+          "y": 528,
+          "w": 960,
+          "h": 96,
+          "swimmable": true
+        }
+      ],
       "motes": [
         [
           120.0,
@@ -437,7 +457,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "Board the ferry when it reaches the jetty"
+          "text": "The lake is swimmable · the weed beds are not"
         }
       ],
       "route": [
@@ -477,6 +497,14 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1680,
+            624
+          ],
+          "action": "timed",
+          "gate_x": 1584
         },
         {
           "at": [
@@ -1184,7 +1212,7 @@
     },
     {
       "name": "The storm ferry",
-      "lesson": "The ferry climbs towards the high jetty",
+      "lesson": "The ferry climbs · read the storm lane over the strait",
       "origin": [
         6048,
         0
@@ -1527,14 +1555,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1824,
           "y": 600,
           "w": 48,
@@ -1756,9 +1776,37 @@
           "w": 48,
           "h": 24,
           "direction": "down"
+        },
+        {
+          "type": "storm",
+          "x": 1536,
+          "y": -3072,
+          "w": 48,
+          "h": 3696,
+          "period": 5.0,
+          "active_seconds": 0.6,
+          "warning_seconds": 1.0,
+          "phase": 1.3
         }
       ],
-      "zones": [],
+      "zones": [
+        {
+          "type": "water",
+          "x": 336,
+          "y": 528,
+          "w": 816,
+          "h": 96,
+          "swimmable": true
+        },
+        {
+          "type": "water",
+          "x": 1824,
+          "y": 528,
+          "w": 720,
+          "h": 96,
+          "swimmable": true
+        }
+      ],
       "motes": [
         [
           96,
@@ -1823,7 +1871,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The ferry climbs towards the high jetty"
+          "text": "Shelter under the high jetty · then time the crossing"
         }
       ],
       "route": [
@@ -1863,6 +1911,14 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1632,
+            624
+          ],
+          "action": "timed",
+          "gate_x": 1536
         },
         {
           "at": [
@@ -3364,7 +3420,7 @@
     },
     {
       "name": "The last evening boat",
-      "lesson": "The last boat carries you back to shore",
+      "lesson": "The last boat waits for no one · dash the storm gap",
       "origin": [
         15744,
         0
@@ -3605,14 +3661,6 @@
         },
         {
           "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1920,
           "y": 600,
           "w": 48,
@@ -3730,9 +3778,37 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "storm",
+          "x": 1632,
+          "y": -3072,
+          "w": 48,
+          "h": 3696,
+          "period": 4.6,
+          "active_seconds": 0.6,
+          "warning_seconds": 1.0,
+          "phase": 0.0
         }
       ],
-      "zones": [],
+      "zones": [
+        {
+          "type": "water",
+          "x": 336,
+          "y": 528,
+          "w": 912,
+          "h": 96,
+          "swimmable": true
+        },
+        {
+          "type": "water",
+          "x": 1920,
+          "y": 528,
+          "w": 720,
+          "h": 96,
+          "swimmable": true
+        }
+      ],
       "motes": [
         [
           96,
@@ -3797,7 +3873,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The last boat carries you back to shore"
+          "text": "One more crossing · mind the weed below"
         }
       ],
       "route": [
@@ -3837,6 +3913,14 @@
             624
           ],
           "action": "drop"
+        },
+        {
+          "at": [
+            1728,
+            624
+          ],
+          "action": "timed",
+          "gate_x": 1632
         },
         {
           "at": [

@@ -3,7 +3,7 @@
   "id": "07-16",
   "title": "The Long Light of Barley Common",
   "season": "mill",
-  "description": "Long wind-driven runs alternate with stone braking bays and high harvest walks.",
+  "description": "Tailwind sprint through the barley: pulsing gusts, polished ice lanes with stone braking bays and awn brambles. Read the gust, commit, brake on stone.",
   "music": "res://audio/july.wav",
   "terrain_style": "july",
   "grid_size": 48,
@@ -19,7 +19,7 @@
   "ground": {
     "y": 624
   },
-  "layout_revision": 13,
+  "layout_revision": 15,
   "abilities": [
     "charge_dash"
   ],
@@ -1667,7 +1667,8 @@
       "force": [
         320,
         0
-      ]
+      ],
+      "pulse": true
     },
     {
       "x": 6720,
@@ -1678,7 +1679,8 @@
       "force": [
         280,
         0
-      ]
+      ],
+      "pulse": true
     },
     {
       "x": 13632,
@@ -1689,7 +1691,8 @@
       "force": [
         350,
         0
-      ]
+      ],
+      "pulse": true
     },
     {
       "x": 17280,
@@ -1700,14 +1703,15 @@
       "force": [
         -220,
         0
-      ]
+      ],
+      "pulse": true
     }
   ],
   "signs": [
     {
       "x": 288,
       "y": 484,
-      "text": "The wind carries speed · brake before each stack"
+      "text": "The wind gusts and dies · vault the awn beds"
     },
     {
       "x": 3408,
@@ -1717,7 +1721,7 @@
     {
       "x": 6672,
       "y": 484,
-      "text": "Low roofs punish unnecessary high launches"
+      "text": "Gusting headwind pockets · keep your footing"
     },
     {
       "x": 9936,
@@ -1727,12 +1731,12 @@
     {
       "x": 13584,
       "y": 484,
-      "text": "Commit to the cuts, then brake on the wide stacks"
+      "text": "Commit between gusts · the stacks are your brakes"
     },
     {
       "x": 17232,
       "y": 484,
-      "text": "The last run pushes back"
+      "text": "The evening wind pushes back in waves"
     }
   ],
   "decorations": [
@@ -1840,7 +1844,7 @@
     "rooms": [
       {
         "name": "The hot tailwind",
-        "lesson": "The wind carries speed · brake before each stack",
+        "lesson": "The wind gusts and dies · vault the awn beds, brake on the stacks",
         "from_x": 0,
         "to_x": 3264,
         "start": [
@@ -1854,7 +1858,7 @@
       },
       {
         "name": "Polished threshing boards",
-        "lesson": "Carry speed across the smooth runs · stop on stone",
+        "lesson": "Carry speed across the polished ice · stop on stone",
         "from_x": 3264,
         "to_x": 6528,
         "start": [
@@ -1868,7 +1872,7 @@
       },
       {
         "name": "Between the harvest walls",
-        "lesson": "Low roofs punish unnecessary high launches",
+        "lesson": "Gusting walls of barley · vault low between the awns",
         "from_x": 6528,
         "to_x": 9792,
         "start": [
@@ -1896,7 +1900,7 @@
       },
       {
         "name": "The long hot straight",
-        "lesson": "Commit to the cuts, then brake on the wide stacks",
+        "lesson": "Commit to the cuts between gusts, then brake on the wide stacks",
         "from_x": 13440,
         "to_x": 17088,
         "start": [
@@ -1910,7 +1914,7 @@
       },
       {
         "name": "The evening headwind",
-        "lesson": "The last run pushes back",
+        "lesson": "The last run pushes back in waves",
         "from_x": 17088,
         "to_x": 20544,
         "start": [
@@ -2568,14 +2572,14 @@
     "spike_placements": 128,
     "visible_spikes": 512,
     "vertical_travel": 624,
-    "intent": "Long wind-driven runs alternate with stone braking bays and high harvest walks."
+    "intent": "Tailwind sprint through the barley: pulsing gusts, polished ice lanes with stone braking bays and awn brambles. Read the gust, commit, brake on stone."
   },
   "editor_version": 2,
   "design": {
     "identity": "Barley tailwind sprint",
     "blueprint": "res://content/layouts/07-16.json",
-    "intent": "Long wind-driven runs alternate with stone braking bays and high harvest walks.",
-    "opening": "The wind carries speed · brake before each stack"
+    "intent": "Tailwind sprint through the barley: pulsing gusts, polished ice lanes with stone braking bays and awn brambles. Read the gust, commit, brake on stone.",
+    "opening": "The wind gusts and dies · vault the awn beds, brake on the stacks"
   },
   "journey_regions": [
     {

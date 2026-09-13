@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 13,
+  "revision": 15,
   "day": "09-14",
   "identity": "Collapsing leaf bridges",
-  "intent": "Stable trunks separate brittle bridges; long stationary charges are costly on leaves.",
+  "intent": "A collapsing leaf-bridge maze: brittle causeways, dead-end mote bait below the true line and a deep trunk climb. Remember the path; the leaves will not wait.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -17,7 +17,7 @@
   "sections": [
     {
       "name": "The first copper leaves",
-      "lesson": "Leaf blocks fall away · keep moving",
+      "lesson": "Leaf blocks fall away · the low line is a trap",
       "origin": [
         0,
         0
@@ -72,9 +72,22 @@
           "x": 2496,
           "y": 528,
           "w": 240,
-          "h": 96,
-          "kind": "block",
-          "material": "log"
+          "h": 48,
+          "kind": "crumble"
+        },
+        {
+          "x": 1008,
+          "y": 576,
+          "w": 144,
+          "h": 48,
+          "kind": "crumble"
+        },
+        {
+          "x": 1872,
+          "y": 576,
+          "w": 144,
+          "h": 48,
+          "kind": "crumble"
         }
       ],
       "hazards": [
@@ -282,40 +295,40 @@
       "zones": [],
       "motes": [
         [
-          120.0,
-          559
-        ],
-        [
-          408.0,
-          463
+          1824.0,
+          367
         ],
         [
           768.0,
           415
         ],
         [
-          1104.0,
-          367
-        ],
-        [
-          1464.0,
-          319
-        ],
-        [
-          1824.0,
-          367
-        ],
-        [
           2232.0,
           415
+        ],
+        [
+          408.0,
+          463
         ],
         [
           2616.0,
           463
         ],
         [
+          120.0,
+          559
+        ],
+        [
           3048.0,
           559
+        ],
+        [
+          1032,
+          511
+        ],
+        [
+          1896,
+          511
         ]
       ],
       "checkpoints": [],
@@ -355,7 +368,7 @@
         {
           "x": 288,
           "y": 484,
-          "text": "Leaf blocks fall away · keep moving"
+          "text": "The low leaves are bait · stay on the high line"
         }
       ],
       "route": [
@@ -438,7 +451,7 @@
     },
     {
       "name": "The brittle canopy",
-      "lesson": "The shortcut collapses behind you",
+      "lesson": "The shortcut collapses behind you · remember the true line",
       "origin": [
         3168,
         0
@@ -495,6 +508,20 @@
           "x": 2640,
           "y": 384,
           "w": 336,
+          "h": 48,
+          "kind": "crumble"
+        },
+        {
+          "x": 1008,
+          "y": 576,
+          "w": 144,
+          "h": 48,
+          "kind": "crumble"
+        },
+        {
+          "x": 2208,
+          "y": 576,
+          "w": 144,
           "h": 48,
           "kind": "crumble"
         }
@@ -984,16 +1011,12 @@
       "zones": [],
       "motes": [
         [
-          96,
-          559
+          1536,
+          175
         ],
         [
-          384,
-          367
-        ],
-        [
-          504.0,
-          367
+          1656.0,
+          175
         ],
         [
           1008,
@@ -1004,22 +1027,6 @@
           271
         ],
         [
-          1536,
-          175
-        ],
-        [
-          1656.0,
-          175
-        ],
-        [
-          2064,
-          79
-        ],
-        [
-          2280.0,
-          79
-        ],
-        [
           2784,
           319
         ],
@@ -1028,8 +1035,28 @@
           319
         ],
         [
+          384,
+          367
+        ],
+        [
+          504.0,
+          367
+        ],
+        [
+          96,
+          559
+        ],
+        [
           3240.0,
           559
+        ],
+        [
+          1032,
+          511
+        ],
+        [
+          2232,
+          511
         ]
       ],
       "checkpoints": [
@@ -1084,7 +1111,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "The shortcut collapses behind you"
+          "text": "Every leaf falls · remember the true line"
         }
       ],
       "route": [
@@ -2166,7 +2193,7 @@
     },
     {
       "name": "Leaves over the ravine",
-      "lesson": "Charge on the trunks · cross the leaves quickly",
+      "lesson": "Charge on the trunks · the bait leaves below are dead ends",
       "origin": [
         9984,
         0
@@ -2214,6 +2241,20 @@
           "x": 2592,
           "y": 480,
           "w": 288,
+          "h": 48,
+          "kind": "crumble"
+        },
+        {
+          "x": 1008,
+          "y": 576,
+          "w": 144,
+          "h": 48,
+          "kind": "crumble"
+        },
+        {
+          "x": 1824,
+          "y": 576,
+          "w": 144,
           "h": 48,
           "kind": "crumble"
         }
@@ -2431,36 +2472,36 @@
       "zones": [],
       "motes": [
         [
-          96,
-          559
-        ],
-        [
-          432.0,
-          415
+          2280.0,
+          271
         ],
         [
           888.0,
           319
         ],
         [
-          1320.0,
-          223
-        ],
-        [
-          1776.0,
-          127
-        ],
-        [
-          2280.0,
-          271
+          432.0,
+          415
         ],
         [
           2736.0,
           415
         ],
         [
+          96,
+          559
+        ],
+        [
           3144.0,
           559
+        ],
+        [
+          1032,
+          511
+        ],
+        [
+          1848,
+          511
         ]
       ],
       "checkpoints": [
@@ -2505,7 +2546,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Charge on the trunks · cross the leaves quickly"
+          "text": "Trunks hold · leaves do not"
         }
       ],
       "route": [
@@ -3461,9 +3502,22 @@
           "x": 2688,
           "y": 528,
           "w": 240,
-          "h": 96,
-          "kind": "block",
-          "material": "log"
+          "h": 48,
+          "kind": "crumble"
+        },
+        {
+          "x": 1056,
+          "y": 576,
+          "w": 144,
+          "h": 48,
+          "kind": "crumble"
+        },
+        {
+          "x": 1824,
+          "y": 576,
+          "w": 144,
+          "h": 48,
+          "kind": "crumble"
         }
       ],
       "hazards": [
@@ -3695,40 +3749,40 @@
       "zones": [],
       "motes": [
         [
-          96,
-          559
-        ],
-        [
-          408.0,
-          463
+          1992.0,
+          319
         ],
         [
           792.0,
           367
         ],
         [
-          1152.0,
-          319
-        ],
-        [
-          1560.0,
-          271
-        ],
-        [
-          1992.0,
-          319
-        ],
-        [
           2400.0,
           415
+        ],
+        [
+          408.0,
+          463
         ],
         [
           2808.0,
           463
         ],
         [
+          96,
+          559
+        ],
+        [
           3240.0,
           559
+        ],
+        [
+          1080,
+          511
+        ],
+        [
+          1848,
+          511
         ]
       ],
       "checkpoints": [
@@ -3773,7 +3827,7 @@
         {
           "x": 144,
           "y": 484,
-          "text": "Finish the bridge before the leaves give way"
+          "text": "One way across · the rest is compost"
         }
       ],
       "route": [
