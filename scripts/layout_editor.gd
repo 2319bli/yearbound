@@ -39,7 +39,7 @@ func _ready() -> void:
 	texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
 	folder=host.store.PATH.get_base_dir().path_join("layouts")
 	DirAccess.make_dir_recursive_absolute(folder)
-	sample_ids=host.stage_order.duplicate()
+	sample_ids=host.stage_order+host.challenge_order
 	build_controls()
 	var clipped=Control.new();clipped.position=CANVAS.position;clipped.size=CANVAS.size;clipped.clip_contents=true;clipped.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(clipped)
 	canvas=Node2D.new();canvas.set_script(load("res://scripts/overlay.gd"));canvas.host=self;canvas.draw_method="draw_canvas";clipped.add_child(canvas)
@@ -123,7 +123,11 @@ func sync_fields() -> void:
 	var month=int(document.stage.id.substr(0,2));var count=28 if month==2 else (30 if month in [4,6,9,11] else 31)
 	fields.day.clear()
 	for day in range(1,count+1): fields.day.add_item(str(day),day)
-	fields.day.select(int(document.stage.id.substr(3,2))-1)
+	var challenge=document.stage.id in host.challenge_order
+	fields.month.disabled=challenge;fields.day.disabled=challenge
+	if challenge:
+		fields.day.clear();fields.day.add_item("X"+document.stage.id.right(2));fields.day.select(0)
+	else:fields.day.select(int(document.stage.id.substr(3,2))-1)
 	fields.season.select(YBLayoutDocument.SEASONS.find(document.stage.season));fields.length.value=document.columns()
 	var height_index=fields.height.get_item_index(document.row_count())
 	if height_index<0:
@@ -338,7 +342,9 @@ func draw_canvas(n: Node2D) -> void:
 		n.draw_rect(rect,Color(.35,.75,.88,.18));n.draw_rect(rect,Color(.5,.8,.9,.5),false,1)
 		n.draw_string(host.font,rect.position+Vector2(10,28),"↑" if zone.type=="updraft" else "→",HORIZONTAL_ALIGNMENT_LEFT,-1,20,Color("b3e9e9"))
 	for h in document.stage.hazards:
-		if h.type=="bramble": YBTerrainArt.bramble(n,Rect2(h.x,h.y,h.w,h.h),document.stage.season,h.get("direction","up"))
+		if h.x+maxf(float(h.get("w",0)),512)<view.x or h.x-512>view.x+CANVAS.size.x/zoom:continue
+		if h.type=="mechanism":YBObstacles.draw(n,h,.8)
+		elif h.type=="bramble": YBTerrainArt.bramble(n,Rect2(h.x,h.y,h.w,h.h),document.stage.season,h.get("direction","up"))
 		elif h.type=="storm": n.draw_rect(Rect2(h.x,h.y,h.w,h.h),Color(1,.75,.4,.24));n.draw_rect(Rect2(h.x,h.y,h.w,h.h),Color("edc180"),false,2)
 		else: n.draw_circle(Vector2(h.x,h.y),float(h.r),Color("d08b77"));n.draw_string(host.font,Vector2(h.x-6,h.y+5),"!",HORIZONTAL_ALIGNMENT_LEFT,-1,18,Color("fff2cc"))
 	for d in document.stage.decorations:

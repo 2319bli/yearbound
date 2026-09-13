@@ -1,3 +1,9 @@
+# Current scenery additions · 0.16.0
+
+The existing 51 map atlases and their 259 named views remain intact. The 132 new monthly challenge maps add **528 original code-native compositions**, each stored with its named place. These use `scenery: {"renderer":"composition","revision":1}` and a per-region `composition` dictionary. `scripts/challenge_scenery.gd` draws the layers behind terrain and blends between places. See [EXTREME_CHALLENGES.md](EXTREME_CHALLENGES.md) for editing and provenance.
+
+The atlas system described below continues to apply to the original calendar stages.
+
 # Custom map scenery · 0.15.0
 
 Every one of the 51 playable dates has its own original pixel-art atlas. All 259 named places select different views within their map's artwork. The June boss has an additional clearing-sky aftermath view. No finished date borrows another date's landscape or cycles through the small old biome library.

@@ -1,3 +1,13 @@
+# Extreme 0.16.0 · current check scope
+
+The owner requested maximum difficulty and explicitly asked not to verify whether routes are possible. **No reachability, route traversal, boss survival or human balance tests were performed for 0.16.** Prior version results below are historical and do not establish current beatability.
+
+Current checks cover compilation freshness; 51 calendar stages plus 132 additional challenges (11 per month); grid/metadata bounds; unique complete challenge geometry; 528 different scenery compositions; resource loading; per-stage music; mechanism data; harmless open/warning states; pause; menu navigation; workshop preservation/export/reopen; challenge save/resume/next; and Dash Lab availability. Native render captures cover the title, monthly browser, three original stages, one challenge from every month, and the workshop rendering a mechanism-heavy challenge. Package loading is checked against the exported app.
+
+`tests/extreme_content.gd` never supplies movement inputs or follows waypoints. `tests/extreme_capture.gd` relocates the player only to compose screenshots. This work does not establish final playability, pacing or fun. See `validation_0_16.json` for the machine-readable delivery record.
+
+---
+
 # Build verification · 13 September 2026
 
 Environment: Apple M4 / macOS, Godot 4.6.2, native OpenGL compatibility renderer. Delivered app is Apple silicon ARM64, includes its own runtime, and uses an ad-hoc development signature. The original Documents/Yearbound music folder was read and copied from, never edited.

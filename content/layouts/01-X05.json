@@ -1,0 +1,7793 @@
+{
+  "schema_version": 1,
+  "revision": 18,
+  "day": "01-X05",
+  "identity": "The Frozen Pendulum",
+  "intent": "The Frozen Pendulum. fracture staircase, crosswind chimney, bell circuit, crown transfer. Ice momentum throughout.",
+  "world_top": -1536,
+  "spawn": [
+    120,
+    624
+  ],
+  "length": 13248,
+  "goal": [
+    13152,
+    624
+  ],
+  "sections": [
+    {
+      "name": "Frozen Pendulum / Fracture staircase",
+      "origin": [
+        0,
+        0
+      ],
+      "width": 3168,
+      "lesson": "Fracture staircase · extreme timing and narrow catches.",
+      "platforms": [
+        {
+          "x": 336,
+          "y": 336,
+          "w": 144,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 624,
+          "y": 240,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 912,
+          "y": 144,
+          "w": 96,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1200,
+          "y": 48,
+          "w": 144,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1488,
+          "y": -48,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1776,
+          "y": -144,
+          "w": 96,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2064,
+          "y": -240,
+          "w": 144,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2352,
+          "y": -336,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 384,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 624,
+          "y": 288,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 192,
+          "w": 96,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": 96,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": 24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 0,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": -96,
+          "w": 96,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": -168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": -192,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": -264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": -288,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r0-m0",
+          "x": 336.0,
+          "y": 120,
+          "period": 1.6,
+          "phase": 0.91,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r0-m1",
+          "x": 384.0,
+          "y": 0,
+          "period": 1.06,
+          "phase": 1.227,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r0-m2",
+          "x": 480.0,
+          "y": 304,
+          "period": 1.17,
+          "phase": 0.144,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r0-m3",
+          "x": 552.0,
+          "y": -24,
+          "period": 1.9900000000000002,
+          "phase": 0.461,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r0-m4",
+          "x": 552.0,
+          "y": 48,
+          "period": 1.39,
+          "phase": 0.778,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r0-m5",
+          "x": 648.0,
+          "y": 64,
+          "period": 1.5,
+          "phase": 1.095,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r0-m6",
+          "x": 720.0,
+          "y": 24,
+          "period": 1.73,
+          "phase": 0.012,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r0-m7",
+          "x": 768.0,
+          "y": -96,
+          "period": 0.95,
+          "phase": 0.329,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r0-m8",
+          "x": 888.0,
+          "y": 112,
+          "period": 1.06,
+          "phase": 0.646,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r0-m9",
+          "x": 960.0,
+          "y": -216,
+          "period": 2.12,
+          "phase": 0.963,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r0-m10",
+          "x": 1008.0,
+          "y": -48,
+          "period": 1.28,
+          "phase": 1.28,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r0-m11",
+          "x": 1104.0,
+          "y": -32,
+          "period": 1.39,
+          "phase": 0.197,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r0-m12",
+          "x": 1200.0,
+          "y": -168,
+          "period": 1.86,
+          "phase": 0.514,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r0-m13",
+          "x": 1248.0,
+          "y": -288,
+          "period": 1.61,
+          "phase": 0.831,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r0-m14",
+          "x": 1344.0,
+          "y": 16,
+          "period": 0.95,
+          "phase": 1.148,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r0-m15",
+          "x": 1416.0,
+          "y": -312,
+          "period": 1.6,
+          "phase": 0.065,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r0-m16",
+          "x": 1416.0,
+          "y": -240,
+          "period": 1.17,
+          "phase": 0.382,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r0-m17",
+          "x": 1512.0,
+          "y": -224,
+          "period": 1.28,
+          "phase": 0.699,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r0-m18",
+          "x": 1584.0,
+          "y": -264,
+          "period": 1.9900000000000002,
+          "phase": 1.016,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r0-m19",
+          "x": 1632.0,
+          "y": -384,
+          "period": 1.5,
+          "phase": 1.333,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r0-m20",
+          "x": 1752.0,
+          "y": -176,
+          "period": 1.61,
+          "phase": 0.25,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r0-m21",
+          "x": 1824.0,
+          "y": -504,
+          "period": 1.73,
+          "phase": 0.567,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r0-m22",
+          "x": 1872.0,
+          "y": -336,
+          "period": 1.06,
+          "phase": 0.884,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r0-m23",
+          "x": 1968.0,
+          "y": -320,
+          "period": 1.17,
+          "phase": 1.201,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r0-m24",
+          "x": 2064.0,
+          "y": -456,
+          "period": 2.12,
+          "phase": 0.118,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r0-m25",
+          "x": 2112.0,
+          "y": -576,
+          "period": 1.39,
+          "phase": 0.435,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r0-m26",
+          "x": 2208.0,
+          "y": -272,
+          "period": 1.5,
+          "phase": 0.752,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r0-m27",
+          "x": 2280.0,
+          "y": -600,
+          "period": 1.86,
+          "phase": 1.069,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r0-m28",
+          "x": 2280.0,
+          "y": -528,
+          "period": 0.95,
+          "phase": 1.386,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r0-m29",
+          "x": 2376.0,
+          "y": -512,
+          "period": 1.06,
+          "phase": 0.303,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r0-m30",
+          "x": 2448.0,
+          "y": -552,
+          "period": 1.6,
+          "phase": 0.62,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r0-m31",
+          "x": 2496.0,
+          "y": -672,
+          "period": 1.28,
+          "phase": 0.937,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 624,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 720,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1248,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1296,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1584,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1632,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1680,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2208,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2400,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2448,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        }
+      ],
+      "zones": [],
+      "motes": [
+        [
+          408.0,
+          264
+        ],
+        [
+          648.0,
+          168
+        ],
+        [
+          960.0,
+          72
+        ],
+        [
+          1272.0,
+          -24
+        ],
+        [
+          1512.0,
+          -120
+        ],
+        [
+          1824.0,
+          -216
+        ],
+        [
+          2136.0,
+          -312
+        ],
+        [
+          2376.0,
+          -408
+        ]
+      ],
+      "checkpoints": [],
+      "decorations": [
+        {
+          "type": "snow_pine",
+          "x": 348,
+          "y": 336,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 924,
+          "y": 144,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 1500,
+          "y": -48,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 2076,
+          "y": -240,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        }
+      ],
+      "signs": [
+        {
+          "x": 144,
+          "y": 440,
+          "text": "Frozen Pendulum / Fracture staircase\nExtreme route"
+        }
+      ],
+      "route": [
+        {
+          "at": [
+            120,
+            624
+          ],
+          "action": "start"
+        },
+        {
+          "at": [
+            408.0,
+            336
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            648.0,
+            240
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            960.0,
+            144
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1272.0,
+            48
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1512.0,
+            -48
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1824.0,
+            -144
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2136.0,
+            -240
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2376.0,
+            -336
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            3072,
+            624
+          ],
+          "action": "unverified"
+        }
+      ],
+      "visual": {
+        "place": "ice",
+        "light": "morning",
+        "art_cell": 0,
+        "composition": {
+          "palette": [
+            "3f5b82",
+            "b3d2dd",
+            "82abc1",
+            "5b86a1",
+            "345872",
+            "c2ebec"
+          ],
+          "ridges": [
+            [
+              [
+                -120,
+                343
+              ],
+              [
+                -60,
+                359
+              ],
+              [
+                0,
+                361
+              ],
+              [
+                60,
+                350
+              ],
+              [
+                120,
+                331
+              ],
+              [
+                180,
+                312
+              ],
+              [
+                240,
+                297
+              ],
+              [
+                300,
+                288
+              ],
+              [
+                360,
+                282
+              ],
+              [
+                420,
+                279
+              ],
+              [
+                480,
+                273
+              ],
+              [
+                540,
+                266
+              ],
+              [
+                600,
+                260
+              ],
+              [
+                660,
+                258
+              ],
+              [
+                720,
+                266
+              ],
+              [
+                780,
+                284
+              ],
+              [
+                840,
+                310
+              ],
+              [
+                900,
+                339
+              ],
+              [
+                960,
+                363
+              ],
+              [
+                1020,
+                373
+              ],
+              [
+                1080,
+                366
+              ],
+              [
+                1140,
+                343
+              ],
+              [
+                1200,
+                310
+              ],
+              [
+                1260,
+                275
+              ],
+              [
+                1320,
+                249
+              ],
+              [
+                1380,
+                236
+              ],
+              [
+                1440,
+                239
+              ]
+            ],
+            [
+              [
+                -120,
+                455
+              ],
+              [
+                -60,
+                455
+              ],
+              [
+                0,
+                440
+              ],
+              [
+                60,
+                416
+              ],
+              [
+                120,
+                389
+              ],
+              [
+                180,
+                366
+              ],
+              [
+                240,
+                352
+              ],
+              [
+                300,
+                348
+              ],
+              [
+                360,
+                350
+              ],
+              [
+                420,
+                353
+              ],
+              [
+                480,
+                353
+              ],
+              [
+                540,
+                349
+              ],
+              [
+                600,
+                342
+              ],
+              [
+                660,
+                338
+              ],
+              [
+                720,
+                341
+              ],
+              [
+                780,
+                354
+              ],
+              [
+                840,
+                377
+              ],
+              [
+                900,
+                406
+              ],
+              [
+                960,
+                433
+              ],
+              [
+                1020,
+                451
+              ],
+              [
+                1080,
+                456
+              ],
+              [
+                1140,
+                446
+              ],
+              [
+                1200,
+                425
+              ],
+              [
+                1260,
+                400
+              ],
+              [
+                1320,
+                379
+              ],
+              [
+                1380,
+                365
+              ],
+              [
+                1440,
+                359
+              ]
+            ],
+            [
+              [
+                -120,
+                440
+              ],
+              [
+                -60,
+                435
+              ],
+              [
+                0,
+                424
+              ],
+              [
+                60,
+                412
+              ],
+              [
+                120,
+                405
+              ],
+              [
+                180,
+                407
+              ],
+              [
+                240,
+                420
+              ],
+              [
+                300,
+                444
+              ],
+              [
+                360,
+                473
+              ],
+              [
+                420,
+                499
+              ],
+              [
+                480,
+                516
+              ],
+              [
+                540,
+                521
+              ],
+              [
+                600,
+                516
+              ],
+              [
+                660,
+                506
+              ],
+              [
+                720,
+                496
+              ],
+              [
+                780,
+                490
+              ],
+              [
+                840,
+                491
+              ],
+              [
+                900,
+                496
+              ],
+              [
+                960,
+                499
+              ],
+              [
+                1020,
+                495
+              ],
+              [
+                1080,
+                482
+              ],
+              [
+                1140,
+                460
+              ],
+              [
+                1200,
+                433
+              ],
+              [
+                1260,
+                409
+              ],
+              [
+                1320,
+                394
+              ],
+              [
+                1380,
+                392
+              ],
+              [
+                1440,
+                402
+              ]
+            ]
+          ],
+          "structures": [
+            {
+              "kind": "ruins",
+              "x": 114,
+              "y": 500,
+              "w": 119,
+              "h": 187
+            },
+            {
+              "kind": "waterfall",
+              "x": 501,
+              "y": 542,
+              "w": 172,
+              "h": 216
+            },
+            {
+              "kind": "clock",
+              "x": 753,
+              "y": 500,
+              "w": 225,
+              "h": 245
+            },
+            {
+              "kind": "observatory",
+              "x": 1140,
+              "y": 542,
+              "w": 138,
+              "h": 274
+            }
+          ],
+          "sun": [
+            393,
+            158,
+            64
+          ],
+          "waterline": 581,
+          "weather": "snow",
+          "seed": 439,
+          "foliage": false,
+          "moon": true,
+          "style": "ruins"
+        }
+      }
+    },
+    {
+      "name": "Frozen Pendulum / Crosswind chimney",
+      "origin": [
+        3168,
+        0
+      ],
+      "width": 3264,
+      "lesson": "Crosswind chimney · extreme timing and narrow catches.",
+      "platforms": [
+        {
+          "x": 336,
+          "y": 192,
+          "w": 144,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 480,
+          "y": 288,
+          "w": 48,
+          "h": 336,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 624,
+          "y": 0,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 912,
+          "y": -192,
+          "w": 96,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1056,
+          "y": -96,
+          "w": 48,
+          "h": 432,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1200,
+          "y": -384,
+          "w": 144,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1488,
+          "y": -576,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1632,
+          "y": -480,
+          "w": 48,
+          "h": 432,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1776,
+          "y": 384,
+          "w": 96,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2064,
+          "y": 192,
+          "w": 144,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2208,
+          "y": 288,
+          "w": 48,
+          "h": 336,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2352,
+          "y": 0,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2640,
+          "y": -192,
+          "w": 96,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2784,
+          "y": -96,
+          "w": 48,
+          "h": 432,
+          "kind": "block",
+          "material": "stone"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 240,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 456,
+          "y": 288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 456,
+          "y": 336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 456,
+          "y": 384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 456,
+          "y": 432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 456,
+          "y": 480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 456,
+          "y": 528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 456,
+          "y": 576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 624,
+          "y": 48,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": -144,
+          "w": 96,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": -216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1032,
+          "y": -96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1032,
+          "y": -48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1032,
+          "y": 0,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1032,
+          "y": 48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1032,
+          "y": 96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1032,
+          "y": 144,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1032,
+          "y": 192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1032,
+          "y": 240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1032,
+          "y": 288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": -336,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": -408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": -528,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1608,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1608,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1608,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1608,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1608,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1608,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1608,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1608,
+          "y": -144,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1608,
+          "y": -96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 432,
+          "w": 96,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": 240,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2184,
+          "y": 288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2184,
+          "y": 336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2184,
+          "y": 384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2184,
+          "y": 432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2184,
+          "y": 480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2184,
+          "y": 528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2184,
+          "y": 576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": 48,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": -144,
+          "w": 96,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": -216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2760,
+          "y": -96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2760,
+          "y": -48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2760,
+          "y": 0,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2760,
+          "y": 48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2760,
+          "y": 96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2760,
+          "y": 144,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2760,
+          "y": 192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2760,
+          "y": 240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2760,
+          "y": 288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m0",
+          "x": 336.0,
+          "y": 160,
+          "period": 0.95,
+          "phase": 0.91,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m1",
+          "x": 408.0,
+          "y": -168,
+          "period": 1.73,
+          "phase": 1.227,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m2",
+          "x": 456.0,
+          "y": 0,
+          "period": 1.17,
+          "phase": 0.144,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m3",
+          "x": 552.0,
+          "y": 16,
+          "period": 1.28,
+          "phase": 0.461,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m4",
+          "x": 576.0,
+          "y": -216,
+          "period": 2.12,
+          "phase": 0.778,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m5",
+          "x": 624.0,
+          "y": -336,
+          "period": 1.5,
+          "phase": 1.095,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m6",
+          "x": 720.0,
+          "y": -32,
+          "period": 1.61,
+          "phase": 0.012,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m7",
+          "x": 792.0,
+          "y": -360,
+          "period": 1.86,
+          "phase": 0.329,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m8",
+          "x": 864.0,
+          "y": -384,
+          "period": 1.06,
+          "phase": 0.646,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m9",
+          "x": 960.0,
+          "y": -368,
+          "period": 1.17,
+          "phase": 0.963,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m10",
+          "x": 1032.0,
+          "y": -408,
+          "period": 1.6,
+          "phase": 1.28,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m11",
+          "x": 1080.0,
+          "y": -528,
+          "period": 1.39,
+          "phase": 0.197,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m12",
+          "x": 1200.0,
+          "y": -416,
+          "period": 1.5,
+          "phase": 0.514,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m13",
+          "x": 1272.0,
+          "y": -744,
+          "period": 1.9900000000000002,
+          "phase": 0.831,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m14",
+          "x": 1320.0,
+          "y": -576,
+          "period": 0.95,
+          "phase": 1.148,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m15",
+          "x": 1416.0,
+          "y": -560,
+          "period": 1.06,
+          "phase": 0.065,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m16",
+          "x": 1440.0,
+          "y": -792,
+          "period": 1.73,
+          "phase": 0.382,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m17",
+          "x": 1488.0,
+          "y": -912,
+          "period": 1.28,
+          "phase": 0.699,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m18",
+          "x": 1584.0,
+          "y": -608,
+          "period": 1.39,
+          "phase": 1.016,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m19",
+          "x": 1656.0,
+          "y": -936,
+          "period": 2.12,
+          "phase": 1.333,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m20",
+          "x": 1728.0,
+          "y": 192,
+          "period": 1.61,
+          "phase": 0.25,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m21",
+          "x": 1824.0,
+          "y": 208,
+          "period": 0.95,
+          "phase": 0.567,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m22",
+          "x": 1896.0,
+          "y": 168,
+          "period": 1.86,
+          "phase": 0.884,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m23",
+          "x": 1944.0,
+          "y": 48,
+          "period": 1.17,
+          "phase": 1.201,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m24",
+          "x": 2064.0,
+          "y": 160,
+          "period": 1.28,
+          "phase": 0.118,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m25",
+          "x": 2136.0,
+          "y": -168,
+          "period": 1.6,
+          "phase": 0.435,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m26",
+          "x": 2184.0,
+          "y": 0,
+          "period": 1.5,
+          "phase": 0.752,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m27",
+          "x": 2280.0,
+          "y": 16,
+          "period": 1.61,
+          "phase": 1.069,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m28",
+          "x": 2304.0,
+          "y": -216,
+          "period": 1.9900000000000002,
+          "phase": 1.386,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m29",
+          "x": 2352.0,
+          "y": -336,
+          "period": 1.06,
+          "phase": 0.303,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m30",
+          "x": 2448.0,
+          "y": -32,
+          "period": 1.17,
+          "phase": 0.62,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m31",
+          "x": 2520.0,
+          "y": -360,
+          "period": 1.73,
+          "phase": 0.937,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m32",
+          "x": 2592.0,
+          "y": -384,
+          "period": 1.39,
+          "phase": 1.254,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r1-m33",
+          "x": 2688.0,
+          "y": -368,
+          "period": 1.5,
+          "phase": 0.171,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 108
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r1-m34",
+          "x": 2760.0,
+          "y": -408,
+          "period": 2.12,
+          "phase": 0.488,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r1-m35",
+          "x": 2808.0,
+          "y": -528,
+          "period": 0.95,
+          "phase": 0.805,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 624,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 720,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1248,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1296,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1584,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1632,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1680,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2208,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2400,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2448,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2976,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        }
+      ],
+      "zones": [
+        {
+          "type": "updraft",
+          "x": 480,
+          "y": -1200,
+          "w": 192,
+          "h": 1824,
+          "force": [
+            160,
+            -1830
+          ]
+        },
+        {
+          "type": "updraft",
+          "x": 1344,
+          "y": -1200,
+          "w": 192,
+          "h": 1824,
+          "force": [
+            -160,
+            -1830
+          ]
+        },
+        {
+          "type": "updraft",
+          "x": 2208,
+          "y": -1200,
+          "w": 192,
+          "h": 1824,
+          "force": [
+            160,
+            -1830
+          ]
+        }
+      ],
+      "motes": [
+        [
+          408.0,
+          120
+        ],
+        [
+          648.0,
+          -72
+        ],
+        [
+          960.0,
+          -264
+        ],
+        [
+          1272.0,
+          -456
+        ],
+        [
+          1512.0,
+          -648
+        ],
+        [
+          1824.0,
+          312
+        ],
+        [
+          2136.0,
+          120
+        ],
+        [
+          2376.0,
+          -72
+        ],
+        [
+          2688.0,
+          -264
+        ]
+      ],
+      "checkpoints": [
+        [
+          96,
+          624
+        ]
+      ],
+      "decorations": [
+        {
+          "type": "snow_pine",
+          "x": 348,
+          "y": 192,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 924,
+          "y": -192,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 1500,
+          "y": -576,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 2076,
+          "y": 192,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 2652,
+          "y": -192,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        }
+      ],
+      "signs": [
+        {
+          "x": 144,
+          "y": 440,
+          "text": "Frozen Pendulum / Crosswind chimney\nExtreme route"
+        }
+      ],
+      "route": [
+        {
+          "at": [
+            96,
+            624
+          ],
+          "action": "start"
+        },
+        {
+          "at": [
+            408.0,
+            192
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            648.0,
+            0
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            960.0,
+            -192
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1272.0,
+            -384
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1512.0,
+            -576
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1824.0,
+            384
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2136.0,
+            192
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2376.0,
+            0
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2688.0,
+            -192
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            3168,
+            624
+          ],
+          "action": "unverified"
+        }
+      ],
+      "visual": {
+        "place": "ice",
+        "light": "shade",
+        "art_cell": 1,
+        "composition": {
+          "palette": [
+            "405c85",
+            "b6d4e0",
+            "84adc4",
+            "5d87a4",
+            "355975",
+            "c5eeef"
+          ],
+          "ridges": [
+            [
+              [
+                -120,
+                336
+              ],
+              [
+                -60,
+                337
+              ],
+              [
+                0,
+                329
+              ],
+              [
+                60,
+                312
+              ],
+              [
+                120,
+                287
+              ],
+              [
+                180,
+                260
+              ],
+              [
+                240,
+                238
+              ],
+              [
+                300,
+                228
+              ],
+              [
+                360,
+                236
+              ],
+              [
+                420,
+                259
+              ],
+              [
+                480,
+                293
+              ],
+              [
+                540,
+                327
+              ],
+              [
+                600,
+                354
+              ],
+              [
+                660,
+                367
+              ],
+              [
+                720,
+                363
+              ],
+              [
+                780,
+                347
+              ],
+              [
+                840,
+                324
+              ],
+              [
+                900,
+                301
+              ],
+              [
+                960,
+                284
+              ],
+              [
+                1020,
+                275
+              ],
+              [
+                1080,
+                272
+              ],
+              [
+                1140,
+                272
+              ],
+              [
+                1200,
+                271
+              ],
+              [
+                1260,
+                269
+              ],
+              [
+                1320,
+                267
+              ],
+              [
+                1380,
+                269
+              ],
+              [
+                1440,
+                278
+              ]
+            ],
+            [
+              [
+                -120,
+                392
+              ],
+              [
+                -60,
+                391
+              ],
+              [
+                0,
+                386
+              ],
+              [
+                60,
+                375
+              ],
+              [
+                120,
+                357
+              ],
+              [
+                180,
+                337
+              ],
+              [
+                240,
+                319
+              ],
+              [
+                300,
+                312
+              ],
+              [
+                360,
+                318
+              ],
+              [
+                420,
+                337
+              ],
+              [
+                480,
+                366
+              ],
+              [
+                540,
+                396
+              ],
+              [
+                600,
+                421
+              ],
+              [
+                660,
+                435
+              ],
+              [
+                720,
+                436
+              ],
+              [
+                780,
+                429
+              ],
+              [
+                840,
+                418
+              ],
+              [
+                900,
+                408
+              ],
+              [
+                960,
+                403
+              ],
+              [
+                1020,
+                403
+              ],
+              [
+                1080,
+                403
+              ],
+              [
+                1140,
+                398
+              ],
+              [
+                1200,
+                387
+              ],
+              [
+                1260,
+                367
+              ],
+              [
+                1320,
+                343
+              ],
+              [
+                1380,
+                322
+              ],
+              [
+                1440,
+                310
+              ]
+            ],
+            [
+              [
+                -120,
+                416
+              ],
+              [
+                -60,
+                440
+              ],
+              [
+                0,
+                464
+              ],
+              [
+                60,
+                481
+              ],
+              [
+                120,
+                489
+              ],
+              [
+                180,
+                489
+              ],
+              [
+                240,
+                486
+              ],
+              [
+                300,
+                485
+              ],
+              [
+                360,
+                490
+              ],
+              [
+                420,
+                501
+              ],
+              [
+                480,
+                515
+              ],
+              [
+                540,
+                525
+              ],
+              [
+                600,
+                526
+              ],
+              [
+                660,
+                516
+              ],
+              [
+                720,
+                494
+              ],
+              [
+                780,
+                466
+              ],
+              [
+                840,
+                439
+              ],
+              [
+                900,
+                419
+              ],
+              [
+                960,
+                411
+              ],
+              [
+                1020,
+                413
+              ],
+              [
+                1080,
+                422
+              ],
+              [
+                1140,
+                431
+              ],
+              [
+                1200,
+                436
+              ],
+              [
+                1260,
+                435
+              ],
+              [
+                1320,
+                429
+              ],
+              [
+                1380,
+                424
+              ],
+              [
+                1440,
+                426
+              ]
+            ]
+          ],
+          "structures": [
+            {
+              "kind": "waterfall",
+              "x": 143,
+              "y": 500,
+              "w": 148,
+              "h": 274
+            },
+            {
+              "kind": "clock",
+              "x": 530,
+              "y": 542,
+              "w": 201,
+              "h": 303
+            },
+            {
+              "kind": "observatory",
+              "x": 782,
+              "y": 500,
+              "w": 114,
+              "h": 332
+            },
+            {
+              "kind": "aqueduct",
+              "x": 1169,
+              "y": 542,
+              "w": 167,
+              "h": 151
+            },
+            {
+              "kind": "belfry",
+              "x": 1421,
+              "y": 500,
+              "w": 220,
+              "h": 180
+            }
+          ],
+          "sun": [
+            466,
+            101,
+            75
+          ],
+          "waterline": 485,
+          "weather": "snow",
+          "seed": 468,
+          "foliage": false,
+          "moon": true,
+          "style": "waterfall"
+        }
+      }
+    },
+    {
+      "name": "Frozen Pendulum / Bell circuit",
+      "origin": [
+        6432,
+        0
+      ],
+      "width": 3360,
+      "lesson": "Bell circuit · extreme timing and narrow catches.",
+      "platforms": [
+        {
+          "x": 336,
+          "y": 240,
+          "w": 144,
+          "h": 48,
+          "kind": "spring",
+          "power": 1000
+        },
+        {
+          "x": 576,
+          "y": -144,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 816,
+          "y": -144,
+          "w": 96,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1056,
+          "y": 240,
+          "w": 144,
+          "h": 48,
+          "kind": "spring",
+          "power": 1000
+        },
+        {
+          "x": 1296,
+          "y": 624,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1536,
+          "y": 624,
+          "w": 96,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1776,
+          "y": 240,
+          "w": 144,
+          "h": 48,
+          "kind": "spring",
+          "power": 1000
+        },
+        {
+          "x": 2016,
+          "y": -144,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2256,
+          "y": -144,
+          "w": 96,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2496,
+          "y": 240,
+          "w": 144,
+          "h": 48,
+          "kind": "spring",
+          "power": 1000
+        }
+      ],
+      "hazards": [
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 288,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": -96,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": -96,
+          "w": 96,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": -168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 288,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1296,
+          "y": 672,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 672,
+          "w": 96,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 288,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": -96,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": -96,
+          "w": 96,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": -168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 288,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m0",
+          "x": 312.0,
+          "y": 48,
+          "period": 0.95,
+          "phase": 0.91,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m1",
+          "x": 408.0,
+          "y": 64,
+          "period": 1.06,
+          "phase": 1.227,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m2",
+          "x": 480.0,
+          "y": 24,
+          "period": 1.86,
+          "phase": 0.144,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m3",
+          "x": 528.0,
+          "y": -96,
+          "period": 1.28,
+          "phase": 0.461,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m4",
+          "x": 528.0,
+          "y": -176,
+          "period": 1.39,
+          "phase": 0.778,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m5",
+          "x": 600.0,
+          "y": -504,
+          "period": 1.6,
+          "phase": 1.095,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m6",
+          "x": 648.0,
+          "y": -336,
+          "period": 1.61,
+          "phase": 0.012,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m7",
+          "x": 744.0,
+          "y": -320,
+          "period": 0.95,
+          "phase": 0.329,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m8",
+          "x": 792.0,
+          "y": -360,
+          "period": 1.9900000000000002,
+          "phase": 0.646,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m9",
+          "x": 840.0,
+          "y": -480,
+          "period": 1.17,
+          "phase": 0.963,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m10",
+          "x": 936.0,
+          "y": -176,
+          "period": 1.28,
+          "phase": 1.28,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m11",
+          "x": 1008.0,
+          "y": -504,
+          "period": 1.73,
+          "phase": 0.197,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m12",
+          "x": 1032.0,
+          "y": 48,
+          "period": 1.5,
+          "phase": 0.514,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m13",
+          "x": 1128.0,
+          "y": 64,
+          "period": 1.61,
+          "phase": 0.831,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m14",
+          "x": 1200.0,
+          "y": 24,
+          "period": 2.12,
+          "phase": 1.148,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m15",
+          "x": 1248.0,
+          "y": -96,
+          "period": 1.06,
+          "phase": 0.065,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m16",
+          "x": 1248.0,
+          "y": 592,
+          "period": 1.17,
+          "phase": 0.382,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m17",
+          "x": 1320.0,
+          "y": 264,
+          "period": 1.86,
+          "phase": 0.699,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m18",
+          "x": 1368.0,
+          "y": 432,
+          "period": 1.39,
+          "phase": 1.016,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m19",
+          "x": 1464.0,
+          "y": 448,
+          "period": 1.5,
+          "phase": 1.333,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m20",
+          "x": 1512.0,
+          "y": 408,
+          "period": 1.6,
+          "phase": 0.25,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m21",
+          "x": 1560.0,
+          "y": 288,
+          "period": 0.95,
+          "phase": 0.567,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m22",
+          "x": 1656.0,
+          "y": 592,
+          "period": 1.06,
+          "phase": 0.884,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m23",
+          "x": 1728.0,
+          "y": 264,
+          "period": 1.9900000000000002,
+          "phase": 1.201,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m24",
+          "x": 1752.0,
+          "y": 48,
+          "period": 1.28,
+          "phase": 0.118,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m25",
+          "x": 1848.0,
+          "y": 64,
+          "period": 1.39,
+          "phase": 0.435,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m26",
+          "x": 1920.0,
+          "y": 24,
+          "period": 1.73,
+          "phase": 0.752,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m27",
+          "x": 1968.0,
+          "y": -96,
+          "period": 1.61,
+          "phase": 1.069,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m28",
+          "x": 1968.0,
+          "y": -176,
+          "period": 0.95,
+          "phase": 1.386,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m29",
+          "x": 2040.0,
+          "y": -504,
+          "period": 2.12,
+          "phase": 0.303,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m30",
+          "x": 2088.0,
+          "y": -336,
+          "period": 1.17,
+          "phase": 0.62,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m31",
+          "x": 2184.0,
+          "y": -320,
+          "period": 1.28,
+          "phase": 0.937,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m32",
+          "x": 2232.0,
+          "y": -360,
+          "period": 1.86,
+          "phase": 1.254,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m33",
+          "x": 2280.0,
+          "y": -480,
+          "period": 1.5,
+          "phase": 0.171,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m34",
+          "x": 2376.0,
+          "y": -176,
+          "period": 1.61,
+          "phase": 0.488,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m35",
+          "x": 2448.0,
+          "y": -504,
+          "period": 1.6,
+          "phase": 0.805,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m36",
+          "x": 2472.0,
+          "y": 48,
+          "period": 1.06,
+          "phase": 1.122,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r2-m37",
+          "x": 2568.0,
+          "y": 64,
+          "period": 1.17,
+          "phase": 0.039,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 120
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r2-m38",
+          "x": 2640.0,
+          "y": 24,
+          "period": 1.9900000000000002,
+          "phase": 0.356,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r2-m39",
+          "x": 2688.0,
+          "y": -96,
+          "period": 1.39,
+          "phase": 0.673,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 624,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 720,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1248,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1296,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1584,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1632,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1680,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2208,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2400,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2448,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2976,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        }
+      ],
+      "zones": [],
+      "motes": [
+        [
+          408.0,
+          168
+        ],
+        [
+          600.0,
+          -216
+        ],
+        [
+          864.0,
+          -216
+        ],
+        [
+          1128.0,
+          168
+        ],
+        [
+          1320.0,
+          552
+        ],
+        [
+          1584.0,
+          552
+        ],
+        [
+          1848.0,
+          168
+        ],
+        [
+          2040.0,
+          -216
+        ],
+        [
+          2304.0,
+          -216
+        ],
+        [
+          2568.0,
+          168
+        ]
+      ],
+      "checkpoints": [
+        [
+          96,
+          624
+        ]
+      ],
+      "decorations": [
+        {
+          "type": "snow_pine",
+          "x": 348,
+          "y": 240,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 828,
+          "y": -144,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 1308,
+          "y": 624,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 1788,
+          "y": 240,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 2268,
+          "y": -144,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        }
+      ],
+      "signs": [
+        {
+          "x": 144,
+          "y": 440,
+          "text": "Frozen Pendulum / Bell circuit\nExtreme route"
+        }
+      ],
+      "route": [
+        {
+          "at": [
+            96,
+            624
+          ],
+          "action": "start"
+        },
+        {
+          "at": [
+            408.0,
+            240
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            600.0,
+            -144
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            864.0,
+            -144
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1128.0,
+            240
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1320.0,
+            624
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1584.0,
+            624
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1848.0,
+            240
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2040.0,
+            -144
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2304.0,
+            -144
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2568.0,
+            240
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            3264,
+            624
+          ],
+          "action": "unverified"
+        }
+      ],
+      "visual": {
+        "place": "ice",
+        "light": "interior",
+        "art_cell": 2,
+        "composition": {
+          "palette": [
+            "425d89",
+            "b8d6e4",
+            "86afc8",
+            "5f88a8",
+            "375a79",
+            "c7f0f3"
+          ],
+          "ridges": [
+            [
+              [
+                -120,
+                243
+              ],
+              [
+                -60,
+                231
+              ],
+              [
+                0,
+                235
+              ],
+              [
+                60,
+                253
+              ],
+              [
+                120,
+                278
+              ],
+              [
+                180,
+                303
+              ],
+              [
+                240,
+                321
+              ],
+              [
+                300,
+                330
+              ],
+              [
+                360,
+                333
+              ],
+              [
+                420,
+                331
+              ],
+              [
+                480,
+                329
+              ],
+              [
+                540,
+                328
+              ],
+              [
+                600,
+                328
+              ],
+              [
+                660,
+                325
+              ],
+              [
+                720,
+                316
+              ],
+              [
+                780,
+                300
+              ],
+              [
+                840,
+                277
+              ],
+              [
+                900,
+                254
+              ],
+              [
+                960,
+                237
+              ],
+              [
+                1020,
+                233
+              ],
+              [
+                1080,
+                245
+              ],
+              [
+                1140,
+                272
+              ],
+              [
+                1200,
+                307
+              ],
+              [
+                1260,
+                340
+              ],
+              [
+                1320,
+                364
+              ],
+              [
+                1380,
+                371
+              ],
+              [
+                1440,
+                362
+              ]
+            ],
+            [
+              [
+                -120,
+                316
+              ],
+              [
+                -60,
+                309
+              ],
+              [
+                0,
+                317
+              ],
+              [
+                60,
+                336
+              ],
+              [
+                120,
+                359
+              ],
+              [
+                180,
+                379
+              ],
+              [
+                240,
+                392
+              ],
+              [
+                300,
+                398
+              ],
+              [
+                360,
+                399
+              ],
+              [
+                420,
+                400
+              ],
+              [
+                480,
+                405
+              ],
+              [
+                540,
+                414
+              ],
+              [
+                600,
+                427
+              ],
+              [
+                660,
+                437
+              ],
+              [
+                720,
+                439
+              ],
+              [
+                780,
+                429
+              ],
+              [
+                840,
+                407
+              ],
+              [
+                900,
+                377
+              ],
+              [
+                960,
+                347
+              ],
+              [
+                1020,
+                324
+              ],
+              [
+                1080,
+                313
+              ],
+              [
+                1140,
+                317
+              ],
+              [
+                1200,
+                331
+              ],
+              [
+                1260,
+                350
+              ],
+              [
+                1320,
+                368
+              ],
+              [
+                1380,
+                380
+              ],
+              [
+                1440,
+                386
+              ]
+            ],
+            [
+              [
+                -120,
+                455
+              ],
+              [
+                -60,
+                467
+              ],
+              [
+                0,
+                487
+              ],
+              [
+                60,
+                510
+              ],
+              [
+                120,
+                529
+              ],
+              [
+                180,
+                539
+              ],
+              [
+                240,
+                535
+              ],
+              [
+                300,
+                519
+              ],
+              [
+                360,
+                496
+              ],
+              [
+                420,
+                473
+              ],
+              [
+                480,
+                455
+              ],
+              [
+                540,
+                445
+              ],
+              [
+                600,
+                444
+              ],
+              [
+                660,
+                446
+              ],
+              [
+                720,
+                447
+              ],
+              [
+                780,
+                442
+              ],
+              [
+                840,
+                430
+              ],
+              [
+                900,
+                415
+              ],
+              [
+                960,
+                402
+              ],
+              [
+                1020,
+                398
+              ],
+              [
+                1080,
+                405
+              ],
+              [
+                1140,
+                425
+              ],
+              [
+                1200,
+                451
+              ],
+              [
+                1260,
+                479
+              ],
+              [
+                1320,
+                500
+              ],
+              [
+                1380,
+                512
+              ],
+              [
+                1440,
+                512
+              ]
+            ]
+          ],
+          "structures": [
+            {
+              "kind": "clock",
+              "x": 172,
+              "y": 500,
+              "w": 177,
+              "h": 151
+            },
+            {
+              "kind": "observatory",
+              "x": 424,
+              "y": 542,
+              "w": 230,
+              "h": 180
+            },
+            {
+              "kind": "aqueduct",
+              "x": 811,
+              "y": 500,
+              "w": 143,
+              "h": 209
+            }
+          ],
+          "sun": [
+            539,
+            174,
+            36
+          ],
+          "waterline": 517,
+          "weather": "snow",
+          "seed": 497,
+          "foliage": false,
+          "moon": true,
+          "style": "clock"
+        }
+      }
+    },
+    {
+      "name": "Frozen Pendulum / Crown transfer",
+      "origin": [
+        9792,
+        0
+      ],
+      "width": 3456,
+      "lesson": "Crown transfer · extreme timing and narrow catches.",
+      "platforms": [
+        {
+          "x": 336,
+          "y": -192,
+          "w": 144,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 576,
+          "y": -624,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 816,
+          "y": 96,
+          "w": 96,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1056,
+          "y": -336,
+          "w": 144,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1296,
+          "y": 384,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1536,
+          "y": -48,
+          "w": 96,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 1776,
+          "y": -480,
+          "w": 144,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2016,
+          "y": 240,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2256,
+          "y": -192,
+          "w": 96,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2496,
+          "y": -624,
+          "w": 144,
+          "h": 48,
+          "kind": "ice"
+        },
+        {
+          "x": 2736,
+          "y": 96,
+          "w": 48,
+          "h": 48,
+          "kind": "ice"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": -144,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": -216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": -576,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 144,
+          "w": 96,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 72,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": -288,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": -360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1296,
+          "y": 432,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 0,
+          "w": 96,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": -72,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": -432,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": -504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 288,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": -144,
+          "w": 96,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": -216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": -576,
+          "w": 144,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": -648,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 144,
+          "w": 48,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m0",
+          "x": 336.0,
+          "y": -408,
+          "period": 1.6,
+          "phase": 0.91,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m1",
+          "x": 384.0,
+          "y": -528,
+          "period": 1.06,
+          "phase": 1.227,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m2",
+          "x": 480.0,
+          "y": -224,
+          "period": 1.17,
+          "phase": 0.144,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m3",
+          "x": 552.0,
+          "y": -552,
+          "period": 1.9900000000000002,
+          "phase": 0.461,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m4",
+          "x": 504.0,
+          "y": -816,
+          "period": 1.39,
+          "phase": 0.778,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m5",
+          "x": 600.0,
+          "y": -800,
+          "period": 1.5,
+          "phase": 1.095,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m6",
+          "x": 672.0,
+          "y": -840,
+          "period": 1.73,
+          "phase": 0.012,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m7",
+          "x": 720.0,
+          "y": -960,
+          "period": 0.95,
+          "phase": 0.329,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m8",
+          "x": 792.0,
+          "y": 64,
+          "period": 1.06,
+          "phase": 0.646,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m9",
+          "x": 864.0,
+          "y": -264,
+          "period": 2.12,
+          "phase": 0.963,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m10",
+          "x": 912.0,
+          "y": -96,
+          "period": 1.28,
+          "phase": 1.28,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m11",
+          "x": 1008.0,
+          "y": -80,
+          "period": 1.39,
+          "phase": 0.197,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m12",
+          "x": 1056.0,
+          "y": -552,
+          "period": 1.86,
+          "phase": 0.514,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m13",
+          "x": 1104.0,
+          "y": -672,
+          "period": 1.61,
+          "phase": 0.831,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m14",
+          "x": 1200.0,
+          "y": -368,
+          "period": 0.95,
+          "phase": 1.148,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m15",
+          "x": 1272.0,
+          "y": -696,
+          "period": 1.6,
+          "phase": 0.065,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m16",
+          "x": 1224.0,
+          "y": 192,
+          "period": 1.17,
+          "phase": 0.382,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m17",
+          "x": 1320.0,
+          "y": 208,
+          "period": 1.28,
+          "phase": 0.699,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m18",
+          "x": 1392.0,
+          "y": 168,
+          "period": 1.9900000000000002,
+          "phase": 1.016,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m19",
+          "x": 1440.0,
+          "y": 48,
+          "period": 1.5,
+          "phase": 1.333,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m20",
+          "x": 1512.0,
+          "y": -80,
+          "period": 1.61,
+          "phase": 0.25,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m21",
+          "x": 1584.0,
+          "y": -408,
+          "period": 1.73,
+          "phase": 0.567,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m22",
+          "x": 1632.0,
+          "y": -240,
+          "period": 1.06,
+          "phase": 0.884,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m23",
+          "x": 1728.0,
+          "y": -224,
+          "period": 1.17,
+          "phase": 1.201,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m24",
+          "x": 1776.0,
+          "y": -696,
+          "period": 2.12,
+          "phase": 0.118,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m25",
+          "x": 1824.0,
+          "y": -816,
+          "period": 1.39,
+          "phase": 0.435,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m26",
+          "x": 1920.0,
+          "y": -512,
+          "period": 1.5,
+          "phase": 0.752,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m27",
+          "x": 1992.0,
+          "y": -840,
+          "period": 1.86,
+          "phase": 1.069,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m28",
+          "x": 1944.0,
+          "y": 48,
+          "period": 0.95,
+          "phase": 1.386,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m29",
+          "x": 2040.0,
+          "y": 64,
+          "period": 1.06,
+          "phase": 0.303,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m30",
+          "x": 2112.0,
+          "y": 24,
+          "period": 1.6,
+          "phase": 0.62,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m31",
+          "x": 2160.0,
+          "y": -96,
+          "period": 1.28,
+          "phase": 0.937,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m32",
+          "x": 2232.0,
+          "y": -224,
+          "period": 1.39,
+          "phase": 1.254,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m33",
+          "x": 2304.0,
+          "y": -552,
+          "period": 1.9900000000000002,
+          "phase": 0.171,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m34",
+          "x": 2352.0,
+          "y": -384,
+          "period": 1.61,
+          "phase": 0.488,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m35",
+          "x": 2448.0,
+          "y": -368,
+          "period": 0.95,
+          "phase": 0.805,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m36",
+          "x": 2496.0,
+          "y": -840,
+          "period": 1.73,
+          "phase": 1.122,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m37",
+          "x": 2544.0,
+          "y": -960,
+          "period": 1.17,
+          "phase": 0.039,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m38",
+          "x": 2640.0,
+          "y": -656,
+          "period": 1.28,
+          "phase": 0.356,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m39",
+          "x": 2712.0,
+          "y": -984,
+          "period": 2.12,
+          "phase": 0.673,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m40",
+          "x": 2664.0,
+          "y": -96,
+          "period": 1.5,
+          "phase": 0.99,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "01-X05-r3-m41",
+          "x": 2760.0,
+          "y": -80,
+          "period": 1.61,
+          "phase": 1.307,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "head_radius": 30,
+          "travel": 132
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "01-X05-r3-m42",
+          "x": 2832.0,
+          "y": -120,
+          "period": 1.86,
+          "phase": 0.224,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "press",
+          "id": "01-X05-r3-m43",
+          "x": 2880.0,
+          "y": -240,
+          "period": 1.06,
+          "phase": 0.541,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "c6eff1",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 624,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 720,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1248,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1296,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1584,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1632,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1680,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2208,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2400,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2448,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2976,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        }
+      ],
+      "zones": [
+        {
+          "type": "updraft",
+          "x": 480,
+          "y": -1200,
+          "w": 192,
+          "h": 1824,
+          "force": [
+            160,
+            -1830
+          ]
+        },
+        {
+          "type": "updraft",
+          "x": 1344,
+          "y": -1200,
+          "w": 192,
+          "h": 1824,
+          "force": [
+            -160,
+            -1830
+          ]
+        },
+        {
+          "type": "updraft",
+          "x": 2208,
+          "y": -1200,
+          "w": 192,
+          "h": 1824,
+          "force": [
+            160,
+            -1830
+          ]
+        }
+      ],
+      "motes": [
+        [
+          408.0,
+          -264
+        ],
+        [
+          600.0,
+          -696
+        ],
+        [
+          864.0,
+          24
+        ],
+        [
+          1128.0,
+          -408
+        ],
+        [
+          1320.0,
+          312
+        ],
+        [
+          1584.0,
+          -120
+        ],
+        [
+          1848.0,
+          -552
+        ],
+        [
+          2040.0,
+          168
+        ],
+        [
+          2304.0,
+          -264
+        ],
+        [
+          2568.0,
+          -696
+        ],
+        [
+          2760.0,
+          24
+        ]
+      ],
+      "checkpoints": [
+        [
+          96,
+          624
+        ]
+      ],
+      "decorations": [
+        {
+          "type": "snow_pine",
+          "x": 348,
+          "y": -192,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 828,
+          "y": 96,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 1308,
+          "y": 384,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 1788,
+          "y": -480,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 2268,
+          "y": -192,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        },
+        {
+          "type": "snow_pine",
+          "x": 2748,
+          "y": 96,
+          "width": 72,
+          "height": 96,
+          "scale": 0.5,
+          "layer": "back"
+        }
+      ],
+      "signs": [
+        {
+          "x": 144,
+          "y": 440,
+          "text": "Frozen Pendulum / Crown transfer\nExtreme route"
+        }
+      ],
+      "route": [
+        {
+          "at": [
+            96,
+            624
+          ],
+          "action": "start"
+        },
+        {
+          "at": [
+            408.0,
+            -192
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            600.0,
+            -624
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            864.0,
+            96
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1128.0,
+            -336
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1320.0,
+            384
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1584.0,
+            -48
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            1848.0,
+            -480
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2040.0,
+            240
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2304.0,
+            -192
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2568.0,
+            -624
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            2760.0,
+            96
+          ],
+          "action": "unverified"
+        },
+        {
+          "at": [
+            3360,
+            624
+          ],
+          "action": "unverified"
+        }
+      ],
+      "visual": {
+        "place": "ice",
+        "light": "sunset",
+        "art_cell": 3,
+        "composition": {
+          "palette": [
+            "435e8c",
+            "bbd8e7",
+            "88b0cb",
+            "618aab",
+            "385b7c",
+            "caf2f6"
+          ],
+          "ridges": [
+            [
+              [
+                -120,
+                277
+              ],
+              [
+                -60,
+                280
+              ],
+              [
+                0,
+                289
+              ],
+              [
+                60,
+                304
+              ],
+              [
+                120,
+                324
+              ],
+              [
+                180,
+                346
+              ],
+              [
+                240,
+                361
+              ],
+              [
+                300,
+                364
+              ],
+              [
+                360,
+                352
+              ],
+              [
+                420,
+                325
+              ],
+              [
+                480,
+                291
+              ],
+              [
+                540,
+                258
+              ],
+              [
+                600,
+                234
+              ],
+              [
+                660,
+                227
+              ],
+              [
+                720,
+                237
+              ],
+              [
+                780,
+                260
+              ],
+              [
+                840,
+                289
+              ],
+              [
+                900,
+                315
+              ],
+              [
+                960,
+                334
+              ],
+              [
+                1020,
+                341
+              ],
+              [
+                1080,
+                340
+              ],
+              [
+                1140,
+                334
+              ],
+              [
+                1200,
+                327
+              ],
+              [
+                1260,
+                322
+              ],
+              [
+                1320,
+                318
+              ],
+              [
+                1380,
+                313
+              ],
+              [
+                1440,
+                304
+              ]
+            ],
+            [
+              [
+                -120,
+                356
+              ],
+              [
+                -60,
+                355
+              ],
+              [
+                0,
+                359
+              ],
+              [
+                60,
+                371
+              ],
+              [
+                120,
+                391
+              ],
+              [
+                180,
+                417
+              ],
+              [
+                240,
+                440
+              ],
+              [
+                300,
+                454
+              ],
+              [
+                360,
+                455
+              ],
+              [
+                420,
+                441
+              ],
+              [
+                480,
+                416
+              ],
+              [
+                540,
+                388
+              ],
+              [
+                600,
+                363
+              ],
+              [
+                660,
+                347
+              ],
+              [
+                720,
+                341
+              ],
+              [
+                780,
+                343
+              ],
+              [
+                840,
+                349
+              ],
+              [
+                900,
+                353
+              ],
+              [
+                960,
+                352
+              ],
+              [
+                1020,
+                348
+              ],
+              [
+                1080,
+                345
+              ],
+              [
+                1140,
+                347
+              ],
+              [
+                1200,
+                358
+              ],
+              [
+                1260,
+                379
+              ],
+              [
+                1320,
+                406
+              ],
+              [
+                1380,
+                433
+              ],
+              [
+                1440,
+                451
+              ]
+            ],
+            [
+              [
+                -120,
+                524
+              ],
+              [
+                -60,
+                509
+              ],
+              [
+                0,
+                494
+              ],
+              [
+                60,
+                484
+              ],
+              [
+                120,
+                480
+              ],
+              [
+                180,
+                481
+              ],
+              [
+                240,
+                483
+              ],
+              [
+                300,
+                480
+              ],
+              [
+                360,
+                469
+              ],
+              [
+                420,
+                449
+              ],
+              [
+                480,
+                425
+              ],
+              [
+                540,
+                404
+              ],
+              [
+                600,
+                391
+              ],
+              [
+                660,
+                391
+              ],
+              [
+                720,
+                403
+              ],
+              [
+                780,
+                424
+              ],
+              [
+                840,
+                447
+              ],
+              [
+                900,
+                465
+              ],
+              [
+                960,
+                476
+              ],
+              [
+                1020,
+                479
+              ],
+              [
+                1080,
+                477
+              ],
+              [
+                1140,
+                477
+              ],
+              [
+                1200,
+                482
+              ],
+              [
+                1260,
+                493
+              ],
+              [
+                1320,
+                510
+              ],
+              [
+                1380,
+                525
+              ],
+              [
+                1440,
+                532
+              ]
+            ]
+          ],
+          "structures": [
+            {
+              "kind": "observatory",
+              "x": 201,
+              "y": 500,
+              "w": 206,
+              "h": 238
+            },
+            {
+              "kind": "aqueduct",
+              "x": 453,
+              "y": 542,
+              "w": 119,
+              "h": 267
+            },
+            {
+              "kind": "belfry",
+              "x": 840,
+              "y": 500,
+              "w": 172,
+              "h": 296
+            },
+            {
+              "kind": "railway",
+              "x": 1092,
+              "y": 542,
+              "w": 225,
+              "h": 325
+            }
+          ],
+          "sun": [
+            612,
+            117,
+            47
+          ],
+          "waterline": 549,
+          "weather": "snow",
+          "seed": 526,
+          "foliage": false,
+          "moon": true,
+          "style": "observatory"
+        }
+      }
+    }
+  ],
+  "journey": true,
+  "secret_areas": [],
+  "scenery": {
+    "renderer": "composition",
+    "revision": 1
+  },
+  "difficulty": {
+    "edition": "extreme",
+    "signature": "pendulum",
+    "secondary": "press",
+    "reachability_tested": false
+  }
+}

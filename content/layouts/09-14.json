@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "revision": 16,
+  "revision": 18,
   "day": "09-14",
   "identity": "Collapsing leaf bridges",
-  "intent": "A collapsing leaf-bridge maze: brittle causeways, dead-end mote bait below the true line and a deep trunk climb. Remember the path; the leaves will not wait. Expert redesign: autumn briars and falling seed weights.",
+  "intent": "A collapsing leaf-bridge maze: brittle causeways, dead-end mote bait below the true line and a deep trunk climb. Remember the path; the leaves will not wait. Extreme edition: tenfold machinery, spike-lined catches and compressed timing.",
   "world_top": -3072,
   "spawn": [
     120,
@@ -318,12 +318,13 @@
           "id": "09-14-machine-800",
           "x": 3432.0,
           "y": 504,
-          "period": 3.4,
+          "period": 1.259,
           "phase": 1.0,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "9f7080",
-          "head_radius": 38
+          "head_radius": 49.4,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -331,14 +332,15 @@
           "id": "09-14-machine-801",
           "x": 3960.0,
           "y": 245,
-          "period": 5.2,
+          "period": 1.926,
           "phase": 1.71,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "b49364",
           "radius": 140,
-          "head_radius": 21,
-          "swing": 0.65
+          "head_radius": 27.3,
+          "swing": 0.65,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -346,12 +348,13 @@
           "id": "09-14-machine-802",
           "x": 4464.0,
           "y": 504,
-          "period": 3.78,
-          "phase": 2.42,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "period": 1.4,
+          "phase": 1.02,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "9f7080",
-          "head_radius": 38
+          "head_radius": 49.4,
+          "extension_seconds": 0.06
         },
         {
           "type": "bramble",
@@ -564,6 +567,1158 @@
         {
           "type": "bramble",
           "x": 4464,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m0",
+          "x": 336,
+          "y": 312,
+          "period": 1.6,
+          "phase": 0.39,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m1",
+          "x": 1080,
+          "y": 538,
+          "period": 1.06,
+          "phase": 0.707,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m2",
+          "x": 1162,
+          "y": 394,
+          "period": 1.17,
+          "phase": 1.024,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m3",
+          "x": 3331,
+          "y": 264,
+          "period": 1.9900000000000002,
+          "phase": 1.341,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m4",
+          "x": 1824,
+          "y": 346,
+          "period": 1.39,
+          "phase": 0.258,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m5",
+          "x": 4464,
+          "y": 442,
+          "period": 1.5,
+          "phase": 0.575,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m6",
+          "x": 2544,
+          "y": 216,
+          "period": 1.73,
+          "phase": 0.892,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m7",
+          "x": 768,
+          "y": 346,
+          "period": 0.95,
+          "phase": 1.209,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m8",
+          "x": 1987,
+          "y": 442,
+          "period": 1.06,
+          "phase": 0.126,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m9",
+          "x": 1392,
+          "y": 168,
+          "period": 2.12,
+          "phase": 0.443,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m10",
+          "x": 3960,
+          "y": 216,
+          "period": 1.6,
+          "phase": 0.76,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m11",
+          "x": 2304,
+          "y": 264,
+          "period": 1.73,
+          "phase": 1.077,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m12",
+          "x": 336,
+          "y": 264,
+          "period": 1.86,
+          "phase": 1.394,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m13",
+          "x": 1080,
+          "y": 312,
+          "period": 1.9900000000000002,
+          "phase": 0.311,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m14",
+          "x": 1162,
+          "y": 168,
+          "period": 2.12,
+          "phase": 0.628,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m15",
+          "x": 3331,
+          "y": 216,
+          "period": 1.6,
+          "phase": 0.945,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m16",
+          "x": 1824,
+          "y": 120,
+          "period": 1.73,
+          "phase": 1.262,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m17",
+          "x": 4464,
+          "y": 216,
+          "period": 1.86,
+          "phase": 0.179,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m18",
+          "x": 2544,
+          "y": 312,
+          "period": 1.9900000000000002,
+          "phase": 0.496,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m19",
+          "x": 768,
+          "y": 442,
+          "period": 1.5,
+          "phase": 0.813,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m20",
+          "x": 1987,
+          "y": 538,
+          "period": 1.61,
+          "phase": 1.13,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m21",
+          "x": 1392,
+          "y": 120,
+          "period": 1.73,
+          "phase": 0.047,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m22",
+          "x": 3960,
+          "y": 346,
+          "period": 1.06,
+          "phase": 0.364,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m23",
+          "x": 2304,
+          "y": 394,
+          "period": 1.17,
+          "phase": 0.681,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r0-m24",
+          "x": 336,
+          "y": 216,
+          "period": 2.12,
+          "phase": 0.998,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m25",
+          "x": 1080,
+          "y": 442,
+          "period": 1.39,
+          "phase": 1.315,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r0-m26",
+          "x": 1162,
+          "y": 298,
+          "period": 1.5,
+          "phase": 0.232,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 720,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 528,
+          "w": 192,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": 480,
+          "w": 192,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": 480,
+          "w": 192,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2208,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": 528,
+          "w": 240,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 576,
+          "w": 240,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3264,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3312,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3360,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3408,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3264,
+          "y": 576,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3840,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3936,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3984,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4032,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4080,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 480,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 4320,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4368,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4416,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4512,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4560,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4320,
+          "y": 576,
+          "w": 288,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 720,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2208,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2976,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4512,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -1347,6 +2502,390 @@
         {
           "type": "bramble",
           "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 480,
+          "w": 384,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 384,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1584,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1632,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1680,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 288,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2208,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": 120,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 192,
+          "w": 480,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 432,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2208,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 192,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -2306,12 +3845,13 @@
           "id": "09-14-machine-0",
           "x": 676.8,
           "y": 552,
-          "period": 3.4,
+          "period": 1.259,
           "phase": 0.0,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "9f7080",
-          "head_radius": 38
+          "head_radius": 49.4,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -2319,13 +3859,14 @@
           "id": "09-14-machine-1",
           "x": 1094.4,
           "y": 480,
-          "period": 3.59,
+          "period": 1.33,
           "phase": 0.71,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "b49364",
           "w": 48,
-          "h": 144
+          "h": 144,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -2333,12 +3874,13 @@
           "id": "09-14-machine-2",
           "x": 1780.8,
           "y": 504,
-          "period": 3.78,
-          "phase": 1.42,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "period": 1.4,
+          "phase": 0.02,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "9f7080",
-          "head_radius": 38
+          "head_radius": 49.4,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -2346,12 +3888,13 @@
           "id": "09-14-machine-3",
           "x": 2222.4,
           "y": 600,
-          "period": 3.97,
-          "phase": 2.13,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "period": 1.47,
+          "phase": 0.66,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "9f7080",
-          "head_radius": 38
+          "head_radius": 49.4,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -2359,12 +3902,13 @@
           "id": "09-14-machine-4",
           "x": 2836.8,
           "y": 552,
-          "period": 4.16,
-          "phase": 2.84,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "period": 1.541,
+          "phase": 1.299,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "9f7080",
-          "head_radius": 38
+          "head_radius": 49.4,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -2372,13 +3916,14 @@
           "id": "09-14-machine-5",
           "x": 3194.4,
           "y": 480,
-          "period": 3.4,
+          "period": 1.259,
           "phase": 0.55,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "b49364",
           "w": 48,
-          "h": 144
+          "h": 144,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -2386,12 +3931,13 @@
           "id": "09-14-machine-820",
           "x": 3720.0,
           "y": 504,
-          "period": 3.4,
+          "period": 1.259,
           "phase": 0.2,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "9f7080",
-          "head_radius": 38
+          "head_radius": 49.4,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -2399,14 +3945,15 @@
           "id": "09-14-machine-821",
           "x": 4248.0,
           "y": 245,
-          "period": 5.2,
+          "period": 1.926,
           "phase": 0.91,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "b49364",
           "radius": 140,
-          "head_radius": 21,
-          "swing": 0.65
+          "head_radius": 27.3,
+          "swing": 0.65,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -2414,12 +3961,13 @@
           "id": "09-14-machine-822",
           "x": 4752.0,
           "y": 504,
-          "period": 3.78,
-          "phase": 1.62,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "period": 1.4,
+          "phase": 0.22,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "9f7080",
-          "head_radius": 38
+          "head_radius": 49.4,
+          "extension_seconds": 0.06
         },
         {
           "type": "bramble",
@@ -2632,6 +4180,2554 @@
         {
           "type": "bramble",
           "x": 4752,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m0",
+          "x": 1478,
+          "y": 312,
+          "period": 1.6,
+          "phase": 0.39,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m1",
+          "x": 576,
+          "y": 538,
+          "period": 1.06,
+          "phase": 0.707,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m2",
+          "x": 4349,
+          "y": 394,
+          "period": 1.17,
+          "phase": 1.024,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m3",
+          "x": 2563,
+          "y": 72,
+          "period": 1.9900000000000002,
+          "phase": 1.341,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m4",
+          "x": 1680,
+          "y": 202,
+          "period": 1.39,
+          "phase": 0.258,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m5",
+          "x": 778,
+          "y": 250,
+          "period": 1.5,
+          "phase": 0.575,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m6",
+          "x": 4666,
+          "y": 216,
+          "period": 1.73,
+          "phase": 0.892,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m7",
+          "x": 3720,
+          "y": 394,
+          "period": 0.95,
+          "phase": 1.209,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m8",
+          "x": 2909,
+          "y": 442,
+          "period": 1.06,
+          "phase": 0.126,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m9",
+          "x": 1478,
+          "y": 312,
+          "period": 2.12,
+          "phase": 0.443,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m10",
+          "x": 552,
+          "y": 384,
+          "period": 1.28,
+          "phase": 0.76,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m11",
+          "x": 4325,
+          "y": 240,
+          "period": 1.39,
+          "phase": 1.077,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m12",
+          "x": 2563,
+          "y": 72,
+          "period": 1.86,
+          "phase": 1.394,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m13",
+          "x": 1656,
+          "y": 48,
+          "period": 1.61,
+          "phase": 0.311,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m14",
+          "x": 754,
+          "y": 96,
+          "period": 0.95,
+          "phase": 0.628,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m15",
+          "x": 4666,
+          "y": 216,
+          "period": 1.6,
+          "phase": 0.945,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m16",
+          "x": 3696,
+          "y": 240,
+          "period": 1.17,
+          "phase": 1.262,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m17",
+          "x": 2885,
+          "y": 288,
+          "period": 1.28,
+          "phase": 0.179,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m18",
+          "x": 1478,
+          "y": 312,
+          "period": 1.9900000000000002,
+          "phase": 0.496,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m19",
+          "x": 576,
+          "y": 538,
+          "period": 1.5,
+          "phase": 0.813,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m20",
+          "x": 4349,
+          "y": 394,
+          "period": 1.61,
+          "phase": 1.13,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m21",
+          "x": 2563,
+          "y": 72,
+          "period": 1.73,
+          "phase": 0.047,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m22",
+          "x": 1680,
+          "y": 202,
+          "period": 1.06,
+          "phase": 0.364,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m23",
+          "x": 778,
+          "y": 250,
+          "period": 1.17,
+          "phase": 0.681,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m24",
+          "x": 4666,
+          "y": 216,
+          "period": 2.12,
+          "phase": 0.998,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m25",
+          "x": 3720,
+          "y": 394,
+          "period": 1.39,
+          "phase": 1.315,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m26",
+          "x": 2909,
+          "y": 442,
+          "period": 1.5,
+          "phase": 0.232,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m27",
+          "x": 1478,
+          "y": 312,
+          "period": 1.86,
+          "phase": 0.549,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m28",
+          "x": 576,
+          "y": 538,
+          "period": 0.95,
+          "phase": 0.866,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m29",
+          "x": 4349,
+          "y": 394,
+          "period": 1.06,
+          "phase": 1.183,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m30",
+          "x": 2563,
+          "y": 72,
+          "period": 1.6,
+          "phase": 0.1,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m31",
+          "x": 1680,
+          "y": 202,
+          "period": 1.28,
+          "phase": 0.417,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m32",
+          "x": 778,
+          "y": 250,
+          "period": 1.39,
+          "phase": 0.734,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m33",
+          "x": 4666,
+          "y": 216,
+          "period": 1.9900000000000002,
+          "phase": 1.051,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m34",
+          "x": 3720,
+          "y": 394,
+          "period": 1.61,
+          "phase": 1.368,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m35",
+          "x": 2909,
+          "y": 442,
+          "period": 0.95,
+          "phase": 0.285,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m36",
+          "x": 1478,
+          "y": 312,
+          "period": 1.73,
+          "phase": 0.602,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m37",
+          "x": 576,
+          "y": 538,
+          "period": 1.17,
+          "phase": 0.919,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m38",
+          "x": 4349,
+          "y": 394,
+          "period": 1.28,
+          "phase": 1.236,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m39",
+          "x": 2563,
+          "y": 72,
+          "period": 2.12,
+          "phase": 0.153,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m40",
+          "x": 1680,
+          "y": 202,
+          "period": 1.5,
+          "phase": 0.47,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m41",
+          "x": 778,
+          "y": 250,
+          "period": 1.61,
+          "phase": 0.787,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m42",
+          "x": 4666,
+          "y": 216,
+          "period": 1.86,
+          "phase": 1.104,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m43",
+          "x": 3720,
+          "y": 394,
+          "period": 1.06,
+          "phase": 0.021,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m44",
+          "x": 2909,
+          "y": 442,
+          "period": 1.17,
+          "phase": 0.338,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m45",
+          "x": 1478,
+          "y": 312,
+          "period": 1.6,
+          "phase": 0.655,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m46",
+          "x": 552,
+          "y": 384,
+          "period": 1.39,
+          "phase": 0.972,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m47",
+          "x": 4325,
+          "y": 240,
+          "period": 1.5,
+          "phase": 1.289,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m48",
+          "x": 2563,
+          "y": 72,
+          "period": 1.9900000000000002,
+          "phase": 0.206,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m49",
+          "x": 1656,
+          "y": 48,
+          "period": 0.95,
+          "phase": 0.523,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m50",
+          "x": 754,
+          "y": 96,
+          "period": 1.06,
+          "phase": 0.84,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m51",
+          "x": 4666,
+          "y": 216,
+          "period": 1.73,
+          "phase": 1.157,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m52",
+          "x": 3696,
+          "y": 240,
+          "period": 1.28,
+          "phase": 0.074,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 48,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "shutter",
+          "id": "09-14-extreme-r2-m53",
+          "x": 2885,
+          "y": 288,
+          "period": 1.39,
+          "phase": 0.391,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "w": 96,
+          "h": 192
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m54",
+          "x": 1478,
+          "y": 312,
+          "period": 2.12,
+          "phase": 0.708,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m55",
+          "x": 576,
+          "y": 538,
+          "period": 1.61,
+          "phase": 1.025,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m56",
+          "x": 4349,
+          "y": 394,
+          "period": 0.95,
+          "phase": 1.342,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m57",
+          "x": 2563,
+          "y": 72,
+          "period": 1.86,
+          "phase": 0.259,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m58",
+          "x": 1680,
+          "y": 202,
+          "period": 1.17,
+          "phase": 0.576,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m59",
+          "x": 778,
+          "y": 250,
+          "period": 1.28,
+          "phase": 0.893,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m60",
+          "x": 4666,
+          "y": 216,
+          "period": 1.6,
+          "phase": 1.21,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m61",
+          "x": 3720,
+          "y": 394,
+          "period": 1.5,
+          "phase": 0.127,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m62",
+          "x": 2909,
+          "y": 442,
+          "period": 1.61,
+          "phase": 0.444,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m63",
+          "x": 1478,
+          "y": 312,
+          "period": 1.9900000000000002,
+          "phase": 0.761,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m64",
+          "x": 576,
+          "y": 360,
+          "period": 2.12,
+          "phase": 1.078,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m65",
+          "x": 4349,
+          "y": 216,
+          "period": 1.6,
+          "phase": 1.395,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m66",
+          "x": 2563,
+          "y": 72,
+          "period": 1.73,
+          "phase": 0.312,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m67",
+          "x": 1680,
+          "y": 24,
+          "period": 1.86,
+          "phase": 0.629,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m68",
+          "x": 778,
+          "y": 72,
+          "period": 1.9900000000000002,
+          "phase": 0.946,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m69",
+          "x": 4666,
+          "y": 216,
+          "period": 2.12,
+          "phase": 1.263,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m70",
+          "x": 3720,
+          "y": 216,
+          "period": 1.6,
+          "phase": 0.18,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m71",
+          "x": 2909,
+          "y": 264,
+          "period": 1.73,
+          "phase": 0.497,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m72",
+          "x": 1478,
+          "y": 312,
+          "period": 1.86,
+          "phase": 0.814,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m73",
+          "x": 576,
+          "y": 538,
+          "period": 1.28,
+          "phase": 1.131,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m74",
+          "x": 4349,
+          "y": 394,
+          "period": 1.39,
+          "phase": 0.048,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m75",
+          "x": 2563,
+          "y": 72,
+          "period": 1.6,
+          "phase": 0.365,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m76",
+          "x": 1680,
+          "y": 202,
+          "period": 1.61,
+          "phase": 0.682,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m77",
+          "x": 778,
+          "y": 250,
+          "period": 0.95,
+          "phase": 0.999,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r2-m78",
+          "x": 4666,
+          "y": 216,
+          "period": 1.9900000000000002,
+          "phase": 1.316,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m79",
+          "x": 3720,
+          "y": 394,
+          "period": 1.17,
+          "phase": 0.233,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r2-m80",
+          "x": 2909,
+          "y": 442,
+          "period": 1.28,
+          "phase": 0.55,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 624,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 720,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 624,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 720,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 384,
+          "w": 672,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1584,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1632,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1680,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1584,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1632,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1680,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 336,
+          "w": 672,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2448,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2976,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2448,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2976,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2448,
+          "y": 384,
+          "w": 576,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 576,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 4080,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4128,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4224,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4272,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4320,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4368,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4080,
+          "y": 480,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 4608,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4656,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4752,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4800,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4848,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4608,
+          "y": 576,
+          "w": 288,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 192,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 624,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 720,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1248,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1296,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1584,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1632,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1680,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2112,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2208,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2400,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2448,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2976,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3264,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3312,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3360,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3408,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4800,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -3329,6 +7425,566 @@
         {
           "type": "bramble",
           "x": 2976,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 432,
+          "w": 240,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1248,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1296,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 264,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": 336,
+          "w": 240,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1680,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2208,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 384,
+          "w": 240,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 528,
+          "w": 288,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1248,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1296,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1392,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1632,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1680,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1776,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2160,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2208,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2256,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2592,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2640,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -4139,12 +8795,13 @@
           "id": "09-14-machine-840",
           "x": 3720.0,
           "y": 504,
-          "period": 3.4,
-          "phase": 2.4,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "period": 1.259,
+          "phase": 1.141,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "9f7080",
-          "head_radius": 38
+          "head_radius": 49.4,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -4152,14 +8809,15 @@
           "id": "09-14-machine-841",
           "x": 4248.0,
           "y": 245,
-          "period": 5.2,
+          "period": 1.926,
           "phase": 0.11,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "b49364",
           "radius": 140,
-          "head_radius": 21,
-          "swing": 0.65
+          "head_radius": 27.3,
+          "swing": 0.65,
+          "extension_seconds": 0.06
         },
         {
           "type": "mechanism",
@@ -4167,12 +8825,13 @@
           "id": "09-14-machine-842",
           "x": 4752.0,
           "y": 504,
-          "period": 3.78,
+          "period": 1.4,
           "phase": 0.82,
-          "safe_seconds": 1.0,
-          "warning_seconds": 0.65,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
           "color": "9f7080",
-          "head_radius": 38
+          "head_radius": 49.4,
+          "extension_seconds": 0.06
         },
         {
           "type": "bramble",
@@ -4385,6 +9044,1158 @@
         {
           "type": "bramble",
           "x": 4752,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m0",
+          "x": 451,
+          "y": -552,
+          "period": 1.6,
+          "phase": 0.39,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m1",
+          "x": 4248,
+          "y": 394,
+          "period": 1.06,
+          "phase": 0.707,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m2",
+          "x": 1325,
+          "y": -566,
+          "period": 1.17,
+          "phase": 1.024,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m3",
+          "x": 4666,
+          "y": 264,
+          "period": 1.9900000000000002,
+          "phase": 1.341,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m4",
+          "x": 1896,
+          "y": -374,
+          "period": 1.39,
+          "phase": 0.258,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m5",
+          "x": 557,
+          "y": 346,
+          "period": 1.5,
+          "phase": 0.575,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m6",
+          "x": 2362,
+          "y": -360,
+          "period": 1.73,
+          "phase": 0.892,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m7",
+          "x": 1032,
+          "y": 106,
+          "period": 0.95,
+          "phase": 1.209,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m8",
+          "x": 2938,
+          "y": 58,
+          "period": 1.06,
+          "phase": 0.126,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m9",
+          "x": 403,
+          "y": -168,
+          "period": 2.12,
+          "phase": 0.443,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m10",
+          "x": 3120,
+          "y": 216,
+          "period": 1.6,
+          "phase": 0.76,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m11",
+          "x": 1229,
+          "y": -360,
+          "period": 1.73,
+          "phase": 1.077,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m12",
+          "x": 3619,
+          "y": 264,
+          "period": 1.86,
+          "phase": 1.394,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m13",
+          "x": 552,
+          "y": -600,
+          "period": 1.9900000000000002,
+          "phase": 0.311,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m14",
+          "x": 4349,
+          "y": 168,
+          "period": 2.12,
+          "phase": 0.628,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m15",
+          "x": 1123,
+          "y": -840,
+          "period": 1.6,
+          "phase": 0.945,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m16",
+          "x": 4752,
+          "y": 216,
+          "period": 1.73,
+          "phase": 1.262,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m17",
+          "x": 1997,
+          "y": -600,
+          "period": 1.86,
+          "phase": 0.179,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m18",
+          "x": 355,
+          "y": 216,
+          "period": 1.9900000000000002,
+          "phase": 0.496,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m19",
+          "x": 2448,
+          "y": -86,
+          "period": 1.5,
+          "phase": 0.813,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m20",
+          "x": 1133,
+          "y": 202,
+          "period": 1.61,
+          "phase": 1.13,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m21",
+          "x": 2822,
+          "y": -72,
+          "period": 1.73,
+          "phase": 0.047,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m22",
+          "x": 504,
+          "y": -38,
+          "period": 1.06,
+          "phase": 0.364,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m23",
+          "x": 3178,
+          "y": 346,
+          "period": 1.17,
+          "phase": 0.681,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "pendulum",
+          "id": "09-14-extreme-r4-m24",
+          "x": 1027,
+          "y": -456,
+          "period": 2.12,
+          "phase": 0.998,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "radius": 204,
+          "head_radius": 32,
+          "swing": 1.15
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m25",
+          "x": 3720,
+          "y": 394,
+          "period": 1.39,
+          "phase": 1.315,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "bloom",
+          "id": "09-14-extreme-r4-m26",
+          "x": 653,
+          "y": -470,
+          "period": 1.5,
+          "phase": 0.232,
+          "safe_seconds": 0.12,
+          "warning_seconds": 0.16,
+          "extension_seconds": 0.06,
+          "color": "e4a56a",
+          "head_radius": 52
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 480,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 912,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": 216,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 288,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": 24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": 24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 624,
+          "y": 24,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 96,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": -168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1008,
+          "y": -168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": -168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": -168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": -168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": -168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 960,
+          "y": -96,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": -360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": -360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 528,
+          "y": -360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 576,
+          "y": -360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 624,
+          "y": -360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": -360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": -288,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": -552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": -552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": -552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": -552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1248,
+          "y": -552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1344,
+          "y": -552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": -480,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": -312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": -312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": -312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": -312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": -312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": -312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1728,
+          "y": -240,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": -72,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2400,
+          "y": -72,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2448,
+          "y": -72,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2496,
+          "y": -72,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2544,
+          "y": -72,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 0,
+          "w": 288,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 168,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 240,
+          "w": 192,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 480,
+          "w": 192,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 576,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 4080,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4128,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4224,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4272,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4320,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4368,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4080,
+          "y": 480,
+          "w": 336,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 4608,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4656,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4704,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4752,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4848,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4608,
+          "y": 576,
+          "w": 288,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 192,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 240,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3264,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3312,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3360,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3408,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 4800,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -4955,6 +10766,550 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 720,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 408,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 480,
+          "w": 240,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 432,
+          "w": 192,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1584,
+          "y": 312,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": 360,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 432,
+          "w": 240,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2400,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2448,
+          "y": 456,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 528,
+          "w": 192,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 504,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 576,
+          "w": 240,
+          "h": 24,
+          "direction": "down"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1824,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 552,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 288,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 336,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 384,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 432,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 480,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 672,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 720,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 768,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 816,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 864,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1056,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1104,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1152,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1200,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1440,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1488,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1536,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1584,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1632,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1872,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1920,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 1968,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2016,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2064,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2304,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2352,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2400,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2448,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2688,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2736,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2784,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [],
@@ -5128,9 +11483,13 @@
   },
   "journey": true,
   "difficulty": {
-    "edition": "expert",
+    "edition": "extreme",
     "signature": "bloom",
     "secondary": "pendulum",
-    "mechanisms": 15
+    "mechanisms": 15,
+    "previous_mechanisms": 15,
+    "mechanism_multiplier": 10,
+    "reachability_tested": false,
+    "ground_spike_banks": true
   }
 }

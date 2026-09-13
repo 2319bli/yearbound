@@ -1,10 +1,10 @@
-# Seasonal obstacle expansion · 0.15.0
+# Seasonal mechanisms · 0.16.0
 
-The campaign contains 51 playable dates, 259 named places and 831 moving or timed mechanisms. All original dates retain their own scenery and route themes. Nine journeys gain additional elevation-changing transfer galleries; the others combine new mechanisms with their existing climbs, circuits, passages, platforms and weather. The June boss's survival attack intervals are 64% of their previous length, while its full five-arena progression and readable warnings remain.
+The current build contains 183 stages, 787 named places and 28,374 moving or timed mechanisms. The 51 calendar maps have ten times their 0.15 mechanism counts (831 → 8,310). Another 132 monthly challenges add 528 places. See [EXTREME_CHALLENGES.md](EXTREME_CHALLENGES.md).
 
-This is an expert difficulty redesign. “Ten times harder” is a direction for playtesting, not an objectively verified multiplier. Checkpoints and immediate retries remain essential. The original movement, the original dash profile with horizontal multiplier 1.5, physical swimming and the 17-station Dash Lab are preserved.
+This difficulty was intentionally not checked for reachability, survival or balance at the owner's request. Original movement, charge dash with horizontal multiplier 1.5, swimming and the 17-station Dash Lab remain unchanged.
 
-## Ten new dates
+## The ten dates introduced in 0.15 (now also hardened)
 
 | Date | Stage | Distinct challenge |
 |---|---|---|
@@ -42,7 +42,7 @@ Example windmill hazard:
 }
 ```
 
-`period` is seconds per cycle and `phase` is a seconds offset. Pulse mechanisms additionally use `safe_seconds` and `warning_seconds`; the remainder is active. Use at least 0.65 seconds open and 0.5 seconds of warning. Shared extension/retraction takes 0.18 seconds. Each instance can tune these parameters independently:
+`period` is seconds per cycle and `phase` is a seconds offset. Pulse mechanisms additionally use `safe_seconds` and `warning_seconds`; the remainder is active. Import bounds now allow periods from 0.6 to 20 seconds, an opening of at least 0.08 seconds, a warning of at least 0.12 seconds and at least 0.2 seconds active. The extreme pass usually uses 0.12 seconds open, 0.16 seconds warning and 0.06 seconds extension/retraction. `extension_seconds` is optional (0.02–1); legacy instances default to 0.18. Warnings remain harmless. Each instance can tune these parameters independently:
 
 | Mechanism | Additional fields |
 |---|---|
@@ -53,6 +53,6 @@ Example windmill hazard:
 | sawrail | `travel`, `head_radius` |
 | arc | `dx`, `dy` (relative endpoint), `thickness` |
 
-Use `scripts/obstacle_rules.gd` for import bounds and `scripts/obstacles.gd` for the shared behavior. Give every instance a unique `id`. Place a safe observation/arrival area before an active crossing; don't let the next mechanism invade a jump's landing bay. Match machinery materials to the day's terrain while preserving the amber edge and dark outline.
+Use `scripts/obstacle_rules.gd` for import bounds and `scripts/obstacles.gd` for the shared behavior. Give every instance a unique `id`. The extreme build deliberately overlaps crossings and constricts landings. Do not widen its openings to satisfy old route bots. Small checkpoint islands remain, but are not a guarantee of a beatable route. Match machinery materials to the day's terrain while preserving the amber edge and dark outline.
 
-Blueprint `route` entries are QA waypoints, not gameplay automation. `mechanism` entries ask the test driver to observe timing and cross using real inputs. All movement and hazards continue running normally. These checks establish reachability; they cannot establish enjoyable human difficulty or final five-minute pacing.
+Blueprint `route` entries are design/QA annotations, not gameplay automation. They have not been updated into a proof of reachability for 0.16. New challenge annotations use `unverified` explicitly. No traversal or survival tests were run for this extreme build.

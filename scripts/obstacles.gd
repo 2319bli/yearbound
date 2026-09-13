@@ -34,7 +34,8 @@ static func parts(h: Dictionary, time: float) -> Array:
 	elif state(h, time) == "active":
 		var active_time = t - float(h.get("safe_seconds", 1.05)) - float(h.get("warning_seconds", .65))
 		var duration = period - float(h.get("safe_seconds", 1.05)) - float(h.get("warning_seconds", .65))
-		var extension = minf(clampf(active_time / .18, 0, 1), clampf((duration - active_time) / .18, 0, 1))
+		var transition=maxf(.02,float(h.get("extension_seconds",.18)))
+		var extension = minf(clampf(active_time / transition, 0, 1), clampf((duration - active_time) / transition, 0, 1))
 		if extension <= .01:return result
 		match h.mechanism:
 			"press": result.append({"rect": Rect2(at + Vector2(0, -(1-extension)*float(h.h)), Vector2(h.w, h.h))})

@@ -68,7 +68,7 @@ func update(dt: float) -> void:
 		if shot.pos.y>780 or shot.pos.x<float(arena.from_x)-100 or shot.pos.x>end+100:host.projectiles.remove_at(i)
 func spawn(at: Vector2, velocity: Vector2, delay: float, radius: float, kind: String) -> void:
 	host.projectiles.append({"pos":at,"vel":velocity,"delay":delay,"r":radius,"kind":kind})
-func chase_wall() -> float:return float(data().from_x)-380+chase_time*(175 if host.assist else 215)
+func chase_wall() -> float:return float(data().from_x)-380+chase_time*float(host.spec.boss.get("chase_speed",215))*(.814 if host.assist else 1.0)
 func draw(n: Node2D) -> void:
 	var arena=data();var end=float(arena.to_x);var center=clampf(host.camera_x+800,float(arena.from_x)+350,end-250)
 	var at=Vector2(center,110+sin(host.age)*16-(phase_time-float(arena.duration))*80 if defeated else 110+sin(host.age)*16)

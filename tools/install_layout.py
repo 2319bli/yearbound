@@ -29,7 +29,7 @@ catalog_path = project/'content'/'catalog.json'
 if target.exists() and not args.replace:
     raise SystemExit(f"{stage['id']} already exists. Choose a different date, or explicitly use --replace.")
 catalog = json.loads(catalog_path.read_text())
-if stage['id'] not in catalog['stages']:
+if stage['id'] not in catalog['stages'] and stage['id'] not in catalog.get('challenges',[]):
     catalog['stages'].append(stage['id'])
 # Featured remains the six reference days; every catalog date appears in the calendar.
 def atomic_write(path, value):

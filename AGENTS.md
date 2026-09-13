@@ -4,9 +4,9 @@ This directory is the canonical editable Godot project and Git repository. Start
 
 ## Project state
 
-- Godot 4.6.2; native Apple silicon desktop build, currently version 0.15.0.
-- 51 playable dates: all of June plus 21 seasonal samples. The full calendar has 365 dates.
-- Every map has its own artwork, covering 259 named places. See `docs/MAP_SCENERY.md` and both `art/maps/PROVENANCE*.json` records.
+- Godot 4.6.2; native Apple silicon desktop build, currently version 0.16.0.
+- 183 stages: 51 calendar dates plus 132 monthly challenges (11 per month). The full main calendar still has 365 dates.
+- 787 named places: 259 original atlas views plus 528 original code-native challenge scenery compositions. See `docs/MAP_SCENERY.md`, `docs/EXTREME_CHALLENGES.md` and the artwork provenance records.
 - The repository `https://github.com/2319bli/yearbound` is intentionally public, following the owner's latest preference.
 
 ## Working together
@@ -22,11 +22,14 @@ This directory is the canonical editable Godot project and Git repository. Start
 - Edit `content/layouts/MM-DD.json` for authored layout changes, then compile with `python3 tools/build_authored_stages.py --write`. The game consumes `content/stages/`; avoid edits there that the compiler will overwrite.
 - Each day should have its own scenery and gameplay identity. Keep terrain tops and hazards clearly separated from background decoration.
 - Preserve the existing responsive movement unless the task explicitly calls for tuning it. The approved charge-dash profile is the original profile with horizontal multiplier **1.5**. Keep the 17-station Dash Lab available.
+- Monthly challenges use `MM-XNN` IDs, a separate `catalog.challenges` list and the Monthly challenges browser. Edit their explicit blueprints normally. `tools/build_monthly_challenges.py --write` deliberately regenerates all 132 challenge blueprints; do not run it casually over custom edits.
 - Mechanisms are authored as `type: "mechanism"` hazards; see `docs/OBSTACLES.md`. Drawn geometry and swept contact must agree. Keep warning intervals harmless.
 - November is physically underwater. Preserve swimming support and workshop metadata when changing shared stage systems.
 - The second major ability and full storyline are intentionally undecided.
 
 ## Build and checks
+
+The owner explicitly requested extreme difficulty without checking whether routes are possible. Do not run reachability, traversal or survival validation unless a later request authorizes it. Historical 0.15 proofs are obsolete for current layouts. Structural, loading, UI, saving and rendering checks remain appropriate.
 
 Run commands from this directory:
 

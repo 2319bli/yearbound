@@ -29,13 +29,15 @@ func run() -> void:
 	for kind in kinds:
 		var h=kinds[kind].duplicate(true);h.x=500;h.y=350;h.phase=0
 		if kind not in ["windmill","pendulum"]:
-			check(YBObstacles.state(h,.2)=="open" and YBObstacles.parts(h,.2).is_empty(),kind+" open state is harmless")
-			check(YBObstacles.state(h,h.safe_seconds+.2)=="warning" and YBObstacles.parts(h,h.safe_seconds+.2).is_empty(),kind+" warning is visible before it becomes lethal")
+			var open_time=float(h.safe_seconds)*.5
+			var warning_time=float(h.safe_seconds)+float(h.warning_seconds)*.5
+			check(YBObstacles.state(h,open_time)=="open" and YBObstacles.parts(h,open_time).is_empty(),kind+" open state is harmless")
+			check(YBObstacles.state(h,warning_time)=="warning" and YBObstacles.parts(h,warning_time).is_empty(),kind+" warning is visible before it becomes lethal")
 		if kind=="shutter":
 			for step in 40:
 				for part in YBObstacles.parts(h,step*float(h.period)/40):
 					check(part.rect.position.x>=h.x and part.rect.end.x<=h.x+h.w,"shutter extension stays inside its marked gate")
-		var t=1.0 if kind in ["windmill","pendulum"] else h.period-.4
+		var t=1.0 if kind in ["windmill","pendulum"] else (float(h.period)+float(h.safe_seconds)+float(h.warning_seconds))*.5
 		var parts=YBObstacles.parts(h,t);check(not parts.is_empty(),kind+" supplies active collision geometry")
 		var part=parts[0];var center: Vector2=part.rect.get_center() if part.has("rect") else (part.center if part.has("center") else part.a.lerp(part.b,.65))
 		var feet=center+Vector2(0,19)

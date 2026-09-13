@@ -15,6 +15,7 @@ var calendar: Dictionary
 var stages: Dictionary = {}
 var stage_order: Array = []
 var featured_order: Array = []
+var challenge_order: Array = []
 var screen := "title"
 var settings_return := "title"
 var buttons: Array[Dictionary] = []
@@ -46,7 +47,8 @@ func _ready() -> void:
 	var catalog = JSON.parse_string(FileAccess.get_file_as_string("res://content/catalog.json"))
 	stage_order = catalog.stages
 	featured_order = catalog.featured
-	for id in catalog.stages: stages[id] = JSON.parse_string(FileAccess.get_file_as_string("res://content/stages/"+id+".json"))
+	challenge_order = catalog.get("challenges",[])
+	for id in stage_order+challenge_order: stages[id] = JSON.parse_string(FileAccess.get_file_as_string("res://content/stages/"+id+".json"))
 	for day in calendar.days: day.available = stages.has(day.id)
 	selected = store.data.last_stage if stages.has(store.data.last_stage) else "06-01"
 	align_month()
@@ -127,9 +129,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif screen == "settings": change_screen(settings_return)
 		elif screen == "controls": change_screen(controls_return)
 		elif screen == "lab_menu": resume_game()
-		elif screen in ["calendar","about"]: change_screen("title")
-	elif screen == "calendar" and event.is_action_pressed("ui_left"): change_month(-1)
-	elif screen == "calendar" and event.is_action_pressed("ui_right"): change_month(1)
+		elif screen in ["calendar","challenges","about"]: change_screen("title")
+	elif screen in ["calendar","challenges"] and event.is_action_pressed("ui_left"): change_month(-1)
+	elif screen in ["calendar","challenges"] and event.is_action_pressed("ui_right"): change_month(1)
 
 func change_screen(next: String) -> void:
 	screen=next;focus=0;hovered=-1;transition=0.35
@@ -194,7 +196,12 @@ func activate(id: String) -> void:
 	match id:
 		"begin": start_stage("06-01")
 		"continue": start_stage(store.data.last_stage,true)
-		"calendar": save_run();align_month();change_screen("calendar");Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+		"calendar":
+			save_run();align_month();change_screen("calendar");Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+			if selected in challenge_order:change_month(0)
+		"challenges":
+			save_run();align_month();change_screen("challenges");Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+			if selected not in challenge_order:change_month(0)
 		"title": save_run();change_screen("title");Input.mouse_mode=Input.MOUSE_MODE_VISIBLE;audio.play_track("res://audio/june_opens_the_gate.mp3")
 		"settings": settings_return=screen;change_screen("settings")
 		"about": change_screen("about")
@@ -214,7 +221,9 @@ func activate(id: String) -> void:
 			if stages.has(selected): start_stage(selected)
 		"prev": change_month(-1)
 		"next": change_month(1)
-		"next_stage": start_stage(stage_order[(stage_order.find(world.spec.id)+1)%stage_order.size()])
+		"next_stage":
+			var order=challenge_order if world.spec.id in challenge_order else stage_order
+			start_stage(order[(order.find(world.spec.id)+1)%order.size()])
 		"music": store.data.settings.music=float((int(floor(store.data.settings.music*4))+1)%5)/4;audio.configure(store.data.settings);store.persist()
 		"effects": store.data.settings.effects=float((int(floor(store.data.settings.effects*4))+1)%5)/4;audio.configure(store.data.settings);store.persist()
 		"fullscreen": toggle_fullscreen()
@@ -238,7 +247,9 @@ func draw_background(n: Node2D) -> void:
 	# The distant landscape shifts gently during a climb; screen-space UI stays put.
 	var vertical=world.camera_y if show_world else 0.0
 	n.draw_set_transform(Vector2(0,clampf(-vertical*.04,0,48)))
-	if show_world and world.spec.has("scenery"):
+	if show_world and world.spec.get("scenery",{}).get("renderer","")=="composition":
+		YBChallengeScenery.background(n,world.spec,world.player.position.x,cam,0 if store.data.settings.reduced_motion else time)
+	elif show_world and world.spec.has("scenery"):
 		YBMapScenery.background(n,world.spec,world.player.position.x,cam,clampf(world.june_boss.aftermath/2,0,1) if world.june_boss else 0)
 	elif show_world and world.spec.has("journey_regions"):
 		YBJourneyScenery.background(n,world.spec.journey_regions,world.player.position.x,cam,0 if store.data.settings.reduced_motion else time,clampf(world.june_boss.aftermath/2,0,1) if world.june_boss else 0)
@@ -255,6 +266,7 @@ func draw_overlay(n: Node2D) -> void:
 	match screen:
 		"title": draw_title(n)
 		"calendar": draw_calendar(n)
+		"challenges": draw_challenges(n)
 		"settings": draw_settings(n)
 		"controls": draw_controls(n)
 		"lab_menu": n.draw_rect(Rect2(0,0,1280,720),Color(.06,.16,.19,.6))
@@ -289,20 +301,23 @@ func draw_title(n: Node2D) -> void:
 	button(n,"about","Field notes",Rect2(281,524,198,44))
 	button(n,"quit","Quit",Rect2(74,579,194,40))
 	button(n,"editor","Layout workshop",Rect2(281,579,198,40))
-	label(n,str(stages.size())+" DAYS TO DISCOVER  /  365 DAYS TO IMAGINE",Vector2(74,674),11,MUTED)
+	label(n,str(stage_order.size())+" CALENDAR DAYS  /  "+str(challenge_order.size())+" EXTREME CHALLENGES",Vector2(74,674),11,MUTED)
 	panel(n,Rect2(831,74,356,79),Color(1,0.97,0.84,0.75),12)
 	label(n,"01",Vector2(853,128),42,INK,false,true)
 	label(n,"JUNE",Vector2(931,107),13,INK)
 	label(n,"The first sunlit path",Vector2(931,132),17,INK)
 	button(n,"lab","Charge dash lab   →",Rect2(831,175,356,48),true)
 	label(n,"Experiment · tune · repeat",Vector2(849,248),14,CREAM)
-	label(n,"FOUNDATION EDITION  ·  0.15.0",Vector2(995,684),11,Color("e6eac7"),true)
+	button(n,"challenges","Monthly challenges   →",Rect2(831,298,356,54),true)
+	label(n,"11 per month · 132 extra stages",Vector2(849,381),15,CREAM)
+	label(n,"EXTREME EDITION  ·  0.16.0",Vector2(995,684),11,Color("e6eac7"),true)
 
 func draw_calendar(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color(0.07,0.18,0.20,0.94))
 	label(n,"THE YEAR AHEAD",Vector2(56,53),12,GOLD)
 	label(n,"One day. A different world.",Vector2(54,105),39,CREAM,false,true)
 	button(n,"title","← Home",Rect2(1100,40,124,40))
+	button(n,"challenges","Monthly challenges",Rect2(858,40,227,40))
 	var month=calendar.months[month_index]
 	label(n,month.name,Vector2(57,171),32,CREAM,false,true)
 	label(n,month.subtitle.to_upper(),Vector2(260,166),12,MUTED)
@@ -331,7 +346,7 @@ func draw_calendar(n: Node2D) -> void:
 	if not s.is_empty():
 		wrapped(n,s.title,Vector2(796,212),395,23,INK)
 		wrapped(n,s.description,Vector2(796,267),390,15,INK)
-		label(n,"EXPERT ROUTE · TIMING & PRECISION" if s.get("difficulty",{}).get("edition","")=="expert" else "A PLAYABLE CHAPTER",Vector2(796,402),11,Color("638070"))
+		label(n,"EXTREME ROUTE · TIMING & PRECISION" if s.get("difficulty",{}).get("edition","")=="extreme" else "A PLAYABLE CHAPTER",Vector2(796,402),11,Color("638070"))
 		var result=store.data.results.get(selected,{})
 		label(n,("Best: "+clock_text(result.best_time)+"  ·  "+str(int(result.motes))+" sunmotes") if not result.is_empty() else ("Survival boss · five arenas" if s.has("boss") else "Explore · collect · reach the garden gate"),Vector2(796,434),14,INK)
 		button(n,"play","Enter this day   →",Rect2(796,472,400,54),true)
@@ -344,6 +359,39 @@ func draw_calendar(n: Node2D) -> void:
 		var id: String=featured_order[i]
 		button(n,"sample:"+id,date_label(id),Rect2(56+(i%6)*196,606+(i/6)*37,184,32),id==selected)
 	label(n,"↑ ↓ / Tab: focus   ·   Enter / A: select   ·   ← →: month   ·   Esc / B: back",Vector2(56,696),12,MUTED)
+
+func draw_challenges(n: Node2D) -> void:
+	n.draw_rect(Rect2(0,0,1280,720),Color("122d34"))
+	var month=calendar.months[month_index]
+	label(n,"THE EXTREME COLLECTION",Vector2(56,51),12,GOLD)
+	label(n,str(month.name)+" · eleven trials",Vector2(54,103),39,CREAM,false,true)
+	button(n,"calendar","Calendar",Rect2(934,40,144,40))
+	button(n,"title","← Home",Rect2(1094,40,130,40))
+	label(n,"Narrow catches. Overlapping machinery. No gentle routes.",Vector2(57,147),16,MUTED)
+	button(n,"prev","←",Rect2(622,120,44,40));button(n,"next","→",Rect2(676,120,44,40))
+	var entries=challenge_order.filter(func(id):return int(stages[id].monthly_challenge.month)==int(month.number))
+	for i in entries.size():
+		var id: String=entries[i];var s: Dictionary=stages[id]
+		var rect=Rect2(56+(i%3)*232,187+(i/3)*109,220,96)
+		panel(n,rect,Color("355951") if id==selected else Color("244149"),8)
+		if id==selected or focus==buttons.size():outline(n,rect,GOLD,8)
+		label(n,"%02d" % (i+1),rect.position+Vector2(14,25),13,GOLD)
+		if store.data.results.has(id):label(n,"✓",rect.position+Vector2(189,25),14,GOLD)
+		wrapped(n,s.title,rect.position+Vector2(14,49),190,15,CREAM)
+		buttons.append({"id":"day:"+id,"rect":rect})
+	panel(n,Rect2(784,187,440,423),Color("f4ecd0"),12)
+	var chosen: Dictionary=stages.get(selected,{})
+	if chosen.has("monthly_challenge"):
+		label(n,date_label(selected).to_upper(),Vector2(808,220),12,INK)
+		wrapped(n,chosen.title,Vector2(808,264),386,26,INK)
+		var stats=str(int(chosen.difficulty.mechanisms))+" mechanisms · "+str(int(chosen.challenge.visible_spikes))+" spikes"
+		label(n,stats,Vector2(808,332),13,Color("58776a"))
+		var yy=372
+		for place in chosen.journey_regions:
+			label(n,str(place.name).split(" / ")[-1],Vector2(808,yy),16,INK);yy+=30
+		button(n,"play","Enter this challenge   →",Rect2(808,530,392,54),true)
+	label(n,"132 ADDITIONAL STAGES  /  THE 365-DAY CALENDAR REMAINS SEPARATE",Vector2(56,657),12,GOLD)
+	label(n,"↑ ↓ / Tab: focus   ·   Enter / A: select   ·   ← →: month   ·   Esc / B: home",Vector2(56,695),12,MUTED)
 
 func draw_hud(n: Node2D) -> void:
 	if lab_test: draw_lab_hud(n);return
@@ -451,8 +499,8 @@ func draw_complete(n: Node2D) -> void:
 		label(n,value,Vector2(x,344),35,INK,true,true)
 		label(n,["TIME","SUNMOTES","RESTARTS"][i],Vector2(x,375),11,Color("638174"),true)
 	button(n,"next_stage","Discover the next day   →",Rect2(390,417,500,52),true)
-	button(n,"calendar","Return to the calendar",Rect2(390,482,500,46))
-	label(n,"Progress saved  ·  "+str(store.data.results.size())+" of "+str(stage_order.size())+" playable days completed",Vector2(640,573),13,Color("638174"),true)
+	button(n,"challenges" if world.spec.id in challenge_order else "calendar","Return to monthly challenges" if world.spec.id in challenge_order else "Return to the calendar",Rect2(390,482,500,46))
+	label(n,"Progress saved  ·  "+str(store.data.results.size())+" of "+str(stages.size())+" stages completed",Vector2(640,573),13,Color("638174"),true)
 
 func button(n: Node2D, id: String, text: String, rect: Rect2, primary: bool=false) -> void:
 	var focused=focus==buttons.size()
@@ -488,7 +536,9 @@ func date_label(id: String) -> String:
 	if id=="dash-lab": return "Charge dash lab"
 	var month=int(id.substr(0,2))
 	for m in calendar.months:
-		if int(m.number)==month: return str(int(id.substr(3,2)))+" "+m.name
+		if int(m.number)==month:
+			if id in challenge_order:return m.name+" · Challenge "+str(int(stages[id].monthly_challenge.number))
+			return str(int(id.substr(3,2)))+" "+m.name
 	return id
 
 func clock_text(seconds: float) -> String:
@@ -501,6 +551,9 @@ func align_month() -> void:
 func change_month(direction: int) -> void:
 	month_index=posmod(month_index+direction,12)
 	var month=int(calendar.months[month_index].number)
+	if screen=="challenges":
+		for id in challenge_order:
+			if int(stages[id].monthly_challenge.month)==month:selected=id;return
 	selected="%02d-01" % month
 	for day in calendar.days:
 		if int(day.month)==month and stages.has(day.id):

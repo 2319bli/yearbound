@@ -10,7 +10,8 @@ static func errors(h: Dictionary) -> PackedStringArray:
 	for key in ["x", "y", "period", "phase"]:
 		if not numeric(h.get(key)):out.append("Mechanism needs finite " + key + ".")
 	if not out.is_empty():return out
-	if h.period < 3 or h.period > 20:out.append("Mechanism period must be 3–20 seconds.")
+	if h.period < .6 or h.period > 20:out.append("Mechanism period must be 0.6–20 seconds.")
+	if h.has("extension_seconds") and (not numeric(h.extension_seconds) or h.extension_seconds<.02 or h.extension_seconds>1):out.append("Mechanism extension must be 0.02–1 seconds.")
 	if h.mechanism in ["windmill", "pendulum"]:
 		if not numeric(h.get("radius")) or h.radius < 32 or h.radius > 360:out.append("Mechanism radius must be 32–360.")
 		if h.mechanism == "windmill":
@@ -21,7 +22,7 @@ static func errors(h: Dictionary) -> PackedStringArray:
 	else:
 		for key in ["safe_seconds", "warning_seconds"]:
 			if not numeric(h.get(key)):out.append("Mechanism needs " + key + ".")
-		if out.is_empty() and (h.safe_seconds < .65 or h.warning_seconds < .5 or h.period < h.safe_seconds+h.warning_seconds+.5):out.append("Mechanism needs a safe opening, visible warning and active interval.")
+		if out.is_empty() and (h.safe_seconds < .08 or h.warning_seconds < .12 or h.period < h.safe_seconds+h.warning_seconds+.2):out.append("Mechanism needs an opening, warning and active interval.")
 		if h.mechanism in ["press","shutter","geyser"]:
 			for key in ["w","h"]:
 				if not numeric(h.get(key)) or h[key] < 24 or h[key] > 480:out.append("Mechanism dimensions must be 24–480.")

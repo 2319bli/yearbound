@@ -1,5 +1,6 @@
 class_name YBLayoutDocument
 extends RefCounted
+static var installed_music_paths: Array = []
 
 const TILE=48
 const ROWS=15
@@ -174,19 +175,21 @@ static func errors(s: Variant, check_playable: bool=false) -> PackedStringArray:
 		if not s.get(field) is String: return PackedStringArray(["Missing or invalid field: "+field])
 	var calendar=JSON.parse_string(FileAccess.get_file_as_string("res://content/calendar.json"))
 	var valid_date=false
+	var catalog=JSON.parse_string(FileAccess.get_file_as_string("res://content/catalog.json"))
 	for day in calendar.days:
 		if day.id==s.id: valid_date=true;break
-	if not valid_date: out.append("Choose a valid calendar date (June–May, excluding 29 February).")
+	if s.id in catalog.get("challenges",[]):valid_date=true
+	if not valid_date: out.append("Choose a valid calendar date or an installed monthly challenge.")
 	if s.title.strip_edges().is_empty() or s.title.length()>80: out.append("Give this day a title of 1–80 characters.")
 	if not s.season in SEASONS: out.append("Unknown seasonal theme.")
 	if s.has("abilities"):
 		if not s.abilities is Array: return PackedStringArray(["Abilities must be a list of known mechanic identifiers."])
 		for id in s.abilities:
 			if id!="charge_dash": out.append("Unknown player ability.")
-	var music_paths=[]
-	for id in JSON.parse_string(FileAccess.get_file_as_string("res://content/catalog.json")).stages:
-		music_paths.append(JSON.parse_string(FileAccess.get_file_as_string("res://content/stages/"+id+".json")).music)
-	if not s.music in music_paths: out.append("Choose one of the included music sketches.")
+	if installed_music_paths.is_empty():
+		for id in catalog.stages+catalog.get("challenges",[]):
+			installed_music_paths.append(JSON.parse_string(FileAccess.get_file_as_string("res://content/stages/"+id+".json")).music)
+	if not s.music in installed_music_paths: out.append("Choose one of the included music sketches.")
 	if s.has("background") and (not s.background is String or not s.background.begins_with("res://art/") or ".." in s.background or not ResourceLoader.exists(s.background)): out.append("Unknown background asset.")
 	if s.has("terrain_style") and not s.terrain_style in JSON.parse_string(FileAccess.get_file_as_string("res://content/terrain_styles.json")): out.append("Unknown terrain palette.")
 	if s.has("ambience"):
@@ -264,7 +267,9 @@ static func errors(s: Variant, check_playable: bool=false) -> PackedStringArray:
 				boundary=region.x+region.w
 	if s.has("scenery"):
 		var art = s.scenery
-		if not art is Dictionary or not art.get("atlas") is String or not art.atlas.begins_with("res://art/") or ".." in art.atlas or art.atlas.get_extension().to_lower() not in ["png", "webp", "jpg", "jpeg"] or not ResourceLoader.exists(art.atlas):
+		if art is Dictionary and art.get("renderer","")=="composition":
+			out.append_array(YBChallengeScenery.errors(art,s.get("journey_regions",[])))
+		elif not art is Dictionary or not art.get("atlas") is String or not art.atlas.begins_with("res://art/") or ".." in art.atlas or art.atlas.get_extension().to_lower() not in ["png", "webp", "jpg", "jpeg"] or not ResourceLoader.exists(art.atlas):
 			out.append("Map scenery needs an installed artwork atlas.")
 		elif not number(art.get("columns")) or not number(art.get("rows")) or art.columns < 1 or art.rows < 1 or art.columns > 8 or art.rows > 8 or art.columns != floorf(art.columns) or art.rows != floorf(art.rows):
 			out.append("Map scenery needs a whole-number atlas grid from 1 to 8.")
@@ -292,7 +297,7 @@ static func errors(s: Variant, check_playable: bool=false) -> PackedStringArray:
 				for phase in s.boss.phases:
 					if not phase is Dictionary or not number(phase.get("from_x")) or not number(phase.get("to_x")) or not number(phase.get("duration")) or not number(phase.get("warning")) or not number(phase.get("interval")) or not point(phase.get("checkpoint")):
 						out.append("A boss arena has incomplete timing or bounds.");continue
-					if phase.from_x!=boundary or phase.to_x<=phase.from_x or phase.to_x>s.length or phase.duration<=0 or phase.warning<.5 or phase.interval<=0:out.append("Boss arenas need connected bounds and readable warnings.")
+					if phase.from_x!=boundary or phase.to_x<=phase.from_x or phase.to_x>s.length or phase.duration<=0 or phase.warning<.12 or phase.interval<=0:out.append("Boss arenas need connected bounds and positive warnings.")
 					if phase.get("pattern","") not in ["rain","terraces","chase","crosswind","final"]:out.append("Unknown boss arena pattern.")
 					boundary=phase.to_x;duration+=phase.duration
 				if not is_equal_approx(duration,float(s.boss.duration)):out.append("Boss duration must match its arena timings.")

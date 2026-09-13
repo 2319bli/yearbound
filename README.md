@@ -1,6 +1,6 @@
-# Yearbound · Foundation 0.15.0
+# Yearbound · Extreme 0.16.0
 
-A native desktop platformer about travelling from 1 June to 31 May. **All 30 June dates are playable**, alongside twenty-one other-month samples. June now follows a chapter-wide design: five substantial connected places per day, with changing scenery, light, elevation and gameplay. The other 314 calendar dates remain unbuilt.
+A native desktop platformer about travelling from 1 June to 31 May. **183 stages** are available: the existing 51 calendar dates and **132 additional monthly challenges (11 per month)**. The calendar still reserves 365 dates for the main journey; the extra challenges do not overwrite its future days or boss slots.
 
 ## Run the game
 
@@ -8,31 +8,25 @@ Open the accompanying **Yearbound.app** on an Apple silicon Mac. The app include
 
 Move with **A/D**, arrows, or **J/L**. **Space/Z** jumps; hold for height. Hold **Shift/C**, aim with WASD/arrows/IJKL, then release for a charge dash. **Esc/P** pauses, **R** restarts at the checkpoint, and **F11** toggles fullscreen. Standard controllers use stick/D-pad, bottom face button to jump, X/West or right shoulder to charge, Start to pause and top face button to restart. Controls are rebindable in Settings. Physical controller hardware has not been tested.
 
-**Explore the calendar** gives immediate access to all 51 samples. June runs from the welcoming village gate through early-summer countryside, midsummer brightness and longer evenings to the Squallkeeper. The monthly shortcuts along the bottom lead to the other seasonal samples.
+**Explore the calendar** gives immediate access to all 51 calendar stages. **Monthly challenges** opens 132 additional stages, eleven for each month, with separate saved progress. June runs from the welcoming village gate through early-summer countryside, midsummer brightness and longer evenings to the Squallkeeper. The monthly shortcuts along the bottom lead to the other seasonal samples.
 
-## Obstacle expansion
+## Extreme difficulty
 
-Ten new four-place expert journeys add working windmill sails, pendulum bells, machinery presses, sluice shutters, steam vents, thorn blooms, rail cutters and lightning arcs. The original 41 dates also have new obstacle sequences, with extra transfer galleries in nine journeys and denser June boss attacks. Across the campaign there are 831 new mechanisms. This is a substantial expert difficulty pass, not a measurable promise that every stage is exactly ten times harder.
+Every existing stage now has **ten times its previous moving/timed mechanism count**: 831 becomes 8,310. Rotors have four blades, cycles run faster, pulse openings are compressed, landing ledges and ceilings gain spikes, long ground stretches become spike banks, moving platforms run faster, and wind/current zones are stronger. The June boss attacks ten times as often and its chase advances twice as fast. Checkpoints and immediate retries remain.
 
-Each new date has its own background atlas and temporary musical sketch. Try 2 July for windmill timing, 7 November for submerged valves, 21 March for waterfall lifts, or 23 April for climbing freight carriages. See [OBSTACLES.md](docs/OBSTACLES.md) for all ten dates, timing feedback and editable parameters.
+This is deliberately an extreme, **unverified difficulty build**, as requested. No route search, traversal bot, survival test, or human beatability test was performed. Tenfold machinery is an exact content count, not a measured tenfold increase in human difficulty. Historical route proofs from 0.15 do not apply to these layouts.
 
-## This chapter
+The 132 additions contain four connected places each. Their combinations include sail helices, needle descents, press vaults, counterweight wells, crumble stairs, moving freight, crosswind chimneys, canopy zippers, bell circuits, floodgate organs and crown transfers. Each has its own geometry, scenery composition and original temporary music sketch. Across both collections there are **787 named places and 28,374 mechanisms**.
 
-Each ordinary June stage contains five large places, not five single-screen challenges. Routes include open fields, interiors, low passages, climbs that carry their altitude forward, long descents, moving cargo, waterwheel circuits, windmill hoists, rivers, spring chains and backtracking. Room names in the HUD identify the current place. Every map now owns a custom pixel-art set, with individual views for all 259 named locations. Backgrounds blend between those actual places; 8 and 29 June visibly progress into night. The Garden Maze includes returning corridors and optional side chambers beneath fading ivy.
+See [EXTREME_CHALLENGES.md](docs/EXTREME_CHALLENGES.md) for all 132 titles and authoring details. [OBSTACLES.md](docs/OBSTACLES.md) documents the mechanism fields.
 
-30 June is a five-arena survival boss: an introductory dodge pattern, higher terraces, an advancing-storm chase, crossing attacks and a final squall followed by a clearing sky. Its health decreases through successful survival or chase progress. Completed phases remain completed after retries; cleared gates connect the arenas physically. There is no melee combat.
+## Movement, atmosphere and workshop
 
-The supplied 1–22 June music is included. Dates 23–29 use distinct temporary synthesized scores pending supplied compositions. The existing boss and other-month music remain. See [JUNE_CHAPTER.md](docs/JUNE_CHAPTER.md) for every day’s route and [AUTHORED_DAYS.md](docs/AUTHORED_DAYS.md) for the other months and content pipeline.
+The base controller, original charge-dash profile with **horizontal multiplier 1.5**, swimming code and **44,160-pixel / 17-station Dash Lab** are byte-for-byte unchanged from 0.15. The lab remains accessible from the title screen. There is no second special ability or new storyline.
 
-See [MAP_SCENERY.md](docs/MAP_SCENERY.md) for the custom artwork, room selection and authoring format.
+Every November challenge is physically underwater, with alternating strong currents. January challenges use ice; March combines waterfall updrafts with crosswinds. The original 51 maps retain their own pixel-art atlases. The new challenges use editable, original code-native compositions: layered ridges, seasonal architecture, foliage, sunlight, water and weather. They do not borrow another map's bitmap background. All scenery stays in the background pass, behind solid terrain and hazards.
 
-## Movement, lab and workshop
-
-The base player controller, original charge-dash profile with **horizontal multiplier 1.5**, and underwater profile are unchanged. The **Charge dash lab** remains 44,160 pixels long with 17 stations. Pause there to select a station, adjust live tuning or export a profile. Saved tuning applies to campaign stages when entered. Lab attempts stay separate from campaign progress. See [CHARGE_DASH.md](docs/CHARGE_DASH.md).
-
-**7 and 19 November** are physically underwater. WASD/arrows/IJKL or the stick swims; Jump rises and Down dives. Water adds buoyancy, drag and dash recovery. There is no breath timer. See [UNDERWATER.md](docs/UNDERWATER.md).
-
-The **Layout workshop** can copy, edit and playtest every sample. It retains charge dash, selectable height, four spike directions, undo/redo, fills, pan/zoom and draft recovery. Authored platform tracks, timed hazards, journey environments and secret metadata survive save/open and playtest. Detailed environment, track and boss settings remain JSON fields. New blank days choose the next unfinished date, 1 July. See [WORKSHOP.md](docs/WORKSHOP.md).
+The workshop can copy all 183 stages, preserve mechanism timing and composed scenery, save/open layouts and playtest them with charge dash. Monthly challenge IDs remain fixed when editing a challenge copy; ordinary calendar dates remain editable. [WORKSHOP.md](docs/WORKSHOP.md) covers the general editor.
 
 ## Source and building
 
@@ -41,8 +35,8 @@ The public repository is [2319bli/yearbound](https://github.com/2319bli/yearboun
 Import `project.godot` in **Godot 4.6.2** and press F5. On Apple silicon macOS, run `python3 tools/build_macos.py` to build the standalone app beside the project. It defaults to `/Applications/Godot.app`; set `GODOT_BIN` for another engine executable. Editing the source does not update an already-built app until rebuilt.
 
 - `content/calendar.json`: the 365-day journey and twelve boss slots.
-- `content/catalog.json`: available dates and featured monthly shortcuts.
-- `content/layouts/MM-DD.json`: explicit per-day room blueprints, environments, optional areas and QA routes.
+- `content/catalog.json`: available dates, featured monthly shortcuts and the separate challenge order.
+- `content/layouts/MM-DD.json`: explicit room blueprints. `MM-XNN.json` files are the monthly challenge stages. Route annotations are historical/design references, not current reachability evidence.
 - `tools/build_authored_stages.py`: compiles blueprints into ordinary stage JSON; no seeded geometry or historical Git tag is required.
 - `content/stages/`: the data consumed by the game and workshop, including music and art references.
 - `scripts/player.gd`, `movement_tuning.gd`, `charge_dash.gd`, `charge_dash_tuning.gd`: shared movement and modular charge ability.
@@ -61,31 +55,13 @@ See [AUTHORING.md](docs/AUTHORING.md) for the stage contract and [FOUNDATION.md]
 
 On macOS the save is `~/Library/Application Support/Godot/app_userdata/Yearbound/yearbound_v1.json`, with a `.bak` recovery copy. Settings, bindings, completed-day records and saved lab tuning are retained. An unfinished run from an older layout revision resumes at its new entrance because checkpoint and collectible positions have changed. June boss phases save independently. Optional sunmotes use the existing collectible save system.
 
-## Verification
-
-Compile/check content with:
+## Checks for this build
 
 ```sh
 python3 tools/build_authored_stages.py --check
 python3 tools/validate_content.py
 ```
 
-For engine checks, set `YEARBOUND_SAVE_DIR` to a scratch directory, then run, for example:
+Set `YEARBOUND_SAVE_DIR` to an empty scratch directory and use an explicit `--log-file` when running `tests/extreme_content.gd` in Godot. It checks all 183 content loads, menu navigation, save/resume, workshop round trips, mechanism warning states and Lab availability. It never moves the player along a route. `tests/extreme_capture.gd` renders representative screenshots using relocation only.
 
-```sh
-godot --headless --path . --script tests/obstacles.gd --fixed-fps 60
-godot --headless --path . --script tests/authored_routes.gd --fixed-fps 60
-godot --headless --path . --script tests/june_chapter.gd --fixed-fps 60
-godot --headless --path . --script tests/june_boss_routes.gd --fixed-fps 60
-godot --headless --path . --script tests/authored_campaign.gd --fixed-fps 60
-godot --headless --path . --script tests/authored_mechanics.gd --fixed-fps 60
-godot --headless --path . --script tests/editor.gd --fixed-fps 60
-godot --headless --path . --script tests/smoke.gd --fixed-fps 60
-godot --headless --path . --script tests/controller.gd --fixed-fps 60
-godot --headless --path . --script tests/charge_dash.gd --fixed-fps 60
-godot --headless --path . --script tests/swimming.gd --fixed-fps 60
-```
-
-`authored_routes.gd` checks the 50 ordinary journeys continuously from their entrances, without moving the player between route points. The boss has separate full-duration arena survival tests, a chase traversal and state/transition tests. These establish reachability, not final human difficulty balance. Set `YEARBOUND_CAPTURE_DIR` to capture native views with `tests/authored_capture.gd`. The native `ground_layout.gd` suite also probes framebuffer layering.
-
-See [VALIDATION.md](docs/VALIDATION.md) for the delivered build’s verification and limits. Final pacing, human balance, physical controller testing and Windows/Linux/Intel Mac exports remain production work. The foundation deliberately leaves the second major mechanic and full storyline open.
+Older `authored_routes.gd`, `june_boss_routes.gd`, route metadata and historical reports are retained for reference. **They were not run against 0.16 and do not prove these stages are possible.** See [VALIDATION.md](docs/VALIDATION.md) for the delivered check scope. Windows/Linux/Intel Mac exports, physical controller testing and final music/pacing remain future work.

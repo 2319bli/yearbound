@@ -21,12 +21,28 @@ assert sum(d['boss'] for d in calendar['days'])==12
 assert set(catalog['featured']) <= set(catalog['stages'])
 assert len(catalog['stages'])==len(set(catalog['stages']))
 atlas_paths=set(); atlas_hashes=set()
-for id in catalog['stages']:
+challenge_ids=catalog.get('challenges',[])
+assert len(challenge_ids)==132 and len(set(challenge_ids))==132
+assert not set(challenge_ids) & set(catalog['stages'])
+compositions=set(); geometry=set()
+for month in range(1,13): assert sum(id.startswith(f'{month:02d}-X') for id in challenge_ids)==11
+for id in catalog['stages']+challenge_ids:
  s=load(f'content/stages/{id}.json'); assert s['id']==id and s['schema_version']==1
- assert id in {d['id'] for d in calendar['days']}
+ assert id in challenge_ids or id in {d['id'] for d in calendar['days']}
  assert (root/s['music'].removeprefix('res://')).is_file()
  if s.get('background'): assert (root/s['background'].removeprefix('res://')).is_file()
- if 'scenery' in s:
+ if s.get('scenery',{}).get('renderer')=='composition':
+  assert s['scenery']['revision']==1 and len(s['journey_regions'])==4
+  assert s['monthly_challenge']=={'month':int(id[:2]),'number':int(id[-2:])}
+  for region in s['journey_regions']:
+   c=region['composition'];assert len(c['palette'])==6 and all(re.fullmatch(r'[0-9a-fA-F]{6}',v) for v in c['palette'])
+   assert len(c['ridges'])==3 and all(len(r)>2 for r in c['ridges'])
+   assert all(x['kind'] in ['mill','aqueduct','factory','belfry','ruins','railway','waterfall','glasshouse','clock','sluice','observatory'] for x in c['structures'])
+   digest=hashlib.sha256(json.dumps(c,sort_keys=True).encode()).hexdigest()
+   assert digest not in compositions,(id,'repeated scenery composition');compositions.add(digest)
+  shape=hashlib.sha256(json.dumps(s['platforms'],sort_keys=True).encode()).hexdigest()
+  assert shape not in geometry,(id,'repeated layout geometry');geometry.add(shape)
+ elif 'scenery' in s:
   art=s['scenery'];path=root/art['atlas'].removeprefix('res://')
   assert art['atlas'].startswith('res://art/') and '..' not in art['atlas'] and path.is_file(), (id,'missing atlas')
   assert type(art['columns']) is int and type(art['rows']) is int and 1<=art['columns']<=8 and 1<=art['rows']<=8, (id,'invalid atlas grid')
@@ -71,9 +87,9 @@ for id in catalog['stages']:
   assert h['type'] in ['blade','thorn','icicle','bramble','storm','mechanism']
   if h['type']=='mechanism':
    assert h['mechanism'] in ['windmill','pendulum','press','shutter','geyser','bloom','sawrail','arc'], (id,'unknown mechanism')
-   assert 3<=h['period']<=20 and isinstance(h['phase'],(float,int)), (id,'invalid mechanism timing')
+   assert .6<=h['period']<=20 and isinstance(h['phase'],(float,int)), (id,'invalid mechanism timing')
    if h['mechanism'] in ['windmill','pendulum']: assert 32<=h['radius']<=360
-   else: assert h['safe_seconds']>=.65 and h['warning_seconds']>=.5 and h['period']>=h['safe_seconds']+h['warning_seconds']+.5
+   else: assert h['safe_seconds']>=.08 and h['warning_seconds']>=.12 and h['period']>=h['safe_seconds']+h['warning_seconds']+.2
   elif h['type']=='bramble':
    assert h['w']>0 and h['h']>0
    assert h.get('direction','up') in ['up','down','left','right'], (id,'invalid spike direction',h)
@@ -89,4 +105,4 @@ for id in catalog['stages']:
   assert len(spikes)>=50 and len(spikes)==challenge['spike_placements'], (id,'spike count changed; update challenge metadata')
   assert len(challenge['rooms'])>=4 and challenge['vertical_travel']>=(192 if s.get('journey_regions') else 384), (id,'missing authored sections or vertical movement')
  print(f"OK {id}: {len(s['platforms'])} platforms, {len(s['motes'])} sunmotes, {len(s['checkpoints'])} checkpoints")
-print(f"Validated {len(catalog['stages'])} stages and 365 dates.")
+print(f"Validated {len(catalog['stages'])} calendar stages, {len(challenge_ids)} monthly challenges and 365 dates. Structural checks only; reachability untested.")
