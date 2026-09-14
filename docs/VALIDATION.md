@@ -1,4 +1,17 @@
-# Extreme 0.16.0 · current check scope
+# Playable rebalance 0.17.0 · current verification
+
+The latest user request supersedes the earlier instruction to skip feasibility testing. Current geometry is checked for complete routes using the approved unassisted movement/dash profile and active hazards.
+
+- 132 monthly challenges: continuous entrance-to-exit control-driven traversals.
+- 50 ordinary calendar stages: continuous entrance-to-exit traversals.
+- June boss: full-duration arena survival from arena perches, plus the chase traversal.
+- Structural compilation, workshop round trips, calendar/challenge navigation, save/resume, Lab availability, native rendering and packaged-app loading.
+
+See `validation_0_17.json` for exact results and content hashes. The 0.16 “reachability untested” record below is historical; it does not describe this revision. Native screenshots relocate the camera/player only for composition and are separate from route evidence.
+
+---
+
+# Extreme 0.16.0 · historical check scope
 
 The owner requested maximum difficulty and explicitly asked not to verify whether routes are possible. **No reachability, route traversal, boss survival or human balance tests were performed for 0.16.** Prior version results below are historical and do not establish current beatability.
 

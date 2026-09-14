@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "revision": 18,
+  "revision": 19,
   "day": "06-X06",
   "identity": "The Beekeeper’s Needle",
-  "intent": "The Beekeeper’s Needle. fracture staircase, moving freight, crosswind chimney, canopy zipper. Four linked extreme trials.",
-  "world_top": -1536,
+  "intent": "The Beekeeper’s Needle. fracture staircase, moving freight, crosswind chimney, canopy zipper. Four linked platforming trials with clear recovery decks.",
+  "world_top": -960,
   "spawn": [
     120,
     624
   ],
-  "length": 12864,
+  "length": 17664,
   "goal": [
-    12768,
+    17568,
     624
   ],
   "sections": [
@@ -21,761 +21,76 @@
         0,
         0
       ],
-      "width": 3072,
-      "lesson": "Fracture staircase · extreme timing and narrow catches.",
+      "width": 4416,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": 336,
-          "w": 144,
+          "x": 288,
+          "y": 480,
+          "w": 576,
+          "h": 48,
+          "kind": "wood"
+        },
+        {
+          "x": 1152,
+          "y": 384,
+          "w": 240,
           "h": 48,
           "kind": "crumble"
         },
         {
-          "x": 576,
-          "y": 240,
-          "w": 48,
+          "x": 1680,
+          "y": 288,
+          "w": 576,
+          "h": 48,
+          "kind": "wood"
+        },
+        {
+          "x": 2544,
+          "y": 384,
+          "w": 240,
           "h": 48,
           "kind": "crumble"
         },
         {
-          "x": 816,
-          "y": 144,
-          "w": 96,
+          "x": 3072,
+          "y": 480,
+          "w": 576,
           "h": 48,
-          "kind": "crumble"
-        },
-        {
-          "x": 1056,
-          "y": 48,
-          "w": 144,
-          "h": 48,
-          "kind": "crumble"
-        },
-        {
-          "x": 1296,
-          "y": -48,
-          "w": 48,
-          "h": 48,
-          "kind": "crumble"
-        },
-        {
-          "x": 1536,
-          "y": -144,
-          "w": 96,
-          "h": 48,
-          "kind": "crumble"
-        },
-        {
-          "x": 1776,
-          "y": -240,
-          "w": 144,
-          "h": 48,
-          "kind": "crumble"
-        },
-        {
-          "x": 2016,
-          "y": -336,
-          "w": 48,
-          "h": 48,
-          "kind": "crumble"
-        },
-        {
-          "x": 2256,
-          "y": -432,
-          "w": 96,
-          "h": 48,
-          "kind": "crumble"
+          "kind": "wood"
         }
       ],
       "hazards": [
         {
-          "type": "bramble",
-          "x": 336,
-          "y": 384,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 432,
-          "y": 312,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 576,
-          "y": 288,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
-          "y": 192,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 864,
-          "y": 120,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1056,
-          "y": 96,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1056,
-          "y": 24,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1296,
-          "y": 0,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": -96,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": -168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
-          "y": -192,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1872,
-          "y": -264,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": -288,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2256,
-          "y": -384,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2304,
-          "y": -456,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
           "type": "mechanism",
-          "mechanism": "bloom",
+          "mechanism": "windmill",
           "id": "06-X06-r0-m0",
-          "x": 336.0,
-          "y": 298,
-          "period": 0.95,
+          "x": 576.0,
+          "y": 344,
+          "period": 7.6,
           "phase": 0.0,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "efd793",
-          "head_radius": 52
+          "radius": 120,
+          "blades": 3,
+          "rotation_direction": -1,
+          "thickness": 7
         },
         {
           "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m1",
-          "x": 384.0,
-          "y": 0,
-          "period": 1.06,
-          "phase": 0.317,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
+          "mechanism": "bloom",
           "id": "06-X06-r0-m2",
-          "x": 480.0,
-          "y": 208,
-          "period": 2.14,
-          "phase": 0.634,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "x": 1968.0,
+          "y": 264,
+          "period": 5.199999999999999,
+          "phase": 0.94,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r0-m3",
-          "x": 552.0,
-          "y": 154,
-          "period": 1.28,
-          "phase": 0.951,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m4",
-          "x": 504.0,
-          "y": 48,
-          "period": 1.39,
-          "phase": 1.268,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r0-m5",
-          "x": 600.0,
-          "y": -32,
-          "period": 1.97,
-          "phase": 0.185,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r0-m6",
-          "x": 672.0,
-          "y": 202,
-          "period": 1.61,
-          "phase": 0.502,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m7",
-          "x": 720.0,
-          "y": -96,
-          "period": 0.95,
-          "phase": 0.819,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r0-m8",
-          "x": 792.0,
-          "y": 16,
-          "period": 1.8,
-          "phase": 1.136,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r0-m9",
-          "x": 864.0,
-          "y": -38,
-          "period": 1.17,
-          "phase": 0.053,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m10",
-          "x": 912.0,
-          "y": -48,
-          "period": 1.28,
-          "phase": 0.37,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r0-m11",
-          "x": 1008.0,
-          "y": -128,
-          "period": 2.31,
-          "phase": 0.687,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r0-m12",
-          "x": 1056.0,
-          "y": 10,
-          "period": 1.5,
-          "phase": 1.004,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m13",
-          "x": 1104.0,
-          "y": -288,
-          "period": 1.61,
-          "phase": 1.321,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r0-m14",
-          "x": 1200.0,
-          "y": -80,
-          "period": 2.14,
-          "phase": 0.238,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r0-m15",
-          "x": 1272.0,
-          "y": -134,
-          "period": 1.06,
-          "phase": 0.555,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m16",
-          "x": 1224.0,
-          "y": -240,
-          "period": 1.17,
-          "phase": 0.872,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r0-m17",
-          "x": 1320.0,
-          "y": -320,
-          "period": 1.97,
-          "phase": 1.189,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r0-m18",
-          "x": 1392.0,
-          "y": -86,
-          "period": 1.39,
-          "phase": 0.106,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m19",
-          "x": 1440.0,
-          "y": -384,
-          "period": 1.5,
-          "phase": 0.423,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r0-m20",
-          "x": 1512.0,
-          "y": -272,
-          "period": 1.8,
-          "phase": 0.74,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r0-m21",
-          "x": 1584.0,
-          "y": -326,
-          "period": 0.95,
-          "phase": 1.057,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m22",
-          "x": 1632.0,
-          "y": -336,
-          "period": 1.06,
-          "phase": 1.374,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r0-m23",
-          "x": 1728.0,
-          "y": -416,
-          "period": 2.31,
-          "phase": 0.291,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r0-m24",
-          "x": 1776.0,
-          "y": -278,
-          "period": 1.28,
-          "phase": 0.608,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m25",
-          "x": 1824.0,
-          "y": -576,
-          "period": 1.39,
-          "phase": 0.925,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r0-m26",
-          "x": 1920.0,
-          "y": -368,
-          "period": 2.14,
-          "phase": 1.242,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r0-m27",
-          "x": 1992.0,
-          "y": -422,
-          "period": 1.61,
-          "phase": 0.159,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m28",
-          "x": 1944.0,
-          "y": -528,
-          "period": 0.95,
-          "phase": 0.476,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r0-m29",
-          "x": 2040.0,
-          "y": -608,
-          "period": 1.97,
-          "phase": 0.793,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r0-m30",
-          "x": 2112.0,
-          "y": -374,
-          "period": 1.17,
-          "phase": 1.11,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m31",
-          "x": 2160.0,
-          "y": -672,
-          "period": 1.28,
-          "phase": 0.027,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r0-m32",
-          "x": 2232.0,
-          "y": -560,
-          "period": 1.8,
-          "phase": 0.344,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r0-m33",
-          "x": 2304.0,
-          "y": -614,
-          "period": 1.5,
-          "phase": 0.661,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r0-m34",
-          "x": 2352.0,
-          "y": -624,
-          "period": 1.61,
-          "phase": 0.978,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r0-m35",
-          "x": 2448.0,
-          "y": -704,
-          "period": 2.31,
-          "phase": 1.295,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "head_radius": 32
         },
         {
           "type": "bramble",
@@ -828,38 +143,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -979,38 +262,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -1123,38 +374,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -1192,100 +411,240 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2976,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [],
       "motes": [
         [
-          408.0,
-          264
+          378,
+          414
         ],
         [
-          600.0,
-          168
+          780,
+          410
         ],
         [
-          864.0,
-          72
+          1242,
+          318
         ],
         [
-          1128.0,
-          -24
+          1308,
+          314
         ],
         [
-          1320.0,
-          -120
+          1770,
+          222
         ],
         [
-          1584.0,
-          -216
+          2172,
+          218
         ],
         [
-          1848.0,
-          -312
+          2634,
+          318
         ],
         [
-          2040.0,
-          -408
+          2700,
+          314
         ],
         [
-          2304.0,
-          -504
+          3162,
+          414
+        ],
+        [
+          3564,
+          410
         ]
       ],
       "checkpoints": [],
       "decorations": [
         {
           "type": "wildflower_drift",
-          "x": 348,
-          "y": 336,
+          "x": 318,
+          "y": 480,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 828,
-          "y": 144,
+          "x": 1182,
+          "y": 384,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 1308,
-          "y": -48,
+          "x": 1710,
+          "y": 288,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 1788,
-          "y": -240,
+          "x": 2574,
+          "y": 384,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 2268,
-          "y": -432,
+          "x": 3102,
+          "y": 480,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         }
       ],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Beekeeper’s Needle / Fracture staircase\nExtreme route"
+          "text": "Beekeeper’s Needle / Fracture staircase\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -1298,73 +657,110 @@
         },
         {
           "at": [
-            408.0,
-            336
+            360,
+            480
           ],
-          "action": "unverified"
+          "action": "jump"
         },
         {
           "at": [
-            600.0,
-            240
+            420.0,
+            480
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            864.0,
-            144
+            732.0,
+            480
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "06-X06-r0-m0"
         },
         {
           "at": [
-            1128.0,
-            48
+            804,
+            480
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            1320.0,
-            -48
+            1224,
+            384
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            1584.0,
-            -144
+            1332,
+            384
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            1848.0,
-            -240
+            1752,
+            288
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            2040.0,
-            -336
+            1812.0,
+            288
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            2304.0,
-            -432
+            2124.0,
+            288
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "06-X06-r0-m2"
         },
         {
           "at": [
-            2976,
+            2196,
+            288
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2616,
+            384
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            2724,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3144,
+            480
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            3588,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4296,
             624
           ],
-          "action": "unverified"
+          "action": "drop"
         }
       ],
       "visual": {
@@ -1766,888 +1162,110 @@
     {
       "name": "Beekeeper’s Needle / Moving freight",
       "origin": [
-        3072,
+        4416,
         0
       ],
-      "width": 3168,
-      "lesson": "Moving freight · extreme timing and narrow catches.",
+      "width": 4416,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": 480,
-          "w": 144,
+          "x": 192,
+          "y": 528,
+          "w": 240,
+          "h": 96,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 432,
+          "y": 528,
+          "w": 192,
           "h": 48,
           "kind": "moving",
           "axis": "x",
-          "distance": 96,
-          "speed": 3.95,
-          "phase": 0.0
+          "distance": 48,
+          "speed": 1,
+          "motion_path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              528,
+              0
+            ],
+            [
+              864,
+              -192
+            ],
+            [
+              864,
+              -192
+            ],
+            [
+              0,
+              -192
+            ]
+          ],
+          "motion_seconds": 10.8,
+          "motion_phase": 0,
+          "track_id": "06-X06-r1-freight"
         },
         {
-          "x": 576,
+          "x": 1488,
+          "y": 336,
+          "w": 384,
+          "h": 48,
+          "kind": "wood"
+        },
+        {
+          "x": 1968,
           "y": 240,
-          "w": 48,
+          "w": 576,
           "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 144,
-          "speed": 3.95,
-          "phase": 0.73
+          "kind": "wood"
         },
         {
-          "x": 816,
-          "y": 0,
-          "w": 96,
+          "x": 2928,
+          "y": 432,
+          "w": 624,
           "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 192,
-          "speed": 3.95,
-          "phase": 1.46
-        },
-        {
-          "x": 1056,
-          "y": -240,
-          "w": 144,
-          "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 96,
-          "speed": 3.95,
-          "phase": 2.19
-        },
-        {
-          "x": 1296,
-          "y": 480,
-          "w": 48,
-          "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 144,
-          "speed": 3.95,
-          "phase": 2.92
-        },
-        {
-          "x": 1536,
-          "y": 240,
-          "w": 96,
-          "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 192,
-          "speed": 3.95,
-          "phase": 3.65
-        },
-        {
-          "x": 1776,
-          "y": 0,
-          "w": 144,
-          "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 96,
-          "speed": 3.95,
-          "phase": 4.38
-        },
-        {
-          "x": 2016,
-          "y": -240,
-          "w": 48,
-          "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 144,
-          "speed": 3.95,
-          "phase": 5.109999999999999
-        },
-        {
-          "x": 2256,
-          "y": 480,
-          "w": 96,
-          "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 192,
-          "speed": 3.95,
-          "phase": 5.84
-        },
-        {
-          "x": 2496,
-          "y": 240,
-          "w": 144,
-          "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 96,
-          "speed": 3.95,
-          "phase": 6.57
+          "kind": "wood"
         }
       ],
       "hazards": [
         {
-          "type": "bramble",
-          "x": 336,
-          "y": 528,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 432,
-          "y": 456,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 576,
-          "y": 288,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
-          "y": 48,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 864,
-          "y": -24,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1056,
-          "y": -192,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1056,
-          "y": -264,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1296,
-          "y": 528,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 288,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 216,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
-          "y": 48,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1872,
-          "y": -24,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": -192,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2256,
-          "y": 528,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2304,
-          "y": 456,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 288,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 216,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
           "type": "mechanism",
-          "mechanism": "shutter",
+          "mechanism": "bloom",
           "id": "06-X06-r1-m0",
-          "x": 312.0,
-          "y": 288,
-          "period": 0.95,
+          "x": 2256.0,
+          "y": 216,
+          "period": 4.6,
           "phase": 0.0,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "efd793",
-          "w": 48,
-          "h": 192
+          "head_radius": 32
         },
         {
           "type": "mechanism",
-          "mechanism": "windmill",
+          "mechanism": "shutter",
           "id": "06-X06-r1-m1",
-          "x": 408.0,
-          "y": 208,
-          "period": 1.97,
-          "phase": 0.317,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m2",
-          "x": 480.0,
-          "y": 442,
-          "period": 1.17,
-          "phase": 0.634,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m3",
-          "x": 528.0,
-          "y": 144,
-          "period": 1.28,
-          "phase": 0.951,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m4",
-          "x": 528.0,
-          "y": 112,
-          "period": 1.8,
-          "phase": 1.268,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m5",
-          "x": 600.0,
-          "y": 58,
-          "period": 1.5,
-          "phase": 0.185,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m6",
-          "x": 648.0,
-          "y": 48,
-          "period": 1.61,
-          "phase": 0.502,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m7",
-          "x": 744.0,
-          "y": -32,
-          "period": 2.31,
-          "phase": 0.819,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m8",
-          "x": 792.0,
-          "y": -38,
-          "period": 1.06,
-          "phase": 1.136,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m9",
-          "x": 840.0,
-          "y": -336,
-          "period": 1.17,
-          "phase": 0.053,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m10",
-          "x": 936.0,
-          "y": -128,
-          "period": 2.14,
-          "phase": 0.37,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m11",
-          "x": 1008.0,
-          "y": -182,
-          "period": 1.39,
-          "phase": 0.687,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m12",
-          "x": 1032.0,
-          "y": -432,
-          "period": 1.5,
-          "phase": 1.004,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m13",
-          "x": 1128.0,
-          "y": -512,
-          "period": 1.97,
-          "phase": 1.321,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m14",
-          "x": 1200.0,
-          "y": -278,
-          "period": 0.95,
-          "phase": 0.238,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m15",
-          "x": 1248.0,
-          "y": -576,
-          "period": 1.06,
-          "phase": 0.555,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m16",
-          "x": 1248.0,
-          "y": 352,
-          "period": 1.8,
-          "phase": 0.872,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m17",
-          "x": 1320.0,
-          "y": 298,
-          "period": 1.28,
-          "phase": 1.189,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m18",
-          "x": 1368.0,
+          "x": 3216.0,
           "y": 288,
-          "period": 1.39,
-          "phase": 0.106,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "period": 4.8999999999999995,
+          "phase": 0.47,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "efd793",
           "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m19",
-          "x": 1464.0,
-          "y": 208,
-          "period": 2.31,
-          "phase": 0.423,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m20",
-          "x": 1512.0,
-          "y": 202,
-          "period": 1.61,
-          "phase": 0.74,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m21",
-          "x": 1560.0,
-          "y": -96,
-          "period": 0.95,
-          "phase": 1.057,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m22",
-          "x": 1656.0,
-          "y": 112,
-          "period": 2.14,
-          "phase": 1.374,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m23",
-          "x": 1728.0,
-          "y": 58,
-          "period": 1.17,
-          "phase": 0.291,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m24",
-          "x": 1752.0,
-          "y": -192,
-          "period": 1.28,
-          "phase": 0.608,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m25",
-          "x": 1848.0,
-          "y": -272,
-          "period": 1.97,
-          "phase": 0.925,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m26",
-          "x": 1920.0,
-          "y": -38,
-          "period": 1.5,
-          "phase": 1.242,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m27",
-          "x": 1968.0,
-          "y": -336,
-          "period": 1.61,
-          "phase": 0.159,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m28",
-          "x": 1968.0,
-          "y": -368,
-          "period": 1.8,
-          "phase": 0.476,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m29",
-          "x": 2040.0,
-          "y": -422,
-          "period": 1.06,
-          "phase": 0.793,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m30",
-          "x": 2088.0,
-          "y": -432,
-          "period": 1.17,
-          "phase": 1.11,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m31",
-          "x": 2184.0,
-          "y": -512,
-          "period": 2.31,
-          "phase": 0.027,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m32",
-          "x": 2232.0,
-          "y": 442,
-          "period": 1.39,
-          "phase": 0.344,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m33",
-          "x": 2280.0,
-          "y": 144,
-          "period": 1.5,
-          "phase": 0.661,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m34",
-          "x": 2376.0,
-          "y": 352,
-          "period": 2.14,
-          "phase": 0.978,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m35",
-          "x": 2448.0,
-          "y": 298,
-          "period": 0.95,
-          "phase": 1.295,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m36",
-          "x": 2472.0,
-          "y": 48,
-          "period": 1.06,
-          "phase": 0.212,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r1-m37",
-          "x": 2568.0,
-          "y": -32,
-          "period": 1.97,
-          "phase": 0.529,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 168,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r1-m38",
-          "x": 2640.0,
-          "y": 202,
-          "period": 1.28,
-          "phase": 0.846,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r1-m39",
-          "x": 2688.0,
-          "y": -96,
-          "period": 1.39,
-          "phase": 1.163,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "h": 144
         },
         {
           "type": "bramble",
@@ -2700,38 +1318,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -2851,38 +1437,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -2995,38 +1549,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -3080,49 +1602,153 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2976,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [],
       "motes": [
         [
-          408.0,
-          408
+          1578,
+          270
         ],
         [
-          600.0,
-          168
+          1788,
+          266
         ],
         [
-          864.0,
-          -72
+          2058,
+          174
         ],
         [
-          1128.0,
-          -312
+          2460,
+          170
         ],
         [
-          1320.0,
-          408
+          3018,
+          366
         ],
         [
-          1584.0,
-          168
-        ],
-        [
-          1848.0,
-          -72
-        ],
-        [
-          2040.0,
-          -312
-        ],
-        [
-          2304.0,
-          408
-        ],
-        [
-          2568.0,
-          168
+          3468,
+          362
         ]
       ],
       "checkpoints": [
@@ -3134,55 +1760,37 @@
       "decorations": [
         {
           "type": "wildflower_drift",
-          "x": 348,
-          "y": 480,
+          "x": 1518,
+          "y": 336,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 828,
-          "y": 0,
+          "x": 1998,
+          "y": 240,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 1308,
-          "y": 480,
+          "x": 2958,
+          "y": 432,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "wildflower_drift",
-          "x": 1788,
-          "y": 0,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "wildflower_drift",
-          "x": 2268,
-          "y": 480,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         }
       ],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Beekeeper’s Needle / Moving freight\nExtreme route"
+          "text": "Beekeeper’s Needle / Moving freight\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -3195,80 +1803,98 @@
         },
         {
           "at": [
-            408.0,
-            480
+            288,
+            528
           ],
-          "action": "unverified"
+          "action": "jump"
         },
         {
           "at": [
-            600.0,
+            528,
+            528
+          ],
+          "action": "board",
+          "track_id": "06-X06-r1-freight"
+        },
+        {
+          "at": [
+            1536,
+            336
+          ],
+          "action": "ride",
+          "track_id": "06-X06-r1-freight"
+        },
+        {
+          "at": [
+            1800,
+            336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2040,
             240
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            864.0,
-            0
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1128.0,
-            -240
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1320.0,
-            480
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1584.0,
+            2100.0,
             240
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            1848.0,
-            0
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            2040.0,
-            -240
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            2304.0,
-            480
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            2568.0,
+            2412.0,
             240
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "06-X06-r1-m0"
         },
         {
           "at": [
-            3072,
+            2484,
+            240
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3000,
+            432
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            3084.0,
+            432
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3396.0,
+            432
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-X06-r1-m1"
+        },
+        {
+          "at": [
+            3492,
+            432
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4296,
             624
           ],
-          "action": "unverified"
+          "action": "drop"
         }
       ],
       "visual": {
@@ -3656,1325 +2282,73 @@
     {
       "name": "Beekeeper’s Needle / Crosswind chimney",
       "origin": [
-        6240,
+        8832,
         0
       ],
-      "width": 3264,
-      "lesson": "Crosswind chimney · extreme timing and narrow catches.",
+      "width": 4416,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": -48,
-          "w": 144,
+          "x": 288,
+          "y": 528,
+          "w": 480,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 480,
+          "x": 1104,
+          "y": 288,
+          "w": 528,
+          "h": 48,
+          "kind": "wood"
+        },
+        {
+          "x": 1968,
           "y": 48,
-          "w": 48,
-          "h": 432,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 576,
-          "y": -240,
-          "w": 48,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 816,
-          "y": -432,
-          "w": 96,
+          "x": 2832,
+          "y": 288,
+          "w": 576,
           "h": 48,
           "kind": "wood"
-        },
-        {
-          "x": 960,
-          "y": -336,
-          "w": 48,
-          "h": 432,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 1056,
-          "y": -624,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1296,
-          "y": 336,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1440,
-          "y": 432,
-          "w": 48,
-          "h": 192,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 1536,
-          "y": 144,
-          "w": 96,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1776,
-          "y": -48,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1920,
-          "y": 48,
-          "w": 48,
-          "h": 432,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 2016,
-          "y": -240,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2256,
-          "y": -432,
-          "w": 96,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2400,
-          "y": -336,
-          "w": 48,
-          "h": 432,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 2496,
-          "y": -624,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2736,
-          "y": 336,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2880,
-          "y": 432,
-          "w": 48,
-          "h": 192,
-          "kind": "block",
-          "material": "stone"
         }
       ],
       "hazards": [
         {
-          "type": "bramble",
-          "x": 336,
-          "y": 0,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 432,
-          "y": -72,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 456,
-          "y": 48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 456,
-          "y": 96,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 456,
-          "y": 144,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 456,
-          "y": 192,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 456,
-          "y": 240,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 456,
-          "y": 288,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 456,
-          "y": 336,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 456,
-          "y": 384,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 456,
-          "y": 432,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 576,
-          "y": -192,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
-          "y": -384,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 864,
-          "y": -456,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -336,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -288,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -240,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -192,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -144,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -96,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": 0,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": 48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1056,
-          "y": -576,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1056,
-          "y": -648,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1296,
-          "y": 384,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": 432,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": 480,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": 528,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": 576,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 192,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 120,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
-          "y": 0,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1872,
-          "y": -72,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 96,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 144,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 192,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 240,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 288,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 336,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 384,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 432,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": -192,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2256,
-          "y": -384,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2304,
-          "y": -456,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": -336,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": -288,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": -240,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": -192,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": -144,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": -96,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": -48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": 0,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": 48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": -576,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": -648,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2736,
-          "y": 384,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 432,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 480,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 528,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 576,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
           "type": "mechanism",
-          "mechanism": "windmill",
+          "mechanism": "shutter",
           "id": "06-X06-r2-m0",
-          "x": 336.0,
-          "y": -176,
-          "period": 1.8,
+          "x": 1344.0,
+          "y": 144,
+          "period": 4.6,
           "phase": 0.0,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
+          "w": 48,
+          "h": 144
         },
         {
           "type": "mechanism",
-          "mechanism": "bloom",
+          "mechanism": "windmill",
           "id": "06-X06-r2-m1",
-          "x": 408.0,
-          "y": -230,
-          "period": 1.06,
-          "phase": 0.317,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "x": 3120.0,
+          "y": 152,
+          "period": 7.6,
+          "phase": 0.47,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m2",
-          "x": 456.0,
-          "y": -240,
-          "period": 1.17,
-          "phase": 0.634,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m3",
-          "x": 552.0,
-          "y": -320,
-          "period": 2.31,
-          "phase": 0.951,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
+          "radius": 120,
+          "blades": 3,
           "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m4",
-          "x": 528.0,
-          "y": -278,
-          "period": 1.39,
-          "phase": 1.268,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m5",
-          "x": 576.0,
-          "y": -576,
-          "period": 1.5,
-          "phase": 0.185,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m6",
-          "x": 672.0,
-          "y": -368,
-          "period": 2.14,
-          "phase": 0.502,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m7",
-          "x": 744.0,
-          "y": -422,
-          "period": 0.95,
-          "phase": 0.819,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m8",
-          "x": 768.0,
-          "y": -624,
-          "period": 1.06,
-          "phase": 1.136,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m9",
-          "x": 864.0,
-          "y": -704,
-          "period": 1.97,
-          "phase": 0.053,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m10",
-          "x": 936.0,
-          "y": -470,
-          "period": 1.28,
-          "phase": 0.37,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m11",
-          "x": 984.0,
-          "y": -768,
-          "period": 1.39,
-          "phase": 0.687,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m12",
-          "x": 1056.0,
-          "y": -752,
-          "period": 1.8,
-          "phase": 1.004,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m13",
-          "x": 1128.0,
-          "y": -806,
-          "period": 1.61,
-          "phase": 1.321,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m14",
-          "x": 1176.0,
-          "y": -816,
-          "period": 0.95,
-          "phase": 0.238,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m15",
-          "x": 1272.0,
-          "y": -896,
-          "period": 2.31,
-          "phase": 0.555,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m16",
-          "x": 1248.0,
-          "y": 298,
-          "period": 1.17,
-          "phase": 0.872,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m17",
-          "x": 1296.0,
-          "y": 0,
-          "period": 1.28,
-          "phase": 1.189,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m18",
-          "x": 1392.0,
-          "y": 208,
-          "period": 2.14,
-          "phase": 0.106,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m19",
-          "x": 1464.0,
-          "y": 154,
-          "period": 1.5,
-          "phase": 0.423,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m20",
-          "x": 1488.0,
-          "y": -48,
-          "period": 1.61,
-          "phase": 0.74,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m21",
-          "x": 1584.0,
-          "y": -128,
-          "period": 1.97,
-          "phase": 1.057,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m22",
-          "x": 1656.0,
-          "y": 106,
-          "period": 1.06,
-          "phase": 1.374,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m23",
-          "x": 1704.0,
-          "y": -192,
-          "period": 1.17,
-          "phase": 0.291,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m24",
-          "x": 1776.0,
-          "y": -176,
-          "period": 1.8,
-          "phase": 0.608,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m25",
-          "x": 1848.0,
-          "y": -230,
-          "period": 1.39,
-          "phase": 0.925,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m26",
-          "x": 1896.0,
-          "y": -240,
-          "period": 1.5,
-          "phase": 1.242,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m27",
-          "x": 1992.0,
-          "y": -320,
-          "period": 2.31,
-          "phase": 0.159,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m28",
-          "x": 1968.0,
-          "y": -278,
-          "period": 0.95,
-          "phase": 0.476,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m29",
-          "x": 2016.0,
-          "y": -576,
-          "period": 1.06,
-          "phase": 0.793,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m30",
-          "x": 2112.0,
-          "y": -368,
-          "period": 2.14,
-          "phase": 1.11,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m31",
-          "x": 2184.0,
-          "y": -422,
-          "period": 1.28,
-          "phase": 0.027,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m32",
-          "x": 2208.0,
-          "y": -624,
-          "period": 1.39,
-          "phase": 0.344,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m33",
-          "x": 2304.0,
-          "y": -704,
-          "period": 1.97,
-          "phase": 0.661,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m34",
-          "x": 2376.0,
-          "y": -470,
-          "period": 1.61,
-          "phase": 0.978,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m35",
-          "x": 2424.0,
-          "y": -768,
-          "period": 0.95,
-          "phase": 1.295,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m36",
-          "x": 2496.0,
-          "y": -752,
-          "period": 1.8,
-          "phase": 0.212,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m37",
-          "x": 2568.0,
-          "y": -806,
-          "period": 1.17,
-          "phase": 0.529,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m38",
-          "x": 2616.0,
-          "y": -816,
-          "period": 1.28,
-          "phase": 0.846,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m39",
-          "x": 2712.0,
-          "y": -896,
-          "period": 2.31,
-          "phase": 1.163,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m40",
-          "x": 2688.0,
-          "y": 298,
-          "period": 1.5,
-          "phase": 0.08,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r2-m41",
-          "x": 2736.0,
-          "y": 0,
-          "period": 1.61,
-          "phase": 0.397,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r2-m42",
-          "x": 2832.0,
-          "y": 208,
-          "period": 2.14,
-          "phase": 0.714,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 144,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r2-m43",
-          "x": 2904.0,
-          "y": 154,
-          "period": 1.06,
-          "phase": 1.031,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "thickness": 7
         },
         {
           "type": "bramble",
@@ -5027,38 +2401,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -5178,38 +2520,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -5322,38 +2632,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -5423,87 +2701,168 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [
         {
           "type": "updraft",
-          "x": 480,
-          "y": -1200,
+          "x": 816,
+          "y": 96,
           "w": 192,
-          "h": 1824,
+          "h": 528,
           "force": [
-            160,
-            -2010
+            0,
+            -3650
           ]
         },
         {
           "type": "updraft",
-          "x": 1344,
-          "y": -1200,
+          "x": 1680,
+          "y": -144,
           "w": 192,
-          "h": 1824,
+          "h": 528,
           "force": [
-            -160,
-            -2010
-          ]
-        },
-        {
-          "type": "updraft",
-          "x": 2208,
-          "y": -1200,
-          "w": 192,
-          "h": 1824,
-          "force": [
-            160,
-            -2010
+            0,
+            -3650
           ]
         }
       ],
       "motes": [
         [
-          408.0,
-          -120
+          378,
+          462
         ],
         [
-          600.0,
-          -312
+          684,
+          458
         ],
         [
-          864.0,
-          -504
+          1194,
+          222
         ],
         [
-          1128.0,
-          -696
+          1548,
+          218
         ],
         [
-          1320.0,
-          264
+          2058,
+          -18
         ],
         [
-          1584.0,
-          72
+          2460,
+          -22
         ],
         [
-          1848.0,
-          -120
+          2922,
+          222
         ],
         [
-          2040.0,
-          -312
-        ],
-        [
-          2304.0,
-          -504
-        ],
-        [
-          2568.0,
-          -696
-        ],
-        [
-          2760.0,
-          264
+          3324,
+          218
         ]
       ],
       "checkpoints": [
@@ -5515,64 +2874,46 @@
       "decorations": [
         {
           "type": "wildflower_drift",
-          "x": 348,
-          "y": -48,
+          "x": 318,
+          "y": 528,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 828,
-          "y": -432,
+          "x": 1134,
+          "y": 288,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 1308,
-          "y": 336,
+          "x": 1998,
+          "y": 48,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 1788,
-          "y": -48,
+          "x": 2862,
+          "y": 288,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "wildflower_drift",
-          "x": 2268,
-          "y": -432,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "wildflower_drift",
-          "x": 2748,
-          "y": 336,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         }
       ],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Beekeeper’s Needle / Crosswind chimney\nExtreme route"
+          "text": "Beekeeper’s Needle / Crosswind chimney\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -5585,87 +2926,112 @@
         },
         {
           "at": [
-            408.0,
-            -48
+            360,
+            528
           ],
-          "action": "unverified"
+          "action": "jump"
         },
         {
           "at": [
-            600.0,
-            -240
+            708,
+            528
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            864.0,
-            -432
+            912,
+            480
           ],
-          "action": "unverified"
+          "action": "flow_enter"
         },
         {
           "at": [
-            1128.0,
-            -624
+            1176,
+            288
           ],
-          "action": "unverified"
+          "action": "flow_exit",
+          "shaft_x": 912
         },
         {
           "at": [
-            1320.0,
-            336
+            1212.0,
+            288
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            1584.0,
-            144
+            1524.0,
+            288
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "06-X06-r2-m0"
         },
         {
           "at": [
-            1848.0,
-            -48
+            1572,
+            288
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            2040.0,
-            -240
+            1776,
+            240
           ],
-          "action": "unverified"
+          "action": "flow_enter"
         },
         {
           "at": [
-            2304.0,
-            -432
+            2040,
+            48
           ],
-          "action": "unverified"
+          "action": "flow_exit",
+          "shaft_x": 1776
         },
         {
           "at": [
-            2568.0,
-            -624
+            2484,
+            48
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            2760.0,
-            336
+            2904,
+            288
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            3168,
+            2964.0,
+            288
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3276.0,
+            288
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-X06-r2-m1"
+        },
+        {
+          "at": [
+            3348,
+            288
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4296,
             624
           ],
-          "action": "unverified"
+          "action": "drop"
         }
       ],
       "visual": {
@@ -6060,806 +3426,86 @@
     {
       "name": "Beekeeper’s Needle / Canopy zipper",
       "origin": [
-        9504,
+        13248,
         0
       ],
-      "width": 3360,
-      "lesson": "Canopy zipper · extreme timing and narrow catches.",
+      "width": 4416,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": -384,
-          "w": 144,
+          "x": 288,
+          "y": 480,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 336,
-          "y": -576,
-          "w": 192,
-          "h": 48,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 672,
-          "y": 384,
-          "w": 48,
+          "x": 1152,
+          "y": 336,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 672,
-          "y": 192,
-          "w": 96,
-          "h": 48,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 1008,
-          "y": -384,
-          "w": 96,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1008,
-          "y": -576,
-          "w": 144,
-          "h": 48,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 1344,
-          "y": 384,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1344,
-          "y": 192,
-          "w": 192,
-          "h": 48,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 1680,
-          "y": -384,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1680,
-          "y": -576,
-          "w": 96,
-          "h": 48,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 2016,
-          "y": 384,
-          "w": 96,
+          "x": 1296,
+          "y": 144,
+          "w": 288,
           "h": 48,
           "kind": "wood"
         },
         {
           "x": 2016,
-          "y": 192,
-          "w": 144,
-          "h": 48,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 2352,
-          "y": -384,
-          "w": 144,
+          "y": 336,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 2352,
-          "y": -576,
-          "w": 192,
-          "h": 48,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 2688,
-          "y": 384,
-          "w": 48,
+          "x": 2880,
+          "y": 480,
+          "w": 624,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 2688,
-          "y": 192,
-          "w": 96,
+          "x": 3024,
+          "y": 288,
+          "w": 336,
           "h": 48,
-          "kind": "block",
-          "material": "stone"
+          "kind": "wood"
         }
       ],
       "hazards": [
         {
-          "type": "bramble",
-          "x": 336,
-          "y": -336,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 432,
-          "y": -408,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 336,
-          "y": -528,
-          "w": 192,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 432,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 240,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1008,
-          "y": -336,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1056,
-          "y": -408,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1008,
-          "y": -528,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1344,
-          "y": 432,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1344,
-          "y": 360,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1344,
-          "y": 240,
-          "w": 192,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": -336,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": -528,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": 432,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": 360,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": 240,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2352,
-          "y": -336,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": -408,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2352,
-          "y": -528,
-          "w": 192,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2688,
-          "y": 432,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2688,
-          "y": 240,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r3-m0",
-          "x": 336.0,
-          "y": -422,
-          "period": 0.95,
-          "phase": 0.0,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r3-m1",
-          "x": 384.0,
-          "y": -720,
-          "period": 1.06,
-          "phase": 0.317,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
           "type": "mechanism",
           "mechanism": "windmill",
-          "id": "06-X06-r3-m2",
-          "x": 480.0,
-          "y": -512,
-          "period": 2.14,
-          "phase": 0.634,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "id": "06-X06-r3-m1",
+          "x": 1440.0,
+          "y": 200,
+          "period": 7.6,
+          "phase": 0.47,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
+          "radius": 120,
+          "blades": 3,
+          "rotation_direction": 1,
+          "thickness": 7
         },
         {
           "type": "mechanism",
           "mechanism": "bloom",
           "id": "06-X06-r3-m3",
-          "x": 552.0,
-          "y": -566,
-          "period": 1.28,
-          "phase": 0.951,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "x": 3192.0,
+          "y": 456,
+          "period": 4.6,
+          "phase": 1.41,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r3-m4",
-          "x": 600.0,
-          "y": 192,
-          "period": 1.39,
-          "phase": 1.268,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r3-m5",
-          "x": 696.0,
-          "y": 112,
-          "period": 1.97,
-          "phase": 0.185,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r3-m6",
-          "x": 768.0,
-          "y": 346,
-          "period": 1.61,
-          "phase": 0.502,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r3-m7",
-          "x": 816.0,
-          "y": 48,
-          "period": 0.95,
-          "phase": 0.819,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r3-m8",
-          "x": 984.0,
-          "y": -512,
-          "period": 1.8,
-          "phase": 1.136,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r3-m9",
-          "x": 1056.0,
-          "y": -566,
-          "period": 1.17,
-          "phase": 0.053,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r3-m10",
-          "x": 1104.0,
-          "y": -576,
-          "period": 1.28,
-          "phase": 0.37,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r3-m11",
-          "x": 1200.0,
-          "y": -656,
-          "period": 2.31,
-          "phase": 0.687,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r3-m12",
-          "x": 1344.0,
-          "y": 346,
-          "period": 1.5,
-          "phase": 1.004,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r3-m13",
-          "x": 1392.0,
-          "y": 48,
-          "period": 1.61,
-          "phase": 1.321,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r3-m14",
-          "x": 1488.0,
-          "y": 256,
-          "period": 2.14,
-          "phase": 0.238,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r3-m15",
-          "x": 1560.0,
-          "y": 202,
-          "period": 1.06,
-          "phase": 0.555,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r3-m16",
-          "x": 1608.0,
-          "y": -576,
-          "period": 1.17,
-          "phase": 0.872,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r3-m17",
-          "x": 1704.0,
-          "y": -656,
-          "period": 1.97,
-          "phase": 1.189,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r3-m18",
-          "x": 1776.0,
-          "y": -422,
-          "period": 1.39,
-          "phase": 0.106,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r3-m19",
-          "x": 1824.0,
-          "y": -720,
-          "period": 1.5,
-          "phase": 0.423,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r3-m20",
-          "x": 1992.0,
-          "y": 256,
-          "period": 1.8,
-          "phase": 0.74,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r3-m21",
-          "x": 2064.0,
-          "y": 202,
-          "period": 0.95,
-          "phase": 1.057,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r3-m22",
-          "x": 2112.0,
-          "y": 192,
-          "period": 1.06,
-          "phase": 1.374,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r3-m23",
-          "x": 2208.0,
-          "y": 112,
-          "period": 2.31,
-          "phase": 0.291,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r3-m24",
-          "x": 2352.0,
-          "y": -422,
-          "period": 1.28,
-          "phase": 0.608,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r3-m25",
-          "x": 2400.0,
-          "y": -720,
-          "period": 1.39,
-          "phase": 0.925,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r3-m26",
-          "x": 2496.0,
-          "y": -512,
-          "period": 2.14,
-          "phase": 1.242,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": -1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r3-m27",
-          "x": 2568.0,
-          "y": -566,
-          "period": 1.61,
-          "phase": 0.159,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r3-m28",
-          "x": 2616.0,
-          "y": 192,
-          "period": 0.95,
-          "phase": 0.476,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "windmill",
-          "id": "06-X06-r3-m29",
-          "x": 2712.0,
-          "y": 112,
-          "period": 1.97,
-          "phase": 0.793,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "radius": 192,
-          "blades": 4,
-          "rotation_direction": 1,
-          "thickness": 10
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "bloom",
-          "id": "06-X06-r3-m30",
-          "x": 2784.0,
-          "y": 346,
-          "period": 1.17,
-          "phase": 1.11,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "head_radius": 52
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "06-X06-r3-m31",
-          "x": 2832.0,
-          "y": 48,
-          "period": 1.28,
-          "phase": 0.027,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "efd793",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "head_radius": 32
         },
         {
           "type": "bramble",
@@ -6912,38 +3558,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -7063,38 +3677,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -7207,38 +3789,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -7324,41 +3874,145 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [],
       "motes": [
         [
-          408.0,
-          -456
+          378,
+          414
         ],
         [
-          696.0,
-          312
+          780,
+          410
         ],
         [
-          1056.0,
-          -456
+          1242,
+          270
         ],
         [
-          1416.0,
-          312
+          1644,
+          266
         ],
         [
-          1704.0,
-          -456
+          1386,
+          78
         ],
         [
-          2064.0,
-          312
+          1500,
+          74
         ],
         [
-          2424.0,
-          -456
+          2106,
+          270
         ],
         [
-          2712.0,
-          312
+          2508,
+          266
+        ],
+        [
+          2970,
+          414
+        ],
+        [
+          3420,
+          410
+        ],
+        [
+          3114,
+          222
+        ],
+        [
+          3276,
+          218
         ]
       ],
       "checkpoints": [
@@ -7370,46 +4024,64 @@
       "decorations": [
         {
           "type": "wildflower_drift",
-          "x": 348,
-          "y": -384,
+          "x": 318,
+          "y": 480,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 1020,
-          "y": -384,
+          "x": 1182,
+          "y": 336,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 1692,
-          "y": -384,
+          "x": 1326,
+          "y": 144,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "wildflower_drift",
-          "x": 2364,
-          "y": -384,
+          "x": 2046,
+          "y": 336,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
+          "layer": "back"
+        },
+        {
+          "type": "wildflower_drift",
+          "x": 2910,
+          "y": 480,
+          "width": 72,
+          "height": 64,
+          "scale": 0.45,
+          "layer": "back"
+        },
+        {
+          "type": "wildflower_drift",
+          "x": 3054,
+          "y": 288,
+          "width": 72,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         }
       ],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Beekeeper’s Needle / Canopy zipper\nExtreme route"
+          "text": "Beekeeper’s Needle / Canopy zipper\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -7422,66 +4094,96 @@
         },
         {
           "at": [
-            408.0,
-            -384
+            360,
+            480
           ],
-          "action": "unverified"
+          "action": "jump"
         },
         {
           "at": [
-            696.0,
-            384
+            804,
+            480
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            1056.0,
-            -384
+            1224,
+            336
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            1416.0,
-            384
+            1284.0,
+            336
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            1704.0,
-            -384
+            1596.0,
+            336
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "06-X06-r3-m1"
         },
         {
           "at": [
-            2064.0,
-            384
+            1668,
+            336
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            2424.0,
-            -384
+            2088,
+            336
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            2712.0,
-            384
+            2532,
+            336
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            3264,
+            2952,
+            480
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            3036.0,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3348.0,
+            480
+          ],
+          "action": "mechanism",
+          "obstacle_id": "06-X06-r3-m3"
+        },
+        {
+          "at": [
+            3444,
+            480
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4296,
             624
           ],
-          "action": "unverified"
+          "action": "drop"
         }
       ],
       "visual": {
@@ -7888,9 +4590,11 @@
     "revision": 1
   },
   "difficulty": {
-    "edition": "extreme",
+    "edition": "challenge",
     "signature": "shutter",
     "secondary": "windmill",
-    "reachability_tested": false
+    "reachability_tested": true,
+    "verification_profile": "default movement and charge dash, horizontal 1.5, unassisted",
+    "verification_method": "continuous_input_route"
   }
 }

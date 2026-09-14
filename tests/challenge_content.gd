@@ -9,10 +9,10 @@ func check(ok: bool,message: String) -> void:
 func run() -> void:
 	var app=load("res://main.tscn").instantiate();root.add_child(app);await frames(3)
 	check(app.stage_order.size()==51 and app.challenge_order.size()==132 and app.stages.size()==183,"51 calendar days plus 132 monthly stages")
-	var months={};var families={};var report=JSON.parse_string(FileAccess.get_file_as_string("res://content/extreme_report.json"))
-	for entry in report.stages:check(entry.mechanisms==entry.previous_mechanisms*10,entry.id+" has tenfold machinery")
+	var months={};var families={}
 	for id in app.stage_order+app.challenge_order:
 		var s: Dictionary=app.stages[id]
+		check(s.difficulty.get("reachability_tested",false),id+" carries the current route-verification metadata")
 		var problems=YBLayoutDocument.errors(s,false)
 		check(problems.is_empty(),id+" validates: "+str(problems))
 		var doc=YBLayoutDocument.new();doc.load_stage(s);var compiled=doc.compile()
@@ -62,5 +62,5 @@ func run() -> void:
 	app.start_lab();app.world.set_running(false)
 	check(app.lab_test and app.world.spec.length==44160,"17-station lab remains available")
 	root.remove_child(app);app.queue_free();await frames(2)
-	print("EXTREME CONTENT: ",failures," failures. No reachability or balance tests performed.")
+	print("CHALLENGE CONTENT: ",failures," failures. Structural integration checks complete.")
 	quit(1 if failures else 0)

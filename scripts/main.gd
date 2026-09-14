@@ -301,7 +301,7 @@ func draw_title(n: Node2D) -> void:
 	button(n,"about","Field notes",Rect2(281,524,198,44))
 	button(n,"quit","Quit",Rect2(74,579,194,40))
 	button(n,"editor","Layout workshop",Rect2(281,579,198,40))
-	label(n,str(stage_order.size())+" CALENDAR DAYS  /  "+str(challenge_order.size())+" EXTREME CHALLENGES",Vector2(74,674),11,MUTED)
+	label(n,str(stage_order.size())+" CALENDAR DAYS  /  "+str(challenge_order.size())+" MONTHLY CHALLENGES",Vector2(74,674),11,MUTED)
 	panel(n,Rect2(831,74,356,79),Color(1,0.97,0.84,0.75),12)
 	label(n,"01",Vector2(853,128),42,INK,false,true)
 	label(n,"JUNE",Vector2(931,107),13,INK)
@@ -310,7 +310,7 @@ func draw_title(n: Node2D) -> void:
 	label(n,"Experiment · tune · repeat",Vector2(849,248),14,CREAM)
 	button(n,"challenges","Monthly challenges   →",Rect2(831,298,356,54),true)
 	label(n,"11 per month · 132 extra stages",Vector2(849,381),15,CREAM)
-	label(n,"EXTREME EDITION  ·  0.16.0",Vector2(995,684),11,Color("e6eac7"),true)
+	label(n,"FOUNDATION EDITION  ·  0.17.0",Vector2(995,684),11,Color("e6eac7"),true)
 
 func draw_calendar(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color(0.07,0.18,0.20,0.94))
@@ -346,7 +346,7 @@ func draw_calendar(n: Node2D) -> void:
 	if not s.is_empty():
 		wrapped(n,s.title,Vector2(796,212),395,23,INK)
 		wrapped(n,s.description,Vector2(796,267),390,15,INK)
-		label(n,"EXTREME ROUTE · TIMING & PRECISION" if s.get("difficulty",{}).get("edition","")=="extreme" else "A PLAYABLE CHAPTER",Vector2(796,402),11,Color("638070"))
+		label(n,"EXPERT ROUTE · TIMING & PRECISION" if s.get("difficulty",{}).get("edition","") in ["expert","challenge"] else "A PLAYABLE CHAPTER",Vector2(796,402),11,Color("638070"))
 		var result=store.data.results.get(selected,{})
 		label(n,("Best: "+clock_text(result.best_time)+"  ·  "+str(int(result.motes))+" sunmotes") if not result.is_empty() else ("Survival boss · five arenas" if s.has("boss") else "Explore · collect · reach the garden gate"),Vector2(796,434),14,INK)
 		button(n,"play","Enter this day   →",Rect2(796,472,400,54),true)
@@ -363,11 +363,11 @@ func draw_calendar(n: Node2D) -> void:
 func draw_challenges(n: Node2D) -> void:
 	n.draw_rect(Rect2(0,0,1280,720),Color("122d34"))
 	var month=calendar.months[month_index]
-	label(n,"THE EXTREME COLLECTION",Vector2(56,51),12,GOLD)
+	label(n,"MONTHLY CHALLENGES",Vector2(56,51),12,GOLD)
 	label(n,str(month.name)+" · eleven trials",Vector2(54,103),39,CREAM,false,true)
 	button(n,"calendar","Calendar",Rect2(934,40,144,40))
 	button(n,"title","← Home",Rect2(1094,40,130,40))
-	label(n,"Narrow catches. Overlapping machinery. No gentle routes.",Vector2(57,147),16,MUTED)
+	label(n,"Read the rhythm. Commit to the jump. Find your next foothold.",Vector2(57,147),16,MUTED)
 	button(n,"prev","←",Rect2(622,120,44,40));button(n,"next","→",Rect2(676,120,44,40))
 	var entries=challenge_order.filter(func(id):return int(stages[id].monthly_challenge.month)==int(month.number))
 	for i in entries.size():

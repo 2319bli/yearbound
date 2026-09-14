@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "revision": 18,
+  "revision": 19,
   "day": "11-X01",
   "identity": "The Submerged Belfry",
-  "intent": "The Submerged Belfry. crown transfer, press vault, moving freight, bell circuit. Fully submerged, with alternating undertows.",
-  "world_top": -1536,
+  "intent": "The Submerged Belfry. crown transfer, press vault, moving freight, bell circuit. Fully submerged passages with timed sluice gates.",
+  "world_top": -960,
   "spawn": [
     120,
     528
   ],
-  "length": 12864,
+  "length": 17664,
   "goal": [
-    12768,
+    17568,
     528
   ],
   "sections": [
@@ -21,682 +21,760 @@
         0,
         0
       ],
-      "width": 3072,
-      "lesson": "Crown transfer · extreme timing and narrow catches.",
+      "width": 4416,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": 384,
-          "w": 144,
+          "x": 0,
+          "y": -960,
+          "w": 4416,
           "h": 48,
-          "kind": "wood"
+          "kind": "block",
+          "material": "stone"
         },
         {
-          "x": 624,
-          "y": -48,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 912,
-          "y": -480,
+          "x": 720,
+          "y": -912,
           "w": 96,
-          "h": 48,
-          "kind": "wood"
+          "h": 1104,
+          "kind": "block",
+          "material": "stone"
         },
         {
-          "x": 1200,
-          "y": 240,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1488,
-          "y": -192,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1776,
-          "y": -624,
+          "x": 720,
+          "y": 432,
           "w": 96,
-          "h": 48,
-          "kind": "wood"
+          "h": 192,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1392,
+          "y": -912,
+          "w": 96,
+          "h": 816,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1392,
+          "y": 144,
+          "w": 96,
+          "h": 480,
+          "kind": "block",
+          "material": "stone"
         },
         {
           "x": 2064,
-          "y": 96,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
+          "y": -912,
+          "w": 96,
+          "h": 528,
+          "kind": "block",
+          "material": "stone"
         },
         {
-          "x": 2352,
-          "y": -336,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
+          "x": 2064,
+          "y": -144,
+          "w": 96,
+          "h": 768,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2736,
+          "y": -912,
+          "w": 96,
+          "h": 768,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2736,
+          "y": 96,
+          "w": 96,
+          "h": 528,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 3408,
+          "y": -912,
+          "w": 96,
+          "h": 1056,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 3408,
+          "y": 384,
+          "w": 96,
+          "h": 240,
+          "kind": "block",
+          "material": "stone"
         }
       ],
       "hazards": [
         {
           "type": "bramble",
-          "x": 336,
-          "y": 432,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 432,
-          "y": 360,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 624,
-          "y": 0,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 912,
-          "y": -432,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 960,
-          "y": -504,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1200,
-          "y": 288,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1200,
-          "y": 216,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1488,
-          "y": -144,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
+          "x": 696,
           "y": -576,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1776,
-          "y": -648,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 2064,
-          "y": 144,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 2160,
-          "y": 72,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 2352,
+          "x": 696,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
           "y": -288,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r0-m0",
-          "x": 336.0,
-          "y": 352,
-          "period": 0.95,
-          "phase": 0.65,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 108
+          "type": "bramble",
+          "x": 696,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r0-m1",
-          "x": 384.0,
+          "type": "bramble",
+          "x": 696,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": -144,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": -96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": -48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": 0,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
           "y": 48,
-          "period": 1.06,
-          "phase": 0.967,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": 96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "mechanism",
           "mechanism": "shutter",
-          "id": "11-X01-r0-m2",
-          "x": 456.0,
-          "y": 192,
-          "period": 1.17,
-          "phase": 1.284,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "id": "11-X01-r0-m1",
+          "x": 1416,
+          "y": -96,
+          "period": 5.7,
+          "phase": 1.02,
+          "safe_seconds": 2.2,
+          "warning_seconds": 0.85,
+          "extension_seconds": 0.18,
           "color": "86c5bc",
           "w": 48,
-          "h": 192
+          "h": 240
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "mechanism",
           "mechanism": "sawrail",
           "id": "11-X01-r0-m3",
-          "x": 552.0,
-          "y": 208,
-          "period": 1.28,
-          "phase": 0.201,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "x": 2784,
+          "y": -24,
+          "period": 5.7,
+          "phase": 1.96,
+          "safe_seconds": 2.2,
+          "warning_seconds": 0.85,
+          "extension_seconds": 0.18,
           "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 108
+          "head_radius": 22,
+          "travel": 42
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r0-m4",
-          "x": 552.0,
-          "y": -240,
-          "period": 1.39,
-          "phase": 0.518,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "type": "bramble",
+          "x": 2712,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r0-m5",
-          "x": 624.0,
-          "y": -384,
-          "period": 1.5,
-          "phase": 0.835,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r0-m6",
-          "x": 720.0,
-          "y": -80,
-          "period": 1.61,
-          "phase": 1.152,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 108
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r0-m7",
-          "x": 768.0,
-          "y": -384,
-          "period": 0.95,
-          "phase": 0.069,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r0-m8",
-          "x": 864.0,
-          "y": -672,
-          "period": 1.06,
-          "phase": 0.386,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r0-m9",
-          "x": 960.0,
-          "y": -656,
-          "period": 1.17,
-          "phase": 0.703,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 108
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r0-m10",
-          "x": 1008.0,
-          "y": -672,
-          "period": 1.28,
-          "phase": 1.02,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r0-m11",
-          "x": 1080.0,
+          "type": "bramble",
+          "x": 2712,
           "y": -816,
-          "period": 1.39,
-          "phase": 1.337,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r0-m12",
-          "x": 1200.0,
-          "y": 208,
-          "period": 1.5,
-          "phase": 0.254,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 108
+          "type": "bramble",
+          "x": 2712,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r0-m13",
-          "x": 1248.0,
+          "type": "bramble",
+          "x": 2712,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -144,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
           "y": -96,
-          "period": 1.61,
-          "phase": 0.571,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r0-m14",
-          "x": 1320.0,
+          "type": "bramble",
+          "x": 3384,
+          "y": -48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": 0,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
           "y": 48,
-          "period": 0.95,
-          "phase": 0.888,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r0-m15",
-          "x": 1416.0,
-          "y": 64,
-          "period": 1.06,
-          "phase": 1.205,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 108
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r0-m16",
-          "x": 1416.0,
-          "y": -384,
-          "period": 1.17,
-          "phase": 0.122,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r0-m17",
-          "x": 1488.0,
-          "y": -528,
-          "period": 1.28,
-          "phase": 0.439,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r0-m18",
-          "x": 1584.0,
-          "y": -224,
-          "period": 1.39,
-          "phase": 0.756,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 108
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r0-m19",
-          "x": 1632.0,
-          "y": -528,
-          "period": 1.5,
-          "phase": 1.073,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r0-m20",
-          "x": 1728.0,
-          "y": -816,
-          "period": 1.61,
-          "phase": 1.39,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r0-m21",
-          "x": 1824.0,
-          "y": -800,
-          "period": 0.95,
-          "phase": 0.307,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 108
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r0-m22",
-          "x": 1872.0,
-          "y": -816,
-          "period": 1.06,
-          "phase": 0.624,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r0-m23",
-          "x": 1944.0,
-          "y": -960,
-          "period": 1.17,
-          "phase": 0.941,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r0-m24",
-          "x": 2064.0,
-          "y": 64,
-          "period": 1.28,
-          "phase": 1.258,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 108
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r0-m25",
-          "x": 2112.0,
-          "y": -240,
-          "period": 1.39,
-          "phase": 0.175,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r0-m26",
-          "x": 2184.0,
-          "y": -96,
-          "period": 1.5,
-          "phase": 0.492,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r0-m27",
-          "x": 2280.0,
-          "y": -80,
-          "period": 1.61,
-          "phase": 0.809,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 108
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r0-m28",
-          "x": 2280.0,
-          "y": -528,
-          "period": 0.95,
-          "phase": 1.126,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r0-m29",
-          "x": 2352.0,
-          "y": -672,
-          "period": 1.06,
-          "phase": 0.043,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r0-m30",
-          "x": 2448.0,
-          "y": -368,
-          "period": 1.17,
-          "phase": 0.36,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 108
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r0-m31",
-          "x": 2496.0,
-          "y": -672,
-          "period": 1.28,
-          "phase": 0.677,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 336,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 384,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
@@ -733,38 +811,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -884,38 +930,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -1028,38 +1042,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -1097,173 +1079,223 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2832,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2880,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2976,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [
         {
-          "type": "updraft",
-          "x": 480,
-          "y": -1200,
-          "w": 192,
-          "h": 1824,
-          "force": [
-            160,
-            -1650
-          ]
-        },
-        {
-          "type": "updraft",
-          "x": 1344,
-          "y": -1200,
-          "w": 192,
-          "h": 1824,
-          "force": [
-            -160,
-            -1650
-          ]
-        },
-        {
-          "type": "updraft",
-          "x": 2208,
-          "y": -1200,
-          "w": 192,
-          "h": 1824,
-          "force": [
-            160,
-            -1650
-          ]
-        },
-        {
           "type": "water",
           "x": 0,
-          "y": -1536,
-          "w": 3072,
-          "h": 2256,
+          "y": -960,
+          "w": 4416,
+          "h": 1680,
           "swimmable": true
-        },
-        {
-          "type": "current",
-          "x": 384,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            700,
-            400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 1008,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            -700,
-            -400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 1632,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            700,
-            400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 2256,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            -700,
-            -400
-          ]
         }
       ],
       "motes": [
         [
-          408.0,
-          312
+          620,
+          301
         ],
         [
-          648.0,
-          -120
+          768,
+          296
         ],
         [
-          960.0,
-          -552
+          920,
+          301
         ],
         [
-          1272.0,
-          168
+          1292,
+          13
         ],
         [
-          1512.0,
-          -264
+          1440,
+          8
         ],
         [
-          1824.0,
-          -696
+          1592,
+          13
         ],
         [
-          2136.0,
-          24
+          1964,
+          -275
         ],
         [
-          2376.0,
-          -408
+          2112,
+          -280
+        ],
+        [
+          2264,
+          -275
+        ],
+        [
+          2636,
+          -35
+        ],
+        [
+          2784,
+          -40
+        ],
+        [
+          2936,
+          -35
+        ],
+        [
+          3308,
+          253
+        ],
+        [
+          3456,
+          248
+        ],
+        [
+          3608,
+          253
         ]
       ],
       "checkpoints": [],
-      "decorations": [
-        {
-          "type": "reeds",
-          "x": 348,
-          "y": 384,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 924,
-          "y": -480,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 1500,
-          "y": -192,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 2076,
-          "y": 96,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        }
-      ],
+      "decorations": [],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Submerged Belfry / Crown transfer\nExtreme route"
+          "text": "Submerged Belfry / Crown transfer\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -1276,66 +1308,82 @@
         },
         {
           "at": [
-            408.0,
-            384
+            552,
+            336
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            648.0,
-            -48
+            984,
+            336
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            960.0,
-            -480
+            1224,
+            48
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            1272.0,
-            240
+            1656,
+            48
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "11-X01-r0-m1"
         },
         {
           "at": [
-            1512.0,
-            -192
+            1896,
+            -240
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            1824.0,
-            -624
+            2328,
+            -240
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            2136.0,
-            96
+            2568,
+            0
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            2376.0,
-            -336
+            3000,
+            0
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "11-X01-r0-m3"
         },
         {
           "at": [
-            2976,
+            3240,
+            288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            3672,
+            288
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            4320,
             528
           ],
-          "action": "unverified"
+          "action": "swim"
         }
       ],
       "visual": {
@@ -1723,144 +1771,97 @@
     {
       "name": "Submerged Belfry / Press vault",
       "origin": [
-        3072,
+        4416,
         0
       ],
-      "width": 3168,
-      "lesson": "Press vault · extreme timing and narrow catches.",
+      "width": 4416,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": 432,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 336,
-          "y": 240,
-          "w": 192,
+          "x": 0,
+          "y": -960,
+          "w": 4416,
           "h": 48,
           "kind": "block",
           "material": "stone"
         },
         {
-          "x": 576,
-          "y": 192,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 576,
-          "y": 0,
+          "x": 720,
+          "y": -912,
           "w": 96,
-          "h": 48,
+          "h": 528,
           "kind": "block",
           "material": "stone"
         },
         {
-          "x": 816,
-          "y": 432,
+          "x": 720,
+          "y": -144,
           "w": 96,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 816,
-          "y": 240,
-          "w": 144,
-          "h": 48,
+          "h": 768,
           "kind": "block",
           "material": "stone"
         },
         {
-          "x": 1056,
-          "y": 192,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1056,
-          "y": 0,
-          "w": 192,
-          "h": 48,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 1296,
-          "y": 432,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1296,
-          "y": 240,
+          "x": 1392,
+          "y": -912,
           "w": 96,
-          "h": 48,
+          "h": 768,
           "kind": "block",
           "material": "stone"
         },
         {
-          "x": 1536,
-          "y": 192,
+          "x": 1392,
+          "y": 96,
           "w": 96,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1536,
-          "y": 0,
-          "w": 144,
-          "h": 48,
+          "h": 528,
           "kind": "block",
           "material": "stone"
         },
         {
-          "x": 1776,
-          "y": 432,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1776,
-          "y": 240,
-          "w": 192,
-          "h": 48,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 2016,
-          "y": 192,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2016,
-          "y": 0,
+          "x": 2064,
+          "y": -912,
           "w": 96,
-          "h": 48,
+          "h": 1056,
           "kind": "block",
           "material": "stone"
         },
         {
-          "x": 2256,
+          "x": 2064,
+          "y": 384,
+          "w": 96,
+          "h": 240,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2736,
+          "y": -912,
+          "w": 96,
+          "h": 1104,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2736,
           "y": 432,
           "w": 96,
-          "h": 48,
-          "kind": "wood"
+          "h": 192,
+          "kind": "block",
+          "material": "stone"
         },
         {
-          "x": 2256,
-          "y": 240,
-          "w": 144,
-          "h": 48,
+          "x": 3408,
+          "y": -912,
+          "w": 96,
+          "h": 816,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 3408,
+          "y": 144,
+          "w": 96,
+          "h": 480,
           "kind": "block",
           "material": "stone"
         }
@@ -1868,767 +1869,665 @@
       "hazards": [
         {
           "type": "bramble",
-          "x": 336,
-          "y": 480,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 432,
-          "y": 408,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 336,
-          "y": 288,
-          "w": 192,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 576,
-          "y": 240,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 576,
-          "y": 48,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 816,
-          "y": 480,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 864,
-          "y": 408,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 816,
-          "y": 288,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1056,
-          "y": 240,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1056,
-          "y": 168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1056,
-          "y": 48,
-          "w": 192,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1296,
-          "y": 480,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1296,
-          "y": 288,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 240,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 48,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
-          "y": 480,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1872,
-          "y": 408,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
-          "y": 288,
-          "w": 192,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": 240,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": 48,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2256,
-          "y": 480,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2304,
-          "y": 408,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2256,
-          "y": 288,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m0",
-          "x": 312.0,
-          "y": 240,
-          "period": 0.95,
-          "phase": 0.65,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "x": 696,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "mechanism",
           "mechanism": "shutter",
           "id": "11-X01-r1-m1",
-          "x": 384.0,
-          "y": 96,
-          "period": 1.06,
-          "phase": 0.967,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m2",
-          "x": 480.0,
-          "y": 400,
-          "period": 1.17,
-          "phase": 1.284,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m3",
-          "x": 528.0,
-          "y": 96,
-          "period": 1.28,
-          "phase": 0.201,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r1-m4",
-          "x": 504.0,
-          "y": 0,
-          "period": 1.39,
-          "phase": 0.518,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m5",
-          "x": 600.0,
-          "y": 16,
-          "period": 1.5,
-          "phase": 0.835,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m6",
-          "x": 648.0,
-          "y": 0,
-          "period": 1.61,
-          "phase": 1.152,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r1-m7",
-          "x": 720.0,
+          "x": 1416,
           "y": -144,
-          "period": 0.95,
-          "phase": 0.069,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m8",
-          "x": 792.0,
-          "y": 400,
-          "period": 1.06,
-          "phase": 0.386,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m9",
-          "x": 840.0,
-          "y": 96,
-          "period": 1.17,
-          "phase": 0.703,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r1-m10",
-          "x": 912.0,
-          "y": 240,
-          "period": 1.28,
+          "period": 5.7,
           "phase": 1.02,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "safe_seconds": 2.2,
+          "warning_seconds": 0.85,
+          "extension_seconds": 0.18,
           "color": "86c5bc",
           "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m11",
-          "x": 1008.0,
-          "y": 256,
-          "period": 1.39,
-          "phase": 1.337,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m12",
-          "x": 1032.0,
-          "y": 0,
-          "period": 1.5,
-          "phase": 0.254,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r1-m13",
-          "x": 1104.0,
-          "y": -144,
-          "period": 1.61,
-          "phase": 0.571,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m14",
-          "x": 1200.0,
-          "y": 160,
-          "period": 0.95,
-          "phase": 0.888,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m15",
-          "x": 1248.0,
-          "y": -144,
-          "period": 1.06,
-          "phase": 1.205,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r1-m16",
-          "x": 1224.0,
-          "y": 240,
-          "period": 1.17,
-          "phase": 0.122,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m17",
-          "x": 1320.0,
-          "y": 256,
-          "period": 1.28,
-          "phase": 0.439,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m18",
-          "x": 1368.0,
-          "y": 240,
-          "period": 1.39,
-          "phase": 0.756,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r1-m19",
-          "x": 1440.0,
-          "y": 96,
-          "period": 1.5,
-          "phase": 1.073,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m20",
-          "x": 1512.0,
-          "y": 160,
-          "period": 1.61,
-          "phase": 1.39,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m21",
-          "x": 1560.0,
-          "y": -144,
-          "period": 0.95,
-          "phase": 0.307,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r1-m22",
-          "x": 1632.0,
-          "y": 0,
-          "period": 1.06,
-          "phase": 0.624,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m23",
-          "x": 1728.0,
-          "y": 16,
-          "period": 1.17,
-          "phase": 0.941,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m24",
-          "x": 1752.0,
-          "y": 240,
-          "period": 1.28,
-          "phase": 1.258,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r1-m25",
-          "x": 1824.0,
-          "y": 96,
-          "period": 1.39,
-          "phase": 0.175,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m26",
-          "x": 1920.0,
-          "y": 400,
-          "period": 1.5,
-          "phase": 0.492,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m27",
-          "x": 1968.0,
-          "y": 96,
-          "period": 1.61,
-          "phase": 0.809,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r1-m28",
-          "x": 1944.0,
-          "y": 0,
-          "period": 0.95,
-          "phase": 1.126,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m29",
-          "x": 2040.0,
-          "y": 16,
-          "period": 1.06,
-          "phase": 0.043,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m30",
-          "x": 2088.0,
-          "y": 0,
-          "period": 1.17,
-          "phase": 0.36,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r1-m31",
-          "x": 2160.0,
-          "y": -144,
-          "period": 1.28,
-          "phase": 0.677,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m32",
-          "x": 2232.0,
-          "y": 400,
-          "period": 1.39,
-          "phase": 0.994,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r1-m33",
-          "x": 2280.0,
-          "y": 96,
-          "period": 1.5,
-          "phase": 1.311,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r1-m34",
-          "x": 2352.0,
-          "y": 240,
-          "period": 1.61,
-          "phase": 0.228,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r1-m35",
-          "x": 2448.0,
-          "y": 256,
-          "period": 0.95,
-          "phase": 0.545,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "h": 240
         },
         {
           "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 1368,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 1368,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 336,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 1368,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 384,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 1368,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -144,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": 0,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": 48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "mechanism",
+          "mechanism": "sawrail",
+          "id": "11-X01-r1-m3",
+          "x": 2784,
+          "y": 312,
+          "period": 5.7,
+          "phase": 1.96,
+          "safe_seconds": 2.2,
+          "warning_seconds": 0.85,
+          "extension_seconds": 0.18,
+          "color": "86c5bc",
+          "head_radius": 22,
+          "travel": 42
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -144,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": 0,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": 48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": 96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
@@ -2665,38 +2564,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -2816,38 +2683,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -2960,38 +2795,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -3045,98 +2848,198 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2928,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 2976,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [
         {
           "type": "water",
           "x": 0,
-          "y": -1536,
-          "w": 3168,
-          "h": 2256,
+          "y": -960,
+          "w": 4416,
+          "h": 1680,
           "swimmable": true
-        },
-        {
-          "type": "current",
-          "x": 384,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            700,
-            400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 1008,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            -700,
-            -400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 1632,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            700,
-            400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 2256,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            -700,
-            -400
-          ]
         }
       ],
       "motes": [
         [
-          408.0,
-          360
+          620,
+          -275
         ],
         [
-          600.0,
-          120
+          768,
+          -280
         ],
         [
-          864.0,
-          360
+          920,
+          -275
         ],
         [
-          1128.0,
-          120
+          1292,
+          -35
         ],
         [
-          1320.0,
-          360
+          1440,
+          -40
         ],
         [
-          1584.0,
-          120
+          1592,
+          -35
         ],
         [
-          1848.0,
-          360
+          1964,
+          253
         ],
         [
-          2040.0,
-          120
+          2112,
+          248
         ],
         [
-          2304.0,
-          360
+          2264,
+          253
+        ],
+        [
+          2636,
+          301
+        ],
+        [
+          2784,
+          296
+        ],
+        [
+          2936,
+          301
+        ],
+        [
+          3308,
+          13
+        ],
+        [
+          3456,
+          8
+        ],
+        [
+          3608,
+          13
         ]
       ],
       "checkpoints": [
@@ -3145,58 +3048,12 @@
           528
         ]
       ],
-      "decorations": [
-        {
-          "type": "reeds",
-          "x": 348,
-          "y": 432,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 828,
-          "y": 432,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 1308,
-          "y": 432,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 1788,
-          "y": 432,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 2268,
-          "y": 432,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        }
-      ],
+      "decorations": [],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Submerged Belfry / Press vault\nExtreme route"
+          "text": "Submerged Belfry / Press vault\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -3209,73 +3066,82 @@
         },
         {
           "at": [
-            408.0,
-            432
+            552,
+            -240
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            600.0,
-            192
+            984,
+            -240
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            864.0,
-            432
+            1224,
+            0
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            1128.0,
-            192
+            1656,
+            0
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "11-X01-r1-m1"
         },
         {
           "at": [
-            1320.0,
-            432
+            1896,
+            288
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            1584.0,
-            192
+            2328,
+            288
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            1848.0,
-            432
+            2568,
+            336
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            2040.0,
-            192
+            3000,
+            336
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "11-X01-r1-m3"
         },
         {
           "at": [
-            2304.0,
-            432
+            3240,
+            48
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            3072,
+            3672,
+            48
+          ],
+          "action": "swim"
+        },
+        {
+          "at": [
+            4320,
             528
           ],
-          "action": "unverified"
+          "action": "swim"
         }
       ],
       "visual": {
@@ -3670,891 +3536,763 @@
     {
       "name": "Submerged Belfry / Moving freight",
       "origin": [
-        6240,
+        8832,
         0
       ],
-      "width": 3264,
-      "lesson": "Moving freight · extreme timing and narrow catches.",
+      "width": 4416,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": 432,
-          "w": 144,
+          "x": 0,
+          "y": -960,
+          "w": 4416,
           "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 96,
-          "speed": 3.4,
-          "phase": 0.0
+          "kind": "block",
+          "material": "stone"
         },
         {
-          "x": 576,
-          "y": 192,
-          "w": 48,
-          "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 144,
-          "speed": 3.4,
-          "phase": 0.73
-        },
-        {
-          "x": 816,
-          "y": -48,
+          "x": 720,
+          "y": -912,
           "w": 96,
-          "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 192,
-          "speed": 3.4,
-          "phase": 1.46
+          "h": 1104,
+          "kind": "block",
+          "material": "stone"
         },
         {
-          "x": 1056,
-          "y": -288,
-          "w": 144,
-          "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 96,
-          "speed": 3.4,
-          "phase": 2.19
-        },
-        {
-          "x": 1296,
-          "y": 432,
-          "w": 48,
-          "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 144,
-          "speed": 3.4,
-          "phase": 2.92
-        },
-        {
-          "x": 1536,
-          "y": 192,
-          "w": 96,
-          "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 192,
-          "speed": 3.4,
-          "phase": 3.65
-        },
-        {
-          "x": 1776,
-          "y": -48,
-          "w": 144,
-          "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 96,
-          "speed": 3.4,
-          "phase": 4.38
-        },
-        {
-          "x": 2016,
-          "y": -288,
-          "w": 48,
-          "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 144,
-          "speed": 3.4,
-          "phase": 5.109999999999999
-        },
-        {
-          "x": 2256,
+          "x": 720,
           "y": 432,
           "w": 96,
-          "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 192,
-          "speed": 3.4,
-          "phase": 5.84
+          "h": 192,
+          "kind": "block",
+          "material": "stone"
         },
         {
-          "x": 2496,
-          "y": 192,
-          "w": 144,
-          "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 96,
-          "speed": 3.4,
-          "phase": 6.57
+          "x": 1392,
+          "y": -912,
+          "w": 96,
+          "h": 816,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 1392,
+          "y": 144,
+          "w": 96,
+          "h": 480,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2064,
+          "y": -912,
+          "w": 96,
+          "h": 528,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2064,
+          "y": -144,
+          "w": 96,
+          "h": 768,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2736,
+          "y": -912,
+          "w": 96,
+          "h": 768,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2736,
+          "y": 96,
+          "w": 96,
+          "h": 528,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 3408,
+          "y": -912,
+          "w": 96,
+          "h": 1056,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 3408,
+          "y": 384,
+          "w": 96,
+          "h": 240,
+          "kind": "block",
+          "material": "stone"
         }
       ],
       "hazards": [
         {
           "type": "bramble",
-          "x": 336,
-          "y": 480,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 432,
-          "y": 408,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 576,
-          "y": 240,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 816,
-          "y": 0,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 864,
-          "y": -72,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1056,
+          "x": 696,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 696,
           "y": -240,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1056,
-          "y": -312,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1296,
-          "y": 480,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -144,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 240,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1776,
+          "x": 696,
           "y": 0,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1872,
-          "y": -72,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": 48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 2016,
-          "y": -240,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2256,
-          "y": 480,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2304,
-          "y": 408,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 240,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m0",
-          "x": 312.0,
-          "y": 240,
-          "period": 0.95,
-          "phase": 0.65,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "x": 696,
+          "y": 96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "mechanism",
           "mechanism": "shutter",
           "id": "11-X01-r2-m1",
-          "x": 384.0,
-          "y": 96,
-          "period": 1.06,
-          "phase": 0.967,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m2",
-          "x": 480.0,
-          "y": 400,
-          "period": 1.17,
-          "phase": 1.284,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m3",
-          "x": 528.0,
-          "y": 96,
-          "period": 1.28,
-          "phase": 0.201,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m4",
-          "x": 504.0,
-          "y": 0,
-          "period": 1.39,
-          "phase": 0.518,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m5",
-          "x": 600.0,
-          "y": 16,
-          "period": 1.5,
-          "phase": 0.835,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m6",
-          "x": 648.0,
-          "y": 0,
-          "period": 1.61,
-          "phase": 1.152,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m7",
-          "x": 720.0,
-          "y": -144,
-          "period": 0.95,
-          "phase": 0.069,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m8",
-          "x": 792.0,
-          "y": -80,
-          "period": 1.06,
-          "phase": 0.386,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m9",
-          "x": 840.0,
-          "y": -384,
-          "period": 1.17,
-          "phase": 0.703,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m10",
-          "x": 912.0,
-          "y": -240,
-          "period": 1.28,
+          "x": 1416,
+          "y": -96,
+          "period": 5.7,
           "phase": 1.02,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "safe_seconds": 2.2,
+          "warning_seconds": 0.85,
+          "extension_seconds": 0.18,
           "color": "86c5bc",
           "w": 48,
-          "h": 192
+          "h": 240
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m11",
-          "x": 1008.0,
-          "y": -224,
-          "period": 1.39,
-          "phase": 1.337,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "type": "bramble",
+          "x": 1368,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m12",
-          "x": 1032.0,
+          "type": "bramble",
+          "x": 1368,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
           "y": -480,
-          "period": 1.5,
-          "phase": 0.254,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m13",
-          "x": 1104.0,
-          "y": -624,
-          "period": 1.61,
-          "phase": 0.571,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "type": "bramble",
+          "x": 1368,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m14",
-          "x": 1200.0,
-          "y": -320,
-          "period": 0.95,
-          "phase": 0.888,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "type": "bramble",
+          "x": 1368,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m15",
-          "x": 1248.0,
-          "y": -624,
-          "period": 1.06,
-          "phase": 1.205,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "type": "bramble",
+          "x": 1368,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m16",
-          "x": 1224.0,
-          "y": 240,
-          "period": 1.17,
-          "phase": 0.122,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "type": "bramble",
+          "x": 1368,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m17",
-          "x": 1320.0,
-          "y": 256,
-          "period": 1.28,
-          "phase": 0.439,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m18",
-          "x": 1368.0,
-          "y": 240,
-          "period": 1.39,
-          "phase": 0.756,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m19",
-          "x": 1440.0,
-          "y": 96,
-          "period": 1.5,
-          "phase": 1.073,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m20",
-          "x": 1512.0,
-          "y": 160,
-          "period": 1.61,
-          "phase": 1.39,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m21",
-          "x": 1560.0,
-          "y": -144,
-          "period": 0.95,
-          "phase": 0.307,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m22",
-          "x": 1632.0,
-          "y": 0,
-          "period": 1.06,
-          "phase": 0.624,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m23",
-          "x": 1728.0,
-          "y": 16,
-          "period": 1.17,
-          "phase": 0.941,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m24",
-          "x": 1752.0,
+          "type": "bramble",
+          "x": 1368,
           "y": -240,
-          "period": 1.28,
-          "phase": 1.258,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m25",
-          "x": 1824.0,
-          "y": -384,
-          "period": 1.39,
-          "phase": 0.175,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "type": "bramble",
+          "x": 1368,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m26",
-          "x": 1920.0,
-          "y": -80,
-          "period": 1.5,
-          "phase": 0.492,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "type": "bramble",
+          "x": 2040,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m27",
-          "x": 1968.0,
-          "y": -384,
-          "period": 1.61,
-          "phase": 0.809,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "type": "bramble",
+          "x": 2040,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m28",
-          "x": 1944.0,
-          "y": -480,
-          "period": 0.95,
-          "phase": 1.126,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "type": "bramble",
+          "x": 2040,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m29",
-          "x": 2040.0,
-          "y": -464,
-          "period": 1.06,
-          "phase": 0.043,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "type": "bramble",
+          "x": 2040,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m30",
-          "x": 2088.0,
-          "y": -480,
-          "period": 1.17,
-          "phase": 0.36,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "type": "bramble",
+          "x": 2040,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m31",
-          "x": 2160.0,
+          "type": "bramble",
+          "x": 2040,
           "y": -624,
-          "period": 1.28,
-          "phase": 0.677,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "mechanism",
           "mechanism": "sawrail",
-          "id": "11-X01-r2-m32",
-          "x": 2232.0,
-          "y": 400,
-          "period": 1.39,
-          "phase": 0.994,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "id": "11-X01-r2-m3",
+          "x": 2784,
+          "y": -24,
+          "period": 5.7,
+          "phase": 1.96,
+          "safe_seconds": 2.2,
+          "warning_seconds": 0.85,
+          "extension_seconds": 0.18,
           "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "head_radius": 22,
+          "travel": 42
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m33",
-          "x": 2280.0,
-          "y": 96,
-          "period": 1.5,
-          "phase": 1.311,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "type": "bramble",
+          "x": 2712,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m34",
-          "x": 2352.0,
-          "y": 240,
-          "period": 1.61,
-          "phase": 0.228,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "type": "bramble",
+          "x": 2712,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m35",
-          "x": 2448.0,
-          "y": 256,
-          "period": 0.95,
-          "phase": 0.545,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "type": "bramble",
+          "x": 2712,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m36",
-          "x": 2472.0,
+          "type": "bramble",
+          "x": 2712,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -144,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
           "y": 0,
-          "period": 1.06,
-          "phase": 0.862,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r2-m37",
-          "x": 2544.0,
-          "y": -144,
-          "period": 1.17,
-          "phase": 1.179,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r2-m38",
-          "x": 2640.0,
-          "y": 160,
-          "period": 1.28,
-          "phase": 0.096,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r2-m39",
-          "x": 2688.0,
-          "y": -144,
-          "period": 1.39,
-          "phase": 0.413,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 336,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 384,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 3384,
+          "y": 48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
@@ -4591,38 +4329,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -4742,38 +4448,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -4886,38 +4560,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -4987,102 +4629,182 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [
         {
           "type": "water",
           "x": 0,
-          "y": -1536,
-          "w": 3264,
-          "h": 2256,
+          "y": -960,
+          "w": 4416,
+          "h": 1680,
           "swimmable": true
-        },
-        {
-          "type": "current",
-          "x": 384,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            700,
-            400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 1008,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            -700,
-            -400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 1632,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            700,
-            400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 2256,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            -700,
-            -400
-          ]
         }
       ],
       "motes": [
         [
-          408.0,
-          360
+          620,
+          301
         ],
         [
-          600.0,
-          120
+          768,
+          296
         ],
         [
-          864.0,
-          -120
+          920,
+          301
         ],
         [
-          1128.0,
-          -360
+          1292,
+          13
         ],
         [
-          1320.0,
-          360
+          1440,
+          8
         ],
         [
-          1584.0,
-          120
+          1592,
+          13
         ],
         [
-          1848.0,
-          -120
+          1964,
+          -275
         ],
         [
-          2040.0,
-          -360
+          2112,
+          -280
         ],
         [
-          2304.0,
-          360
+          2264,
+          -275
         ],
         [
-          2568.0,
-          120
+          2636,
+          -35
+        ],
+        [
+          2784,
+          -40
+        ],
+        [
+          2936,
+          -35
+        ],
+        [
+          3308,
+          253
+        ],
+        [
+          3456,
+          248
+        ],
+        [
+          3608,
+          253
         ]
       ],
       "checkpoints": [
@@ -5091,58 +4813,12 @@
           528
         ]
       ],
-      "decorations": [
-        {
-          "type": "reeds",
-          "x": 348,
-          "y": 432,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 828,
-          "y": -48,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 1308,
-          "y": 432,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 1788,
-          "y": -48,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 2268,
-          "y": 432,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        }
-      ],
+      "decorations": [],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Submerged Belfry / Moving freight\nExtreme route"
+          "text": "Submerged Belfry / Moving freight\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -5155,80 +4831,82 @@
         },
         {
           "at": [
-            408.0,
-            432
+            552,
+            336
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            600.0,
-            192
+            984,
+            336
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            864.0,
-            -48
+            1224,
+            48
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            1128.0,
-            -288
+            1656,
+            48
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "11-X01-r2-m1"
         },
         {
           "at": [
-            1320.0,
-            432
+            1896,
+            -240
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            1584.0,
-            192
+            2328,
+            -240
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            1848.0,
-            -48
+            2568,
+            0
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            2040.0,
-            -288
+            3000,
+            0
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "11-X01-r2-m3"
         },
         {
           "at": [
-            2304.0,
-            432
+            3240,
+            288
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            2568.0,
-            192
+            3672,
+            288
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            3168,
+            4320,
             528
           ],
-          "action": "unverified"
+          "action": "swim"
         }
       ],
       "visual": {
@@ -5630,930 +5308,763 @@
     {
       "name": "Submerged Belfry / Bell circuit",
       "origin": [
-        9504,
+        13248,
         0
       ],
-      "width": 3360,
-      "lesson": "Bell circuit · extreme timing and narrow catches.",
+      "width": 4416,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": 192,
-          "w": 144,
+          "x": 0,
+          "y": -960,
+          "w": 4416,
           "h": 48,
-          "kind": "spring",
-          "power": 1000
+          "kind": "block",
+          "material": "stone"
         },
         {
-          "x": 576,
-          "y": -192,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 816,
-          "y": -192,
+          "x": 720,
+          "y": -912,
           "w": 96,
-          "h": 48,
-          "kind": "wood"
+          "h": 768,
+          "kind": "block",
+          "material": "stone"
         },
         {
-          "x": 1056,
-          "y": 192,
-          "w": 144,
-          "h": 48,
-          "kind": "spring",
-          "power": 1000
-        },
-        {
-          "x": 1296,
-          "y": 576,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1536,
-          "y": 576,
+          "x": 720,
+          "y": 96,
           "w": 96,
-          "h": 48,
-          "kind": "wood"
+          "h": 528,
+          "kind": "block",
+          "material": "stone"
         },
         {
-          "x": 1776,
-          "y": 192,
-          "w": 144,
-          "h": 48,
-          "kind": "spring",
-          "power": 1000
-        },
-        {
-          "x": 2016,
-          "y": -192,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2256,
-          "y": -192,
+          "x": 1392,
+          "y": -912,
           "w": 96,
-          "h": 48,
-          "kind": "wood"
+          "h": 1056,
+          "kind": "block",
+          "material": "stone"
         },
         {
-          "x": 2496,
-          "y": 192,
-          "w": 144,
-          "h": 48,
-          "kind": "spring",
-          "power": 1000
+          "x": 1392,
+          "y": 384,
+          "w": 96,
+          "h": 240,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2064,
+          "y": -912,
+          "w": 96,
+          "h": 1104,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2064,
+          "y": 432,
+          "w": 96,
+          "h": 192,
+          "kind": "block",
+          "material": "stone"
         },
         {
           "x": 2736,
-          "y": 576,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
+          "y": -912,
+          "w": 96,
+          "h": 816,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 2736,
+          "y": 144,
+          "w": 96,
+          "h": 480,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 3408,
+          "y": -912,
+          "w": 96,
+          "h": 528,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 3408,
+          "y": -144,
+          "w": 96,
+          "h": 768,
+          "kind": "block",
+          "material": "stone"
         }
       ],
       "hazards": [
         {
           "type": "bramble",
-          "x": 336,
-          "y": 240,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 432,
-          "y": 168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 576,
-          "y": -144,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 816,
-          "y": -144,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 864,
-          "y": -216,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1056,
-          "y": 240,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1056,
-          "y": 168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1296,
-          "y": 624,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 624,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 552,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1776,
-          "y": 240,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 1872,
-          "y": 168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 696,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 2016,
-          "y": -144,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
+          "x": 696,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 2256,
-          "y": -144,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2304,
-          "y": -216,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 240,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2736,
-          "y": 624,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m0",
-          "x": 312.0,
-          "y": 0,
-          "period": 0.95,
-          "phase": 0.65,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "x": 696,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "mechanism",
           "mechanism": "shutter",
           "id": "11-X01-r3-m1",
-          "x": 384.0,
-          "y": -144,
-          "period": 1.06,
-          "phase": 0.967,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m2",
-          "x": 480.0,
-          "y": 160,
-          "period": 1.17,
-          "phase": 1.284,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m3",
-          "x": 528.0,
-          "y": -144,
-          "period": 1.28,
-          "phase": 0.201,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m4",
-          "x": 504.0,
-          "y": -384,
-          "period": 1.39,
-          "phase": 0.518,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m5",
-          "x": 600.0,
-          "y": -368,
-          "period": 1.5,
-          "phase": 0.835,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m6",
-          "x": 648.0,
-          "y": -384,
-          "period": 1.61,
-          "phase": 1.152,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m7",
-          "x": 720.0,
-          "y": -528,
-          "period": 0.95,
-          "phase": 0.069,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m8",
-          "x": 792.0,
-          "y": -224,
-          "period": 1.06,
-          "phase": 0.386,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m9",
-          "x": 840.0,
-          "y": -528,
-          "period": 1.17,
-          "phase": 0.703,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m10",
-          "x": 912.0,
-          "y": -384,
-          "period": 1.28,
+          "x": 1416,
+          "y": 144,
+          "period": 5.7,
           "phase": 1.02,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "safe_seconds": 2.2,
+          "warning_seconds": 0.85,
+          "extension_seconds": 0.18,
           "color": "86c5bc",
           "w": 48,
-          "h": 192
+          "h": 240
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m11",
-          "x": 1008.0,
-          "y": -368,
-          "period": 1.39,
-          "phase": 1.337,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "type": "bramble",
+          "x": 1368,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m12",
-          "x": 1032.0,
-          "y": 0,
-          "period": 1.5,
-          "phase": 0.254,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "type": "bramble",
+          "x": 1368,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m13",
-          "x": 1104.0,
-          "y": -144,
-          "period": 1.61,
-          "phase": 0.571,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "type": "bramble",
+          "x": 1368,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m14",
-          "x": 1200.0,
-          "y": 160,
-          "period": 0.95,
-          "phase": 0.888,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "type": "bramble",
+          "x": 1368,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m15",
-          "x": 1248.0,
-          "y": -144,
-          "period": 1.06,
-          "phase": 1.205,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "type": "bramble",
+          "x": 1368,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m16",
-          "x": 1224.0,
-          "y": 384,
-          "period": 1.17,
-          "phase": 0.122,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "type": "bramble",
+          "x": 1368,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m17",
-          "x": 1320.0,
-          "y": 400,
-          "period": 1.28,
-          "phase": 0.439,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "type": "bramble",
+          "x": 1368,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m18",
-          "x": 1368.0,
-          "y": 384,
-          "period": 1.39,
-          "phase": 0.756,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m19",
-          "x": 1440.0,
-          "y": 240,
-          "period": 1.5,
-          "phase": 1.073,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m20",
-          "x": 1512.0,
-          "y": 544,
-          "period": 1.61,
-          "phase": 1.39,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m21",
-          "x": 1560.0,
-          "y": 240,
-          "period": 0.95,
-          "phase": 0.307,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m22",
-          "x": 1632.0,
-          "y": 384,
-          "period": 1.06,
-          "phase": 0.624,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m23",
-          "x": 1728.0,
-          "y": 400,
-          "period": 1.17,
-          "phase": 0.941,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m24",
-          "x": 1752.0,
-          "y": 0,
-          "period": 1.28,
-          "phase": 1.258,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m25",
-          "x": 1824.0,
-          "y": -144,
-          "period": 1.39,
-          "phase": 0.175,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m26",
-          "x": 1920.0,
-          "y": 160,
-          "period": 1.5,
-          "phase": 0.492,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m27",
-          "x": 1968.0,
-          "y": -144,
-          "period": 1.61,
-          "phase": 0.809,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m28",
-          "x": 1944.0,
-          "y": -384,
-          "period": 0.95,
-          "phase": 1.126,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m29",
-          "x": 2040.0,
-          "y": -368,
-          "period": 1.06,
-          "phase": 0.043,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m30",
-          "x": 2088.0,
-          "y": -384,
-          "period": 1.17,
-          "phase": 0.36,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m31",
-          "x": 2160.0,
+          "type": "bramble",
+          "x": 1368,
           "y": -528,
-          "period": 1.28,
-          "phase": 0.677,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m32",
-          "x": 2232.0,
-          "y": -224,
-          "period": 1.39,
-          "phase": 0.994,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "type": "bramble",
+          "x": 1368,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m33",
-          "x": 2280.0,
-          "y": -528,
-          "period": 1.5,
-          "phase": 1.311,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "type": "bramble",
+          "x": 1368,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m34",
-          "x": 2352.0,
+          "type": "bramble",
+          "x": 1368,
           "y": -384,
-          "period": 1.61,
-          "phase": 0.228,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m35",
-          "x": 2448.0,
-          "y": -368,
-          "period": 0.95,
-          "phase": 0.545,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
+          "type": "bramble",
+          "x": 1368,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m36",
-          "x": 2472.0,
+          "type": "bramble",
+          "x": 1368,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -144,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
+          "y": -48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 1368,
           "y": 0,
-          "period": 1.06,
-          "phase": 0.862,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m37",
-          "x": 2544.0,
+          "type": "bramble",
+          "x": 1368,
+          "y": 48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
           "y": -144,
-          "period": 1.17,
-          "phase": 1.179,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": -48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": 0,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": 48,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2040,
+          "y": 96,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "mechanism",
           "mechanism": "sawrail",
-          "id": "11-X01-r3-m38",
-          "x": 2640.0,
-          "y": 160,
-          "period": 1.28,
-          "phase": 0.096,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "id": "11-X01-r3-m3",
+          "x": 2784,
+          "y": 24,
+          "period": 5.7,
+          "phase": 1.96,
+          "safe_seconds": 2.2,
+          "warning_seconds": 0.85,
+          "extension_seconds": 0.18,
           "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m39",
-          "x": 2688.0,
-          "y": -144,
-          "period": 1.39,
-          "phase": 0.413,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m40",
-          "x": 2664.0,
-          "y": 384,
-          "period": 1.5,
-          "phase": 0.73,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "sawrail",
-          "id": "11-X01-r3-m41",
-          "x": 2760.0,
-          "y": 400,
-          "period": 1.61,
-          "phase": 1.047,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "head_radius": 30,
-          "travel": 132
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "geyser",
-          "id": "11-X01-r3-m42",
-          "x": 2808.0,
-          "y": 384,
-          "period": 0.95,
-          "phase": 1.364,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "11-X01-r3-m43",
-          "x": 2880.0,
-          "y": 240,
-          "period": 1.06,
-          "phase": 0.281,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "86c5bc",
-          "w": 96,
-          "h": 192
+          "head_radius": 22,
+          "travel": 42
         },
         {
           "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 2712,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 2712,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 336,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 2712,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
-          "x": 384,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "x": 2712,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -432,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -384,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -336,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -288,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -240,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 2712,
+          "y": -192,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -864,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -816,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -768,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -720,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -672,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -624,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -576,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -528,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
+        },
+        {
+          "type": "bramble",
+          "x": 3384,
+          "y": -480,
+          "w": 24,
+          "h": 48,
+          "direction": "left"
         },
         {
           "type": "bramble",
@@ -6590,38 +6101,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -6741,38 +6220,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -6885,38 +6332,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -7002,106 +6417,166 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3792,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [
         {
           "type": "water",
           "x": 0,
-          "y": -1536,
-          "w": 3360,
-          "h": 2256,
+          "y": -960,
+          "w": 4416,
+          "h": 1680,
           "swimmable": true
-        },
-        {
-          "type": "current",
-          "x": 384,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            700,
-            400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 1008,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            -700,
-            -400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 1632,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            700,
-            400
-          ]
-        },
-        {
-          "type": "current",
-          "x": 2256,
-          "y": -1296,
-          "w": 432,
-          "h": 1728,
-          "force": [
-            -700,
-            -400
-          ]
         }
       ],
       "motes": [
         [
-          408.0,
-          120
+          620,
+          -35
         ],
         [
-          600.0,
-          -264
+          768,
+          -40
         ],
         [
-          864.0,
-          -264
+          920,
+          -35
         ],
         [
-          1128.0,
-          120
+          1292,
+          253
         ],
         [
-          1320.0,
-          504
+          1440,
+          248
         ],
         [
-          1584.0,
-          504
+          1592,
+          253
         ],
         [
-          1848.0,
-          120
+          1964,
+          301
         ],
         [
-          2040.0,
-          -264
+          2112,
+          296
         ],
         [
-          2304.0,
-          -264
+          2264,
+          301
         ],
         [
-          2568.0,
-          120
+          2636,
+          13
         ],
         [
-          2760.0,
-          504
+          2784,
+          8
+        ],
+        [
+          2936,
+          13
+        ],
+        [
+          3308,
+          -275
+        ],
+        [
+          3456,
+          -280
+        ],
+        [
+          3608,
+          -275
         ]
       ],
       "checkpoints": [
@@ -7110,67 +6585,12 @@
           528
         ]
       ],
-      "decorations": [
-        {
-          "type": "reeds",
-          "x": 348,
-          "y": 192,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 828,
-          "y": -192,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 1308,
-          "y": 576,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 1788,
-          "y": 192,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 2268,
-          "y": -192,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "reeds",
-          "x": 2748,
-          "y": 576,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        }
-      ],
+      "decorations": [],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Submerged Belfry / Bell circuit\nExtreme route"
+          "text": "Submerged Belfry / Bell circuit\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -7183,87 +6603,82 @@
         },
         {
           "at": [
-            408.0,
-            192
+            552,
+            0
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            600.0,
-            -192
+            984,
+            0
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            864.0,
-            -192
+            1224,
+            288
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            1128.0,
-            192
+            1656,
+            288
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "11-X01-r3-m1"
         },
         {
           "at": [
-            1320.0,
-            576
+            1896,
+            336
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            1584.0,
-            576
+            2328,
+            336
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            1848.0,
-            192
+            2568,
+            48
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            2040.0,
-            -192
+            3000,
+            48
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "11-X01-r3-m3"
         },
         {
           "at": [
-            2304.0,
-            -192
+            3240,
+            -240
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            2568.0,
-            192
+            3672,
+            -240
           ],
-          "action": "unverified"
+          "action": "swim"
         },
         {
           "at": [
-            2760.0,
-            576
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            3264,
+            4320,
             528
           ],
-          "action": "unverified"
+          "action": "swim"
         }
       ],
       "visual": {
@@ -7656,9 +7071,11 @@
     "revision": 1
   },
   "difficulty": {
-    "edition": "extreme",
+    "edition": "challenge",
     "signature": "shutter",
     "secondary": "sawrail",
-    "reachability_tested": false
+    "reachability_tested": true,
+    "verification_profile": "default movement and charge dash, horizontal 1.5, unassisted",
+    "verification_method": "continuous_input_route"
   }
 }

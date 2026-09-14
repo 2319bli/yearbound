@@ -4,7 +4,7 @@ This directory is the canonical editable Godot project and Git repository. Start
 
 ## Project state
 
-- Godot 4.6.2; native Apple silicon desktop build, currently version 0.16.0.
+- Godot 4.6.2; native Apple silicon desktop build, currently version 0.17.0.
 - 183 stages: 51 calendar dates plus 132 monthly challenges (11 per month). The full main calendar still has 365 dates.
 - 787 named places: 259 original atlas views plus 528 original code-native challenge scenery compositions. See `docs/MAP_SCENERY.md`, `docs/EXTREME_CHALLENGES.md` and the artwork provenance records.
 - The repository `https://github.com/2319bli/yearbound` is intentionally public, following the owner's latest preference.
@@ -29,7 +29,7 @@ This directory is the canonical editable Godot project and Git repository. Start
 
 ## Build and checks
 
-The owner explicitly requested extreme difficulty without checking whether routes are possible. Do not run reachability, traversal or survival validation unless a later request authorizes it. Historical 0.15 proofs are obsolete for current layouts. Structural, loading, UI, saving and rendering checks remain appropriate.
+The latest request supersedes the extreme-spam direction: stages must be remotely possible, readable and intentionally designed. Reachability and survival testing are now authorized and required for changed routes. Preserve challenging mechanics without overlapping hazard spam.
 
 Run commands from this directory:
 
@@ -48,4 +48,4 @@ yearbound_test_dir="$(mktemp -d /tmp/yearbound-test.XXXXXX)"
 YEARBOUND_SAVE_DIR="$yearbound_test_dir" /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --log-file "$yearbound_test_dir/engine.log" --script tests/smoke.gd --fixed-fps 60
 ```
 
-Run tests appropriate to the changed subsystem; see `README.md` and `docs/VALIDATION.md`. Rendering checks such as `tests/map_scenery_render.gd` and `tests/ground_layout.gd` require the native renderer, without `--headless`. Set `YEARBOUND_CAPTURE_DIR` for screenshot scripts. Automated reachability checks do not establish final human difficulty or five-minute pacing.
+Run `tests/challenge_routes.gd` for changed monthly routes, `tests/authored_routes.gd` for changed ordinary dates, and `tests/june_boss_routes.gd` for the June boss. Run tests appropriate to the changed subsystem; see `README.md` and `docs/VALIDATION.md`. Rendering checks such as `tests/map_scenery_render.gd` and `tests/ground_layout.gd` require the native renderer, without `--headless`. Set `YEARBOUND_CAPTURE_DIR` for screenshot scripts. Automated reachability checks do not establish final human difficulty or five-minute pacing.

@@ -1,27 +1,26 @@
-# Monthly challenges · 0.16.0
+# Monthly challenges · 0.17.0
 
-The title screen and calendar link to **Monthly challenges**. Left/right or the arrow buttons change month; each collection exposes eleven cards. Click a card and enter it, or use Tab/up/down and Enter/controller A. Completion, best times and unfinished runs use stable `MM-XNN` save IDs. “Next” continues in challenge order. Main calendar dates and future boss slots remain separate.
+**Monthly challenges** on the title screen contains eleven stages for each month, with four connected places per stage. The `MM-XNN` IDs and saved progress remain stable. Main calendar dates and future boss slots remain separate.
 
-## Difficulty
+## Current design
 
-All 51 existing maps have exactly ten times their prior mechanism count. The shared extreme authoring values are recorded in `content/extreme_rules.json`; per-instance values remain in the blueprints. Landing tops are reduced to narrow catches by spikes, undersides and long ground stretches gain spike banks, movement machinery runs faster, and existing current/wind zones are stronger. The June boss's five phases remain but attack intervals are divided by ten; its chase speed is 430 instead of 215.
+The 0.16 extreme layouts have been replaced. Each place now contains two spaced crossings, clear take-off and landing decks, and recovery room. The whole collection uses eight mechanisms per stage. Standard climbs are at most 240 pixels; moving freight rests at both ends of its track. Seasonal features remain: physical swimming and sluice passages in November, ice in January, waterfall lifts in March, canopy passages, crumbles and wind exposure elsewhere.
 
-Each new stage contains four connected places, 12,864–13,248 world pixels and 1,408–2,012 visible spikes. The eleven architectural forms are intentionally recombined and evolved across seasonal conditions. There are no identical full platform layouts or repeated full scenery compositions. This is an offline authored collection built from reusable architectural forms, not 132 individually hand-playtested bespoke campaigns.
+Timed land mechanisms have at least 1.4 seconds open and 0.75 seconds harmless warning. Underwater shutters open for 2.2 seconds plus a 0.85-second warning. The eight families retain their own shapes and timing: rotors and pendulums remain continuous, while shutters, presses, vents, blooms, saw rails and arcs have readable openings. Spikes sit in failure beds and on underwater baffles, not across every landing surface.
 
-**Reachability, survival and human difficulty are untested by explicit request.** There is no claim that any route is beatable. Historical route proofs are retained only as history. Base movement, the original charge-dash profile (horizontal multiplier 1.5), swimming and the Dash Lab remain unchanged.
+The eleven architectural forms are intentionally revisited across seasonal conditions in different four-place combinations. Every complete platform layout and every scenery composition is different. All 132 routes are tested using the real movement and hazards; no route teleporting, invulnerability or assist settings are used. This establishes traversability, not final human balance.
 
-## Content pipeline
+## Editing
 
-- `content/monthly_challenges.json`: human-readable manifest of all 132 additions.
-- `content/catalog.json`: separate `stages` (calendar) and `challenges` lists.
-- `content/layouts/MM-XNN.json`: editable local geometry, hazards, zones, scene compositions and unverified design waypoints.
-- `tools/build_authored_stages.py --write`: compile explicit blueprints into normal game/editor data.
-- `tools/build_monthly_challenges.py --write`: deliberate regeneration of all 132 challenge blueprints from their original authoring source. It overwrites challenge edits; do not use it for routine compilation.
-- `scripts/challenge_scenery.gd`: original code-native scene renderer. A region's `composition` owns six palette colors, three ridge silhouettes, its landmark list, sun position, waterline and weather. Eleven architectural landmark families are composed differently for every place. The renderer shares no collision geometry with terrain.
-- `tools/synthesize_challenge_scores.py`: NumPy-based offline synthesis of 132 distinct temporary loops in `audio/challenges/`. These are original sketches, intended for replacement with final compositions.
-- `content/extreme_report.json`: exact before/after mechanism counts for the original 51 maps.
+- `content/monthly_challenges.json` lists the 132 stages.
+- `content/catalog.json` keeps calendar dates and monthly challenges in separate lists.
+- Edit the explicit `content/layouts/MM-XNN.json` files and compile with `tools/build_authored_stages.py --write`.
+- `tools/build_monthly_challenges.py --write` deliberately replaces all challenge blueprints from the authoring source. It is not routine compilation; avoid overwriting custom edits. Regenerated geometry requires new route checks.
+- `content/challenge_design_rules.json` records the spacing and timing constraints; the content validator enforces eight separated crossings per stage and the minimum warning/open intervals.
+- `scripts/challenge_scenery.gd` draws each place's original code-native composition behind terrain. Six palette colors, three ridge silhouettes, landmarks, sunlight, waterline and weather are editable per place.
+- The existing 132 original temporary loops remain in `audio/challenges/`. `tools/synthesize_challenge_scores.py` regenerates them offline with NumPy; final compositions can replace their stage music references.
 
-The 51 pre-existing map atlases are unchanged. New challenge scenery is drawn from project-native code and data; no image-generation service or external image assets were used for this expansion.
+The original 51 map atlases are unchanged. This rebalance does not change player physics, dash settings (horizontal multiplier 1.5), swimming code or the Dash Lab. The 0.16 extreme rules/report are retained under `docs/history/` solely as history.
 
 ## The 132 additions
 

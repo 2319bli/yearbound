@@ -1,4 +1,4 @@
-# Yearbound · Extreme 0.16.0
+# Yearbound · Foundation 0.17.0
 
 A native desktop platformer about travelling from 1 June to 31 May. **183 stages** are available: the existing 51 calendar dates and **132 additional monthly challenges (11 per month)**. The calendar still reserves 365 dates for the main journey; the extra challenges do not overwrite its future days or boss slots.
 
@@ -10,21 +10,21 @@ Move with **A/D**, arrows, or **J/L**. **Space/Z** jumps; hold for height. Hold 
 
 **Explore the calendar** gives immediate access to all 51 calendar stages. **Monthly challenges** opens 132 additional stages, eleven for each month, with separate saved progress. June runs from the welcoming village gate through early-summer countryside, midsummer brightness and longer evenings to the Squallkeeper. The monthly shortcuts along the bottom lead to the other seasonal samples.
 
-## Extreme difficulty
+## Challenging, readable routes
 
-Every existing stage now has **ten times its previous moving/timed mechanism count**: 831 becomes 8,310. Rotors have four blades, cycles run faster, pulse openings are compressed, landing ledges and ceilings gain spikes, long ground stretches become spike banks, moving platforms run faster, and wind/current zones are stronger. The June boss attacks ten times as often and its chase advances twice as fast. Checkpoints and immediate retries remain.
+Version 0.17 replaces the 0.16 object-spam pass. The original 51 calendar maps return to their earlier expert geometry and timing, including the five-arena June boss. The 132 extra stages are rebuilt with clear landing decks, separated obstacles, staged climbs and useful recovery space.
 
-This is deliberately an extreme, **unverified difficulty build**, as requested. No route search, traversal bot, survival test, or human beatability test was performed. Tenfold machinery is an exact content count, not a measured tenfold increase in human difficulty. Historical route proofs from 0.15 do not apply to these layouts.
+Each monthly challenge has **four connected places and eight mechanisms**: two deliberate crossings per place. Spike beds punish missed transfers; platforms no longer have spikes covering nearly every top and underside. Ordinary upward transfers stay at or below 240 pixels. Moving freight pauses at both docks, and underwater shutters have longer openings.
 
-The 132 additions contain four connected places each. Their combinations include sail helices, needle descents, press vaults, counterweight wells, crumble stairs, moving freight, crosswind chimneys, canopy zippers, bell circuits, floodgate organs and crown transfers. Each has its own geometry, scenery composition and original temporary music sketch. Across both collections there are **787 named places and 28,374 mechanisms**.
+All 132 monthly routes and the 50 ordinary calendar routes are checked continuously from their entrances using actual inputs, active hazards and the default unassisted movement profile. The June boss has separate full-duration survival and chase checks. These establish a working route; final human pacing and difficulty remain playtest work.
 
-See [EXTREME_CHALLENGES.md](docs/EXTREME_CHALLENGES.md) for all 132 titles and authoring details. [OBSTACLES.md](docs/OBSTACLES.md) documents the mechanism fields.
+See [CHALLENGE_REBALANCE.md](docs/CHALLENGE_REBALANCE.md) for the changes and check scope. [EXTREME_CHALLENGES.md](docs/EXTREME_CHALLENGES.md) retains the full 132-stage listing and updated authoring guidance.
 
 ## Movement, atmosphere and workshop
 
 The base controller, original charge-dash profile with **horizontal multiplier 1.5**, swimming code and **44,160-pixel / 17-station Dash Lab** are byte-for-byte unchanged from 0.15. The lab remains accessible from the title screen. There is no second special ability or new storyline.
 
-Every November challenge is physically underwater, with alternating strong currents. January challenges use ice; March combines waterfall updrafts with crosswinds. The original 51 maps retain their own pixel-art atlases. The new challenges use editable, original code-native compositions: layered ridges, seasonal architecture, foliage, sunlight, water and weather. They do not borrow another map's bitmap background. All scenery stays in the background pass, behind solid terrain and hazards.
+Every November challenge is physically underwater, through spacious over/under passages and timed sluices. January challenges use ice; March combines waterfall updrafts with crosswinds. The original 51 maps retain their own pixel-art atlases. The new challenges use editable, original code-native compositions: layered ridges, seasonal architecture, foliage, sunlight, water and weather. They do not borrow another map's bitmap background. All scenery stays in the background pass, behind solid terrain and hazards.
 
 The workshop can copy all 183 stages, preserve mechanism timing and composed scenery, save/open layouts and playtest them with charge dash. Monthly challenge IDs remain fixed when editing a challenge copy; ordinary calendar dates remain editable. [WORKSHOP.md](docs/WORKSHOP.md) covers the general editor.
 
@@ -62,6 +62,8 @@ python3 tools/build_authored_stages.py --check
 python3 tools/validate_content.py
 ```
 
-Set `YEARBOUND_SAVE_DIR` to an empty scratch directory and use an explicit `--log-file` when running `tests/extreme_content.gd` in Godot. It checks all 183 content loads, menu navigation, save/resume, workshop round trips, mechanism warning states and Lab availability. It never moves the player along a route. `tests/extreme_capture.gd` renders representative screenshots using relocation only.
+Set `YEARBOUND_SAVE_DIR` to an empty scratch directory and use an explicit `--log-file` when running `tests/challenge_content.gd` in Godot. It checks all 183 content loads, menu navigation, save/resume, workshop round trips, mechanism warning states and Lab availability. It never moves the player along a route. `tests/challenge_capture.gd` renders representative screenshots using relocation only.
 
-Older `authored_routes.gd`, `june_boss_routes.gd`, route metadata and historical reports are retained for reference. **They were not run against 0.16 and do not prove these stages are possible.** See [VALIDATION.md](docs/VALIDATION.md) for the delivered check scope. Windows/Linux/Intel Mac exports, physical controller testing and final music/pacing remain future work.
+`tests/challenge_routes.gd` checks every monthly challenge from start to finish. `tests/authored_routes.gd` covers ordinary calendar stages; `tests/june_boss_routes.gd` covers the boss. These use normal input actions, keep physics/hazards active and do not relocate the player between route points. Boss survival checks begin on an arena perch, as documented in that suite.
+
+See [VALIDATION.md](docs/VALIDATION.md) and `docs/validation_0_17.json` for the delivered results. Windows/Linux/Intel Mac exports, physical controller testing and final music/pacing remain future work.

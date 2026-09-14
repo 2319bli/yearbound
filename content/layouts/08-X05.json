@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "revision": 18,
+  "revision": 19,
   "day": "08-X05",
   "identity": "The Last Light Rig",
-  "intent": "The Last Light Rig. moving freight, bell circuit, sail helix, counterweight well. Four linked extreme trials.",
-  "world_top": -1536,
+  "intent": "The Last Light Rig. moving freight, bell circuit, sail helix, counterweight well. Four linked platforming trials with clear recovery decks.",
+  "world_top": -960,
   "spawn": [
     120,
     624
   ],
-  "length": 13248,
+  "length": 17472,
   "goal": [
-    13152,
+    17376,
     624
   ],
   "sections": [
@@ -21,735 +21,110 @@
         0,
         0
       ],
-      "width": 3168,
-      "lesson": "Moving freight · extreme timing and narrow catches.",
+      "width": 4368,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": 480,
-          "w": 48,
+          "x": 288,
+          "y": 528,
+          "w": 240,
+          "h": 96,
+          "kind": "block",
+          "material": "stone"
+        },
+        {
+          "x": 528,
+          "y": 528,
+          "w": 192,
           "h": 48,
           "kind": "moving",
           "axis": "x",
-          "distance": 96,
-          "speed": 3.4,
-          "phase": 0.0
+          "distance": 48,
+          "speed": 1,
+          "motion_path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              528,
+              0
+            ],
+            [
+              864,
+              -192
+            ],
+            [
+              864,
+              -192
+            ],
+            [
+              0,
+              -192
+            ]
+          ],
+          "motion_seconds": 10.8,
+          "motion_phase": 0,
+          "track_id": "08-X05-r0-freight"
         },
         {
-          "x": 624,
-          "y": 240,
-          "w": 96,
+          "x": 1584,
+          "y": 336,
+          "w": 384,
           "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 144,
-          "speed": 3.4,
-          "phase": 0.73
-        },
-        {
-          "x": 912,
-          "y": 0,
-          "w": 144,
-          "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 192,
-          "speed": 3.4,
-          "phase": 1.46
-        },
-        {
-          "x": 1200,
-          "y": -240,
-          "w": 48,
-          "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 96,
-          "speed": 3.4,
-          "phase": 2.19
-        },
-        {
-          "x": 1488,
-          "y": 480,
-          "w": 96,
-          "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 144,
-          "speed": 3.4,
-          "phase": 2.92
-        },
-        {
-          "x": 1776,
-          "y": 240,
-          "w": 144,
-          "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 192,
-          "speed": 3.4,
-          "phase": 3.65
+          "kind": "wood"
         },
         {
           "x": 2064,
-          "y": 0,
-          "w": 48,
+          "y": 240,
+          "w": 576,
           "h": 48,
-          "kind": "moving",
-          "axis": "x",
-          "distance": 96,
-          "speed": 3.4,
-          "phase": 4.38
+          "kind": "wood"
         },
         {
-          "x": 2352,
-          "y": -240,
-          "w": 96,
+          "x": 3024,
+          "y": 432,
+          "w": 624,
           "h": 48,
-          "kind": "moving",
-          "axis": "y",
-          "distance": 144,
-          "speed": 3.4,
-          "phase": 5.109999999999999
+          "kind": "wood"
         }
       ],
       "hazards": [
         {
-          "type": "bramble",
-          "x": 336,
-          "y": 528,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 624,
-          "y": 288,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 624,
-          "y": 216,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 912,
-          "y": 48,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1008,
-          "y": -24,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1200,
-          "y": -192,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1488,
-          "y": 528,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 456,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
-          "y": 288,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
-          "y": 216,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2064,
-          "y": 48,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2352,
-          "y": -192,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2352,
-          "y": -264,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
           "type": "mechanism",
-          "mechanism": "shutter",
+          "mechanism": "pendulum",
           "id": "08-X05-r0-m0",
-          "x": 264.0,
-          "y": 288,
-          "period": 0.95,
-          "phase": 0.26,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "x": 2352.0,
+          "y": 60,
+          "period": 5.6,
+          "phase": 0.22,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "eab468",
-          "w": 48,
-          "h": 192
+          "radius": 158,
+          "head_radius": 21,
+          "swing": 0.82
         },
         {
           "type": "mechanism",
-          "mechanism": "pendulum",
+          "mechanism": "arc",
           "id": "08-X05-r0-m1",
-          "x": 360.0,
-          "y": 120,
-          "period": 1.73,
-          "phase": 0.577,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r0-m2",
-          "x": 432.0,
+          "x": 3336.0,
           "y": 288,
-          "period": 1.17,
-          "phase": 0.894,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "period": 4.8999999999999995,
+          "phase": 0.69,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "eab468",
           "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r0-m3",
-          "x": 480.0,
-          "y": 144,
-          "period": 1.28,
-          "phase": 1.211,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r0-m4",
-          "x": 600.0,
-          "y": 24,
-          "period": 2.12,
-          "phase": 0.128,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r0-m5",
-          "x": 672.0,
-          "y": -96,
-          "period": 1.5,
-          "phase": 0.445,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r0-m6",
-          "x": 720.0,
-          "y": 48,
-          "period": 1.61,
-          "phase": 0.762,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r0-m7",
-          "x": 816.0,
-          "y": -120,
-          "period": 1.86,
-          "phase": 1.079,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r0-m8",
-          "x": 912.0,
-          "y": -192,
-          "period": 1.06,
-          "phase": 1.396,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r0-m9",
-          "x": 960.0,
-          "y": -336,
-          "period": 1.17,
-          "phase": 0.313,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r0-m10",
-          "x": 1056.0,
-          "y": -216,
-          "period": 1.6,
-          "phase": 0.63,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r0-m11",
-          "x": 1128.0,
-          "y": -336,
-          "period": 1.39,
-          "phase": 0.947,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r0-m12",
-          "x": 1128.0,
-          "y": -432,
-          "period": 1.5,
-          "phase": 1.264,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r0-m13",
-          "x": 1224.0,
-          "y": -600,
-          "period": 1.9900000000000002,
-          "phase": 0.181,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r0-m14",
-          "x": 1296.0,
-          "y": -432,
-          "period": 0.95,
-          "phase": 0.498,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r0-m15",
-          "x": 1344.0,
-          "y": -576,
-          "period": 1.06,
-          "phase": 0.815,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r0-m16",
-          "x": 1464.0,
-          "y": 264,
-          "period": 1.73,
-          "phase": 1.132,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r0-m17",
-          "x": 1536.0,
-          "y": 144,
-          "period": 1.28,
-          "phase": 0.049,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r0-m18",
-          "x": 1584.0,
-          "y": 288,
-          "period": 1.39,
-          "phase": 0.366,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r0-m19",
-          "x": 1680.0,
-          "y": 120,
-          "period": 2.12,
-          "phase": 0.683,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r0-m20",
-          "x": 1776.0,
-          "y": 48,
-          "period": 1.61,
-          "phase": 1.0,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r0-m21",
-          "x": 1824.0,
-          "y": -96,
-          "period": 0.95,
-          "phase": 1.317,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r0-m22",
-          "x": 1920.0,
-          "y": 24,
-          "period": 1.86,
-          "phase": 0.234,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r0-m23",
-          "x": 1992.0,
-          "y": -96,
-          "period": 1.17,
-          "phase": 0.551,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r0-m24",
-          "x": 1992.0,
-          "y": -192,
-          "period": 1.28,
-          "phase": 0.868,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r0-m25",
-          "x": 2088.0,
-          "y": -360,
-          "period": 1.6,
-          "phase": 1.185,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r0-m26",
-          "x": 2160.0,
-          "y": -192,
-          "period": 1.5,
-          "phase": 0.102,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r0-m27",
-          "x": 2208.0,
-          "y": -336,
-          "period": 1.61,
-          "phase": 0.419,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r0-m28",
-          "x": 2328.0,
-          "y": -456,
-          "period": 1.9900000000000002,
-          "phase": 0.736,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r0-m29",
-          "x": 2400.0,
-          "y": -576,
-          "period": 1.06,
-          "phase": 1.053,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r0-m30",
-          "x": 2448.0,
-          "y": -432,
-          "period": 1.17,
-          "phase": 1.37,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r0-m31",
-          "x": 2544.0,
-          "y": -600,
-          "period": 1.73,
-          "phase": 0.287,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 336,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 384,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "dy": 144,
+          "thickness": 6
         },
         {
           "type": "bramble",
@@ -786,38 +161,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -937,38 +280,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -1081,38 +392,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -1166,121 +445,182 @@
           "w": 48,
           "h": 24,
           "direction": "up"
-        }
-      ],
-      "zones": [
-        {
-          "type": "wind",
-          "x": 672,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
-          "force": [
-            700,
-            0
-          ]
         },
         {
-          "type": "wind",
-          "x": 1488,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
-          "force": [
-            -700,
-            0
-          ]
+          "type": "bramble",
+          "x": 2928,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         },
         {
-          "type": "wind",
-          "x": 2304,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
-          "force": [
-            700,
-            0
-          ]
+          "type": "bramble",
+          "x": 2976,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
+      "zones": [],
       "motes": [
         [
-          360.0,
-          408
+          1674,
+          270
         ],
         [
-          672.0,
-          168
+          1884,
+          266
         ],
         [
-          984.0,
-          -72
+          2154,
+          174
         ],
         [
-          1224.0,
-          -312
+          2556,
+          170
         ],
         [
-          1536.0,
-          408
+          3114,
+          366
         ],
         [
-          1848.0,
-          168
-        ],
-        [
-          2088.0,
-          -72
-        ],
-        [
-          2400.0,
-          -312
+          3564,
+          362
         ]
       ],
       "checkpoints": [],
       "decorations": [
         {
           "type": "storm_beacon",
-          "x": 348,
-          "y": 480,
+          "x": 1614,
+          "y": 336,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "storm_beacon",
-          "x": 924,
-          "y": 0,
+          "x": 2094,
+          "y": 240,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "storm_beacon",
-          "x": 1500,
-          "y": 480,
+          "x": 3054,
+          "y": 432,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "storm_beacon",
-          "x": 2076,
-          "y": 0,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         }
       ],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Last Light Rig / Moving freight\nExtreme route"
+          "text": "Last Light Rig / Moving freight\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -1293,66 +633,98 @@
         },
         {
           "at": [
-            360.0,
-            480
+            384,
+            528
           ],
-          "action": "unverified"
+          "action": "jump"
         },
         {
           "at": [
-            672.0,
+            624,
+            528
+          ],
+          "action": "board",
+          "track_id": "08-X05-r0-freight"
+        },
+        {
+          "at": [
+            1632,
+            336
+          ],
+          "action": "ride",
+          "track_id": "08-X05-r0-freight"
+        },
+        {
+          "at": [
+            1896,
+            336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2136,
             240
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            984.0,
-            0
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1224.0,
-            -240
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1536.0,
-            480
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1848.0,
+            2196.0,
             240
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            2088.0,
-            0
+            2508.0,
+            240
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "08-X05-r0-m0"
         },
         {
           "at": [
-            2400.0,
-            -240
+            2580,
+            240
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            3072,
+            3096,
+            432
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            3180.0,
+            432
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3492.0,
+            432
+          ],
+          "action": "mechanism",
+          "obstacle_id": "08-X05-r0-m1"
+        },
+        {
+          "at": [
+            3588,
+            432
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4248,
             624
           ],
-          "action": "unverified"
+          "action": "drop"
         }
       ],
       "visual": {
@@ -1747,795 +1119,73 @@
     {
       "name": "Last Light Rig / Bell circuit",
       "origin": [
-        3168,
+        4368,
         0
       ],
-      "width": 3264,
-      "lesson": "Bell circuit · extreme timing and narrow catches.",
+      "width": 4368,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": 240,
-          "w": 48,
-          "h": 48,
-          "kind": "spring",
-          "power": 1000
-        },
-        {
-          "x": 624,
-          "y": -144,
-          "w": 96,
+          "x": 384,
+          "y": 528,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 912,
-          "y": -144,
-          "w": 144,
+          "x": 1248,
+          "y": 336,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 1200,
-          "y": 240,
-          "w": 48,
-          "h": 48,
-          "kind": "spring",
-          "power": 1000
-        },
-        {
-          "x": 1488,
-          "y": 624,
-          "w": 96,
+          "x": 2112,
+          "y": 144,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 1776,
-          "y": 624,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2064,
-          "y": 240,
-          "w": 48,
-          "h": 48,
-          "kind": "spring",
-          "power": 1000
-        },
-        {
-          "x": 2352,
-          "y": -144,
-          "w": 96,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2640,
-          "y": -144,
-          "w": 144,
+          "x": 3024,
+          "y": 336,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         }
       ],
       "hazards": [
         {
-          "type": "bramble",
-          "x": 336,
-          "y": 288,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 624,
-          "y": -96,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 624,
-          "y": -168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 912,
-          "y": -96,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1008,
-          "y": -168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1200,
-          "y": 288,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1488,
-          "y": 672,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
-          "y": 672,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2064,
-          "y": 288,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2352,
-          "y": -96,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2352,
-          "y": -168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2640,
-          "y": -96,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2736,
-          "y": -168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m0",
-          "x": 264.0,
-          "y": 48,
-          "period": 0.95,
-          "phase": 0.26,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
           "type": "mechanism",
           "mechanism": "pendulum",
           "id": "08-X05-r1-m1",
-          "x": 360.0,
-          "y": -120,
-          "period": 1.73,
-          "phase": 0.577,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r1-m2",
-          "x": 432.0,
-          "y": 48,
-          "period": 1.17,
-          "phase": 0.894,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m3",
-          "x": 480.0,
-          "y": -96,
-          "period": 1.28,
-          "phase": 1.211,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r1-m4",
-          "x": 600.0,
-          "y": -360,
-          "period": 2.12,
-          "phase": 0.128,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r1-m5",
-          "x": 672.0,
-          "y": -480,
-          "period": 1.5,
-          "phase": 0.445,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m6",
-          "x": 720.0,
-          "y": -336,
-          "period": 1.61,
-          "phase": 0.762,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r1-m7",
-          "x": 816.0,
-          "y": -504,
-          "period": 1.86,
-          "phase": 1.079,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r1-m8",
-          "x": 912.0,
-          "y": -336,
-          "period": 1.06,
-          "phase": 1.396,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m9",
-          "x": 960.0,
-          "y": -480,
-          "period": 1.17,
-          "phase": 0.313,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r1-m10",
-          "x": 1056.0,
-          "y": -360,
-          "period": 1.6,
-          "phase": 0.63,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r1-m11",
-          "x": 1128.0,
-          "y": -480,
-          "period": 1.39,
-          "phase": 0.947,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m12",
-          "x": 1128.0,
-          "y": 48,
-          "period": 1.5,
-          "phase": 1.264,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r1-m13",
-          "x": 1224.0,
-          "y": -120,
-          "period": 1.9900000000000002,
-          "phase": 0.181,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r1-m14",
-          "x": 1296.0,
-          "y": 48,
-          "period": 0.95,
-          "phase": 0.498,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m15",
-          "x": 1344.0,
-          "y": -96,
-          "period": 1.06,
-          "phase": 0.815,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r1-m16",
-          "x": 1464.0,
-          "y": 408,
-          "period": 1.73,
-          "phase": 1.132,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r1-m17",
           "x": 1536.0,
-          "y": 288,
-          "period": 1.28,
-          "phase": 0.049,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "y": 156,
+          "period": 5.6,
+          "phase": 0.69,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m18",
-          "x": 1584.0,
-          "y": 432,
-          "period": 1.39,
-          "phase": 0.366,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r1-m19",
-          "x": 1680.0,
-          "y": 264,
-          "period": 2.12,
-          "phase": 0.683,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
+          "radius": 158,
+          "head_radius": 21,
+          "swing": 0.82
         },
         {
           "type": "mechanism",
           "mechanism": "arc",
-          "id": "08-X05-r1-m20",
-          "x": 1776.0,
-          "y": 432,
-          "period": 1.61,
-          "phase": 1.0,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "id": "08-X05-r1-m3",
+          "x": 3312.0,
+          "y": 192,
+          "period": 4.6,
+          "phase": 1.63,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "eab468",
           "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m21",
-          "x": 1824.0,
-          "y": 288,
-          "period": 0.95,
-          "phase": 1.317,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r1-m22",
-          "x": 1920.0,
-          "y": 408,
-          "period": 1.86,
-          "phase": 0.234,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r1-m23",
-          "x": 1992.0,
-          "y": 288,
-          "period": 1.17,
-          "phase": 0.551,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m24",
-          "x": 1992.0,
-          "y": 48,
-          "period": 1.28,
-          "phase": 0.868,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r1-m25",
-          "x": 2088.0,
-          "y": -120,
-          "period": 1.6,
-          "phase": 1.185,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r1-m26",
-          "x": 2160.0,
-          "y": 48,
-          "period": 1.5,
-          "phase": 0.102,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m27",
-          "x": 2208.0,
-          "y": -96,
-          "period": 1.61,
-          "phase": 0.419,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r1-m28",
-          "x": 2328.0,
-          "y": -360,
-          "period": 1.9900000000000002,
-          "phase": 0.736,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r1-m29",
-          "x": 2400.0,
-          "y": -480,
-          "period": 1.06,
-          "phase": 1.053,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m30",
-          "x": 2448.0,
-          "y": -336,
-          "period": 1.17,
-          "phase": 1.37,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r1-m31",
-          "x": 2544.0,
-          "y": -504,
-          "period": 1.73,
-          "phase": 0.287,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r1-m32",
-          "x": 2640.0,
-          "y": -336,
-          "period": 1.39,
-          "phase": 0.604,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r1-m33",
-          "x": 2688.0,
-          "y": -480,
-          "period": 1.5,
-          "phase": 0.921,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r1-m34",
-          "x": 2784.0,
-          "y": -360,
-          "period": 2.12,
-          "phase": 1.238,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r1-m35",
-          "x": 2856.0,
-          "y": -480,
-          "period": 0.95,
-          "phase": 0.155,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 336,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 384,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "dy": 144,
+          "thickness": 6
         },
         {
           "type": "bramble",
@@ -2572,38 +1222,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -2723,38 +1341,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -2867,38 +1453,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -2968,79 +1522,149 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3024,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3072,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [
         {
           "type": "wind",
-          "x": 672,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
+          "x": 984,
+          "y": -576,
+          "w": 240,
+          "h": 1152,
           "force": [
-            700,
-            0
-          ]
-        },
-        {
-          "type": "wind",
-          "x": 1488,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
-          "force": [
-            -700,
-            0
-          ]
-        },
-        {
-          "type": "wind",
-          "x": 2304,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
-          "force": [
-            700,
+            -120,
             0
           ]
         }
       ],
       "motes": [
         [
-          360.0,
-          168
+          474,
+          462
         ],
         [
-          672.0,
-          -216
+          876,
+          458
         ],
         [
-          984.0,
-          -216
+          1338,
+          270
         ],
         [
-          1224.0,
-          168
+          1740,
+          266
         ],
         [
-          1536.0,
-          552
+          2202,
+          78
         ],
         [
-          1848.0,
-          552
+          2604,
+          74
         ],
         [
-          2088.0,
-          168
+          3114,
+          270
         ],
         [
-          2400.0,
-          -216
-        ],
-        [
-          2712.0,
-          -216
+          3516,
+          266
         ]
       ],
       "checkpoints": [
@@ -3052,55 +1676,46 @@
       "decorations": [
         {
           "type": "storm_beacon",
-          "x": 348,
-          "y": 240,
+          "x": 414,
+          "y": 528,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "storm_beacon",
-          "x": 924,
-          "y": -144,
+          "x": 1278,
+          "y": 336,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "storm_beacon",
-          "x": 1500,
-          "y": 624,
+          "x": 2142,
+          "y": 144,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "storm_beacon",
-          "x": 2076,
-          "y": 240,
+          "x": 3054,
+          "y": 336,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "storm_beacon",
-          "x": 2652,
-          "y": -144,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         }
       ],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Last Light Rig / Bell circuit\nExtreme route"
+          "text": "Last Light Rig / Bell circuit\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -3113,73 +1728,96 @@
         },
         {
           "at": [
-            360.0,
-            240
+            456,
+            528
           ],
-          "action": "unverified"
+          "action": "jump"
         },
         {
           "at": [
-            672.0,
-            -144
+            900,
+            528
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            984.0,
-            -144
+            1320,
+            336
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            1224.0,
-            240
+            1380.0,
+            336
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            1536.0,
+            1692.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "08-X05-r1-m1"
+        },
+        {
+          "at": [
+            1764,
+            336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2184,
+            144
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            2628,
+            144
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3096,
+            336
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            3156.0,
+            336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            3468.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "08-X05-r1-m3"
+        },
+        {
+          "at": [
+            3540,
+            336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4248,
             624
           ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1848.0,
-            624
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            2088.0,
-            240
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            2400.0,
-            -144
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            2712.0,
-            -144
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            3168,
-            624
-          ],
-          "action": "unverified"
+          "action": "drop"
         }
       ],
       "visual": {
@@ -3581,870 +2219,72 @@
     {
       "name": "Last Light Rig / Sail helix",
       "origin": [
-        6432,
+        8736,
         0
       ],
-      "width": 3360,
-      "lesson": "Sail helix · extreme timing and narrow catches.",
+      "width": 4368,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": 384,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 576,
-          "y": 192,
-          "w": 96,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 816,
-          "y": 0,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1056,
-          "y": -192,
-          "w": 48,
+          "x": 384,
+          "y": 528,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
           "x": 1296,
-          "y": -384,
-          "w": 96,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1536,
           "y": 384,
-          "w": 144,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 1776,
+          "x": 2208,
           "y": 192,
-          "w": 48,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 2016,
-          "y": 0,
-          "w": 96,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2256,
-          "y": -192,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2496,
-          "y": -384,
-          "w": 48,
+          "x": 3120,
+          "y": 384,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         }
       ],
       "hazards": [
         {
-          "type": "bramble",
-          "x": 336,
-          "y": 432,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 576,
-          "y": 240,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 576,
-          "y": 168,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
-          "y": 48,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 912,
-          "y": -24,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1056,
-          "y": -144,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1296,
-          "y": -336,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1344,
-          "y": -408,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 432,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 360,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
-          "y": 240,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": 48,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": -24,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2256,
-          "y": -144,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2352,
-          "y": -216,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": -336,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m0",
-          "x": 288.0,
-          "y": 168,
-          "period": 1.6,
-          "phase": 0.26,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
           "type": "mechanism",
           "mechanism": "arc",
           "id": "08-X05-r2-m1",
-          "x": 360.0,
-          "y": 48,
-          "period": 1.06,
-          "phase": 0.577,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "x": 1584.0,
+          "y": 240,
+          "period": 4.8999999999999995,
+          "phase": 0.69,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         },
         {
           "type": "mechanism",
           "mechanism": "shutter",
-          "id": "08-X05-r2-m2",
-          "x": 408.0,
-          "y": 192,
-          "period": 1.17,
-          "phase": 0.894,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
           "id": "08-X05-r2-m3",
-          "x": 504.0,
-          "y": 24,
-          "period": 1.9900000000000002,
-          "phase": 1.211,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m4",
-          "x": 552.0,
-          "y": 0,
-          "period": 1.39,
-          "phase": 0.128,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m5",
-          "x": 600.0,
-          "y": -144,
-          "period": 1.5,
-          "phase": 0.445,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m6",
-          "x": 696.0,
-          "y": -24,
-          "period": 1.73,
-          "phase": 0.762,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m7",
-          "x": 768.0,
-          "y": -144,
-          "period": 0.95,
-          "phase": 1.079,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m8",
-          "x": 792.0,
-          "y": -192,
-          "period": 1.06,
-          "phase": 1.396,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "x": 3384.0,
+          "y": 240,
+          "period": 4.6,
+          "phase": 1.63,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "eab468",
           "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m9",
-          "x": 888.0,
-          "y": -360,
-          "period": 2.12,
-          "phase": 0.313,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m10",
-          "x": 960.0,
-          "y": -192,
-          "period": 1.28,
-          "phase": 0.63,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m11",
-          "x": 1008.0,
-          "y": -336,
-          "period": 1.39,
-          "phase": 0.947,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m12",
-          "x": 1008.0,
-          "y": -408,
-          "period": 1.86,
-          "phase": 1.264,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m13",
-          "x": 1080.0,
-          "y": -528,
-          "period": 1.61,
-          "phase": 0.181,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m14",
-          "x": 1128.0,
-          "y": -384,
-          "period": 0.95,
-          "phase": 0.498,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m15",
-          "x": 1224.0,
-          "y": -552,
-          "period": 1.6,
-          "phase": 0.815,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m16",
-          "x": 1272.0,
-          "y": -576,
-          "period": 1.17,
-          "phase": 1.132,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m17",
-          "x": 1320.0,
-          "y": -720,
-          "period": 1.28,
-          "phase": 0.049,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m18",
-          "x": 1416.0,
-          "y": -600,
-          "period": 1.9900000000000002,
-          "phase": 0.366,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m19",
-          "x": 1488.0,
-          "y": -720,
-          "period": 1.5,
-          "phase": 0.683,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m20",
-          "x": 1512.0,
-          "y": 192,
-          "period": 1.61,
-          "phase": 1.0,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m21",
-          "x": 1608.0,
-          "y": 24,
-          "period": 1.73,
-          "phase": 1.317,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m22",
-          "x": 1680.0,
-          "y": 192,
-          "period": 1.06,
-          "phase": 0.234,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m23",
-          "x": 1728.0,
-          "y": 48,
-          "period": 1.17,
-          "phase": 0.551,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m24",
-          "x": 1728.0,
-          "y": -24,
-          "period": 2.12,
-          "phase": 0.868,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m25",
-          "x": 1800.0,
-          "y": -144,
-          "period": 1.39,
-          "phase": 1.185,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m26",
-          "x": 1848.0,
-          "y": 0,
-          "period": 1.5,
-          "phase": 0.102,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m27",
-          "x": 1944.0,
-          "y": -168,
-          "period": 1.86,
-          "phase": 0.419,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m28",
-          "x": 1992.0,
-          "y": -192,
-          "period": 0.95,
-          "phase": 0.736,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m29",
-          "x": 2040.0,
-          "y": -336,
-          "period": 1.06,
-          "phase": 1.053,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m30",
-          "x": 2136.0,
-          "y": -216,
-          "period": 1.6,
-          "phase": 1.37,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m31",
-          "x": 2208.0,
-          "y": -336,
-          "period": 1.28,
-          "phase": 0.287,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m32",
-          "x": 2232.0,
-          "y": -384,
-          "period": 1.39,
-          "phase": 0.604,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m33",
-          "x": 2328.0,
-          "y": -552,
-          "period": 1.9900000000000002,
-          "phase": 0.921,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m34",
-          "x": 2400.0,
-          "y": -384,
-          "period": 1.61,
-          "phase": 1.238,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m35",
-          "x": 2448.0,
-          "y": -528,
-          "period": 0.95,
-          "phase": 0.155,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m36",
-          "x": 2448.0,
-          "y": -600,
-          "period": 1.73,
-          "phase": 0.472,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r2-m37",
-          "x": 2520.0,
-          "y": -720,
-          "period": 1.17,
-          "phase": 0.789,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r2-m38",
-          "x": 2568.0,
-          "y": -576,
-          "period": 1.28,
-          "phase": 1.106,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r2-m39",
-          "x": 2664.0,
-          "y": -744,
-          "period": 2.12,
-          "phase": 0.023,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 336,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 384,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "h": 144
         },
         {
           "type": "bramble",
@@ -4481,38 +2321,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -4632,38 +2440,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -4776,38 +2552,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -4893,116 +2637,133 @@
           "w": 48,
           "h": 24,
           "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3120,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3168,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
       "zones": [
         {
-          "type": "updraft",
-          "x": 480,
-          "y": -1200,
-          "w": 192,
-          "h": 1824,
-          "force": [
-            160,
-            -1830
-          ]
-        },
-        {
-          "type": "updraft",
-          "x": 1344,
-          "y": -1200,
-          "w": 192,
-          "h": 1824,
-          "force": [
-            -160,
-            -1830
-          ]
-        },
-        {
-          "type": "updraft",
-          "x": 2208,
-          "y": -1200,
-          "w": 192,
-          "h": 1824,
-          "force": [
-            160,
-            -1830
-          ]
-        },
-        {
           "type": "wind",
-          "x": 672,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
+          "x": 984,
+          "y": -576,
+          "w": 288,
+          "h": 1152,
           "force": [
-            700,
-            0
-          ]
-        },
-        {
-          "type": "wind",
-          "x": 1488,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
-          "force": [
-            -700,
-            0
-          ]
-        },
-        {
-          "type": "wind",
-          "x": 2304,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
-          "force": [
-            700,
+            120,
             0
           ]
         }
       ],
       "motes": [
         [
-          360.0,
-          312
+          474,
+          462
         ],
         [
-          624.0,
-          120
+          876,
+          458
         ],
         [
-          888.0,
-          -72
+          1386,
+          318
         ],
         [
-          1080.0,
-          -264
+          1788,
+          314
         ],
         [
-          1344.0,
-          -456
+          2298,
+          126
         ],
         [
-          1608.0,
-          312
+          2700,
+          122
         ],
         [
-          1800.0,
-          120
+          3210,
+          318
         ],
         [
-          2064.0,
-          -72
-        ],
-        [
-          2328.0,
-          -264
-        ],
-        [
-          2520.0,
-          -456
+          3612,
+          314
         ]
       ],
       "checkpoints": [
@@ -5014,55 +2775,46 @@
       "decorations": [
         {
           "type": "storm_beacon",
-          "x": 348,
+          "x": 414,
+          "y": 528,
+          "width": 72,
+          "height": 64,
+          "scale": 0.45,
+          "layer": "back"
+        },
+        {
+          "type": "storm_beacon",
+          "x": 1326,
           "y": 384,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "storm_beacon",
-          "x": 828,
-          "y": 0,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "storm_beacon",
-          "x": 1308,
-          "y": -384,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "storm_beacon",
-          "x": 1788,
+          "x": 2238,
           "y": 192,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "storm_beacon",
-          "x": 2268,
-          "y": -192,
+          "x": 3150,
+          "y": 384,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         }
       ],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Last Light Rig / Sail helix\nExtreme route"
+          "text": "Last Light Rig / Sail helix\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -5075,80 +2827,96 @@
         },
         {
           "at": [
-            360.0,
+            456,
+            528
+          ],
+          "action": "jump"
+        },
+        {
+          "at": [
+            900,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1368,
             384
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            624.0,
-            192
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            888.0,
-            0
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1080.0,
-            -192
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1344.0,
-            -384
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1608.0,
+            1428.0,
             384
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            1800.0,
+            1740.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "08-X05-r2-m1"
+        },
+        {
+          "at": [
+            1812,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2280,
             192
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            2064.0,
-            0
+            2724,
+            192
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            2328.0,
-            -192
+            3192,
+            384
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            2520.0,
-            -384
+            3252.0,
+            384
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            3264,
+            3564.0,
+            384
+          ],
+          "action": "mechanism",
+          "obstacle_id": "08-X05-r2-m3"
+        },
+        {
+          "at": [
+            3636,
+            384
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4248,
             624
           ],
-          "action": "unverified"
+          "action": "drop"
         }
       ],
       "visual": {
@@ -5536,1372 +3304,72 @@
     {
       "name": "Last Light Rig / Counterweight well",
       "origin": [
-        9792,
+        13104,
         0
       ],
-      "width": 3456,
-      "lesson": "Counterweight well · extreme timing and narrow catches.",
+      "width": 4368,
+      "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
       "platforms": [
         {
-          "x": 336,
-          "y": 432,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 480,
+          "x": 384,
           "y": 528,
-          "w": 48,
-          "h": 96,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 576,
-          "y": 0,
-          "w": 96,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 816,
-          "y": -432,
-          "w": 144,
+          "x": 1248,
+          "y": 336,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 960,
-          "y": -336,
-          "w": 48,
-          "h": 432,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 1056,
-          "y": 144,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1296,
-          "y": -288,
-          "w": 96,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1440,
-          "y": -192,
-          "w": 48,
-          "h": 432,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 1536,
-          "y": 288,
-          "w": 144,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1776,
-          "y": -144,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 1920,
-          "y": -48,
-          "w": 48,
-          "h": 432,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 2016,
+          "x": 2112,
           "y": 432,
-          "w": 96,
+          "w": 576,
           "h": 48,
           "kind": "wood"
         },
         {
-          "x": 2256,
-          "y": 0,
-          "w": 144,
+          "x": 3024,
+          "y": 192,
+          "w": 624,
           "h": 48,
           "kind": "wood"
-        },
-        {
-          "x": 2400,
-          "y": 96,
-          "w": 48,
-          "h": 432,
-          "kind": "block",
-          "material": "stone"
-        },
-        {
-          "x": 2496,
-          "y": -432,
-          "w": 48,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2736,
-          "y": 144,
-          "w": 96,
-          "h": 48,
-          "kind": "wood"
-        },
-        {
-          "x": 2880,
-          "y": 240,
-          "w": 48,
-          "h": 384,
-          "kind": "block",
-          "material": "stone"
         }
       ],
       "hazards": [
         {
-          "type": "bramble",
-          "x": 336,
-          "y": 480,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 456,
-          "y": 528,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 456,
-          "y": 576,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 576,
-          "y": 48,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 576,
-          "y": -24,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
-          "y": -384,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 912,
-          "y": -456,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -336,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -288,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -240,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -192,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -144,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -96,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": -48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": 0,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 936,
-          "y": 48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1056,
-          "y": 192,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1296,
-          "y": -240,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1344,
-          "y": -312,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": -192,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": -144,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": -96,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": -48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": 0,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": 48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": 96,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": 144,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1416,
-          "y": 192,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 336,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1536,
-          "y": 264,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1776,
-          "y": -96,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": -48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 0,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 48,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 96,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 144,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 192,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 240,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 288,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 1896,
-          "y": 336,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": 480,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2016,
-          "y": 408,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2256,
-          "y": 48,
-          "w": 144,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2352,
-          "y": -24,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": 96,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": 144,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": 192,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": 240,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": 288,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": 336,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": 384,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": 432,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2376,
-          "y": 480,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": -384,
-          "w": 48,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2736,
-          "y": 192,
-          "w": 96,
-          "h": 24,
-          "direction": "down"
-        },
-        {
-          "type": "bramble",
-          "x": 2784,
-          "y": 120,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 240,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 288,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 336,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 384,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 432,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 480,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 528,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "bramble",
-          "x": 2856,
-          "y": 576,
-          "w": 24,
-          "h": 48,
-          "direction": "left"
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m0",
-          "x": 288.0,
-          "y": 216,
-          "period": 1.6,
-          "phase": 0.26,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
           "type": "mechanism",
           "mechanism": "arc",
           "id": "08-X05-r3-m1",
-          "x": 360.0,
-          "y": 96,
-          "period": 1.06,
-          "phase": 0.577,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "x": 1536.0,
+          "y": 192,
+          "period": 4.8999999999999995,
+          "phase": 0.69,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
+          "dx": 0,
+          "dy": 144,
+          "thickness": 6
         },
         {
           "type": "mechanism",
           "mechanism": "shutter",
-          "id": "08-X05-r3-m2",
-          "x": 408.0,
-          "y": 240,
-          "period": 1.17,
-          "phase": 0.894,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
           "id": "08-X05-r3-m3",
-          "x": 504.0,
-          "y": 72,
-          "period": 1.9900000000000002,
-          "phase": 1.211,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m4",
-          "x": 552.0,
-          "y": -192,
-          "period": 1.39,
-          "phase": 0.128,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m5",
-          "x": 600.0,
-          "y": -336,
-          "period": 1.5,
-          "phase": 0.445,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m6",
-          "x": 696.0,
-          "y": -216,
-          "period": 1.73,
-          "phase": 0.762,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m7",
-          "x": 768.0,
-          "y": -336,
-          "period": 0.95,
-          "phase": 1.079,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m8",
-          "x": 792.0,
-          "y": -624,
-          "period": 1.06,
-          "phase": 1.396,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
+          "x": 3312.0,
+          "y": 48,
+          "period": 4.6,
+          "phase": 1.63,
+          "safe_seconds": 1.4,
+          "warning_seconds": 0.75,
+          "extension_seconds": 0.18,
           "color": "eab468",
           "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m9",
-          "x": 888.0,
-          "y": -792,
-          "period": 2.12,
-          "phase": 0.313,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m10",
-          "x": 960.0,
-          "y": -624,
-          "period": 1.28,
-          "phase": 0.63,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m11",
-          "x": 1008.0,
-          "y": -768,
-          "period": 1.39,
-          "phase": 0.947,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m12",
-          "x": 1008.0,
-          "y": -72,
-          "period": 1.86,
-          "phase": 1.264,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m13",
-          "x": 1080.0,
-          "y": -192,
-          "period": 1.61,
-          "phase": 0.181,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m14",
-          "x": 1128.0,
-          "y": -48,
-          "period": 0.95,
-          "phase": 0.498,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m15",
-          "x": 1224.0,
-          "y": -216,
-          "period": 1.6,
-          "phase": 0.815,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m16",
-          "x": 1272.0,
-          "y": -480,
-          "period": 1.17,
-          "phase": 1.132,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m17",
-          "x": 1320.0,
-          "y": -624,
-          "period": 1.28,
-          "phase": 0.049,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m18",
-          "x": 1416.0,
-          "y": -504,
-          "period": 1.9900000000000002,
-          "phase": 0.366,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m19",
-          "x": 1488.0,
-          "y": -624,
-          "period": 1.5,
-          "phase": 0.683,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m20",
-          "x": 1512.0,
-          "y": 96,
-          "period": 1.61,
-          "phase": 1.0,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m21",
-          "x": 1608.0,
-          "y": -72,
-          "period": 1.73,
-          "phase": 1.317,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m22",
-          "x": 1680.0,
-          "y": 96,
-          "period": 1.06,
-          "phase": 0.234,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m23",
-          "x": 1728.0,
-          "y": -48,
-          "period": 1.17,
-          "phase": 0.551,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m24",
-          "x": 1728.0,
-          "y": -360,
-          "period": 2.12,
-          "phase": 0.868,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m25",
-          "x": 1800.0,
-          "y": -480,
-          "period": 1.39,
-          "phase": 1.185,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m26",
-          "x": 1848.0,
-          "y": -336,
-          "period": 1.5,
-          "phase": 0.102,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m27",
-          "x": 1944.0,
-          "y": -504,
-          "period": 1.86,
-          "phase": 0.419,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m28",
-          "x": 1992.0,
-          "y": 240,
-          "period": 0.95,
-          "phase": 0.736,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m29",
-          "x": 2040.0,
-          "y": 96,
-          "period": 1.06,
-          "phase": 1.053,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m30",
-          "x": 2136.0,
-          "y": 216,
-          "period": 1.6,
-          "phase": 1.37,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m31",
-          "x": 2208.0,
-          "y": 96,
-          "period": 1.28,
-          "phase": 0.287,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m32",
-          "x": 2232.0,
-          "y": -192,
-          "period": 1.39,
-          "phase": 0.604,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m33",
-          "x": 2328.0,
-          "y": -360,
-          "period": 1.9900000000000002,
-          "phase": 0.921,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m34",
-          "x": 2400.0,
-          "y": -192,
-          "period": 1.61,
-          "phase": 1.238,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m35",
-          "x": 2448.0,
-          "y": -336,
-          "period": 0.95,
-          "phase": 0.155,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m36",
-          "x": 2448.0,
-          "y": -648,
-          "period": 1.73,
-          "phase": 0.472,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m37",
-          "x": 2520.0,
-          "y": -768,
-          "period": 1.17,
-          "phase": 0.789,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m38",
-          "x": 2568.0,
-          "y": -624,
-          "period": 1.28,
-          "phase": 1.106,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 48,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m39",
-          "x": 2664.0,
-          "y": -792,
-          "period": 2.12,
-          "phase": 0.023,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m40",
-          "x": 2712.0,
-          "y": -48,
-          "period": 1.5,
-          "phase": 0.34,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 0,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "shutter",
-          "id": "08-X05-r3-m41",
-          "x": 2760.0,
-          "y": -192,
-          "period": 1.61,
-          "phase": 0.657,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "w": 96,
-          "h": 192
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "pendulum",
-          "id": "08-X05-r3-m42",
-          "x": 2856.0,
-          "y": -72,
-          "period": 1.86,
-          "phase": 0.974,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "radius": 204,
-          "head_radius": 32,
-          "swing": 1.15
-        },
-        {
-          "type": "mechanism",
-          "mechanism": "arc",
-          "id": "08-X05-r3-m43",
-          "x": 2928.0,
-          "y": -192,
-          "period": 1.06,
-          "phase": 1.291,
-          "safe_seconds": 0.12,
-          "warning_seconds": 0.16,
-          "extension_seconds": 0.06,
-          "color": "eab468",
-          "dx": 96,
-          "dy": 192,
-          "thickness": 9
-        },
-        {
-          "type": "bramble",
-          "x": 240,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 288,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 336,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 384,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
+          "h": 144
         },
         {
           "type": "bramble",
@@ -6938,38 +3406,6 @@
         {
           "type": "bramble",
           "x": 624,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 672,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 720,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 768,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 816,
           "y": 600,
           "w": 48,
           "h": 24,
@@ -7089,38 +3525,6 @@
         },
         {
           "type": "bramble",
-          "x": 1536,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1584,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1632,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 1680,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 1728,
           "y": 600,
           "w": 48,
@@ -7233,38 +3637,6 @@
         },
         {
           "type": "bramble",
-          "x": 2400,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2448,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2496,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
-          "x": 2544,
-          "y": 600,
-          "w": 48,
-          "h": 24,
-          "direction": "up"
-        },
-        {
-          "type": "bramble",
           "x": 2592,
           "y": 600,
           "w": 48,
@@ -7366,87 +3738,105 @@
           "w": 48,
           "h": 24,
           "direction": "up"
-        }
-      ],
-      "zones": [
-        {
-          "type": "wind",
-          "x": 672,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
-          "force": [
-            700,
-            0
-          ]
         },
         {
-          "type": "wind",
-          "x": 1488,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
-          "force": [
-            -700,
-            0
-          ]
+          "type": "bramble",
+          "x": 3216,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         },
         {
-          "type": "wind",
-          "x": 2304,
-          "y": -1248,
-          "w": 480,
-          "h": 1680,
-          "force": [
-            700,
-            0
-          ]
+          "type": "bramble",
+          "x": 3456,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3504,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3552,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3600,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3648,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3696,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
+        },
+        {
+          "type": "bramble",
+          "x": 3744,
+          "y": 600,
+          "w": 48,
+          "h": 24,
+          "direction": "up"
         }
       ],
+      "zones": [],
       "motes": [
         [
-          360.0,
-          360
+          474,
+          462
         ],
         [
-          624.0,
-          -72
+          876,
+          458
         ],
         [
-          888.0,
-          -504
+          1338,
+          270
         ],
         [
-          1080.0,
-          72
+          1740,
+          266
         ],
         [
-          1344.0,
-          -360
+          2202,
+          366
         ],
         [
-          1608.0,
-          216
+          2604,
+          362
         ],
         [
-          1800.0,
-          -216
+          3114,
+          126
         ],
         [
-          2064.0,
-          360
-        ],
-        [
-          2328.0,
-          -72
-        ],
-        [
-          2520.0,
-          -504
-        ],
-        [
-          2784.0,
-          72
+          3564,
+          122
         ]
       ],
       "checkpoints": [
@@ -7458,64 +3848,46 @@
       "decorations": [
         {
           "type": "storm_beacon",
-          "x": 348,
+          "x": 414,
+          "y": 528,
+          "width": 72,
+          "height": 64,
+          "scale": 0.45,
+          "layer": "back"
+        },
+        {
+          "type": "storm_beacon",
+          "x": 1278,
+          "y": 336,
+          "width": 72,
+          "height": 64,
+          "scale": 0.45,
+          "layer": "back"
+        },
+        {
+          "type": "storm_beacon",
+          "x": 2142,
           "y": 432,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         },
         {
           "type": "storm_beacon",
-          "x": 828,
-          "y": -432,
+          "x": 3054,
+          "y": 192,
           "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "storm_beacon",
-          "x": 1308,
-          "y": -288,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "storm_beacon",
-          "x": 1788,
-          "y": -144,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "storm_beacon",
-          "x": 2268,
-          "y": 0,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
-          "layer": "back"
-        },
-        {
-          "type": "storm_beacon",
-          "x": 2748,
-          "y": 144,
-          "width": 72,
-          "height": 96,
-          "scale": 0.5,
+          "height": 64,
+          "scale": 0.45,
           "layer": "back"
         }
       ],
       "signs": [
         {
-          "x": 144,
+          "x": 120,
           "y": 440,
-          "text": "Last Light Rig / Counterweight well\nExtreme route"
+          "text": "Last Light Rig / Counterweight well\nRead the rhythm. Catch the clear deck."
         }
       ],
       "route": [
@@ -7528,87 +3900,96 @@
         },
         {
           "at": [
-            360.0,
+            456,
+            528
+          ],
+          "action": "jump"
+        },
+        {
+          "at": [
+            900,
+            528
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1320,
+            336
+          ],
+          "action": "dash"
+        },
+        {
+          "at": [
+            1380.0,
+            336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            1692.0,
+            336
+          ],
+          "action": "mechanism",
+          "obstacle_id": "08-X05-r3-m1"
+        },
+        {
+          "at": [
+            1764,
+            336
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            2184,
             432
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            624.0,
-            0
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            888.0,
-            -432
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1080.0,
-            144
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1344.0,
-            -288
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1608.0,
-            288
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            1800.0,
-            -144
-          ],
-          "action": "unverified"
-        },
-        {
-          "at": [
-            2064.0,
+            2628,
             432
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            2328.0,
-            0
+            3096,
+            192
           ],
-          "action": "unverified"
+          "action": "dash"
         },
         {
           "at": [
-            2520.0,
-            -432
+            3180.0,
+            192
           ],
-          "action": "unverified"
+          "action": "walk"
         },
         {
           "at": [
-            2784.0,
-            144
+            3492.0,
+            192
           ],
-          "action": "unverified"
+          "action": "mechanism",
+          "obstacle_id": "08-X05-r3-m3"
         },
         {
           "at": [
-            3360,
+            3588,
+            192
+          ],
+          "action": "walk"
+        },
+        {
+          "at": [
+            4248,
             624
           ],
-          "action": "unverified"
+          "action": "drop"
         }
       ],
       "visual": {
@@ -8008,9 +4389,11 @@
     "revision": 1
   },
   "difficulty": {
-    "edition": "extreme",
+    "edition": "challenge",
     "signature": "arc",
     "secondary": "shutter",
-    "reachability_tested": false
+    "reachability_tested": true,
+    "verification_profile": "default movement and charge dash, horizontal 1.5, unassisted",
+    "verification_method": "continuous_input_route"
   }
 }

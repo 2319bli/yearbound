@@ -4,10 +4,10 @@
   "title": "The Amber Breakwater",
   "season": "boss",
   "terrain_style": "august",
-  "description": "The Amber Breakwater. fracture staircase, canopy zipper, crown transfer, press vault. Four linked extreme trials.",
+  "description": "The Amber Breakwater. fracture staircase, canopy zipper, crown transfer, press vault. Four linked platforming trials with clear recovery decks.",
   "music": "res://audio/challenges/08-X01.wav",
   "grid_size": 48,
-  "length": 13152,
+  "length": 17280,
   "ground": {
     "y": 624
   },
@@ -18,57 +18,57 @@
     "rooms": [
       {
         "name": "Amber Breakwater / Fracture staircase",
-        "lesson": "Fracture staircase · extreme timing and narrow catches.",
+        "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
         "from_x": 0,
-        "to_x": 3264,
+        "to_x": 4320,
         "start": [
           120,
           624
         ],
         "end": [
-          3168,
+          4200,
           624
         ]
       },
       {
         "name": "Amber Breakwater / Canopy zipper",
-        "lesson": "Canopy zipper · extreme timing and narrow catches.",
-        "from_x": 3264,
-        "to_x": 6624,
+        "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
+        "from_x": 4320,
+        "to_x": 8640,
         "start": [
-          3360,
+          4416,
           624
         ],
         "end": [
-          6528,
+          8520,
           624
         ]
       },
       {
         "name": "Amber Breakwater / Crown transfer",
-        "lesson": "Crown transfer · extreme timing and narrow catches.",
-        "from_x": 6624,
-        "to_x": 10080,
+        "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
+        "from_x": 8640,
+        "to_x": 12960,
         "start": [
-          6720,
+          8736,
           624
         ],
         "end": [
-          9984,
+          12840,
           624
         ]
       },
       {
         "name": "Amber Breakwater / Press vault",
-        "lesson": "Press vault · extreme timing and narrow catches.",
-        "from_x": 10080,
-        "to_x": 13152,
+        "lesson": "Observe the machine, cross its opening, then prepare the next transfer.",
+        "from_x": 12960,
+        "to_x": 17280,
         "start": [
-          10176,
+          13056,
           624
         ],
         "end": [
-          13056,
+          17160,
           624
         ]
       }
@@ -84,369 +84,473 @@
       },
       {
         "at": [
-          408.0,
-          336
+          456,
+          528
         ],
-        "action": "unverified",
+        "action": "jump",
         "room": 0
       },
       {
         "at": [
-          648.0,
-          240
+          516.0,
+          528
         ],
-        "action": "unverified",
+        "action": "walk",
         "room": 0
       },
       {
         "at": [
-          960.0,
-          144
+          828.0,
+          528
         ],
-        "action": "unverified",
+        "action": "mechanism",
+        "obstacle_id": "08-X01-r0-m0",
         "room": 0
       },
       {
         "at": [
-          1272.0,
-          48
+          900,
+          528
         ],
-        "action": "unverified",
+        "action": "walk",
         "room": 0
       },
       {
         "at": [
-          1512.0,
-          -48
-        ],
-        "action": "unverified",
-        "room": 0
-      },
-      {
-        "at": [
-          1824.0,
-          -144
-        ],
-        "action": "unverified",
-        "room": 0
-      },
-      {
-        "at": [
-          2136.0,
-          -240
-        ],
-        "action": "unverified",
-        "room": 0
-      },
-      {
-        "at": [
-          2376.0,
-          -336
-        ],
-        "action": "unverified",
-        "room": 0
-      },
-      {
-        "at": [
-          3168,
-          624
-        ],
-        "action": "unverified",
-        "room": 0
-      },
-      {
-        "at": [
-          3360,
-          624
-        ],
-        "action": "start",
-        "room": 1
-      },
-      {
-        "at": [
-          3672.0,
-          -96
-        ],
-        "action": "unverified",
-        "room": 1
-      },
-      {
-        "at": [
-          3912.0,
-          480
-        ],
-        "action": "unverified",
-        "room": 1
-      },
-      {
-        "at": [
-          4224.0,
-          -96
-        ],
-        "action": "unverified",
-        "room": 1
-      },
-      {
-        "at": [
-          4536.0,
-          480
-        ],
-        "action": "unverified",
-        "room": 1
-      },
-      {
-        "at": [
-          4776.0,
-          -96
-        ],
-        "action": "unverified",
-        "room": 1
-      },
-      {
-        "at": [
-          5088.0,
-          480
-        ],
-        "action": "unverified",
-        "room": 1
-      },
-      {
-        "at": [
-          5400.0,
-          -96
-        ],
-        "action": "unverified",
-        "room": 1
-      },
-      {
-        "at": [
-          5640.0,
-          480
-        ],
-        "action": "unverified",
-        "room": 1
-      },
-      {
-        "at": [
-          5952.0,
-          -96
-        ],
-        "action": "unverified",
-        "room": 1
-      },
-      {
-        "at": [
-          6528,
-          624
-        ],
-        "action": "unverified",
-        "room": 1
-      },
-      {
-        "at": [
-          6720,
-          624
-        ],
-        "action": "start",
-        "room": 2
-      },
-      {
-        "at": [
-          7032.0,
+          1320,
           432
         ],
-        "action": "unverified",
-        "room": 2
+        "action": "dash",
+        "room": 0
       },
       {
         "at": [
-          7224.0,
-          0
+          1428,
+          432
         ],
-        "action": "unverified",
-        "room": 2
+        "action": "walk",
+        "room": 0
       },
       {
         "at": [
-          7488.0,
-          -432
+          1848,
+          336
         ],
-        "action": "unverified",
+        "action": "dash",
+        "room": 0
+      },
+      {
+        "at": [
+          1908.0,
+          336
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          2220.0,
+          336
+        ],
+        "action": "mechanism",
+        "obstacle_id": "08-X01-r0-m2",
+        "room": 0
+      },
+      {
+        "at": [
+          2292,
+          336
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          2712,
+          432
+        ],
+        "action": "dash",
+        "room": 0
+      },
+      {
+        "at": [
+          2820,
+          432
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          3240,
+          528
+        ],
+        "action": "dash",
+        "room": 0
+      },
+      {
+        "at": [
+          3684,
+          528
+        ],
+        "action": "walk",
+        "room": 0
+      },
+      {
+        "at": [
+          4200,
+          624
+        ],
+        "action": "drop",
+        "room": 0
+      },
+      {
+        "at": [
+          4416,
+          624
+        ],
+        "action": "start",
+        "room": 1
+      },
+      {
+        "at": [
+          4776,
+          528
+        ],
+        "action": "jump",
+        "room": 1
+      },
+      {
+        "at": [
+          5220,
+          528
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          5640,
+          384
+        ],
+        "action": "dash",
+        "room": 1
+      },
+      {
+        "at": [
+          5700.0,
+          384
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          6012.0,
+          384
+        ],
+        "action": "mechanism",
+        "obstacle_id": "08-X01-r1-m1",
+        "room": 1
+      },
+      {
+        "at": [
+          6084,
+          384
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          6504,
+          384
+        ],
+        "action": "dash",
+        "room": 1
+      },
+      {
+        "at": [
+          6948,
+          384
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          7368,
+          528
+        ],
+        "action": "dash",
+        "room": 1
+      },
+      {
+        "at": [
+          7452.0,
+          528
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          7764.0,
+          528
+        ],
+        "action": "mechanism",
+        "obstacle_id": "08-X01-r1-m3",
+        "room": 1
+      },
+      {
+        "at": [
+          7860,
+          528
+        ],
+        "action": "walk",
+        "room": 1
+      },
+      {
+        "at": [
+          8520,
+          624
+        ],
+        "action": "drop",
+        "room": 1
+      },
+      {
+        "at": [
+          8736,
+          624
+        ],
+        "action": "start",
         "room": 2
       },
       {
         "at": [
-          7752.0,
+          9096,
+          528
+        ],
+        "action": "jump",
+        "room": 2
+      },
+      {
+        "at": [
+          9540,
+          528
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          10008,
           288
         ],
-        "action": "unverified",
+        "action": "dash",
         "room": 2
       },
       {
         "at": [
-          7944.0,
-          -144
+          10068.0,
+          288
         ],
-        "action": "unverified",
+        "action": "walk",
         "room": 2
       },
       {
         "at": [
-          8208.0,
-          -576
+          10380.0,
+          288
         ],
-        "action": "unverified",
+        "action": "mechanism",
+        "obstacle_id": "08-X01-r2-m1",
         "room": 2
       },
       {
         "at": [
-          8472.0,
-          144
+          10452,
+          288
         ],
-        "action": "unverified",
+        "action": "walk",
         "room": 2
       },
       {
         "at": [
-          8664.0,
-          -288
+          10920,
+          48
         ],
-        "action": "unverified",
+        "action": "dash",
         "room": 2
       },
       {
         "at": [
-          8928.0,
-          432
+          11364,
+          48
         ],
-        "action": "unverified",
+        "action": "walk",
         "room": 2
       },
       {
         "at": [
-          9192.0,
-          0
+          11832,
+          288
         ],
-        "action": "unverified",
+        "action": "dash",
         "room": 2
       },
       {
         "at": [
-          9984,
+          11916.0,
+          288
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          12228.0,
+          288
+        ],
+        "action": "mechanism",
+        "obstacle_id": "08-X01-r2-m3",
+        "room": 2
+      },
+      {
+        "at": [
+          12324,
+          288
+        ],
+        "action": "walk",
+        "room": 2
+      },
+      {
+        "at": [
+          12840,
           624
         ],
-        "action": "unverified",
+        "action": "drop",
         "room": 2
-      },
-      {
-        "at": [
-          10176,
-          624
-        ],
-        "action": "start",
-        "room": 3
-      },
-      {
-        "at": [
-          10488.0,
-          336
-        ],
-        "action": "unverified",
-        "room": 3
-      },
-      {
-        "at": [
-          10632.0,
-          96
-        ],
-        "action": "unverified",
-        "room": 3
-      },
-      {
-        "at": [
-          10848.0,
-          336
-        ],
-        "action": "unverified",
-        "room": 3
-      },
-      {
-        "at": [
-          11064.0,
-          96
-        ],
-        "action": "unverified",
-        "room": 3
-      },
-      {
-        "at": [
-          11208.0,
-          336
-        ],
-        "action": "unverified",
-        "room": 3
-      },
-      {
-        "at": [
-          11424.0,
-          96
-        ],
-        "action": "unverified",
-        "room": 3
-      },
-      {
-        "at": [
-          11640.0,
-          336
-        ],
-        "action": "unverified",
-        "room": 3
-      },
-      {
-        "at": [
-          11784.0,
-          96
-        ],
-        "action": "unverified",
-        "room": 3
-      },
-      {
-        "at": [
-          12000.0,
-          336
-        ],
-        "action": "unverified",
-        "room": 3
-      },
-      {
-        "at": [
-          12216.0,
-          96
-        ],
-        "action": "unverified",
-        "room": 3
-      },
-      {
-        "at": [
-          12360.0,
-          336
-        ],
-        "action": "unverified",
-        "room": 3
       },
       {
         "at": [
           13056,
           624
         ],
-        "action": "unverified",
+        "action": "start",
+        "room": 3
+      },
+      {
+        "at": [
+          13416,
+          528
+        ],
+        "action": "jump",
+        "room": 3
+      },
+      {
+        "at": [
+          13812,
+          528
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          14184,
+          432
+        ],
+        "action": "dash",
+        "room": 3
+      },
+      {
+        "at": [
+          14268.0,
+          432
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          14580.0,
+          432
+        ],
+        "action": "mechanism",
+        "obstacle_id": "08-X01-r3-m1",
+        "room": 3
+      },
+      {
+        "at": [
+          14676,
+          432
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          15144,
+          432
+        ],
+        "action": "dash",
+        "room": 3
+      },
+      {
+        "at": [
+          15636,
+          432
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          16104,
+          528
+        ],
+        "action": "dash",
+        "room": 3
+      },
+      {
+        "at": [
+          16164.0,
+          528
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          16476.0,
+          528
+        ],
+        "action": "mechanism",
+        "obstacle_id": "08-X01-r3-m3",
+        "room": 3
+      },
+      {
+        "at": [
+          16548,
+          528
+        ],
+        "action": "walk",
+        "room": 3
+      },
+      {
+        "at": [
+          17160,
+          624
+        ],
+        "action": "drop",
         "room": 3
       }
     ],
-    "spike_placements": 317,
-    "visible_spikes": 1584,
-    "vertical_travel": 1200,
-    "intent": "The Amber Breakwater. fracture staircase, canopy zipper, crown transfer, press vault. Four linked extreme trials."
+    "spike_placements": 212,
+    "visible_spikes": 848,
+    "vertical_travel": 576,
+    "intent": "The Amber Breakwater. fracture staircase, canopy zipper, crown transfer, press vault. Four linked platforming trials with clear recovery decks."
   },
   "monthly_challenge": {
     "month": 8,
@@ -458,1125 +562,240 @@
   },
   "platforms": [
     {
-      "x": 336,
-      "y": 336,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
-    },
-    {
       "x": 384,
-      "y": 336,
-      "w": 48,
+      "y": 528,
+      "w": 576,
       "h": 48,
-      "kind": "crumble"
-    },
-    {
-      "x": 432,
-      "y": 336,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
-    },
-    {
-      "x": 624,
-      "y": 240,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
-    },
-    {
-      "x": 912,
-      "y": 144,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
-    },
-    {
-      "x": 960,
-      "y": 144,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
-    },
-    {
-      "x": 1200,
-      "y": 48,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
+      "kind": "wood"
     },
     {
       "x": 1248,
-      "y": 48,
+      "y": 432,
       "w": 48,
       "h": 48,
       "kind": "crumble"
     },
     {
       "x": 1296,
-      "y": 48,
+      "y": 432,
       "w": 48,
       "h": 48,
       "kind": "crumble"
     },
     {
-      "x": 1488,
-      "y": -48,
+      "x": 1344,
+      "y": 432,
+      "w": 48,
+      "h": 48,
+      "kind": "crumble"
+    },
+    {
+      "x": 1392,
+      "y": 432,
+      "w": 48,
+      "h": 48,
+      "kind": "crumble"
+    },
+    {
+      "x": 1440,
+      "y": 432,
       "w": 48,
       "h": 48,
       "kind": "crumble"
     },
     {
       "x": 1776,
-      "y": -144,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
-    },
-    {
-      "x": 1824,
-      "y": -144,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
-    },
-    {
-      "x": 2064,
-      "y": -240,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
-    },
-    {
-      "x": 2112,
-      "y": -240,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
-    },
-    {
-      "x": 2160,
-      "y": -240,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
-    },
-    {
-      "x": 2352,
-      "y": -336,
-      "w": 48,
-      "h": 48,
-      "kind": "crumble"
-    },
-    {
-      "x": 3600,
-      "y": -96,
-      "w": 144,
+      "y": 336,
+      "w": 576,
       "h": 48,
       "kind": "wood"
     },
     {
-      "x": 3600,
-      "y": -288,
-      "w": 192,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 3888,
-      "y": 480,
-      "w": 48,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 3888,
-      "y": 288,
-      "w": 96,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 4176,
-      "y": -96,
-      "w": 96,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 4176,
-      "y": -288,
-      "w": 144,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 4464,
-      "y": 480,
-      "w": 144,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 4464,
-      "y": 288,
-      "w": 192,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 4752,
-      "y": -96,
-      "w": 48,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 4752,
-      "y": -288,
-      "w": 96,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 5040,
-      "y": 480,
-      "w": 96,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 5040,
-      "y": 288,
-      "w": 144,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 5328,
-      "y": -96,
-      "w": 144,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 5328,
-      "y": -288,
-      "w": 192,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 5616,
-      "y": 480,
-      "w": 48,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 5616,
-      "y": 288,
-      "w": 96,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 5904,
-      "y": -96,
-      "w": 96,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 5904,
-      "y": -288,
-      "w": 144,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 6960,
+      "x": 2640,
       "y": 432,
-      "w": 144,
+      "w": 48,
+      "h": 48,
+      "kind": "crumble"
+    },
+    {
+      "x": 2688,
+      "y": 432,
+      "w": 48,
+      "h": 48,
+      "kind": "crumble"
+    },
+    {
+      "x": 2736,
+      "y": 432,
+      "w": 48,
+      "h": 48,
+      "kind": "crumble"
+    },
+    {
+      "x": 2784,
+      "y": 432,
+      "w": 48,
+      "h": 48,
+      "kind": "crumble"
+    },
+    {
+      "x": 2832,
+      "y": 432,
+      "w": 48,
+      "h": 48,
+      "kind": "crumble"
+    },
+    {
+      "x": 3168,
+      "y": 528,
+      "w": 576,
       "h": 48,
       "kind": "wood"
     },
     {
-      "x": 7200,
-      "y": 0,
-      "w": 48,
+      "x": 4704,
+      "y": 528,
+      "w": 576,
+      "h": 48,
+      "kind": "wood"
+    },
+    {
+      "x": 5568,
+      "y": 384,
+      "w": 576,
+      "h": 48,
+      "kind": "wood"
+    },
+    {
+      "x": 5712,
+      "y": 192,
+      "w": 288,
+      "h": 48,
+      "kind": "wood"
+    },
+    {
+      "x": 6432,
+      "y": 384,
+      "w": 576,
+      "h": 48,
+      "kind": "wood"
+    },
+    {
+      "x": 7296,
+      "y": 528,
+      "w": 624,
       "h": 48,
       "kind": "wood"
     },
     {
       "x": 7440,
-      "y": -432,
-      "w": 96,
+      "y": 336,
+      "w": 336,
       "h": 48,
       "kind": "wood"
     },
     {
-      "x": 7680,
+      "x": 9024,
+      "y": 528,
+      "w": 576,
+      "h": 48,
+      "kind": "wood"
+    },
+    {
+      "x": 9936,
       "y": 288,
-      "w": 144,
+      "w": 576,
       "h": 48,
       "kind": "wood"
     },
     {
-      "x": 7920,
-      "y": -144,
-      "w": 48,
+      "x": 10848,
+      "y": 48,
+      "w": 576,
       "h": 48,
       "kind": "wood"
     },
     {
-      "x": 8160,
-      "y": -576,
-      "w": 96,
+      "x": 11760,
+      "y": 288,
+      "w": 624,
       "h": 48,
       "kind": "wood"
     },
     {
-      "x": 8400,
-      "y": 144,
-      "w": 144,
+      "x": 13344,
+      "y": 528,
+      "w": 528,
       "h": 48,
       "kind": "wood"
     },
     {
-      "x": 8640,
-      "y": -288,
-      "w": 48,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 8880,
+      "x": 14112,
       "y": 432,
-      "w": 96,
+      "w": 624,
       "h": 48,
       "kind": "wood"
     },
     {
-      "x": 9120,
-      "y": 0,
-      "w": 144,
+      "x": 14256,
+      "y": 240,
+      "w": 336,
       "h": 48,
       "kind": "wood"
     },
     {
-      "x": 10416,
+      "x": 15072,
+      "y": 432,
+      "w": 624,
+      "h": 48,
+      "kind": "wood"
+    },
+    {
+      "x": 16032,
+      "y": 528,
+      "w": 576,
+      "h": 48,
+      "kind": "wood"
+    },
+    {
+      "x": 16176,
       "y": 336,
-      "w": 144,
+      "w": 288,
       "h": 48,
       "kind": "wood"
-    },
-    {
-      "x": 10416,
-      "y": 144,
-      "w": 192,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 10608,
-      "y": 96,
-      "w": 48,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 10608,
-      "y": -96,
-      "w": 96,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 10800,
-      "y": 336,
-      "w": 96,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 10800,
-      "y": 144,
-      "w": 144,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 10992,
-      "y": 96,
-      "w": 144,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 10992,
-      "y": -96,
-      "w": 192,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 11184,
-      "y": 336,
-      "w": 48,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 11184,
-      "y": 144,
-      "w": 96,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 11376,
-      "y": 96,
-      "w": 96,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 11376,
-      "y": -96,
-      "w": 144,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 11568,
-      "y": 336,
-      "w": 144,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 11568,
-      "y": 144,
-      "w": 192,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 11760,
-      "y": 96,
-      "w": 48,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 11760,
-      "y": -96,
-      "w": 96,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 11952,
-      "y": 336,
-      "w": 96,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 11952,
-      "y": 144,
-      "w": 144,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 12144,
-      "y": 96,
-      "w": 144,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 12144,
-      "y": -96,
-      "w": 192,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
-    },
-    {
-      "x": 12336,
-      "y": 336,
-      "w": 48,
-      "h": 48,
-      "kind": "wood"
-    },
-    {
-      "x": 12336,
-      "y": 144,
-      "w": 96,
-      "h": 48,
-      "kind": "block",
-      "material": "stone"
     }
   ],
   "hazards": [
     {
-      "type": "bramble",
-      "x": 336,
-      "y": 384,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 432,
-      "y": 312,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 624,
-      "y": 288,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 912,
-      "y": 192,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 960,
-      "y": 120,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 1200,
-      "y": 96,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 1200,
-      "y": 24,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 1488,
-      "y": 0,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 1776,
-      "y": -96,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 1776,
-      "y": -168,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 2064,
-      "y": -192,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 2160,
-      "y": -264,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 2352,
-      "y": -288,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
       "type": "mechanism",
       "mechanism": "arc",
       "id": "08-X01-r0-m0",
-      "x": 336.0,
-      "y": 144,
-      "period": 0.95,
-      "phase": 0.26,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
+      "x": 672.0,
+      "y": 384,
+      "period": 4.6,
+      "phase": 0.22,
+      "safe_seconds": 1.4,
+      "warning_seconds": 0.75,
+      "extension_seconds": 0.18,
       "color": "eab468",
       "dx": 0,
-      "dy": 192,
-      "thickness": 9
+      "dy": 144,
+      "thickness": 6
     },
     {
       "type": "mechanism",
       "mechanism": "shutter",
-      "id": "08-X01-r0-m1",
-      "x": 384.0,
-      "y": 0,
-      "period": 1.06,
-      "phase": 0.577,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
       "id": "08-X01-r0-m2",
-      "x": 480.0,
-      "y": 120,
-      "period": 1.86,
-      "phase": 0.894,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r0-m3",
-      "x": 552.0,
-      "y": 0,
-      "period": 1.28,
-      "phase": 1.211,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r0-m4",
-      "x": 552.0,
-      "y": 48,
-      "period": 1.39,
-      "phase": 0.128,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
+      "x": 2040.0,
+      "y": 192,
+      "period": 5.199999999999999,
+      "phase": 1.16,
+      "safe_seconds": 1.4,
+      "warning_seconds": 0.75,
+      "extension_seconds": 0.18,
       "color": "eab468",
       "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r0-m5",
-      "x": 648.0,
-      "y": -120,
-      "period": 1.6,
-      "phase": 0.445,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r0-m6",
-      "x": 720.0,
-      "y": 48,
-      "period": 1.61,
-      "phase": 0.762,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r0-m7",
-      "x": 768.0,
-      "y": -96,
-      "period": 0.95,
-      "phase": 1.079,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r0-m8",
-      "x": 888.0,
-      "y": -72,
-      "period": 1.9900000000000002,
-      "phase": 1.396,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r0-m9",
-      "x": 960.0,
-      "y": -192,
-      "period": 1.17,
-      "phase": 0.313,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r0-m10",
-      "x": 1008.0,
-      "y": -48,
-      "period": 1.28,
-      "phase": 0.63,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r0-m11",
-      "x": 1104.0,
-      "y": -216,
-      "period": 1.73,
-      "phase": 0.947,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r0-m12",
-      "x": 1200.0,
-      "y": -144,
-      "period": 1.5,
-      "phase": 1.264,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r0-m13",
-      "x": 1248.0,
-      "y": -288,
-      "period": 1.61,
-      "phase": 0.181,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r0-m14",
-      "x": 1344.0,
-      "y": -168,
-      "period": 2.12,
-      "phase": 0.498,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r0-m15",
-      "x": 1416.0,
-      "y": -288,
-      "period": 1.06,
-      "phase": 0.815,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r0-m16",
-      "x": 1416.0,
-      "y": -240,
-      "period": 1.17,
-      "phase": 1.132,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r0-m17",
-      "x": 1512.0,
-      "y": -408,
-      "period": 1.86,
-      "phase": 0.049,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r0-m18",
-      "x": 1584.0,
-      "y": -240,
-      "period": 1.39,
-      "phase": 0.366,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r0-m19",
-      "x": 1632.0,
-      "y": -384,
-      "period": 1.5,
-      "phase": 0.683,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r0-m20",
-      "x": 1752.0,
-      "y": -360,
-      "period": 1.6,
-      "phase": 1.0,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r0-m21",
-      "x": 1824.0,
-      "y": -480,
-      "period": 0.95,
-      "phase": 1.317,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r0-m22",
-      "x": 1872.0,
-      "y": -336,
-      "period": 1.06,
-      "phase": 0.234,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r0-m23",
-      "x": 1968.0,
-      "y": -504,
-      "period": 1.9900000000000002,
-      "phase": 0.551,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r0-m24",
-      "x": 2064.0,
-      "y": -432,
-      "period": 1.28,
-      "phase": 0.868,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r0-m25",
-      "x": 2112.0,
-      "y": -576,
-      "period": 1.39,
-      "phase": 1.185,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r0-m26",
-      "x": 2208.0,
-      "y": -456,
-      "period": 1.73,
-      "phase": 0.102,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r0-m27",
-      "x": 2280.0,
-      "y": -576,
-      "period": 1.61,
-      "phase": 0.419,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r0-m28",
-      "x": 2280.0,
-      "y": -528,
-      "period": 0.95,
-      "phase": 0.736,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r0-m29",
-      "x": 2376.0,
-      "y": -696,
-      "period": 2.12,
-      "phase": 1.053,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r0-m30",
-      "x": 2448.0,
-      "y": -528,
-      "period": 1.17,
-      "phase": 1.37,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r0-m31",
-      "x": 2496.0,
-      "y": -672,
-      "period": 1.28,
-      "phase": 0.287,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "bramble",
-      "x": 240,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 288,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 336,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 384,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
+      "h": 144
     },
     {
       "type": "bramble",
@@ -1613,38 +832,6 @@
     {
       "type": "bramble",
       "x": 624,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 672,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 720,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 768,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 816,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -1764,38 +951,6 @@
     },
     {
       "type": "bramble",
-      "x": 1536,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 1584,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 1632,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 1680,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
       "x": 1728,
       "y": 600,
       "w": 48,
@@ -1908,38 +1063,6 @@
     },
     {
       "type": "bramble",
-      "x": 2400,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 2448,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 2496,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 2544,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
       "x": 2592,
       "y": 600,
       "w": 48,
@@ -2012,759 +1135,51 @@
     },
     {
       "type": "bramble",
-      "x": 3600,
-      "y": -48,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 3696,
-      "y": -120,
+      "x": 3024,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 3600,
-      "y": -240,
-      "w": 192,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 3888,
-      "y": 528,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 3888,
-      "y": 336,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 4176,
-      "y": -48,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 4224,
-      "y": -120,
+      "x": 3072,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 4176,
-      "y": -240,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 4464,
-      "y": 528,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 4464,
-      "y": 456,
+      "x": 3120,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 4464,
-      "y": 336,
-      "w": 192,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 4752,
-      "y": -48,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 4752,
-      "y": -240,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 5040,
-      "y": 528,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 5040,
-      "y": 456,
+      "x": 3168,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 5040,
-      "y": 336,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 5328,
-      "y": -48,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 5424,
-      "y": -120,
+      "x": 3216,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 5328,
-      "y": -240,
-      "w": 192,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 5616,
-      "y": 528,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 5616,
-      "y": 336,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 5904,
-      "y": -48,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 5952,
-      "y": -120,
+      "x": 3456,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 5904,
-      "y": -240,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m0",
-      "x": 3600.0,
-      "y": -288,
-      "period": 0.95,
-      "phase": 0.26,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m1",
-      "x": 3648.0,
-      "y": -432,
-      "period": 1.06,
-      "phase": 0.577,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m2",
-      "x": 3744.0,
-      "y": -312,
-      "period": 1.86,
-      "phase": 0.894,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m3",
-      "x": 3816.0,
-      "y": -432,
-      "period": 1.28,
-      "phase": 1.211,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m4",
-      "x": 3816.0,
-      "y": 288,
-      "period": 1.39,
-      "phase": 0.128,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m5",
-      "x": 3912.0,
-      "y": 120,
-      "period": 1.6,
-      "phase": 0.445,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m6",
-      "x": 3984.0,
-      "y": 288,
-      "period": 1.61,
-      "phase": 0.762,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m7",
-      "x": 4032.0,
-      "y": 144,
-      "period": 0.95,
-      "phase": 1.079,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m8",
-      "x": 4152.0,
-      "y": -312,
-      "period": 1.9900000000000002,
-      "phase": 1.396,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m9",
-      "x": 4224.0,
-      "y": -432,
-      "period": 1.17,
-      "phase": 0.313,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m10",
-      "x": 4272.0,
-      "y": -288,
-      "period": 1.28,
-      "phase": 0.63,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m11",
-      "x": 4368.0,
-      "y": -456,
-      "period": 1.73,
-      "phase": 0.947,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m12",
-      "x": 4464.0,
-      "y": 288,
-      "period": 1.5,
-      "phase": 1.264,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m13",
-      "x": 4512.0,
-      "y": 144,
-      "period": 1.61,
-      "phase": 0.181,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m14",
-      "x": 4608.0,
-      "y": 264,
-      "period": 2.12,
-      "phase": 0.498,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m15",
-      "x": 4680.0,
-      "y": 144,
-      "period": 1.06,
-      "phase": 0.815,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m16",
-      "x": 4680.0,
-      "y": -288,
-      "period": 1.17,
-      "phase": 1.132,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m17",
-      "x": 4776.0,
-      "y": -456,
-      "period": 1.86,
-      "phase": 0.049,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m18",
-      "x": 4848.0,
-      "y": -288,
-      "period": 1.39,
-      "phase": 0.366,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m19",
-      "x": 4896.0,
-      "y": -432,
-      "period": 1.5,
-      "phase": 0.683,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m20",
-      "x": 5016.0,
-      "y": 264,
-      "period": 1.6,
-      "phase": 1.0,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m21",
-      "x": 5088.0,
-      "y": 144,
-      "period": 0.95,
-      "phase": 1.317,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m22",
-      "x": 5136.0,
-      "y": 288,
-      "period": 1.06,
-      "phase": 0.234,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m23",
-      "x": 5232.0,
-      "y": 120,
-      "period": 1.9900000000000002,
-      "phase": 0.551,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m24",
-      "x": 5328.0,
-      "y": -288,
-      "period": 1.28,
-      "phase": 0.868,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m25",
-      "x": 5376.0,
-      "y": -432,
-      "period": 1.39,
-      "phase": 1.185,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m26",
-      "x": 5472.0,
-      "y": -312,
-      "period": 1.73,
-      "phase": 0.102,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m27",
-      "x": 5544.0,
-      "y": -432,
-      "period": 1.61,
-      "phase": 0.419,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m28",
-      "x": 5544.0,
-      "y": 288,
-      "period": 0.95,
-      "phase": 0.736,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m29",
-      "x": 5640.0,
-      "y": 120,
-      "period": 2.12,
-      "phase": 1.053,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m30",
-      "x": 5712.0,
-      "y": 288,
-      "period": 1.17,
-      "phase": 1.37,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m31",
-      "x": 5760.0,
-      "y": 144,
-      "period": 1.28,
-      "phase": 0.287,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m32",
-      "x": 5880.0,
-      "y": -312,
-      "period": 1.86,
-      "phase": 0.604,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r1-m33",
-      "x": 5952.0,
-      "y": -432,
-      "period": 1.5,
-      "phase": 0.921,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r1-m34",
-      "x": 6000.0,
-      "y": -288,
-      "period": 1.61,
-      "phase": 1.238,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r1-m35",
-      "x": 6096.0,
-      "y": -456,
-      "period": 1.6,
-      "phase": 0.155,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
     },
     {
       "type": "bramble",
@@ -2807,172 +1222,35 @@
       "direction": "up"
     },
     {
-      "type": "bramble",
-      "x": 3744,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "08-X01-r1-m1",
+      "x": 5856.0,
+      "y": 240,
+      "period": 4.8999999999999995,
+      "phase": 0.69,
+      "safe_seconds": 1.4,
+      "warning_seconds": 0.75,
+      "extension_seconds": 0.18,
+      "color": "eab468",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
     },
     {
-      "type": "bramble",
-      "x": 3792,
-      "y": 600,
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "08-X01-r1-m3",
+      "x": 7584.0,
+      "y": 384,
+      "period": 4.6,
+      "phase": 1.63,
+      "safe_seconds": 1.4,
+      "warning_seconds": 0.75,
+      "extension_seconds": 0.18,
+      "color": "eab468",
       "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 3840,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 3888,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 3936,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 3984,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4032,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4080,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4128,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4176,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4224,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4272,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4320,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4368,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4416,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4464,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4512,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4560,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4608,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4656,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4704,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
+      "h": 144
     },
     {
       "type": "bramble",
@@ -3009,38 +1287,6 @@
     {
       "type": "bramble",
       "x": 4944,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 4992,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 5040,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 5088,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 5136,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -3160,38 +1406,6 @@
     },
     {
       "type": "bramble",
-      "x": 5856,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 5904,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 5952,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 6000,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
       "x": 6048,
       "y": 600,
       "w": 48,
@@ -3248,770 +1462,55 @@
     },
     {
       "type": "bramble",
-      "x": 6960,
-      "y": 480,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 7056,
-      "y": 408,
+      "x": 6384,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 7200,
-      "y": 48,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 7440,
-      "y": -384,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 7488,
-      "y": -456,
+      "x": 6432,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 7680,
-      "y": 336,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 7680,
-      "y": 264,
+      "x": 6480,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 7920,
-      "y": -96,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 8160,
-      "y": -528,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 8160,
-      "y": -600,
+      "x": 6528,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 8400,
-      "y": 192,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 8496,
-      "y": 120,
+      "x": 6576,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 8640,
-      "y": -240,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 8880,
-      "y": 480,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 8928,
-      "y": 408,
+      "x": 6624,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 9120,
-      "y": 48,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 9120,
-      "y": -24,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m0",
-      "x": 6960.0,
-      "y": 240,
-      "period": 0.95,
-      "phase": 0.26,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m1",
-      "x": 7008.0,
-      "y": 96,
-      "period": 1.06,
-      "phase": 0.577,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m2",
-      "x": 7104.0,
-      "y": 216,
-      "period": 1.86,
-      "phase": 0.894,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m3",
-      "x": 7176.0,
-      "y": 96,
-      "period": 1.28,
-      "phase": 1.211,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m4",
-      "x": 7128.0,
-      "y": -192,
-      "period": 1.39,
-      "phase": 0.128,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m5",
-      "x": 7224.0,
-      "y": -360,
-      "period": 1.6,
-      "phase": 0.445,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m6",
-      "x": 7296.0,
-      "y": -192,
-      "period": 1.61,
-      "phase": 0.762,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m7",
-      "x": 7344.0,
-      "y": -336,
-      "period": 0.95,
-      "phase": 1.079,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m8",
-      "x": 7416.0,
-      "y": -648,
-      "period": 1.9900000000000002,
-      "phase": 1.396,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m9",
-      "x": 7488.0,
-      "y": -768,
-      "period": 1.17,
-      "phase": 0.313,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m10",
-      "x": 7536.0,
-      "y": -624,
-      "period": 1.28,
-      "phase": 0.63,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m11",
-      "x": 7632.0,
-      "y": -792,
-      "period": 1.73,
-      "phase": 0.947,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m12",
-      "x": 7680.0,
-      "y": 96,
-      "period": 1.5,
-      "phase": 1.264,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m13",
-      "x": 7728.0,
-      "y": -48,
-      "period": 1.61,
-      "phase": 0.181,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m14",
-      "x": 7824.0,
-      "y": 72,
-      "period": 2.12,
-      "phase": 0.498,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m15",
-      "x": 7896.0,
-      "y": -48,
-      "period": 1.06,
-      "phase": 0.815,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m16",
-      "x": 7848.0,
-      "y": -336,
-      "period": 1.17,
-      "phase": 1.132,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m17",
-      "x": 7944.0,
-      "y": -504,
-      "period": 1.86,
-      "phase": 0.049,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m18",
-      "x": 8016.0,
-      "y": -336,
-      "period": 1.39,
-      "phase": 0.366,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m19",
-      "x": 8064.0,
-      "y": -480,
-      "period": 1.5,
-      "phase": 0.683,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m20",
-      "x": 8136.0,
-      "y": -792,
-      "period": 1.6,
-      "phase": 1.0,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m21",
-      "x": 8208.0,
-      "y": -912,
-      "period": 0.95,
-      "phase": 1.317,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m22",
-      "x": 8256.0,
-      "y": -768,
-      "period": 1.06,
-      "phase": 0.234,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m23",
-      "x": 8352.0,
-      "y": -936,
-      "period": 1.9900000000000002,
-      "phase": 0.551,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m24",
-      "x": 8400.0,
-      "y": -48,
-      "period": 1.28,
-      "phase": 0.868,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m25",
-      "x": 8448.0,
-      "y": -192,
-      "period": 1.39,
-      "phase": 1.185,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m26",
-      "x": 8544.0,
-      "y": -72,
-      "period": 1.73,
-      "phase": 0.102,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m27",
-      "x": 8616.0,
-      "y": -192,
-      "period": 1.61,
-      "phase": 0.419,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m28",
-      "x": 8568.0,
-      "y": -480,
-      "period": 0.95,
-      "phase": 0.736,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m29",
-      "x": 8664.0,
-      "y": -648,
-      "period": 2.12,
-      "phase": 1.053,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m30",
-      "x": 8736.0,
-      "y": -480,
-      "period": 1.17,
-      "phase": 1.37,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m31",
-      "x": 8784.0,
-      "y": -624,
-      "period": 1.28,
-      "phase": 0.287,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m32",
-      "x": 8856.0,
-      "y": 216,
-      "period": 1.86,
-      "phase": 0.604,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m33",
-      "x": 8928.0,
-      "y": 96,
-      "period": 1.5,
-      "phase": 0.921,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m34",
-      "x": 8976.0,
-      "y": 240,
-      "period": 1.61,
-      "phase": 1.238,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m35",
-      "x": 9072.0,
-      "y": 72,
-      "period": 1.6,
-      "phase": 0.155,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m36",
-      "x": 9120.0,
-      "y": -192,
-      "period": 1.06,
-      "phase": 0.472,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r2-m37",
-      "x": 9168.0,
-      "y": -336,
-      "period": 1.17,
-      "phase": 0.789,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r2-m38",
-      "x": 9264.0,
-      "y": -216,
-      "period": 1.9900000000000002,
-      "phase": 1.106,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r2-m39",
-      "x": 9336.0,
-      "y": -336,
-      "period": 1.39,
-      "phase": 0.023,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "bramble",
-      "x": 6864,
+      "x": 6672,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -4131,38 +1630,6 @@
     },
     {
       "type": "bramble",
-      "x": 7584,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 7632,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 7680,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 7728,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
       "x": 7776,
       "y": 600,
       "w": 48,
@@ -4210,172 +1677,35 @@
       "direction": "up"
     },
     {
-      "type": "bramble",
-      "x": 8064,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
+      "type": "mechanism",
+      "mechanism": "arc",
+      "id": "08-X01-r2-m1",
+      "x": 10224.0,
+      "y": 144,
+      "period": 4.8999999999999995,
+      "phase": 0.69,
+      "safe_seconds": 1.4,
+      "warning_seconds": 0.75,
+      "extension_seconds": 0.18,
+      "color": "eab468",
+      "dx": 0,
+      "dy": 144,
+      "thickness": 6
     },
     {
-      "type": "bramble",
-      "x": 8112,
-      "y": 600,
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "08-X01-r2-m3",
+      "x": 12048.0,
+      "y": 144,
+      "period": 4.6,
+      "phase": 1.63,
+      "safe_seconds": 1.4,
+      "warning_seconds": 0.75,
+      "extension_seconds": 0.18,
+      "color": "eab468",
       "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8160,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8208,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8256,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8304,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8352,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8400,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8448,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8496,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8544,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8592,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8640,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8688,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8736,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8784,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8832,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8880,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8928,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 8976,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 9024,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
+      "h": 144
     },
     {
       "type": "bramble",
@@ -4412,38 +1742,6 @@
     {
       "type": "bramble",
       "x": 9264,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 9312,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 9360,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 9408,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 9456,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -4507,928 +1805,55 @@
     },
     {
       "type": "bramble",
-      "x": 10416,
-      "y": 384,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 10512,
-      "y": 312,
+      "x": 9840,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 10416,
-      "y": 192,
-      "w": 192,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 10608,
-      "y": 144,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 10608,
-      "y": -48,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 10800,
-      "y": 384,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 10848,
-      "y": 312,
+      "x": 9888,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 10800,
-      "y": 192,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 10992,
-      "y": 144,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 10992,
-      "y": 72,
+      "x": 9936,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 10992,
-      "y": -48,
-      "w": 192,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 11184,
-      "y": 384,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 11184,
-      "y": 192,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 11376,
-      "y": 144,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 11376,
-      "y": 72,
+      "x": 9984,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 11376,
-      "y": -48,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 11568,
-      "y": 384,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 11664,
-      "y": 312,
+      "x": 10032,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 11568,
-      "y": 192,
-      "w": 192,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 11760,
-      "y": 144,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 11760,
-      "y": -48,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 11952,
-      "y": 384,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 12000,
-      "y": 312,
+      "x": 10080,
+      "y": 600,
       "w": 48,
       "h": 24,
       "direction": "up"
     },
     {
       "type": "bramble",
-      "x": 11952,
-      "y": 192,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 12144,
-      "y": 144,
-      "w": 144,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 12144,
-      "y": 72,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 12144,
-      "y": -48,
-      "w": 192,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 12336,
-      "y": 384,
-      "w": 48,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "bramble",
-      "x": 12336,
-      "y": 192,
-      "w": 96,
-      "h": 24,
-      "direction": "down"
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m0",
-      "x": 10392.0,
-      "y": 144,
-      "period": 0.95,
-      "phase": 0.26,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m1",
-      "x": 10488.0,
-      "y": -24,
-      "period": 1.73,
-      "phase": 0.577,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m2",
-      "x": 10560.0,
-      "y": 144,
-      "period": 1.17,
-      "phase": 0.894,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m3",
-      "x": 10608.0,
-      "y": 0,
-      "period": 1.28,
-      "phase": 1.211,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m4",
-      "x": 10560.0,
-      "y": -120,
-      "period": 2.12,
-      "phase": 0.128,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m5",
-      "x": 10632.0,
-      "y": -240,
-      "period": 1.5,
-      "phase": 0.445,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m6",
-      "x": 10680.0,
-      "y": -96,
-      "period": 1.61,
-      "phase": 0.762,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m7",
-      "x": 10776.0,
-      "y": -264,
-      "period": 1.86,
-      "phase": 1.079,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m8",
-      "x": 10776.0,
-      "y": 144,
-      "period": 1.06,
-      "phase": 1.396,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m9",
-      "x": 10824.0,
-      "y": 0,
-      "period": 1.17,
-      "phase": 0.313,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m10",
-      "x": 10920.0,
-      "y": 120,
-      "period": 1.6,
-      "phase": 0.63,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m11",
-      "x": 10992.0,
-      "y": 0,
-      "period": 1.39,
-      "phase": 0.947,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m12",
-      "x": 10968.0,
-      "y": -96,
-      "period": 1.5,
-      "phase": 1.264,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m13",
-      "x": 11064.0,
-      "y": -264,
-      "period": 1.9900000000000002,
-      "phase": 0.181,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m14",
-      "x": 11136.0,
-      "y": -96,
-      "period": 0.95,
-      "phase": 0.498,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m15",
-      "x": 11184.0,
-      "y": -240,
-      "period": 1.06,
-      "phase": 0.815,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m16",
-      "x": 11136.0,
-      "y": 120,
-      "period": 1.73,
-      "phase": 1.132,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m17",
-      "x": 11208.0,
-      "y": 0,
-      "period": 1.28,
-      "phase": 0.049,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m18",
-      "x": 11256.0,
-      "y": 144,
-      "period": 1.39,
-      "phase": 0.366,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m19",
-      "x": 11352.0,
-      "y": -24,
-      "period": 2.12,
-      "phase": 0.683,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m20",
-      "x": 11352.0,
-      "y": -96,
-      "period": 1.61,
-      "phase": 1.0,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m21",
-      "x": 11400.0,
-      "y": -240,
-      "period": 0.95,
-      "phase": 1.317,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m22",
-      "x": 11496.0,
-      "y": -120,
-      "period": 1.86,
-      "phase": 0.234,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m23",
-      "x": 11568.0,
-      "y": -240,
-      "period": 1.17,
-      "phase": 0.551,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m24",
-      "x": 11544.0,
-      "y": 144,
-      "period": 1.28,
-      "phase": 0.868,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m25",
-      "x": 11640.0,
-      "y": -24,
-      "period": 1.6,
-      "phase": 1.185,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m26",
-      "x": 11712.0,
-      "y": 144,
-      "period": 1.5,
-      "phase": 0.102,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m27",
-      "x": 11760.0,
-      "y": 0,
-      "period": 1.61,
-      "phase": 0.419,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m28",
-      "x": 11712.0,
-      "y": -120,
-      "period": 1.9900000000000002,
-      "phase": 0.736,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m29",
-      "x": 11784.0,
-      "y": -240,
-      "period": 1.06,
-      "phase": 1.053,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m30",
-      "x": 11832.0,
-      "y": -96,
-      "period": 1.17,
-      "phase": 1.37,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m31",
-      "x": 11928.0,
-      "y": -264,
-      "period": 1.73,
-      "phase": 0.287,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m32",
-      "x": 11928.0,
-      "y": 144,
-      "period": 1.39,
-      "phase": 0.604,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m33",
-      "x": 11976.0,
-      "y": 0,
-      "period": 1.5,
-      "phase": 0.921,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m34",
-      "x": 12072.0,
-      "y": 120,
-      "period": 2.12,
-      "phase": 1.238,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m35",
-      "x": 12144.0,
-      "y": 0,
-      "period": 0.95,
-      "phase": 0.155,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m36",
-      "x": 12120.0,
-      "y": -96,
-      "period": 1.06,
-      "phase": 0.472,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m37",
-      "x": 12216.0,
-      "y": -264,
-      "period": 1.86,
-      "phase": 0.789,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m38",
-      "x": 12288.0,
-      "y": -96,
-      "period": 1.28,
-      "phase": 1.106,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 0,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m39",
-      "x": 12336.0,
-      "y": -240,
-      "period": 1.39,
-      "phase": 0.023,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 96,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m40",
-      "x": 12288.0,
-      "y": 120,
-      "period": 1.6,
-      "phase": 0.34,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "arc",
-      "id": "08-X01-r3-m41",
-      "x": 12360.0,
-      "y": 0,
-      "period": 1.61,
-      "phase": 0.657,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "dx": 96,
-      "dy": 192,
-      "thickness": 9
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "shutter",
-      "id": "08-X01-r3-m42",
-      "x": 12408.0,
-      "y": 144,
-      "period": 0.95,
-      "phase": 0.974,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "w": 48,
-      "h": 192
-    },
-    {
-      "type": "mechanism",
-      "mechanism": "pendulum",
-      "id": "08-X01-r3-m43",
-      "x": 12504.0,
-      "y": -24,
-      "period": 1.9900000000000002,
-      "phase": 1.291,
-      "safe_seconds": 0.12,
-      "warning_seconds": 0.16,
-      "extension_seconds": 0.06,
-      "color": "eab468",
-      "radius": 204,
-      "head_radius": 32,
-      "swing": 1.15
-    },
-    {
-      "type": "bramble",
-      "x": 10320,
+      "x": 10128,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5548,38 +1973,6 @@
     },
     {
       "type": "bramble",
-      "x": 11040,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 11088,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 11136,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 11184,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
       "x": 11232,
       "y": 600,
       "w": 48,
@@ -5692,38 +2085,6 @@
     },
     {
       "type": "bramble",
-      "x": 11904,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 11952,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 12000,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
-      "x": 12048,
-      "y": 600,
-      "w": 48,
-      "h": 24,
-      "direction": "up"
-    },
-    {
-      "type": "bramble",
       "x": 12096,
       "y": 600,
       "w": 48,
@@ -5771,8 +2132,39 @@
       "direction": "up"
     },
     {
+      "type": "mechanism",
+      "mechanism": "shutter",
+      "id": "08-X01-r3-m1",
+      "x": 14400.0,
+      "y": 288,
+      "period": 4.8999999999999995,
+      "phase": 0.69,
+      "safe_seconds": 1.4,
+      "warning_seconds": 0.75,
+      "extension_seconds": 0.18,
+      "color": "eab468",
+      "w": 48,
+      "h": 144
+    },
+    {
+      "type": "mechanism",
+      "mechanism": "pendulum",
+      "id": "08-X01-r3-m3",
+      "x": 16320.0,
+      "y": 348,
+      "period": 5.6,
+      "phase": 1.63,
+      "safe_seconds": 1.4,
+      "warning_seconds": 0.75,
+      "extension_seconds": 0.18,
+      "color": "eab468",
+      "radius": 158,
+      "head_radius": 21,
+      "swing": 0.82
+    },
+    {
       "type": "bramble",
-      "x": 12384,
+      "x": 13392,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5780,7 +2172,7 @@
     },
     {
       "type": "bramble",
-      "x": 12432,
+      "x": 13440,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5788,7 +2180,7 @@
     },
     {
       "type": "bramble",
-      "x": 12480,
+      "x": 13488,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5796,7 +2188,7 @@
     },
     {
       "type": "bramble",
-      "x": 12528,
+      "x": 13536,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5804,7 +2196,7 @@
     },
     {
       "type": "bramble",
-      "x": 12576,
+      "x": 13584,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5812,7 +2204,7 @@
     },
     {
       "type": "bramble",
-      "x": 12624,
+      "x": 13824,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5820,7 +2212,7 @@
     },
     {
       "type": "bramble",
-      "x": 12672,
+      "x": 13872,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5828,7 +2220,7 @@
     },
     {
       "type": "bramble",
-      "x": 12720,
+      "x": 13920,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5836,7 +2228,7 @@
     },
     {
       "type": "bramble",
-      "x": 12768,
+      "x": 13968,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5844,7 +2236,7 @@
     },
     {
       "type": "bramble",
-      "x": 12816,
+      "x": 14016,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5852,7 +2244,343 @@
     },
     {
       "type": "bramble",
-      "x": 12864,
+      "x": 14064,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14112,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14160,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14208,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14256,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14304,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14352,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14400,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14448,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14688,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14736,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14784,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14832,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14880,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14928,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 14976,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15024,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15072,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15120,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15168,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15216,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15264,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15312,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15552,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15600,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15648,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15696,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15744,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15792,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15840,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15888,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15936,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 15984,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 16032,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 16080,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 16128,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 16176,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 16416,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 16464,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 16512,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 16560,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 16608,
+      "y": 600,
+      "w": 48,
+      "h": 24,
+      "direction": "up"
+    },
+    {
+      "type": "bramble",
+      "x": 16656,
       "y": 600,
       "w": 48,
       "h": 24,
@@ -5862,540 +2590,411 @@
   "zones": [
     {
       "type": "wind",
-      "x": 672,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
+      "x": 9624,
+      "y": -576,
+      "w": 288,
+      "h": 1152,
       "force": [
-        700,
-        0
-      ]
-    },
-    {
-      "type": "wind",
-      "x": 1488,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
-      "force": [
-        -700,
-        0
-      ]
-    },
-    {
-      "type": "wind",
-      "x": 2304,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
-      "force": [
-        700,
-        0
-      ]
-    },
-    {
-      "type": "wind",
-      "x": 3936,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
-      "force": [
-        700,
-        0
-      ]
-    },
-    {
-      "type": "wind",
-      "x": 4752,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
-      "force": [
-        -700,
-        0
-      ]
-    },
-    {
-      "type": "wind",
-      "x": 5568,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
-      "force": [
-        700,
-        0
-      ]
-    },
-    {
-      "type": "updraft",
-      "x": 7104,
-      "y": -1200,
-      "w": 192,
-      "h": 1824,
-      "force": [
-        160,
-        -1650
-      ]
-    },
-    {
-      "type": "updraft",
-      "x": 7968,
-      "y": -1200,
-      "w": 192,
-      "h": 1824,
-      "force": [
-        -160,
-        -1650
-      ]
-    },
-    {
-      "type": "updraft",
-      "x": 8832,
-      "y": -1200,
-      "w": 192,
-      "h": 1824,
-      "force": [
-        160,
-        -1650
-      ]
-    },
-    {
-      "type": "wind",
-      "x": 7296,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
-      "force": [
-        700,
-        0
-      ]
-    },
-    {
-      "type": "wind",
-      "x": 8112,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
-      "force": [
-        -700,
-        0
-      ]
-    },
-    {
-      "type": "wind",
-      "x": 8928,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
-      "force": [
-        700,
-        0
-      ]
-    },
-    {
-      "type": "wind",
-      "x": 10752,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
-      "force": [
-        700,
-        0
-      ]
-    },
-    {
-      "type": "wind",
-      "x": 11568,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
-      "force": [
-        -700,
-        0
-      ]
-    },
-    {
-      "type": "wind",
-      "x": 12384,
-      "y": -1248,
-      "w": 480,
-      "h": 1680,
-      "force": [
-        700,
+        120,
         0
       ]
     }
   ],
   "motes": [
     [
-      408.0,
-      264
+      474,
+      462
     ],
     [
-      648.0,
-      168
+      876,
+      458
     ],
     [
-      960.0,
-      72
+      1338,
+      366
     ],
     [
-      1272.0,
-      -24
+      1404,
+      362
     ],
     [
-      1512.0,
-      -120
+      1866,
+      270
     ],
     [
-      1824.0,
-      -216
+      2268,
+      266
     ],
     [
-      2136.0,
-      -312
+      2730,
+      366
     ],
     [
-      2376.0,
-      -408
+      2796,
+      362
     ],
     [
-      3672.0,
-      -168
+      3258,
+      462
     ],
     [
-      3912.0,
-      408
+      3660,
+      458
     ],
     [
-      4224.0,
-      -168
+      4794,
+      462
     ],
     [
-      4536.0,
-      408
+      5196,
+      458
     ],
     [
-      4776.0,
-      -168
+      5658,
+      318
     ],
     [
-      5088.0,
-      408
+      6060,
+      314
     ],
     [
-      5400.0,
-      -168
+      5802,
+      126
     ],
     [
-      5640.0,
-      408
+      5916,
+      122
     ],
     [
-      5952.0,
-      -168
+      6522,
+      318
     ],
     [
-      7032.0,
-      360
+      6924,
+      314
     ],
     [
-      7224.0,
-      -72
+      7386,
+      462
     ],
     [
-      7488.0,
-      -504
+      7836,
+      458
     ],
     [
-      7752.0,
-      216
+      7530,
+      270
     ],
     [
-      7944.0,
-      -216
+      7692,
+      266
     ],
     [
-      8208.0,
-      -648
+      9114,
+      462
     ],
     [
-      8472.0,
-      72
+      9516,
+      458
     ],
     [
-      8664.0,
-      -360
+      10026,
+      222
     ],
     [
-      8928.0,
-      360
+      10428,
+      218
     ],
     [
-      9192.0,
-      -72
+      10938,
+      -18
     ],
     [
-      10488.0,
-      264
+      11340,
+      -22
     ],
     [
-      10632.0,
-      24
+      11850,
+      222
     ],
     [
-      10848.0,
-      264
+      12300,
+      218
     ],
     [
-      11064.0,
-      24
+      13434,
+      462
     ],
     [
-      11208.0,
-      264
+      13788,
+      458
     ],
     [
-      11424.0,
-      24
+      14202,
+      366
     ],
     [
-      11640.0,
-      264
+      14652,
+      362
     ],
     [
-      11784.0,
-      24
+      14346,
+      174
     ],
     [
-      12000.0,
-      264
+      14508,
+      170
     ],
     [
-      12216.0,
-      24
+      15162,
+      366
     ],
     [
-      12360.0,
-      264
+      15612,
+      362
+    ],
+    [
+      16122,
+      462
+    ],
+    [
+      16524,
+      458
+    ],
+    [
+      16266,
+      270
+    ],
+    [
+      16380,
+      266
     ]
   ],
   "checkpoints": [
     [
-      3360,
+      4416,
       624
     ],
     [
-      6720,
+      8736,
       624
     ],
     [
-      10176,
+      13056,
       624
     ]
   ],
   "decorations": [
     {
       "type": "storm_beacon",
-      "x": 348,
-      "y": 336,
+      "x": 414,
+      "y": 528,
       "width": 72,
-      "height": 96,
-      "scale": 0.5,
+      "height": 64,
+      "scale": 0.45,
       "layer": "back"
     },
     {
       "type": "storm_beacon",
-      "x": 924,
-      "y": 144,
-      "width": 72,
-      "height": 96,
-      "scale": 0.5,
-      "layer": "back"
-    },
-    {
-      "type": "storm_beacon",
-      "x": 1500,
-      "y": -48,
-      "width": 72,
-      "height": 96,
-      "scale": 0.5,
-      "layer": "back"
-    },
-    {
-      "type": "storm_beacon",
-      "x": 2076,
-      "y": -240,
-      "width": 72,
-      "height": 96,
-      "scale": 0.5,
-      "layer": "back"
-    },
-    {
-      "type": "storm_beacon",
-      "x": 3612,
-      "y": -96,
-      "width": 72,
-      "height": 96,
-      "scale": 0.5,
-      "layer": "back"
-    },
-    {
-      "type": "storm_beacon",
-      "x": 4188,
-      "y": -96,
-      "width": 72,
-      "height": 96,
-      "scale": 0.5,
-      "layer": "back"
-    },
-    {
-      "type": "storm_beacon",
-      "x": 4764,
-      "y": -96,
-      "width": 72,
-      "height": 96,
-      "scale": 0.5,
-      "layer": "back"
-    },
-    {
-      "type": "storm_beacon",
-      "x": 5340,
-      "y": -96,
-      "width": 72,
-      "height": 96,
-      "scale": 0.5,
-      "layer": "back"
-    },
-    {
-      "type": "storm_beacon",
-      "x": 5916,
-      "y": -96,
-      "width": 72,
-      "height": 96,
-      "scale": 0.5,
-      "layer": "back"
-    },
-    {
-      "type": "storm_beacon",
-      "x": 6972,
+      "x": 1278,
       "y": 432,
       "width": 72,
-      "height": 96,
-      "scale": 0.5,
+      "height": 64,
+      "scale": 0.45,
       "layer": "back"
     },
     {
       "type": "storm_beacon",
-      "x": 7452,
-      "y": -432,
+      "x": 1806,
+      "y": 336,
       "width": 72,
-      "height": 96,
-      "scale": 0.5,
+      "height": 64,
+      "scale": 0.45,
       "layer": "back"
     },
     {
       "type": "storm_beacon",
-      "x": 7932,
-      "y": -144,
-      "width": 72,
-      "height": 96,
-      "scale": 0.5,
-      "layer": "back"
-    },
-    {
-      "type": "storm_beacon",
-      "x": 8412,
-      "y": 144,
-      "width": 72,
-      "height": 96,
-      "scale": 0.5,
-      "layer": "back"
-    },
-    {
-      "type": "storm_beacon",
-      "x": 8892,
+      "x": 2670,
       "y": 432,
       "width": 72,
-      "height": 96,
-      "scale": 0.5,
+      "height": 64,
+      "scale": 0.45,
       "layer": "back"
     },
     {
       "type": "storm_beacon",
-      "x": 10428,
-      "y": 336,
+      "x": 3198,
+      "y": 528,
       "width": 72,
-      "height": 96,
-      "scale": 0.5,
+      "height": 64,
+      "scale": 0.45,
       "layer": "back"
     },
     {
       "type": "storm_beacon",
-      "x": 10812,
-      "y": 336,
+      "x": 4734,
+      "y": 528,
       "width": 72,
-      "height": 96,
-      "scale": 0.5,
+      "height": 64,
+      "scale": 0.45,
       "layer": "back"
     },
     {
       "type": "storm_beacon",
-      "x": 11196,
-      "y": 336,
+      "x": 5598,
+      "y": 384,
       "width": 72,
-      "height": 96,
-      "scale": 0.5,
+      "height": 64,
+      "scale": 0.45,
       "layer": "back"
     },
     {
       "type": "storm_beacon",
-      "x": 11580,
-      "y": 336,
+      "x": 5742,
+      "y": 192,
       "width": 72,
-      "height": 96,
-      "scale": 0.5,
+      "height": 64,
+      "scale": 0.45,
       "layer": "back"
     },
     {
       "type": "storm_beacon",
-      "x": 11964,
-      "y": 336,
+      "x": 6462,
+      "y": 384,
       "width": 72,
-      "height": 96,
-      "scale": 0.5,
+      "height": 64,
+      "scale": 0.45,
       "layer": "back"
     },
     {
       "type": "storm_beacon",
-      "x": 12348,
+      "x": 7326,
+      "y": 528,
+      "width": 72,
+      "height": 64,
+      "scale": 0.45,
+      "layer": "back"
+    },
+    {
+      "type": "storm_beacon",
+      "x": 7470,
       "y": 336,
       "width": 72,
-      "height": 96,
-      "scale": 0.5,
+      "height": 64,
+      "scale": 0.45,
+      "layer": "back"
+    },
+    {
+      "type": "storm_beacon",
+      "x": 9054,
+      "y": 528,
+      "width": 72,
+      "height": 64,
+      "scale": 0.45,
+      "layer": "back"
+    },
+    {
+      "type": "storm_beacon",
+      "x": 9966,
+      "y": 288,
+      "width": 72,
+      "height": 64,
+      "scale": 0.45,
+      "layer": "back"
+    },
+    {
+      "type": "storm_beacon",
+      "x": 10878,
+      "y": 48,
+      "width": 72,
+      "height": 64,
+      "scale": 0.45,
+      "layer": "back"
+    },
+    {
+      "type": "storm_beacon",
+      "x": 11790,
+      "y": 288,
+      "width": 72,
+      "height": 64,
+      "scale": 0.45,
+      "layer": "back"
+    },
+    {
+      "type": "storm_beacon",
+      "x": 13374,
+      "y": 528,
+      "width": 72,
+      "height": 64,
+      "scale": 0.45,
+      "layer": "back"
+    },
+    {
+      "type": "storm_beacon",
+      "x": 14142,
+      "y": 432,
+      "width": 72,
+      "height": 64,
+      "scale": 0.45,
+      "layer": "back"
+    },
+    {
+      "type": "storm_beacon",
+      "x": 14286,
+      "y": 240,
+      "width": 72,
+      "height": 64,
+      "scale": 0.45,
+      "layer": "back"
+    },
+    {
+      "type": "storm_beacon",
+      "x": 15102,
+      "y": 432,
+      "width": 72,
+      "height": 64,
+      "scale": 0.45,
+      "layer": "back"
+    },
+    {
+      "type": "storm_beacon",
+      "x": 16062,
+      "y": 528,
+      "width": 72,
+      "height": 64,
+      "scale": 0.45,
+      "layer": "back"
+    },
+    {
+      "type": "storm_beacon",
+      "x": 16206,
+      "y": 336,
+      "width": 72,
+      "height": 64,
+      "scale": 0.45,
       "layer": "back"
     }
   ],
   "signs": [
     {
-      "x": 144,
+      "x": 120,
       "y": 440,
-      "text": "Amber Breakwater / Fracture staircase\nExtreme route"
+      "text": "Amber Breakwater / Fracture staircase\nRead the rhythm. Catch the clear deck."
     },
     {
-      "x": 3408,
+      "x": 4440,
       "y": 440,
-      "text": "Amber Breakwater / Canopy zipper\nExtreme route"
+      "text": "Amber Breakwater / Canopy zipper\nRead the rhythm. Catch the clear deck."
     },
     {
-      "x": 6768,
+      "x": 8760,
       "y": 440,
-      "text": "Amber Breakwater / Crown transfer\nExtreme route"
+      "text": "Amber Breakwater / Crown transfer\nRead the rhythm. Catch the clear deck."
     },
     {
-      "x": 10224,
+      "x": 13080,
       "y": 440,
-      "text": "Amber Breakwater / Press vault\nExtreme route"
+      "text": "Amber Breakwater / Press vault\nRead the rhythm. Catch the clear deck."
     }
   ],
   "spawn": [
@@ -6403,10 +3002,10 @@
     624
   ],
   "goal": [
-    13056,
+    17184,
     624
   ],
-  "world_top": -1536,
+  "world_top": -960,
   "abilities": [
     "charge_dash"
   ],
@@ -6415,7 +3014,7 @@
       "name": "Amber Breakwater / Fracture staircase",
       "x": 0,
       "y": 0,
-      "w": 3264,
+      "w": 4320,
       "place": "lake",
       "light": "morning",
       "art_cell": 0,
@@ -6798,9 +3397,9 @@
     },
     {
       "name": "Amber Breakwater / Canopy zipper",
-      "x": 3264,
+      "x": 4320,
       "y": 0,
-      "w": 3360,
+      "w": 4320,
       "place": "lake",
       "light": "shade",
       "art_cell": 1,
@@ -7190,9 +3789,9 @@
     },
     {
       "name": "Amber Breakwater / Crown transfer",
-      "x": 6624,
+      "x": 8640,
       "y": 0,
-      "w": 3456,
+      "w": 4320,
       "place": "lake",
       "light": "interior",
       "art_cell": 2,
@@ -7589,9 +4188,9 @@
     },
     {
       "name": "Amber Breakwater / Press vault",
-      "x": 10080,
+      "x": 12960,
       "y": 0,
-      "w": 3072,
+      "w": 4320,
       "place": "lake",
       "light": "sunset",
       "art_cell": 3,
@@ -7979,18 +4578,20 @@
     "revision": 1
   },
   "difficulty": {
-    "edition": "extreme",
+    "edition": "challenge",
     "signature": "pendulum",
     "secondary": "arc",
-    "reachability_tested": false,
-    "mechanisms": 152
+    "reachability_tested": true,
+    "verification_profile": "default movement and charge dash, horizontal 1.5, unassisted",
+    "verification_method": "continuous_input_route",
+    "mechanisms": 8
   },
   "editor_version": 2,
-  "layout_revision": 18,
+  "layout_revision": 19,
   "design": {
     "identity": "The Amber Breakwater",
     "blueprint": "res://content/layouts/08-X01.json",
-    "intent": "The Amber Breakwater. fracture staircase, canopy zipper, crown transfer, press vault. Four linked extreme trials.",
-    "opening": "Fracture staircase · extreme timing and narrow catches."
+    "intent": "The Amber Breakwater. fracture staircase, canopy zipper, crown transfer, press vault. Four linked platforming trials with clear recovery decks.",
+    "opening": "Observe the machine, cross its opening, then prepare the next transfer."
   }
 }

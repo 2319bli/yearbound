@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline authoring source for 132 extreme challenges. Never runs in the game.
+"""Offline authoring source for 132 readable platforming challenges. Never runs in the game.
 
 Eleven architectural forms combine in distinct four-place itineraries. Month
 physics, dimensions, surfaces, machine choreography and scenery are explicit
@@ -49,14 +49,14 @@ def block(x,y,w=96,kind='wood',h=48,**kw):
 def spike(x,y,w=48,h=24,direction='up'):return dict(type='bramble',x=x,y=y,w=w,h=h,direction=direction)
 def machine(kind,x,y,identity,i,mi=0):
     h=dict(type='mechanism',mechanism=kind,id=f'{identity}-m{i}',x=x,y=y,
-           period=round(.95+(i%7)*.11,3),phase=round((i*.317+mi*.13)%1.4,3),safe_seconds=.12,
-           warning_seconds=.16,extension_seconds=.06,color=PALETTES[MONTHS[mi]][-1])
-    if kind=='windmill':h.update(y=y-128,radius=144+(i%3)*24,blades=4,rotation_direction=1 if i%2 else -1,thickness=10,period=1.8+(i%4)*.17)
-    elif kind=='pendulum':h.update(y=y-216,radius=204,head_radius=32,swing=1.15,period=1.6+(i%5)*.13)
-    elif kind in ['press','shutter','geyser']:h.update(x=x-24,y=y-192,w=48+(i%2)*48,h=192)
-    elif kind=='bloom':h.update(y=y-38,head_radius=52)
-    elif kind=='sawrail':h.update(y=y-32,head_radius=30,travel=108+(i%3)*12)
-    elif kind=='arc':h.update(y=y-192,dx=96 if i%2 else 0,dy=192,thickness=9)
+           period=4.6+(i%3)*.3,phase=round((i*.47+mi*.11)%3,3),safe_seconds=1.4,
+           warning_seconds=.75,extension_seconds=.18,color=PALETTES[MONTHS[mi]][-1])
+    if kind=='windmill':h.update(y=y-136,radius=120,blades=3,rotation_direction=1 if i%2 else -1,thickness=7,period=7.6)
+    elif kind=='pendulum':h.update(y=y-180,radius=158,head_radius=21,swing=.82,period=5.6)
+    elif kind in ['press','shutter','geyser']:h.update(x=x-24,y=y-144,w=48,h=144)
+    elif kind=='bloom':h.update(y=y-24,head_radius=32)
+    elif kind=='sawrail':h.update(y=y-24,head_radius=22,travel=42)
+    elif kind=='arc':h.update(y=y-144,dx=0,dy=144,thickness=6)
     return h
 
 def scene(mi,k,ri,form):
@@ -78,63 +78,99 @@ def scene(mi,k,ri,form):
                 waterline=485+(seed%4)*32,weather='bubbles' if MONTHS[mi]==11 else ('snow' if MONTHS[mi] in [12,1] else ('rain' if MONTHS[mi] in [8,10,3,4] else 'pollen')),
                 seed=seed,foliage=MONTHS[mi] not in [11,12,1],moon=MONTHS[mi] in [10,1],style=LANDMARKS[form])
 
+# Deliberate route silhouettes: clear decks alternate with committed transfers.
+# Two machines per place, never on the arrival or departure edge of a deck.
+PATTERNS={
+0:[(288,528,576),(1200,384,576),(2112,192,576),(3024,384,576)],
+1:[(288,528,576),(1104,288,576),(1968,48,576),(2880,336,624)],
+2:[(288,528,528),(1056,432,624),(2016,432,624),(2976,528,576)],
+3:[(288,528,576),(1152,336,576),(2016,432,576),(2928,192,624)],
+4:[(288,528,576),(1152,432,240),(1680,336,576),(2544,432,240),(3072,528,576)],
+7:[(288,528,576),(1152,384,576),(2016,384,576),(2880,528,624)],
+8:[(288,528,576),(1152,336,576),(2016,144,576),(2928,336,576)],
+9:[(288,528,624),(1200,288,576),(2112,384,576),(3024,192,624)],
+10:[(288,528,576),(1200,288,576),(2112,48,576),(3024,288,624)]}
+
+def route_node(x,y,action='walk',**kw):return dict(at=[x,y],action=action,**kw)
+
+def add_crossing(s,p,kind,identity,index,mi):
+    center=p['x']+p['w']/2;at=p['y']
+    h=machine(kind,center,at,identity,index,mi);s['hazards'].append(h)
+    s['route'] += [route_node(center-156,at),route_node(center+156,at,'mechanism',obstacle_id=h['id']),route_node(p['x']+p['w']-60,at)]
+
 def section(mi,k,ri,ox):
     month=MONTHS[mi];form=(k*3+mi*2+ri*(1+mi%3))%11
-    width=(64+2*((k+mi+ri)%5))*48
-    water=month==11
-    s=dict(name=FORMS[form],origin=[ox,0],width=width,lesson=FORMS[form]+' · extreme timing and narrow catches.',
+    width=4320+48*(k%3)+96*(mi%2);dx=48*(mi%3);dy=-48*(k%2)
+    water=month==11;identity=f'{month:02d}-X{k+1:02d}-r{ri}'
+    primary=PROFILE[month][3][(form+k)%3];secondary=PROFILE[month][3][(form+k+1)%3]
+    s=dict(name=FORMS[form],origin=[ox,0],width=width,lesson='Observe the machine, cross its opening, then prepare the next transfer.',
            platforms=[],hazards=[],zones=[],motes=[],checkpoints=[] if ri==0 else [[96,528 if water else 624]],
-           decorations=[],signs=[dict(x=144,y=440,text=FORMS[form]+'\nExtreme route')],route=[dict(at=[120 if ri==0 else 96,528 if water else 624],action='start')],
+           decorations=[],signs=[dict(x=120,y=440,text=FORMS[form]+'\nRead the rhythm. Catch the clear deck.')],route=[route_node(120 if ri==0 else 96,528 if water else 624,'start')],
            visual=dict(place=PROFILE[month][2],light=['morning','shade','interior','sunset'][ri],art_cell=ri,composition=scene(mi,k,ri,form)))
-    n=8+(k+ri)%4;step=((width-624)//(n*48))*48
-    placements=[]
-    for j in range(n):
-        x=336+j*step
-        if form==0:y=480-(j%5)*192
-        elif form==1:y=-576+(j%7)*144
-        elif form==2:y=432 if j%2==0 else 192
-        elif form==3:y=432-((j*3)%7)*144
-        elif form==4:y=432-j*96
-        elif form==5:y=480-(j%4)*240
-        elif form==6:y=384-((j+ri)%6)*192
-        elif form==7:y=480 if j%2 else -96-(k%3)*96
-        elif form==8:y=288-round(math.sin(j*math.pi/3)*5)*96
-        elif form==9:y=384-((j*2+ri)%6)*192
-        else:y=480-((j*3+k)%8)*144
-        y-=48*((mi+k+ri)%3)
-        w=48*(1+(j+k+mi)%3)
-        kind='ice' if month==1 or (month in [12,2] and j%3==0) else ('crumble' if form in [1,4] or (month==2 and j%2) else 'wood')
-        p=block(x,y,w,kind)
-        if form==5 or (month==4 and j%3==1):p.update(kind='moving',axis='y' if j%2 else 'x',distance=96+(j%3)*48,speed=3.4+(k%4)*.55,phase=j*.73)
-        if form==8 and j%3==0:p.update(kind='spring',power=1000+(k%4)*90)
-        s['platforms'].append(p);placements.append((x,y,w))
-        s['motes'].append([x+w/2,y-72]);s['route'].append(dict(at=[x+w/2,y],action='unverified'))
-        s['hazards'] += [spike(x,y+48,w,24,'down')]
-        if w>=96:s['hazards'].append(spike(x if j%2 else x+w-48,y-24))
-        if form in [2,7,9]:
-            s['platforms'].append(block(x,y-192,w+48,'block'))
-            s['hazards'].append(spike(x,y-144,w+48,24,'down'))
-        if form in [3,6,9] and j%2==0:
-            s['platforms'].append(block(x+144,y+96,48,'block',min(624-y-96,432)))
-            for yy in range(y+96,min(624,y+528),48):s['hazards'].append(spike(x+120,yy,24,48,'left'))
-        if j%2==0:s['decorations'].append(dict(type=PROFILE[month][4],x=x+12,y=y,width=72,height=96,scale=.5,layer='back'))
-    signature=PROFILE[month][3]
-    for j,(x,y,w) in enumerate(placements):
-        for q in range(4):
-            kind=signature[(j+q+form)%3]
-            h=machine(kind,x+w/2+(q-1)*72,y-((q%2)*144),f'{month:02d}-X{k+1:02d}-r{ri}',j*4+q,mi)
-            s['hazards'].append(h)
-    # The ground is continuous but packed with banks of spikes. Each chamber
-    # leaves only a small arrival/exit island; this is not a path feasibility rule.
-    for x in range(240,width-240,48):s['hazards'].append(spike(x,600))
-    if form in [0,6,10] or month==3:
-        for j in range(3):s['zones'].append(dict(type='updraft',x=480+j*864,y=-1200,w=192,h=1824,force=[(-1 if j%2 else 1)*160,-1650-(k%3)*180]))
-    if month in [7,8,10,3,4]:
-        for j in range(3):s['zones'].append(dict(type='wind',x=672+j*816,y=-1248,w=480,h=1680,force=[(-1 if (j+k)%2 else 1)*(650+mi*25),0]))
     if water:
-        s['zones'].append(dict(type='water',x=0,y=-1536,w=width,h=2256,swimmable=True))
-        for j in range(4):s['zones'].append(dict(type='current',x=384+j*624,y=-1296,w=432,h=1728,force=[(-1 if j%2 else 1)*700,(-1 if (j+k)%2 else 1)*400]))
-    s['route'].append(dict(at=[width-96,528 if water else 624],action='unverified'))
+        s['zones']=[dict(type='water',x=0,y=-960,w=width,h=1680,swimmable=True)]
+        s['platforms'].append(block(0,-960,width,'block'))
+        levels=[336,48,-240,0,288]
+        for j in range(5):
+            x=624+j*672+dx;y=levels[(j+form)%5]-48*(k%2)
+            top=y-144;bottom=y+96
+            s['platforms'] += [block(x,-912,96,'block',top+912),block(x,bottom,96,'block',624-bottom)]
+            s['route'].append(route_node(x-168,y,'swim'))
+            if j in [1,3]:
+                h=machine('shutter' if j==1 else 'sawrail',x+48,y,identity,j,mi)
+                h.update(safe_seconds=2.2,warning_seconds=.85,period=5.7)
+                if h['mechanism']=='shutter':h.update(x=x+24,y=top,w=48,h=240)
+                s['hazards'].append(h)
+                s['route'].append(route_node(x+264,y,'mechanism',obstacle_id=h['id']))
+            else:s['route'].append(route_node(x+264,y,'swim'))
+            s['motes'] += [[x-100,y-35],[x+48,y-40],[x+200,y-35]]
+            for yy in range(-864,top-48,48):s['hazards'].append(spike(x-24,yy,24,48,'left'))
+        s['route'].append(route_node(width-96,528,'swim'))
+    elif form==5:
+        # Slow freight pauses at both docks. The next hazard is after disembarking.
+        track=identity+'-freight'
+        s['platforms']=[block(192+dx,528,240,'block',96),block(432+dx,528,192,'moving',axis='x',distance=48,speed=1,
+            motion_path=[[0,0],[0,0],[528,0],[864,-192],[864,-192],[0,-192]],motion_seconds=10.8,motion_phase=0,track_id=track),
+            block(1488+dx,336,384),block(1968+dx,240,576),block(2928+dx,432,624)]
+        s['route'] += [route_node(288+dx,528,'jump'),route_node(528+dx,528,'board',track_id=track),route_node(1536+dx,336,'ride',track_id=track),route_node(1800+dx,336)]
+        for index,p in enumerate(s['platforms'][3:]):
+            s['route'].append(route_node(p['x']+72,p['y'],'dash'));add_crossing(s,p,primary if index==0 else secondary,identity,index,mi)
+    elif form==6:
+        s['platforms']=[block(288+dx,528,480),block(1104+dx,288,528),block(1968+dx,48,576),block(2832+dx,288,576)]
+        s['zones']=[dict(type='updraft',x=816+dx,y=96,w=192,h=528,force=[0,-3650]),dict(type='updraft',x=1680+dx,y=-144,w=192,h=528,force=[0,-3650])]
+        s['route'] += [route_node(360+dx,528,'jump'),route_node(708+dx,528),route_node(912+dx,480,'flow_enter'),route_node(1176+dx,288,'flow_exit',shaft_x=912+dx)]
+        add_crossing(s,s['platforms'][1],primary,identity,0,mi)
+        s['route'] += [route_node(1776+dx,240,'flow_enter'),route_node(2040+dx,48,'flow_exit',shaft_x=1776+dx),route_node(2484+dx,48),route_node(2904+dx,288,'dash')]
+        add_crossing(s,s['platforms'][3],secondary,identity,1,mi)
+    else:
+        entries=PATTERNS[form]
+        for j,(x,y,w) in enumerate(entries):
+            kind='crumble' if form==4 and j in [1,3] else ('ice' if month==1 or month in [12,2] and j%3==0 else 'wood')
+            p=block(x+dx,y+dy,w,kind);s['platforms'].append(p)
+            s['route'].append(route_node(p['x']+72,p['y'],'jump' if j==0 else 'dash'))
+            gate=j in ([0,2] if form==4 else [1,3])
+            if gate:add_crossing(s,p,primary if j<2 else secondary,identity,j,mi)
+            else:s['route'].append(route_node(p['x']+p['w']-60,p['y']))
+            if form in [2,7] and gate:
+                # Canopy constrains the crossing, not the landing or jump approach.
+                s['platforms'].append(block(p['x']+144,p['y']-192,p['w']-288,'wood'))
+        if month in [7,8,10,3,4] and form in [0,8,10]:
+            # Brief wind patch over one transfer; takeoff and landing stay neutral.
+            first=s['platforms'][0];second=s['platforms'][1]
+            s['zones'].append(dict(type='wind',x=first['x']+first['w']+24,y=-576,w=max(48,second['x']-first['x']-first['w']-48),h=1152,force=[120 if ri%2==0 else -120,0]))
+    if not water:s['route'].append(route_node(width-120,624,'drop'))
+    # Failure beds sit well below the required catches, never on every surface.
+    # Small gaps between beds and checkpoint islands keep the scene legible.
+    for x in range(336+dx,width-576,48):
+        if x%(864)<672:s['hazards'].append(spike(x,600))
+    if not water:
+        for p in s['platforms']:
+            if p['kind'] in ['moving','block'] or p['y']< -200:continue
+            s['motes'] += [[p['x']+90,p['y']-66],[p['x']+p['w']-84,p['y']-70]]
+            s['decorations'].append(dict(type=PROFILE[month][4],x=p['x']+30,y=p['y'],width=72,height=64,scale=.45,layer='back'))
+    if not water:
+        final_deck=max((p for p in s['platforms'] if p['w']>=480),key=lambda p:p['x'])
+        final_deck['w']+=48*(mi//3)
     return s
 
 def build():
@@ -145,18 +181,18 @@ def build():
             id=f'{month:02d}-X{k+1:02d}';sections=[];ox=0
             for ri in range(4):
                 s=section(mi,k,ri,ox);sections.append(s);ox+=s['width']
-            for ri,s in enumerate(sections):s['name']=title.split('The ')[-1]+' / '+s['name'];s['signs'][0]['text']=s['name']+'\nExtreme route'
-            intent=f'{title}. '+', '.join(s['name'].split(' / ')[-1].lower() for s in sections)+'. '+('Fully submerged, with alternating undertows.' if month==11 else ('Ice momentum throughout.' if month==1 else 'Four linked extreme trials.'))
+            for ri,s in enumerate(sections):s['name']=title.split('The ')[-1]+' / '+s['name'];s['signs'][0]['text']=s['name']+'\nRead the rhythm. Catch the clear deck.'
+            intent=f'{title}. '+', '.join(s['name'].split(' / ')[-1].lower() for s in sections)+'. '+('Fully submerged passages with timed sluice gates.' if month==11 else ('Ice momentum throughout.' if month==1 else 'Four linked platforming trials with clear recovery decks.'))
             spawn=[120,528 if month==11 else 624];goal=[ox-96,spawn[1]]
-            layout=dict(schema_version=1,revision=18,day=id,identity=title,intent=intent,world_top=-1536,spawn=spawn,length=ox,goal=goal,sections=sections,journey=True,secret_areas=[],
-                        scenery=dict(renderer='composition',revision=1),difficulty=dict(edition='extreme',signature=mechanisms[k%3],secondary=mechanisms[(k+1)%3],reachability_tested=False))
+            layout=dict(schema_version=1,revision=19,day=id,identity=title,intent=intent,world_top=-960,spawn=spawn,length=ox,goal=goal,sections=sections,journey=True,secret_areas=[],
+                        scenery=dict(renderer='composition',revision=1),difficulty=dict(edition='challenge',signature=mechanisms[k%3],secondary=mechanisms[(k+1)%3],reachability_tested=False))
             stage=dict(schema_version=1,id=id,title=title,season=season,terrain_style=terrain,description=intent,music=f'res://audio/challenges/{id}.wav',grid_size=48,length=ox,ground=dict(y=624),challenge=dict(original_length=1536),
                        monthly_challenge=dict(month=month,number=k+1),ambience=dict(haze=PALETTES[month][2],separation=.58))
             write(ROOT/'content/layouts'/f'{id}.json',layout);write(ROOT/'content/stages'/f'{id}.json',stage)
             manifest.append(dict(id=id,month=month,number=k+1,title=title,places=[s['name'] for s in sections],signature=layout['difficulty']['signature'],length=ox))
     write(ROOT/'content/monthly_challenges.json',manifest)
     catalog=json.loads((ROOT/'content/catalog.json').read_text());catalog['challenges']=[s['id'] for s in manifest];write(ROOT/'content/catalog.json',catalog)
-    print('Authored 132 challenge blueprints / 528 places. No reachability tests performed.')
+    print('Authored 132 readable challenge routes / 528 places. Run route verification before delivery.')
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--write',action='store_true');args=p.parse_args()
